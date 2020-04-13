@@ -3,7 +3,7 @@
 	include("../head1.html");
 	if($password_OK) echo("<title>$classe - $elv</title>");
 	else echo("<title>$classe</title>");
-?>		
+?>
 	<script type="text/javascript">
 		function login(){
 			var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
@@ -20,7 +20,7 @@
 
 
 	</script>
-		
+
 	</head>
 	<body>
 		<img src="head.png"/>
@@ -37,11 +37,12 @@
 ?>
 
 <center>
-<?php	
+<?php
 	if($password_OK){
-	    if($sujet2TP) echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets de TP</a></p>") ;
-		$questionnaire_perso = "$repertoire$classe/_Copies/$elv/rep/index.htm"; 
-		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\" target=\"_blank\">Devoir personnalisé</a></p>");	
+	  if($sujet2TP) echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets de TP</a></p>") ;
+		$questionnaire_perso = "$repertoire$classe/_Copies/$elv/rep/index.htm";
+		echo("<p class=\"liste\"><a href=\"./index9.php?elv=$elv\" class=\"no-under\">Logiciels disponibles</a></p>") ;
+		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\" target=\"_blank\">Devoir personnalisé</a></p>");
 	}
 ?>
 
@@ -54,4 +55,4 @@
 
 	}
 	include("../foot1.html");
-?>	
+?>

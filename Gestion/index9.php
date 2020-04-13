@@ -1,4 +1,5 @@
 <?php
+	//Liste des logiciels disponibles sur la clef
 	include("./security.php");
 	include("../head1.html");
 	if($password_OK) echo("<title>$classe - $elv</title>");

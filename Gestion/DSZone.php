@@ -16,12 +16,12 @@
 			$i++;
 		}
 	}
-	
+
 	$arrayjava .= "];\n";
 
-?>	
+?>
 
-<script>	
+<script>
 	<?php echo($arrayjava); ?>
 	function change_sujet(selection) {
 		var xhr = null;
@@ -30,21 +30,21 @@
 		if(reponse=="O") {
 		    chemin = "./DSMove.php?valeurs="+selection.value+":"+ selection.id.replace("nom_","")+":";
 		    xhr.open("GET", chemin, true);
-		    xhr.send(null); 
-			 
+		    xhr.send(null);
+
 			location.reload() ;
-		}	
+		}
 	}
-	
-	
+
+
 	function miseajour(id_name) {
         var ip = document.getElementById(id_name);
         var etat = document.getElementById("etat_"+id_name);
-         
+
         var xhr = null;
         var xhr = new XMLHttpRequest();
         var tab;
-         
+
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
                 tab = xhr.responseText.split(":");
@@ -52,36 +52,36 @@
                 etat.innerHTML = tab[1];
             }
         };
-         
+
         //xhr.open("GET", "./chatES.php", true);
         chemin = "./DSReponses.php?elv="+id_name;
         xhr.open("GET", chemin, true);
-        xhr.send(null);         
+        xhr.send(null);
     }
-	
+
 	function refresh_event() {
 		for(i=0;i<liste2nom.length;i++) miseajour(liste2nom[i]);
 	}
-	
+
 	// Appelle la fonction diminuerCompteur toutes les secondes (1000 millisecondes)
     setInterval(refresh_event, 1000);
-	
+
 	function logout(){
 		document.cookie = 'elv=';
 		document.cookie = 'password=';
 		lien = './chat.php';
 		window.location.replace(lien);
 	}
-	
+
 	function login(){
 		pwd = document.getElementById('password').value;
 		elv = document.getElementById('elv').value;
 		classe = document.getElementById('classe').value;
-			
+
 		document.cookie = 'elv='+elv;
 		document.cookie = 'password='+pwd;
-		document.cookie = 'laclasse='+classe;	
-		
+		document.cookie = 'laclasse='+classe;
+
 		lien = './chat.php';
 		window.location.replace(lien);
 	}
@@ -93,13 +93,13 @@
 <?php
 	include("./haut_DS3.php");
 	include("./DS_Securite.php");// function DSMDP($classe, $elv)
-	
+
 	function start($nom, $classe){//---------------------------------------------- passe en mode ON
 		$drap = false;
 		$repertoire = "./files/$classe/_Copies/$nom/rep";
 		if(!file_exists($repertoire)) mkdir($repertoire);
 		chmod($repertoire,0777);
-		
+
 		$fichier_on = "$repertoire/on.txt";
 		if(!file_exists($fichier_on)){//pour ne pas changer de code en cas de correction du sujet
 			$fp = fopen($fichier_on, "w");
@@ -107,17 +107,18 @@
 			fwrite($fp, "$code");
 			fclose($fp);
 			chmod($fichier_on,0777);
+			$repertoire_reponses = "$repertoire/$code";
+			mkdir($repertoire_reponses);
+			chmod($repertoire_reponses,0777);
 		}
-		
-		$repertoire_reponses = "$repertoire/$code";
-		mkdir($repertoire_reponses);
-		chmod($repertoire_reponses,0777);
+
+
 
 		echo("ON pour $nom, code $code<br>");
 		return $drap;
 	}
 
-	
+
 	//Le 11 novembre 2017
 	function start_stop($nom, $classe){//-------------------------------------------  inversion mode on/off et retour de l'état
 		$drap = false;
@@ -128,13 +129,13 @@
 		if(file_exists($fichier_on)) rename($fichier_on, $fichier_off);
 		else rename($fichier_off, $fichier_on);
 	}
-	
-	
+
+
 	function state_onoff($nom, $classe){//-------------------------------------------  retour de l'état on/off
 		$filename ="./files/$classe/_Copies/$nom/rep/on.txt";
 		return(file_exists($filename));
 	}
-	
+
 	function bouton_onoff($nom, $classe){//-------------------------------------------  bouton on/off
 		$etat = state_onoff($nom, $classe);
 		if($etat) $bouton = "<a href=\"./DSZone.php?action=OnOff&name=$nom\">Marche</a>";
@@ -145,10 +146,10 @@
 	function file_liste2($dir){
 		$session_file_name = "$dir/sessions.txt";
 		$synthese_session = "./files/_liste2session.txt";
-		
+
 		$fp_liste = fopen($synthese_session, "a");
 		fwrite($fp_liste, "#$dir:");
-		
+
 		if(file_exists($session_file_name)) {
 			$fp2020 = fopen($session_file_name, "r");
 			while(!feof($fp2020)) {
@@ -158,13 +159,13 @@
 				$id .= "<font color=\"green\">$part3[2]/$part3[3] $part3[1]h$part3[0]</font>$br<font size=\"-1\">$part2[2]</font><br>$part[0]<br>";
 				fwrite($fp_liste, "$part[0]:");
 			}
-			fclose($fp2020);	
+			fclose($fp2020);
 		}
-		
+
 		fclose($fp_liste);
 		return "$id";
 	}
-	
+
 	function analyse_log() {
 		$synthese_session = "./files/_liste2session.txt";
 		$fp_liste = fopen($synthese_session, "r");
@@ -181,8 +182,8 @@
 		}
 		fclose($fp_liste);
 		return $jumeau;
-	}	
-		
+	}
+
 	function file_liste($dir){
 		$lesrepertoires = scandir($dir);
 		$laliste = "";
@@ -208,7 +209,7 @@
 		}
 		return $laliste;
 	}
-	
+
 	function deroulant_sujet($nom,$classe,$actuel){
 		$deroulant = "<select id=\"nom_$nom\" onchange=\"change_sujet(this);\">";
 		if($actuel) $deroulant .= "<option value=\"\">$actuel</option>";
@@ -222,16 +223,16 @@
 					$deroulant .= "<option value=\"$part[0]\">$part[0]</option>";
 				}
 			}
-			
+
 		}
-		
-		
+
+
 		$deroulant .= "</select>";
 		return $deroulant;
 	}
-		
-	//  ________________________________________________________________________________________      FIN DES FONCTIONS 
-	
+
+	//  ________________________________________________________________________________________      FIN DES FONCTIONS
+
 	//-------------------------------------------------------------         Création du menu pour la liste des répertoires
 	$repertoireDcopies = "./files/$classe/_Copies";
 	$listeDrepondants = scandir($repertoireDcopies); //echo(count($listeDrepondants));
@@ -247,22 +248,22 @@
 	}
 	$menu_nom .= "</select>";
 	$u=0;
-	
-	
+
+
 	if($action=="OnOff"){
 		$name17 = $_GET[name];
 		affiche("OnOff -- $name17");
 		start_stop($name17, $classe);
 	}
-	
+
 	if($creation_repertoire) affiche($creation_repertoire);
-	
-	
+
+
 	if($action==44){//--------------------------------------------------------------------------------------- Distribue les sujets
 		$lebonnom = $_POST[nom];
 		$lebontd = $_POST[td];
 		$nomTemporaire = "$repertoire_Sujets/$lebontd/index.htm";
-		
+
 		if($lebonnom=="Tous"){
 			foreach($leleve2020 as $txt){//Distribution du sujet à chaque élève
                 if(!file_exists("./files/$classe/_Copies/$txt/rep"))  mkdir("./files/$classe/_Copies/$txt/rep");
@@ -284,11 +285,11 @@
 			}
 			else $Message .= "La sauvegarde vers $chemin a échouée !!<br>" ;
 			start($lebonnom, $classe);
-		}		
+		}
 		echo("<p>Action 44 : $Message</p>");
 	}
-	
-	
+
+
 	if($action==111){//----------------------------------------------------------------------------------------    Efface les réponses de nom111 et le sujet - demande de confirmation
 		$nom111 = $_GET[nom];
 		$td111 = $_GET[td];
@@ -296,17 +297,17 @@
 		echo("<table><tr><td>Archiver le $td111 de $nom111 ? <input type=\"submit\" value=\"OUI\"> ");
 		echo("<input type=\"button\" value=\"NON\" onclick=\"gotolien('./DSZone.php')\"></td></tr></table>");
 		echo("</form>");
-	}	
+	}
 
 	if($action==110){//-------------------------------------------------------------------------------------------------     Déplace les réponses de nom111 et le sujet dans rep/$TAG
 		$nom111 = $_GET[nom]; //###
 		$td111 = $_GET[td];
 		$DS_password = DSMDP($classe, $nom111);
-		
+
 		$dossier_rep = "./files/$classe/_Copies/$nom111/rep/$DS_password";
 		$dossier_bak = "./files/$classe/_Copies/$nom111/rep/$td111 $DS_password/";
 		if(file_exists($dossier_rep)) rename($dossier_rep, $dossier_bak);
-		
+
 		$dossier_rep = "./files/$classe/_Copies/$nom111/rep";
 		if(file_exists($dossier_rep)){
 			$listeDreponses = scandir($dossier_rep);
@@ -338,7 +339,7 @@
 		echo("<input type=\"button\" value=\"NON\" onclick=\"gotolien('./DSZone.php')\"></td></tr></table>");
 		echo("</form>");
 	}
-	
+
 	if($action==52){//Efface la réponse
 		$poubelle = "./files/$classe/_Copies/_Poubelle";
 		if(!file_exists($poubelle)) {
@@ -348,12 +349,12 @@
 		$file2delete = $_GET[dir];
 		if(file_exists($file2delete)){
 			$apres = "./files/$classe/_Copies/_Poubelle/trash.txt";
-			rename($file2delete, $apres);			
+			rename($file2delete, $apres);
 		}
 
 		$Message = "Réponse $file2delete supprimée";
 		echo("<p>Action 52 : $Message</p>");
-	}	
+	}
 
 
 
@@ -365,12 +366,12 @@
 			mkdir($poubelle);
 			affiche("$poubelle crée");
 		}
-		
+
 		foreach($listeDrepondants as $txt){
 			$dossier_rep = "./files/$classe/_Copies/$txt/rep/";
 			$dossier_poubelle = $dossier_rep."Poubelle/";
-			if(!file($dossier_poubelle)) mkdir($dossier_poubelle); //Créé une poubelle par élève 
-			
+			if(!file($dossier_poubelle)) mkdir($dossier_poubelle); //Créé une poubelle par élève
+
 			if(file_exists($dossier_rep)){
 				$listeDreponses = scandir($dossier_rep);
 				foreach($listeDreponses as $filename){
@@ -384,11 +385,11 @@
 		}
 		$Message = "Réponses supprimées";
 		echo("<p>Action 32 : $Message</p>");
-	}	
-												
+	}
 
 
-	
+
+
 	// -----------------------------------------------------------------------------------------------------------------------------   LES COPIES
 	titre_tab("<a href=\"./DSZone.php\"><img src=\"./icon/reload.png\" height=\"20px\"/></a> Les copies");
 	$violet_t = "#8d1682";//violet 27min
@@ -397,7 +398,7 @@
 	$jaune_t = "#ffed02";//jaune 1min
 	$vert_t = "#02fe00";//vert 20s
 	echo("<table><tr>");
-	
+
 	echo("<td bgcolor=\"black\"></td>");
 	echo("<td bgcolor=\"white\" width=\"35px\"><font size=\"-2\">27 min</font></td><td bgcolor=\"$violet_t\"></td>");
 	echo("<td bgcolor=\"white\" width=\"30px\"><font size=\"-2\">9 min</font></td><td bgcolor=\"$rouge_t\"></td>");
@@ -405,7 +406,7 @@
 	echo("<td bgcolor=\"white\" width=\"30px\"><font size=\"-2\">1 min</font></td><td bgcolor=\"$jaune_t\"></td>");
 	echo("<td bgcolor=\"white\" width=\"30px\"><font size=\"-2\">20 s</font></td><td bgcolor=\"$vert_t\"></td>");
 	echo("<td bgcolor=\"white\" width=\"10px\"><font size=\"-2\">0</font></td><td bgcolor=\"#CCC\"></td>");
-	echo("</tr></table>");  
+	echo("</tr></table>");
 
 
 	$i=0;
@@ -447,7 +448,7 @@
 				$i=0;
 			}
 		}
-		
+
 	}
 	echo("</tr></table>");
 ?>
@@ -478,7 +479,7 @@
 				echo("<td><a href=\"./sujet2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Sujet\"><img src=\"./icon/distrib.png\" height=\"$hauteur\"></a></td>");
 				echo("</tr><tr><td>\n");
 			}
-			
+
 		}
 	}
 	echo("</td></tr></table>");
@@ -499,7 +500,7 @@
 
 <?php
 	titre_tab("Création & Édition");
-	//--------------------------------------------------------------------------------------------------------------------                NOUVEAU SUJET          
+	//--------------------------------------------------------------------------------------------------------------------                NOUVEAU SUJET
 ?>
 <table><tr>
 	<form method="post" action="DSNew.php">
@@ -515,7 +516,7 @@
 	<form method="post" action="DSNew.php">
 	<td>
 		<input type="hidden" value="2" name="action">
-		TAG du sujet : <?php echo($menu_td);?></td><td> 
+		TAG du sujet : <?php echo($menu_td);?></td><td>
 		</td><td>
 		<input name="bouton" value="Editer" type="submit">
 	</td>
@@ -537,10 +538,10 @@
 	$contenu_case2 = "";
 	foreach($Nom_et_sujet as $nom1_sujet1){
 		$part_of1 = explode(":", $nom1_sujet1);
-		$nom17 = $part_of1[0]; 
+		$nom17 = $part_of1[0];
 		$code2DS = DSMDP($classe, $nom17);
 		$code2DS = "<font color=\"#000000\" title=\"$code2DS\">----</font>";
-		
+
 		$lesreponses = "$repertoire_DS$nom17/rep";
 		if(file_exists($lesreponses)&&($nom17!=".")){
 			$i++;
@@ -556,7 +557,7 @@
 		}
 	}
 	echo("<tr valign=\"top\" bgcolor=\"white\">$contenu_case1</tr>");
-	echo("<tr valign=\"top\">$contenu_case2</tr>");	
+	echo("<tr valign=\"top\">$contenu_case2</tr>");
 	echo("</table>");
 
 	$pirate = analyse_log();

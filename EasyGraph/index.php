@@ -1,11 +1,12 @@
 <?php
 /* On démarre la session AVANT d'écrire du code HTML*/ session_start();
-	$numero = session_id();//Numero des fichiers 
+	$numero = session_id();//Numero des fichiers
+	$name = $_COOKIE['nom'];
 ?>
 
 <html>
-	
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>	
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 	<head>
 		<link rel="stylesheet" type="text/css" media="screen" href="styles_sujet.css">
 		<link rel="stylesheet" type="text/css" href="print.css" media="print">
@@ -23,15 +24,16 @@
 <!--
 	taille tableau = 800 x 400
 	taille image = 700 x 350
--->	
-			
+-->
+
 	<table class="blanc">
-		
+
 		<tr><td colspan="3">																											<!-- GRAPHIQUE -->
 			<svg id="graphe" width="700" height="350">
 				<text x="450" y="65" fill="#DDD" id="Session"><?php echo($numero); ?></text><!-- FILIGRAMME -->
-				<!-- 	
-					(0,0) = 25,330 
+				<text x="450" y="40" fill="#DDD" id="Nom"><?php echo($name); ?></text>
+				<!--
+					(0,0) = 25,330
 				-->
 				<line x1="25" y1="330" x2="25" y2="30" style="stroke:rgb(0,0,0);stroke-width:2" id="axe_y"/>
 				<line x1="25" y1="330" x2="675" y2="330" style="stroke:rgb(0,0,0);stroke-width:2" id="axe_x"/>
@@ -39,22 +41,22 @@
 
 				<text x="676" y="335" fill="black" id="Y0">0</text>
 				<text x="20" y="345" fill="black" id="X0">0</text>
-				
-				
+
+
 				<text x="30" y="25" fill="blue" id="Legende_Y1">Mesure 1</text>
 				<text x="350" y="25" fill="green" id="Legende_Y2">Mesure 2</text>
 				<text x="100" y="345" fill="black" id="Legende_X">Commande</text>
 				<text transform="matrix(-0, -1, 1, -0, 20, 250)" id="Echelle_Y">1% par graduation</text>
 				<text x="500" y="345" fill="black" id="Echelle_X">1% par graduation</text>
-			
+
 				<polyline points="" style="fill:none;stroke:blue;stroke-width:1" id="courbe1"/>
 				<polyline points="" style="fill:none;stroke:green;stroke-width:1" id="courbe2"/>
-			
+
 			</svg>
-		</td></tr>		
-	</table>	
-																											<!-- TABLEAU -->	
-	<table class="blanc2">	
+		</td></tr>
+	</table>
+																											<!-- TABLEAU -->
+	<table class="blanc2">
 		<tr>
 			<tr><td class="blue">X1</td><td class="blue">Y1</td><td class="green">X2</td><td class="green">Y2</td></tr>
 			<tr><td><input type="text" id="X10" value="0" size="10px"/></td><td><input type="text" id="Y10" value="0" size="10px"/>
@@ -79,12 +81,12 @@
 			</td><td><input type="text" id="X29" value="" size="10px"/></td><td><input type="text" id="Y29" value="" size="10px"/></td></tr>
 		</tr>
 	</table>
-																											<!-- REGLAGES -->	
+																											<!-- REGLAGES -->
 
 	<table class="blanc3">
 		<tr>
 			<td colspan="2" class="black">
-				  
+
 				<input type="text" size="20" id="Legende_X1_txt" value="Commande"/>
 				<br>Legende X
 			</td>
@@ -100,7 +102,7 @@
 				<img src="write.gif" width="30px" onclick="dessine();" title="Dessine graphique">
 			</td><td bgcolor="#f44128" class="black">
 				<img src="efface.gif" width="30px"  title="Efface graphique" onclick="efface_graphique();">
-			</td>		
+			</td>
 		</tr>
 		<tr>
 			<td width="12.5%">
@@ -159,10 +161,6 @@
 
 
 
-		
+
 	</body>
 </html>
-
-
-
-

@@ -1,4 +1,5 @@
 
 <td>Bagur</td><td>192.168.0.23 []</td><td>Prof Login</td><td>12/04/20 18:04</td>
 <td>Bagur</td><td>192.168.0.220 []</td><td>Prof Login</td><td>13/04/20 8:33</td>
-<td>Bagur</td><td>192.168.0.220 []</td><td>Prof Login</td><td>13/04/20 15:52</td>
+<td>Bertolotti</td><td>127.0.0.1 []</td><td>b&wd5c</td><td>13/04/20 13:58</td>
+<td>Bertolotti</td><td>127.0.0.1 []</td><td>Prof Login</td><td>13/04/20 13:59</td>

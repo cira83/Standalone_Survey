@@ -1,15 +1,15 @@
 <?php
 	session_start();
-    
+
 	function alert2020($texte) {
 		echo("<!-- $texte -->");
 	}
-	
+
 	function info_name_file() {
 		$nom_script = $_SERVER['SCRIPT_NAME'];
 		echo("<!-- fichier : $nom_script -->");
 	}
-	
+
 	function estfichier2($nom){// Fichier ou non ?
 		$drap = true;
 		$data = explode(".", $nom);
@@ -17,7 +17,7 @@
 		if($nom[0]=="_") $drap = false;
 		if($nom=="index.htm") $drap = false; //Nom du fichier questionnaire
 		if($nom=="rep") $drap = false; //Nom du répertoire des réponse au questionnaire
-		
+
 		return($drap);
 	}
 
@@ -32,34 +32,34 @@
 				if(!$part[1]) {
 					if($i) $classe_text .= ":$classe";
 					else $classe_text = "$classe";
-					$i++;					
+					$i++;
 				}
 			}
 		}
 		return $classe_text;
-	}	
+	}
 
 	//Partie connexion sécurisé - V00
 	$prof_password = "b7wd5c";//Mot du passe du professeur
 	$classe_text = les_classes();// echo($classe_text);
-	$classe_dispo = explode(":", $classe_text); 
+	$classe_dispo = explode(":", $classe_text);
 	$repertoire = "./files/";
-	
-	$action1 = $_POST['action']; 
+
+	$action1 = $_POST['action'];
 	if($action1==1){
 		$elv = $_POST['nom'];
-		setcookie("nom", $elv,time()+3600*24*8);
+		setcookie("nom", $elv,time()+3600*24*8,"/");
 		$classe = $_POST['classe'];
 		setcookie("laclasse", $classe,time()+3600*24*8);
 		$password = $_POST['password'];
 		setcookie("password", $password,time()+3600*24*8);
-	} 
+	}
 	else {
 		$classe = $_COOKIE['laclasse'];
 		$elv = $_COOKIE['nom'];
 		$password = $_COOKIE['password'];
 	}
-	
+
 	//MENU DEROULANT CLASSES        -----------------------------------------------------------------------------------------------------
 	$select_classe = "<select name=\"classe\" id=\"classe\" onchange=\"login();\">";
 	$select_classe .= "<option>Selectionner votre classe</option>";
@@ -70,7 +70,7 @@
 	}
 	$select_classe .= "</select>";
 	$submit = "<input type=\"submit\" value=\"Login\">\n";
-	
+
 	//MENU DEROULANT ELEVES        ------------------------------------------------------------------------------------------------------
 	$select_elv = "<select name=\"nom\" id=\"nom\">\n";
 	$fichieralire = "$repertoire$classe.txt";
@@ -88,35 +88,35 @@
 		fclose($fp);
 	}
 	$select_elv .= "</select>";
-	
+
 	$password_in = "<input type=\"password\" name=\"password\">";
-	
-	
-	
+
+
+
 	//CLEF MOT DE PASSE        -----------------------------------------------------------------------------------------------------------
 	$password_OK = $bon_password==$password;
 	if(!$bon_password) $password_OK = 0;
-	
+
 	//LOGIN DU PROF
 	$prof_login = 0;
 	if($password==$prof_password){
 		$password_OK = 1;
 		$prof_login = 1;
-	}	
-	
+	}
+
 	if($password_OK){
 		$password_in = "<input type=\"hidden\" name=\"password\" value=\"##\">";
 		$submit = "<input type=\"submit\" value=\"Logout\">\n";
 		$select_classe = "<font color=\"yellow\" size=\"+2\">$elv</font><input type=\"hidden\" name=\"classe\" value=\"$classe\">";
 		$select_elv = "<input type=\"hidden\" name=\"nom\" value=\"$elv\">";
-	}	
-	
-	
+	}
+
+
 	$invite = "<form action=\"./index7.php\" method=\"post\"><input type=\"hidden\" value=\"1\" name=\"action\">\n";
 	$invite .= "<table><tr><td align=\"left\">$select_classe $select_elv $password_in</td><td align=\"right\">$submit</td></tr></table>";
 	$invite .= "</form>";
-	
-	
+
+
 	//FICHIER LOG        -----------------------------------------------------------------------------------------------------------
 	if($action1==1){
 		$session_nb = session_id();

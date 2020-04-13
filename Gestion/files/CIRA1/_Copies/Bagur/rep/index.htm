@@ -1,72 +1,44 @@
-Influence du temps intégral#TD1#Easyreg 1
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" media="screen" href="../../../../../styles.css">
-</head>
-C#<p>Soit une r&eacute;gulation de niveau dont la fonction de transfert r&eacute;glante est :</p> <center><img src="./files/CIRA1/_Copies/_Sujets/TD1/easy04.gif"/></center><p>Avec un gain statique K = 2 et une constante de temps &tau; = 3min.</p><p>On associe &agrave; ce proc&eacute;d&eacute; un correcteur P.I. s&eacute;rie C(p) de gain A et de constante de temps d'int&eacute;gration Ti.</p>
-Q#Donner la fonction de transfert en boucle ouverte T(p)en fonction de A et Ti.#1
-T#
-Q#Donner la fonction de transfert F(p) en boucle ferm&eacute;e en fonction de A et Ti.#1
-T#
-L#
-
-C#Répondre aux questions suivantes en utilisant le logiciel <a href="./files/CIRA1/_Sujets2TP/EasyRegPhp/" target="blank">EasyReg</a>.
-C#<center><p><font color="red">Sur EasyReg choisir une constante de temps pour le calcul de 60s.</font></p></center>
-C#<p>On effectue 4 essais avec les r&eacute;glages suivant du r&eacute;gulateur :</p><ol><li>R&eacute;gulateur en P seul : A = 2,5</li><li>R&eacute;gulateur en PI : A = 2,5 ; Ti = 1/3 min</li><li>R&eacute;gulateur en PI : A = 2,5 ; Ti = 2 min</li><li>R&eacute;gulateur en PI : A = 2,5 ; Ti = 3 min</li></ol>
-C#<b>Pour l'essai 1 :</b>
-Q#Tracer la courbe de r&eacute;ponse indicielle en boucle ferm&eacute;e. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
-I#
-Q#Relever la valeur du premier d&eacute;passement, l'erreur statique et le temps de r&eacute;ponse &agrave; 2%.#1
-T#
-L#
-
-Q#Tracer la courbe de r&eacute;ponse fr&eacute;quentielle en boucle ouverte dans le plan de Black.#1
-I#
-Q#Quelle est la valeur du gain statique en boucle ouverte (gain pour p=0) ?#1
-T#
-L#
-
-C#<b>Pour l'essai 2 :</b>
-Q#Tracer la courbe de r&eacute;ponse indicielle en boucle ferm&eacute;e. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
-I#
-Q#Relever la valeur du premier d&eacute;passement, l'erreur statique et le temps de r&eacute;ponse &agrave; 2%.#1
-T#
-L#
-
-Q#Tracer la courbe de r&eacute;ponse fr&eacute;quentielle en boucle ouverte dans le plan de Black.#1
-I#
-Q#Quelle est la valeur du gain statique en boucle ouverte (gain pour p=0) ?#1
-T#
-L#
-
-C#<b>Pour l'essai 3 :</b>
-Q#Tracer la courbe de r&eacute;ponse indicielle en boucle ferm&eacute;e. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
-I#
-Q#Relever la valeur du premier d&eacute;passement, l'erreur statique et le temps de r&eacute;ponse &agrave; 2%.#1
-T#
-L#
-
-Q#Tracer la courbe de r&eacute;ponse fr&eacute;quentielle en boucle ouverte dans le plan de Black.#1
-I#
-Q#Quelle est la valeur du gain statique en boucle ouverte (gain pour p=0) ?#1
-T#
-L#
-
-C#<b>Pour l'essai 4 :</b>
-Q#Tracer la courbe de r&eacute;ponse indicielle en boucle ferm&eacute;e. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
-I#
-Q#Relever la valeur du premier d&eacute;passement, l'erreur statique et le temps de r&eacute;ponse &agrave; 2%.#1
-T#
-L#
-
-Q#Tracer la courbe de r&eacute;ponse fr&eacute;quentielle en boucle ouverte dans le plan de Black.#1
-I#
-Q#Quelle est la valeur du gain statique en boucle ouverte (gain pour p=0) ?#1
-T#
-L#
-
-
-Q#Comparer les r&eacute;ponses et en d&eacute;duire l&rsquo;influence de l&rsquo;action int&eacute;grale sur la pr&eacute;cision, la stabilit&eacute; et le temps de r&eacute;ponse &agrave; &plusmn;2% du syst&egrave;me.#1
+TP1 Débit2#TP11#
+C#<h2>I. Schématisation et fonctionnement (10 pts)</h2>
+Q#En vous aidant de la documentation disponible, faites l’inventaire de l’instrumentation mis en oeuvre dans la régulation. On précisera : <ul><li>leur symbole normalisé ;</li><li>leur marque ;</li><li>leur référence ;</li><li>les caractéristiques principales en les chiffrant.</li></ul>#1
 U#
-Q#Comparer les courbes sur le plan de Black et en d&eacute;duire l&rsquo;influence de l&rsquo;action int&eacute;grale l'allure de la courbe.#1
+Q#Préciser les éléments suivants :<ul><li>la grandeur réglée ;</li><li>la grandeur réglante ;</li><li>l’organe de réglage ;</li><li>une grandeur perturbatrice.</li></ul>#1
 U#
+Q#Expliquer le fonctionnement de la maquette.#2
+U#
+L#
+Q#Proposer un schéma TI de votre maquette.#2
+I#
+L#
+Q#Proposer un schéma fonctionnel de votre maquette. On repérera sur le schéma les éléments et les grandeurs physiques présents sur la maquette.#2
+I#
+L#
+Q#Donner le câblage électrique du transmetteur qui mesure la grandeur réglée sur la maquette.#1
+I#
+Q#Préciser son principe de fonctionnement.#1
+U#
+L#
+C#<h2>II. Fonctionnement manuel</h2>
+Q#Procéder à la mise en marche du système. On amènera la mesure à 50%.#1
+I#
+Q#Donner alors la valeur de la commande.#1
+T#
+Q#Le procédé est-il stable ? Justifiez votre réponse.#1
+U#
+L#
+Q#Enregistrer le passage d’un régime transitoire à un régime permanent. Imprimer votre courbe, puis indiquer la frontière entre les deux régimes.#1
+I#
+Q#Relever la caractéristique statique de votre procédé.#1
+I#
+L#
+Q#Votre procédé est-il direct ou inverse ?#1
+T#
+Q#Donner la valeur du gain statique pour une mesure de 50%.#1
+T#
+L#
+Q#Enregistrer la réponse indicielle du système à une augmentation de la commande de 100%.#1
+I#
+Q#Donner le temps de réponse à ±10%. Faire apparaître les constructions sur l’image précédente.#1
+T#
+Q#Donner la valeur du premier dépassement. Faire apparaître les constructions sur l’image précédente.#1
+T#

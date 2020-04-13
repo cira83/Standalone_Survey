@@ -1,4 +1,5 @@
 <?php
+	//Créé pour les TP version 2021
 	include("./security.php");
 	include("./DSFonctions.php");
 	include("./DS_Securite.php");
@@ -7,7 +8,6 @@
   $titredudocument = "$classe - $elv";
   $sujet2TP = $_GET['sujet'];
   $TAG = $_GET['tag'];
-
 
 	function start($nom, $classe){//---------------------------------------------- passe en mode ON
 		$drap = false;
@@ -25,6 +25,7 @@
 			$repertoire_reponses = "$repertoire/$code";
 			mkdir($repertoire_reponses);
 			chmod($repertoire_reponses,0777);
+			$drap = true;
 		}
 
 		return $drap;
@@ -38,10 +39,8 @@
 	$depart = "./files/$classe/$TAG/index.htm";
 	$arrive = "./files/$classe/_Copies/$elv/rep/index.htm";
 	$copy_possible = file_exists($depart);
-	if($copy_possible) {
-		copy($depart,$arrive);
-		start($elv, $classe);
-	}
+	$drap = start($elv, $classe);
+	if($copy_possible&&$drap) copy($depart,$arrive);
 ?>
 <html>
 	<head>
@@ -57,11 +56,15 @@
 			</tr></table>
 
 <?php
-	if($copy_possible) {
+	if($copy_possible&&$drap) {
 		echo("<p>Le sujet $sujet2TP est disponible pour travailler.</p>");
 		echo("<p><a href=\"./devoir.php\">$sujet2TP</a></p>");
 	}
-	else echo("<p>Le sujet $sujet2TP : $depart n'existe pas.</p>");
+	if(!$copy_possible) echo("<p>Le sujet $sujet2TP : $depart n'existe pas.</p>");
+	if(!$drap){
+		echo("<p>Un sujet est déjà présent !!!</p>");
+		echo("<p><a href=\"./devoir.php\">$sujet2TP</a></p>");
+	}
 
 ?>
 

@@ -132,6 +132,7 @@
 			$i++;
 			$part = explode("#", $ligne);
 			if($i==$numero) $partie = rtrim($ligne);
+			//if($i==$numero) $partie = $ligne;
 		}
 		fclose($fp);
 		return $partie;
@@ -146,8 +147,8 @@
 		$order   = array("\r\n", "\n", "\r");
 		$replace = '<br/>';
 		$champs1 = str_replace($order, $replace, $champs);// nettoie le champs à ajouter
-		$champs1 = str_replace("p0ur100","%",$champs1);
-		//$champs1 = $champs;
+		$champs1 = str_replace("\\","",$champs1);//pour enlever les \ ajouter par je ne sais qui
+
 		while(!feof($source)){
 			$ligne = fgets($source);
 			$i++;

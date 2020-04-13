@@ -122,7 +122,7 @@
 				$part = explode(",",$ligne);
 				if($part[1]) {//C'est une ligne normale
 					if($k==0) echo("<tr align=\"left\">");//première colonne
-					echo("<td><a href=\"DS_deplace.php?sujet=$part[0]&tag=$part[1]\" class=\"annales\" target=\"_blank\">$part[0]</a></td>");
+					echo("<td><a href=\"DS_deplace.php?sujet=$part[0]&tag=$part[1]\" class=\"annales\">$part[0]</a></td>");
 					$k++;
 				}
 				else

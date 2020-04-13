@@ -59,7 +59,7 @@
 <?php
 	if($copy_possible) {
 		echo("<p>Le sujet $sujet2TP est disponible pour travailler.</p>");
-		echo("<p><a href=\"./devoir.php\">----</a></p>");
+		echo("<p><a href=\"./devoir.php\">$sujet2TP</a></p>");
 	}
 	else echo("<p>Le sujet $sujet2TP : $depart n'existe pas.</p>");
 

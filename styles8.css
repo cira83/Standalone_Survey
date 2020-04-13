@@ -1,0 +1,157 @@
+.orange {
+	color: orange;
+}
+
+.vert {
+	color: lime;
+}
+
+.bleu {
+	color: aqua;
+}
+
+.annales{
+	color: yellow;
+	text-decoration: none;
+	font-size: small;
+}
+
+.annales_blanc{
+	color: white;
+	text-decoration: none;
+	font-size: small;
+}
+
+.annales_titre{
+	color: aqua;
+	text-decoration: none;
+	font-size: medium;
+	font-variant: small-caps;
+}
+
+body 
+{
+	background-color: #1f1f1f;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #eaeaea;
+	border-style: none;
+	width: 781px;
+	margin-left: auto;
+	margin-right: auto;
+}
+h1
+{
+	color: #fefb00;
+	font-variant: small-caps;
+	font-size: x-large;
+}
+h2
+{
+	color: #72fa78;
+	font-size: large;
+}
+h3
+{
+	color: aqua;
+	font-size: medium;
+}
+h4
+{
+	text-align: center;
+	color: #fefb00;
+}
+
+P.titre{
+	margin-right: auto;
+	margin-left: auto;
+	font: xx-large Georgia, "Times New Roman", Times, serif;
+	color: orange;
+	text-align: center;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	border-style: none;
+	border-width: 1px;
+}
+
+table.notes{
+	border: 1px dotted orange;
+}
+
+table.blanc{
+	border: 1px dotted white;
+	border-collapse:collapse;
+}
+
+a{
+	color: aqua;
+}
+a.no-under{
+	text-decoration: none; 
+}
+a.no-under-orange{
+	text-decoration: none;
+	color: orange;
+}
+
+a.pied{
+	color: orange;
+	text-decoration: none; 
+}
+
+.liste{
+	color: white;
+	text-decoration: none;
+	text-indent: 25px;
+}
+
+.jaune{
+	color: yellow;
+}
+
+.bleu{
+	color: aqua;
+}
+
+img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+img.inline{
+	display: inline;
+}
+
+table.marins{
+	text-align: left;
+}
+
+table.biblio{
+	text-align: left;
+}
+
+
+img.marins{
+	display: block;
+	float: right;
+}
+
+td.present {
+	font-size: 8px;
+}
+
+td.absent {
+	color: red;
+	font-size: 8pt;
+}
+
+td.blanc {
+	border: 1px solid white;
+}
+

@@ -15,7 +15,7 @@ function sommaire_document($sujet2DS){
 			}
 		}
 		fclose($fp);
-		
+
 		return $sommaire_td;
 }
 
@@ -37,17 +37,18 @@ function bandeau($repertoire_elv,$code) {
 			if($part[0]=="Q") {//Question
 				$i++;
 				$coef[$i]= $part[2];
-				$total = $total+$coef[$i];			
+				$total = $total+$coef[$i];
 			}
 		}
-		fclose($fp);		
+		fclose($fp);
 	}
 	else $total = "non trouvé";
 	echo("<!-- $sujet2DS : NB de points du DS : $total -->");
-	
+
 	$note_C = 0;
 	$repertoireDreponses = "$repertoire_elv/rep/$code";
-	$elements = scandir($repertoireDreponses);
+	if(file_exists($repertoireDreponses))	$elements = scandir($repertoireDreponses);
+	else $elements = "";
 	for($i=1;$i<count($coef)+1;$i++) {
 		$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/X.gif\" title=\"Q$i\"></a>";
 		if(in_array("N$i.txt", $elements)) {
@@ -70,7 +71,7 @@ function bandeau($repertoire_elv,$code) {
 				$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/D.gif\" title=\"Q$i\"></a>";
 				$note_C += 0.05*$coef[$i];
 			}
-			
+
 		}
 		if($i==1) $sommaire_td .= "$note_L";
 		else $sommaire_td .= "</td><td>$note_L";

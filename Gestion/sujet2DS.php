@@ -1,12 +1,12 @@
 <?php
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 
-	
+
 	$nom2eleve = $_GET[name];
 	$titre_copie = $_COOKIE["elv"];
 	$sujet2DS = $_GET[file];
-	$repertoire_rep = "./files/$classe/_Copies/$nom2eleve/rep";	
-	
+	$repertoire_rep = "./files/$classe/_Copies/$nom2eleve/rep";
+
 	$sujet = $_GET[file2];//Pour le professeur uniquement 18 fevrier 2017
 	if($sujet) {
 		$repertoire_rep = "$sujet/rep212";//pour éviter la fraude
@@ -15,8 +15,8 @@
 		$emplacement = $_GET[name];
 		$sujet2DS = "./files/$classe/_Copies/$emplacement/index.htm";
 	}
-	
-	
+
+
 	function largeur_svg($image_link){
 		$largeur = 0;
 		$fp = fopen($image_link, "r");
@@ -33,7 +33,7 @@
 						$largeur++;
 						//echo("<p>--- $largeur</p>");
 					}
-						
+
 				}
 			}
 			$drap =  !feof($fp);
@@ -41,13 +41,13 @@
 		fclose($fp);
 		return $largeur;
 	}
-	
+
 	function netoyer4HTML($texte){//Netoyage du texte pour HTML
 		$texte = str_replace("&", "&amp;", $texte);
 		$texte = str_replace(array("<",">","\t"), array("&lsaquo;","&rsaquo;","&nbsp;&nbsp;&nbsp;"), $texte);
 		return $texte;
 	}
-		
+
 	function ligne2tableau($content){
 		echo("<table class=\"left\"><tr><td>$content</td></tr></table>");
 	}
@@ -76,7 +76,7 @@
 		}
 		return $texte;
 	}
-	
+
 	function trouve_texte_long($nom,$repertoire_rep){
 		$texte = "?";
 		$filename = "$repertoire_rep/$nom.txt";
@@ -101,24 +101,24 @@
 		if($size>700) $nosize = 1;
 		$ext = explode(".", $image);
 		if($ext[count($ext)-1]=="svg") $nosize = 1;
-		
+
 		if($nosize) $text = "<img src=\"$image\">";
 		else $text = "<img src=\"$image\" width=\"$size px\">";
 		echo("<table><tr><td><a href=\"$image\">$text</a></td></tr></table>");
 	}
-		
+
 	function affiche_texte($texte,$name,$size){
 		$text = "<form method=\"post\" action=\"./devoir.php?action=3\"><input type=\"text\" name=\"reponse\" value=\"$texte\" size=\"$size\"/>";
 		$text .= "<input type=\"hidden\" name=\"question\" value=\"$name\"/>";
 		$text .= "<input type=\"submit\" value=\"R&eacute;pondre\"></form>";
 		echo("<table><tr><td>$text</td></tr></table>");
 	}
-	
+
 	function chemin_relatif($bout2texte){
 		$bout2texte = str_replace("http://gatt.fr/Gestion/", "./", $bout2texte);
 		return $bout2texte;
 	}
-	
+
 ?>
 
 <html>
@@ -131,12 +131,12 @@
 		$fp = fopen($sujet2DS, "r");
 		$titre_complet = fgets($fp);
 		$part = explode("#", $titre_complet);
-		$titre = "$part[1] $part[0]";//pour enlever la référence au répertoire réponse
+		$titre = "$part[1] - $part[0]";//pour enlever la référence au répertoire réponse
 		echo("<title>$titre</title>");
 	}
 ?>
 	</head>
-	<body>	
+	<body>
 <?php
 	//echo("<p>$repertoire_rep</p>");
 	if(file_exists($sujet2DS)){
@@ -152,7 +152,7 @@
 
 			if($part[0]=="C"){//Commentaire
 				ligne2tableau("$part[1]");
-			}	
+			}
 			if($part[0]=="Q") {//Question
 				$i++;
 				$bareme = "";
@@ -163,7 +163,7 @@
 				if($part[2]) {
 					if(!$reponsefaite) $bareme = "</td><td class=\"pt\">$nd2pt";
 					else $bareme = "</td><td class=\"pas2pt\">$nd2pt";
-					
+
 					$_SESSION[points] = $_SESSION[points] + $part[2];
 				}
 				ligne2tableau("<p class=\"question\"><font color=\"#0000FF\">\n<b>Q$i : </b></font>$part[1]</p> $bareme");
@@ -184,13 +184,13 @@
 				}else echo("\n<hr>");
 			}
 		}
-		fclose($fpDS);
+		fclose($fp);
 	}else{
 		echo("Pas de fichier  $sujet2DS !!");
 	}
 	$nb_points = $_SESSION[points];
 	$numero2page++;
 	ligne2tableau("</td><td align=\"center\" bgcolor=\"white\">Page $numero2page</td><td>");
-	
+
 	if($_GET[calc])  echo("<script type=\"text/javascript\">message(\"$nb_points\");</script>");
 ?>

@@ -1,14 +1,14 @@
 <?php
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	include("./DS_Securite.php");// function DSMDP($classe, $elv);
-	
+
 	$nom2eleve = $_GET[name];
-	$titre_copie = $_COOKIE["elv"]; 
+	$titre_copie = $_COOKIE["elv"];
 	$sujet2DS = $_GET[file];
 	$DS_password = DSMDP($classe, $nom2eleve);
 	$repertoire_rep = "./files/$classe/_Copies/$nom2eleve/rep/$DS_password";
-		
-	
+
+
 	include("./DSFonctionsPlus.php");
 
 	function lecture_DS_pour_image($numero2question, $sujet2DS) {
@@ -27,8 +27,8 @@
 		else $image ="pas de fichier $sujet2DS";
 		return $image;
 	}
-	
-	
+
+
 	if(file_exists($sujet2DS)) {//-------------------------------------------------------                  Pour récupérer le titre court 24 fevrier 2017
 		$fp = fopen($sujet2DS, "r");
 		$ligne1 = fgets($fp);
@@ -36,12 +36,13 @@
 		$nom_court .= $part[1];
 		fclose($fp);
 	}
-	
-	
-	
+
+
+
 	$sujet = $_GET[file2];//-------------------------------------------------------------                  Pour le professeur uniquement 18 fevrier 2017
+	$prof_login = strpos($sujet,"Sujet"); //C'est le prof qui corrige le sujet
 	$cestleprof = 0;
-	if($sujet&&$Cleprof) {
+	if($prof_login) {
 		$cestleprof = 1;
 		$repertoire_rep = "$sujet/rep212";//pour éviter la fraude
 		$_SESSION[sujet2DS]=$sujet;
@@ -57,7 +58,7 @@
 			fclose($fp);
 		}
 	}
-	
+
 	function largeur_svg($image_link){
 		$largeur = 0;
 		$fp = fopen($image_link, "r");
@@ -81,13 +82,13 @@
 		fclose($fp);
 		return $largeur;
 	}
-	
+
 	function netoyer4HTML($texte){//Netoyage du texte pour HTML
 		$texte = str_replace("&", "&amp;", $texte);
 		$texte = str_replace(array("<",">","\t"), array("&lsaquo;","&rsaquo;","&nbsp;&nbsp;&nbsp;"), $texte);
 		return $texte;
 	}
-		
+
 	function ligne2tableau($content){
 		echo("<table class=\"left\"><tr><td>$content</td></tr></table>");
 	}
@@ -116,7 +117,7 @@
 		}
 		return $texte;
 	}
-	
+
 	function trouve_texte_long($nom,$repertoire_rep){
 		$texte = "?";
 		$filename = "$repertoire_rep/$nom.txt";
@@ -146,33 +147,33 @@
 		if($type) echo("<table><tr><td><a href=\"$image\">$text</a></td></tr></table>");
 		else echo("<table class=\"reponse\"><tr><td><a href=\"$image\">$text</a></td></tr></table>");
 	}
-		
+
 	function affiche_texte($texte,$name,$size){
 		$text = "<form method=\"post\" action=\"./devoir.php?action=3\"><input type=\"text\" name=\"reponse\" value=\"$texte\" size=\"$size\"/>";
 		$text .= "<input type=\"hidden\" name=\"question\" value=\"$name\"/>";
 		$text .= "<input type=\"submit\" value=\"R&eacute;pondre\"></form>";
 		echo("<table><tr><td>$text</td></tr></table>");
 	}
-	
+
 	function chemin_relatif($bout2texte){
 		$bout2texte = str_replace("http://gatt.fr/Gestion/", "./", $bout2texte);
 		return $bout2texte;
 	}
-	
+
 	if(file_exists($sujet2DS)){
 		$fp = fopen($sujet2DS, "r");
 		$titre = fgets($fp);
 		$part = explode("-", $titre);
 		fclose($fp);
 	}
-	
+
 	$nom2eleveimp = $nom2eleve;
 	if($nom2eleve=="Professeur") {
 		$nom2eleve = "Correction";
 		$nom2eleveimp = "_Correction";
 	}
-	
-	
+
+
 	$sommaire_td = bandeau("./files/$classe/_Copies/$nom2eleve",$DS_password);
 	if($cestleprof) $sommaire_td[1] = "";
 ?>
@@ -184,12 +185,12 @@
 		<script type="text/javascript" src="./script.js"></script>
 		<title><?php echo("$nom_court $nom2eleveimp");?></title>
 	</head>
-	<body>	
+	<body>
 			<table><tr id="sommaire"><td><font size="+4"><?php echo("$nom_court $nom2eleve");?></font></td>
 			<td width="120px"><?php echo($sommaire_td[1]);?></td></tr></table>
 <?php
 	//echo("<p>$repertoire_rep</p>");
-	$sessions_file_name = "$repertoire_rep/sessions.txt";	
+	$sessions_file_name = "$repertoire_rep/sessions.txt";
 	if(file_exists($sessions_file_name)) {
 		$session_fp = fopen($sessions_file_name, "r");
 		$flag2017 = 0;
@@ -199,15 +200,15 @@
 		}
 		fclose($session_fp);
 	}
-	
+
 	if(file_exists($sujet2DS)){
 		//------------------------------------------------------------------------------  Sommaire avec toutes les questions
-		
-		
+
+
 		$rebelote =  sommaire_document($sujet2DS);
 		ligne2tableauOcentre($rebelote,$sommaire_td[0]);
 		//Fin du sommaire
-		
+
 		$fp = fopen($sujet2DS, "r");
 		$ligne = fgets($fp);
 		$part = explode("#", $ligne);
@@ -222,7 +223,7 @@
 
 			if($part[0]=="C"){//Commentaire
 				ligne2tableau("<i>$part[1]</i>");
-			}	
+			}
 			if($part[0]=="Q") {//Question
 				$i++;
 				$bareme = "";
@@ -233,13 +234,13 @@
 				if($part[2]) {
 					if(!$reponsefaite) $bareme = "</td><td class=\"pt\">$nd2pt";
 					else $bareme = "</td><td class=\"pas2pt\">$nd2pt";
-					
+
 					$_SESSION[points] = $_SESSION[points] + $part[2];
 				}
 				//ligne2tableau("<p class=\"question\" id=\"Q$i\" ><font color=\"#0000FF\">\n<b>Q$i : </b></font>$part[1]</p> $bareme");
 				ligne2tableau("<a id=\"Q$i\" href=\"#sommaire\"><b>Q$i :</b></a> $part[1] $bareme $lettre_elv");
 			}
-			
+
 			//Réponse sour la forme d'une image
 			if($part[0]=="I") {
 				if(!file_exists("$repertoire_rep/I$i.txt")){// Pas encore de réponse image
@@ -248,7 +249,7 @@
 					//$dimensions = getimagesize($image_link);
 					echo("<!-- $image_link -->");
 					affiche_image($image_link,10,1);//100<700 pour ne pas mettre width=700
-				}else 
+				}else
 				{
 					$filetexte16 = fopen("$repertoire_rep/I$i.txt", "r");
 					$image = fgets($filetexte16);
@@ -263,12 +264,12 @@
 
 			}
 			if($part[0]=="T") {//Réponse sous la forme de texte
-				$texte = trouve_texte("I$i",$repertoire_rep); 
+				$texte = trouve_texte("I$i",$repertoire_rep);
 				if($texte != "?") ligne2tableauRep($texte);
 				else ligne2tableau($texte);
 			}
 			if($part[0]=="U") {//Réponse sous la forme de texte
-				$texte = trouve_texte_long("I$i",$repertoire_rep); 
+				$texte = trouve_texte_long("I$i",$repertoire_rep);
 				if($texte != "?") ligne2tableauRep($texte);
 				else ligne2tableau($texte);
 			}
@@ -278,37 +279,37 @@
 				echo("\n<p></p>");
 				echo("<div class=\"breakafter\"></div>\n");
 			}
-			
+
 			if($part[0]=="D") {//Question dynamique 10/2017
 				$i++;
 				$bareme = "";
 				$nd2pt = $part[2];
 				$reponsefaite = 0;
 				if(!file_exists("$repertoire_rep/I$i.txt")) $reponsefaite = 1;
-				
+
 				if($part[2]) {
 					if(!$reponsefaite) $bareme = "</td><td class=\"pt\">$nd2pt";
 					else $bareme = "</td><td class=\"pas2pt\">$nd2pt";
-					
+
 					$_SESSION[points] = $_SESSION[points] + $part[2];
 				}
-				
+
 				$laquestion2017 = $part[1];
 				if(file_exists("$repertoire_rep/Q$i.txt")){
 					$question_file = fopen("$repertoire_rep/Q$i.txt", "r");
 					$laquestion2017 = fgets($question_file);
-					fclose($question_file);					
+					fclose($question_file);
 				}
 				if(file_exists("$repertoire_rep/R$i.txt")){
 					$reponse_file = fopen("$repertoire_rep/R$i.txt", "r");
 					$lareponse = fgets($reponse_file);
-					fclose($reponse_file);					
+					fclose($reponse_file);
 				}
 
 				ligne2tableau("<p class=\"question\"><font color=\"#0000FF\">\n<b>Q$i : </b></font>$laquestion2017</p> $bareme");
 				ligne2tableau("<p class=\"question\">La bonne réponse à <font color=\"#0000FF\">\n<b>Q$i</b></font> est : $lareponse.");
 			}
-			
+
 		}
 		fclose($fp);
 	}
@@ -318,6 +319,6 @@
 	$nb_points = $_SESSION[points];
 	$numero2page++;
 	ligne2tableau("</td><td align=\"center\" bgcolor=\"white\">Page $numero2page</td><td>");
-	
+
 	if($_GET[calc])  echo("<script type=\"text/javascript\">message(\"$nb_points\");</script>");
 ?>

@@ -39,10 +39,10 @@
 <center>
 <?php
 	if($password_OK){
-	  if($sujet2TP) echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets de TP</a></p>") ;
+	  if($sujet2TP) echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets disponibles</a></p>") ;
 		$questionnaire_perso = "$repertoire$classe/_Copies/$elv/rep/index.htm";
-		echo("<p class=\"liste\"><a href=\"./index9.php?elv=$elv\" class=\"no-under\">Logiciels disponibles</a></p>") ;
-		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\" target=\"_blank\">Devoir personnalisé</a></p>");
+		echo("<p class=\"liste\"><a href=\"./index9.php?elv=$elv\" class=\"no-under\">Logiciels</a></p>") ;
+		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\" target=\"_blank\">Sujet actuel</a></p>");
 	}
 ?>
 

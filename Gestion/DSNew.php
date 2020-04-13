@@ -1,11 +1,11 @@
-<?php 
+<?php
 	$action = $_POST[action];//1. Nouveau Sujet 2.Editer sujet 3.Supprimer Ligne 4.Editer Ligne 5. Ajouter ligne 6. Saut de page
 	if($action==1) $TAG = $_POST[TAG];//nouveau sujet
 	else $TAG = $_POST[td];//edition sujet
 	$num2ligne = $_GET[ligne];
-	
+
 	$champs = $_POST[Champs]; //$champs = str_replace("%", "p0ur100", $champs);
-	
+
 	if(!$action) $action = $_GET[action];
 	if(!$TAG) $TAG = $_GET[TAG];
 	$pageaafficher = $_GET[page];
@@ -14,42 +14,42 @@
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	$repertoire_Sujets = "./files/$classe/_Copies/_Sujets/";
 	$repertoire_Images = "./files/$classe/_Copies/_Sujets/$TAG/img/";
-	
+
 	$titre = $_POST[titre];
 
 	include("./haut_DS2.php");
-	
+
 	function add_event($events) {
 		$filename = "./files/_enventDS.txt";
 		$fp = fopen($filename, "a");
 		fwrite($fp, "$events\n");
 		fclose($fp);
 	}
-	
+
 	function affiche_comment($comment) {
 		echo("<!-- $comment -->");
 	}
-	
+
 
 ?>
 <script>
-		
+
 	function miseajour() {
         ip = document.getElementById("images");
-         
+
         var xhr = null;
         var xhr = new XMLHttpRequest();
-         
+
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
                 ip.innerHTML = xhr.responseText;
             }
         };
-         
+
         xhr.open("GET", "<?php echo($requete);?>", true);
-        xhr.send(null);         
+        xhr.send(null);
     }
-	
+
 	// Appelle la fonction diminuerCompteur toutes les secondes (1000 millisecondes)
     setInterval(miseajour, 2000);
 
@@ -81,7 +81,7 @@
 <?php
 	// FONCTIONS
 	include("./DSFonctions.php");
-		
+
 	function ligne($numero,$code,$contenu,$coef,$quest,$page,$TAG,$pageaafficher) {
 		$SUP = "<a href=\"./DSNew.php?action=3&ligne=$numero&TAG=$TAG&page=$pageaafficher#Q$quest\" title=\"Supprimer\"><img src=\"icon/Moins.gif\"/></a>";
 		$C = "<a href=\"./DSNew.php?action=5&ligne=$numero&TAG=$TAG&page=$pageaafficher#Q$quest\" title=\"Commentaire\"><img src=\"icon/C_vert.gif\"/></a>";
@@ -95,10 +95,10 @@
 		$HR = "<hr>";
 		$bgcolor = "bgcolor=\"#e0e0e0\"";// Tableau = #c0c0c0
 		switch($code) {
-			case "C": 
+			case "C":
 				echo("<table><tr><td align=\"left\"><i>$contenu</i></td><td width=\"10px\"><img src=\"icon/C_vert.gif\" title=\"Commentaire\"/>$HR$SUP$BR$Mod$BR$C$BR$Q$BR$L</td><tr></table>");
 				break;
-			case "Q": 
+			case "Q":
 				echo("<table id=\"Q$quest\"><tr><td align=\"left\"><font color=\"blue\"><b>Q$quest)</b></font> $contenu</td><td width=\"10px\"><img src=\"icon/Q_vert.gif\" title=\"Question\"/><br><b>$coef</b>$HR$SUP$BR$Mod$BR$C$BR$T$BR$U$BR$I</td><tr></table>");
 				break;
 			case "T":
@@ -123,7 +123,7 @@
 				break;
 		}
 	}
-	
+
 	function lecture($filename, $numero) {
 		add_event("lecture($filename, $numero)");
 		$fp = fopen($filename, "r");
@@ -136,9 +136,10 @@
 		fclose($fp);
 		return $partie;
 	}
-	
+
 	function ecriture($chemin_du_sujet, $num2ligne,$champs) {
 		add_event("ecriture($chemin_du_sujet, $num2ligne,$champs)");
+		if(file_exists("$chemin_du_sujet.bak")) unlink("$chemin_du_sujet.bak");
 		rename($chemin_du_sujet, "$chemin_du_sujet.bak");
 		$source = fopen("$chemin_du_sujet.bak", "r");
 		$cible = fopen($chemin_du_sujet, "w");
@@ -159,13 +160,14 @@
 			}
 			else {
 				if($i==1) fwrite($cible, "$champs1\n");
-				else fwrite($cible, $ligne);				
+				else fwrite($cible, $ligne);
 			}
 		}
 	}
-	
+
 	function insert_ligne($chemin_du_sujet, $num2ligne,$champs) {
 		add_event("insert_ligne($chemin_du_sujet, $num2ligne,$champs)");
+		if(file_exists("$chemin_du_sujet.bak")) unlink("$chemin_du_sujet.bak");
 		rename($chemin_du_sujet, "$chemin_du_sujet.bak");
 		$source = fopen("$chemin_du_sujet.bak", "r");
 		$cible = fopen($chemin_du_sujet, "w");
@@ -181,6 +183,7 @@
 
 	function del_ligne($chemin_du_sujet, $num2ligne) {
 		add_event("del_ligne($chemin_du_sujet, $num2ligne)");
+		if(file_exists("$chemin_du_sujet.bak")) unlink("$chemin_du_sujet.bak");
 		rename($chemin_du_sujet, "$chemin_du_sujet.bak");
 		$source = fopen("$chemin_du_sujet.bak", "r");
 		$cible = fopen($chemin_du_sujet, "w");
@@ -191,11 +194,11 @@
 			if($i!=$num2ligne) fwrite($cible, $ligne);
 		}
 	}
-	
+
 	function undo_modif($chemin_du_sujet)
 	{
 		add_event("undo_modif($chemin_du_sujet)");
-		if(file_exists("$chemin_du_sujet.bak")) 
+		if(file_exists("$chemin_du_sujet.bak"))
 			rename("$chemin_du_sujet.bak",$chemin_du_sujet);
 	}
 
@@ -207,7 +210,7 @@
 		echo("<p>Dossier $TAG créer </p>");
 		mkdir("$repertoire_du_sujet/img");
 	}
-	
+
 	//Création du sujet
 	$chemin_du_sujet = $repertoire_du_sujet."/index.htm";
 	if(!file_exists($chemin_du_sujet)) {
@@ -216,8 +219,8 @@
 		fwrite($fp, "C#");
 		echo("<p>Sujet créer </p>");
 		fclose($fp);
-	}	
-	
+	}
+
 	//Liste des images
 	$Deroulant_image = "<select name=\"image\" onchange=\"addimage(this.value);\">";
 	$Deroulant_image .= "<option>+ Image</option>";
@@ -225,8 +228,8 @@
 	foreach($LaListeDesImages as $img) //echo("$img<br>");
 	if(est_image($img)) $Deroulant_image .= "<option value=\"$img\">$img</option>";
 	$Deroulant_image .= "</select>";
-	
-	
+
+
 	if($action==3) {//------------------------------------------------------------------- X : Suppression
 		$contenu = lecture($chemin_du_sujet, $num2ligne);
 		$part2ligne = explode("#", $contenu);
@@ -240,7 +243,7 @@
 	if($action==31) {
 		del_ligne($chemin_du_sujet,$num2ligne);
 	}
-	
+
 	if($action==4) {//------------------------------------------------------------------- M : Edition
 		$contenu = lecture($chemin_du_sujet, $num2ligne);
 		$part2ligne = explode("#", $contenu);
@@ -249,27 +252,27 @@
 		$h3 = "<input type=\"button\"value=\"+ Titre 3\" onclick=\"addh(3);\"> ";
 		if($num2ligne==1) $part2ligne[1] = $part2ligne[0]."#".$part2ligne[1]."#".$part2ligne[2];
 		if($part2ligne[0]=="Q") $part2ligne[1] = $part2ligne[1]."#".$part2ligne[2];
-		
+
 		$message = "<table id=\"Edition\"><form method=\"POST\" action=\"./DSNew.php?action=41&ligne=$num2ligne&TAG=$TAG&page=$pageaafficher\">";
-		$message .= "<tr><td bgcolor=\"white\"><textarea cols=\"110\" rows=\"5\" name=\"Champs\" id=\"Champs\">$part2ligne[1]</textarea></td><td>";
+		$message .= "<tr><td bgcolor=\"white\"><textarea cols=\"90\" rows=\"5\" name=\"Champs\" id=\"Champs\">$part2ligne[1]</textarea></td><td>";
 		$message .= "$icone<br>$Deroulant_image<br>$h2<br>$h3<hr><input type=\"submit\"><input type=\"hidden\" id=\"tipe\" value=\"$part2ligne[0]\"></td><tr></form></table>";
-		
+
 		$message .= "<table><tr><td>Lien vers <input type=\"text\" id=\"lien\" size=\"70px\"> sur texte <input type=\"text\" id=\"texte\">";
 		$message .= " <input type=\"submit\" onclick=\"addlien();\" value=\"+ Lien\"></td><tr></table>";
 		if($part2ligne[0]=="Q") $message .= "<table><tr bgcolor=\"yellow\"><td>Mettre le nombre de points de la question après le # (séparateur décimal = .)</td><tr></table>";
 		//$message .= "<table><tr><td bgcolor=\"#0085cf\"><b>Edition ligne $num2ligne</b></td><tr></table>";
-		
+
 		//$racourcie = "<table><tr><td bgcolor=\"#0085cf\"><b><a href=\"#Edition\">Edition ligne $num2ligne</a></b></td><tr></table>";
 	}
 
 	if($action==41) {
 		ecriture($chemin_du_sujet, $num2ligne,$champs);
 	}
-	
+
 	if($action==5) {
 		insert_ligne($chemin_du_sujet, $num2ligne,"C");
 	}
-	
+
 	if($action==51) {
 		$contenu = insert_ligne($chemin_du_sujet, $num2ligne,"Q");
 	}
@@ -285,11 +288,11 @@
 	if($action==54) {
 		insert_ligne($chemin_du_sujet, $num2ligne,"I");
 	}
-			
+
 	if($action==6) {
 		insert_ligne($chemin_du_sujet, $num2ligne,"L");
 	}
-	
+
 	if($action==100) {//------------------------------------------------------------------- CHARGE IMAGES
 		//on vérifie que le champ est bien rempli:
 		if(!empty($_FILES["fichier_choisi"]["name"])){
@@ -303,12 +306,12 @@
 			$poidsFichier = $_FILES["fichier_choisi"]["size"] ;
 			//code de l'erreur si jamais il y en a une:
 			$codeErreur = $_FILES["fichier_choisi"]["error"] ;
-			
+
 			if(!file_exists($repertoire_Images)) {
 				mkdir($repertoire_Images);
 				$message .= "<table><tr><td>Répertoire image créé.</td><tr></table>";
 			}
-			
+
 			if(est_image($nomFichier)) {
 				if(copy($nomTemporaire, $repertoire_Images.$nomFichier)){
 					chmod("$repertoire_Images$nomFichier",0777);
@@ -327,14 +330,14 @@
 		else $message .= "<table><tr><td>Pas de fichier choisi !!!</td><tr></table>" ;
 
 	}
-	
+
 	if($action==101) {//------------------------------------------------------------------- UNDO
 		undo_modif($chemin_du_sujet);
 	}
-	
+
 	affiche_comment("action = $action");
 	affiche_comment("champs = $champs");
-	
+
 	$i=0;
 	$quest=0; $quest_page=0;
 	$page=0;
@@ -345,13 +348,13 @@
 	$sur = 0; $sur_page=0;
 
 
-//------------------------------------------------------------------------------------------------------ AFFICHAGE 
+//------------------------------------------------------------------------------------------------------ AFFICHAGE
 	$pageaafficher_vu = $pageaafficher + 1;
 	$vu_eleve = "</td><td><a href=\"./devoir.php?name=_Sujets/$TAG&file=./files/$classe/_Copies/_Sujets/$TAG&page=$pageaafficher_vu\" target=\"_blank\"><img src=\"./icon/sujet_mod.png\" height=\"40px\" title=\"Vu candidat\"/></a>";
 	// Première Ligne avec le Titre
-	ligne($i,"X","<a href=\"./DSZone.php\"><img src=\"./icon/home.png\" height=\"20px\" title=\"Home\"/></a></td><td width=\"30px\"><a href=\"./DSNew.php?TAG=$TAG&action=101&page=$pageaafficher\"><img src=\"./icon/reload.png\" height=\"20px\" title=\"Annuler la derni&egrave;re modification\"/></a></td><td><font size=\"+3\">$TAG $part[0]</font>$vu_eleve",$part[1],$quest,$page,$TAG,$pageaafficher);
+	ligne($i,"X","<a href=\"./DSZone.php\"><img src=\"./icon/home.png\" height=\"20px\" title=\"Home\"/></a></td><td width=\"30px\"><a href=\"./DSNew.php?TAG=$TAG&action=101&page=$pageaafficher\"><img src=\"./icon/reload.png\" height=\"20px\" title=\"Annuler la derni&egrave;re modification\"/></a></td><td><font size=\"+3\">$TAG - $part[0]</font>$vu_eleve",$part[1],$quest,$page,$TAG,$pageaafficher);
 	if($i==$num2ligne) echo($message);
-	
+
 	//if($i==$num2ligne-1) echo($message);
 	//if($racourcie) echo($racourcie);
 	while(!feof($fp)){
@@ -377,7 +380,7 @@
 		if(($part[0]=="L")&&($pageaafficher==$page-1)) ligne($i,$part[0],$part[1],$part[2],$quest,$page,$TAG,$pageaafficher);//dernière ligne avec numèro de page
 	}
 	fclose($fp);
-	
+
 	//Lien vers les pages
 	$bas2page = "<table><tr>";
 	for($i=0;$i<$page;$i++) {

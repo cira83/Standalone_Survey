@@ -1,0 +1,4 @@
+Grandeur réglée : Niveau dans le réservoir.
+Grandeur réglante : Débit QMP.
+Grandeur perturbatrice : Débit Qs1.
+

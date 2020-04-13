@@ -1,0 +1,11 @@
+Bagur:Arthur:27/11/2001:tzzv8tei:::S SI ISN (P):[12] 13,5/15:non:::non:NON:Costebelle
+Bertolotti:Mattéo:16/12/2001:z5t79t7f:::Pilote (B):[1] 14,5/15:non:::non:NON:Costebelle
+Blanc:Gwendal:23/02/2001:6nxhgaxi:::EE (P):[19] 12/15:non:::non:NON:Costebelle
+Fabri:Alexandre:22/09/2001:sm3xnx64:::S SVT SVT (P):M [42] 8,5/15:non:::oui:NON:Dumont d'Urville
+Gonzalez:Adrien:08/07/2001:h43narryb:::SIN (P):M [18] 7/15:non:::oui:NON:Rouvière
+Grapin:Tanguy:11/10/2001:kyrad4em:::S SVT Physique (AB):M [8] 12/15:non:::oui:NON:Notre Dame
+Laou-Hap:Brandon:12/11/1999:q69iwa8ch:::S SI (P):[23] 11,1/15:non:::non:NON:Louis Lachenal (74)
+Menini:Mario:01/08/2001:eb3cb7vq:::STL (P):[17] 13/15:non:::non:NON:Costebelle
+Touita:Azeddine:30/07/2001:d2pbjzhh:::ITEC (P):[77] 2/15:non:::non:NON:Jean Henri Fabre - Carpentras
+Vernhet:Dristan:03/10/2000:y4kdnnyfz:::MEEC (B):M PO [1] 14,5/15:non:::oui:NON:Adam De Craponne (Salon)
+Vogel:Pierrick:27/12/2001:ph5fvrmq:::S SVT ISN (P):[39] 9/15:non:::non:NON:Rouvière

@@ -1,0 +1,50 @@
+Purification de carbonate de potassium#TD5#BAC 2004 CR1
+C#Le carbonate de potassium est un des composants utilisés dans la fabrication du verre. Au cours de sa fabrication, on introduit de l’amine, qui doit ensuite être éliminée.<br/>Pour cela on fait réagir sous pression atmosphérique le mélange de carbonate de potassium et d’amine avec de l’eau (H<sub>2</sub>O) et du gaz carbonique (CO<sub>2</sub>). La réaction chimique ainsi obtenue permet à l’amine de se dissoudre dans l’eau. Si la réaction est incomplète, tout le CO<sub>2</sub> est consommé. Il faut donc toujours avoir un excédent de CO<sub>2</sub> à la sortie du procédé pour s‘assurer de l’élimination complète de l’amine.<br/>Le débit  de CO<sub>2</sub> à l’entrée du procédé est donc régulé en fonction de la mesure du taux de CO<sub>2</sub> à la sortie. <br/>Le schéma du procédé est le suivant :<br/>
+C#<img src="./files/CIRA1/_Copies/_Sujets/TD5/img/01.png">
+L#
+C#<h2>Analyse fonctionnelle</h2>Le procédé est composé de deux boucles repérées par les indices 01 et 02.<br/>La boucle 01 est une régulation de taux de CO<sub>2</sub>. Les appareils AT01 et AIC01 sont respectivement un analyseur/transmetteur de taux de CO<sub>2</sub> et un régulateur/indicateur de taux de CO<sub>2<sub>. <br/>
+Q#Nommer les éléments de la boucle repérée 02.#2
+U#
+Q#Quelles sont les grandeurs réglante(s), réglée(s) et perturbatrice(s) de la boucle 02 ?#1
+U#
+Q#Quelles sont les grandeurs réglante(s), réglée(s) et perturbatrice(s) de la boucle 01 ?#1
+U#
+Q#Proposer un schéma fonctionnel des deux boucles.#1
+I#./files/CIRA1/_Copies/_Sujets/TD5/img/02.png
+L#
+C#<h2>Mesure de débit</h2>La mesure de débit de CO<sub>2</sub> est une mesure de débit massique, c'est à dire qu'on mesure le débit volumique et la masse volumique du CO<sub>2</sub> (le produit des deux donnant le débit massique). La masse volumique est obtenue par une mesure de la température et de la pression du CO<sub>2</sub> (lois des gaz).
+Q#Proposer un moyen de mesurer la température (-10°C à +80°C).#1
+T#
+Q#Le transmetteur de température à une sortie 4-20 mA. Quelle est la valeur du courant pour une mesure de 50ºC ?#1
+T#
+Q#Proposer un moyen de mesurer la pression (0 à 4 bar) en expliquant le principe physique utilisé.#1
+U#
+L#
+C#<h2>Régulation de débit</h2>
+Q#En cas de problème, on doit envoyer le CO<sub>2</sub> en excès pour être certain de dissoudre toute l’amine. En déduire le sens d'action de la vanne FV02 (FMA ou OMA)#1
+U#
+Q#Quel doit être le sens d’action du régulateur de la branche 02 ? (Justifier la réponse).#1
+U#
+C#On isole le régulateur FIC02. Initialement Y2 = 50 % et X2 = W2 = 40 %. On lui applique un échelon sur l'entrée mesure de +10 % à l'instant t = 0. La structure du régulateur est PI série. <br/>Les paramètres sont les suivants : Xp = 50 % ; Ti = 1 min.
+Q#Tracer X2(t) et Y2(t), en tenant compte du sens d'action retenu question Q9.#2
+I#./files/CIRA1/_Copies/_Sujets/TD5/img/02.png
+L#
+C#On réalise un essai en boucle ouverte pour modéliser le procédé. On applique un échelon de 12,5 % sur la sortie du régulateur. (voir Q12)<br/>On cherche un modèle de la forme :<br/><img src="./files/CIRA1/_Copies/_Sujets/TD5/img/04.png">
+Q#Déterminer la valeur de K et celle de τ en vous aidant de la courbe obtenue.#1
+T#
+Q#Faire apparaitre les constructions sur le graphique.#1
+I#./files/CIRA1/_Copies/_Sujets/TD5/img/03.png
+L#
+C#Le régulateur est placé en fonctionnement automatique, sans action intégrale ni dérivée. <br/>On réalise trois essais successifs du régulateur en mode automatique. Dans chaque essai on applique un échelon de consigne de 25% :<ul><li>Essai 1 : Xp = 30% ;</li><li>Essai 2 : Xp = 50% ;</li><li>Essai 3 : Xp = 70%.</li> </ul>Les courbes correspondantes à chacun de ces essais sont données ci-dessous :<br/><img src="./files/CIRA1/_Copies/_Sujets/TD5/img/05.png">
+Q#Associer chacune des mesures Xa, Xb, Xc à chacun des essais (1, 2 ou 3). Justifier la réponse.#1
+U#
+Q#Déterminer la valeur du premier dépassement de la mesure Xb.#1
+T#
+Q#Calculer l'écart statique sur la courbe Xb.#1
+T#
+Q#Quelle réponse vous paraît la plus convenable ? Justifier.#1
+U#
+Q#Proposer un réglage du régulateur PID mixte qui annule l'erreur statique.#2
+T#
+Q#Donner la fonction de transfert C(p) du correcteur que vous proposez à la question Q17.#1
+T#

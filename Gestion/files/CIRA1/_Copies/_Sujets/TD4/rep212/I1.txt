@@ -1,0 +1,1 @@
+Un capteur de pression différentielle.

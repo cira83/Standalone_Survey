@@ -1,0 +1,1 @@
+Capteur de pression à membrane. Sous l'effet de la pression, la membrane se déforme et on mesure cette déformation.

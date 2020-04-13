@@ -1,0 +1,1 @@
+En fonctionnement manuel, on effectue un échelon de 5% autour du point de fonctionnement. Si la mesure ne se stabilise pas, ou si elle se stabilise à 0% ou 100%, le procédé est instable. Sinon, le procédé est stable.

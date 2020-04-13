@@ -1,0 +1,3 @@
+Signaux de mesure : I1, I4.
+Signaux de consigne : I2.
+Signaux de commande : I2, I3.

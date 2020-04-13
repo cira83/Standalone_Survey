@@ -1,0 +1,1 @@
+Quand on augmente la commande, la vanne se ferme, le débit diminue. Le procédé est inverse, il faut régler le régulateur avec une action directe pour équilibrer.

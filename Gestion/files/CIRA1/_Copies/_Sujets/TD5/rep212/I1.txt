@@ -1,0 +1,5 @@
+FIC02 = Régulateur de débit ;
+FT02 = Transmetteur de d'bit ;
+FE02 = Capteur de débit ;
+FV02 = Vanne de régulation ;
+FY02 = Convertisseur I/P.

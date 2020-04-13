@@ -1,0 +1,2 @@
+La réponse Xb est la plus convenable, car l'erreur statique et le dépassement sont acceptables.
+

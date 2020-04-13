@@ -1,0 +1,1 @@
+Quand on augmente la commande du LIC, la vanne s'ouvre, le niveau augmente. Le procédé est direct, pour équilibrer il faut mettre le régulateur en action inverse.

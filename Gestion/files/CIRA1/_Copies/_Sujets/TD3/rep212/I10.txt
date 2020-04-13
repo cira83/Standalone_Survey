@@ -1,0 +1,1 @@
+Serie -> Second ; 1400 s pour 70 % donc Ti = 1400 / 70 * 5 = 100 s

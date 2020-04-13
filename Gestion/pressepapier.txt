@@ -1,0 +1,10 @@
+	include("./lesfonctions.php");
+	
+	if($password_OK){
+		echo("<table><tr><td colspan=2><p class=\"titre\">Les notes de $nom</p></td></tr></table>");
+		if($serveur_name == "B800") include("./eleve4allPi.php");
+		else include("./eleve4all.php");
+	}
+	else{
+		echo("<td colspan=2>Vous n'&ecirc;tes pas connect&eacute;(e) !!</td>$logout</tr></table>");
+	}

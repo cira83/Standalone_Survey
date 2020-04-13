@@ -1,0 +1,3 @@
+Grandeur réglée = taux de CO2 ;
+Grandeur réglante = débit de CO2 ;
+Grandeur perturbatrice = pression PCO2.

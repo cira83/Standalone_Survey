@@ -1,0 +1,3 @@
+Essai 1 : Xa ; Essai 2 : Xb ; Essai 3 : Xc.
+L'erreur statique varie dans le même sens que Xp. 
+

@@ -1,0 +1,2 @@
+Le système le plus rapide est celui qui utilise le correcteur proportionnel, mais l’erreur statique est aussi la plus importante. 
+Si l’on veut une erreur statique nulle, il faut choisir le correcteur avec Ti=3 min, car il est le plus rapide.

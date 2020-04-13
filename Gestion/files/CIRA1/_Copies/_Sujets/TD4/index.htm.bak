@@ -1,0 +1,88 @@
+Produits pharmaceutiques#TD4#BAC 2002
+C#<h2>Présentation</h2>
+C#Le procédé à étudier est implanté au sein d’une entreprise de produits pharmaceutiques. Cette unité fabrique des formes liquides (sirops conditionnés en flacons). Sa production est obtenue par lot (Batch) de 10 000 flacons de 300ml chacun. L’unité est divisée en deux zones : <ul><li>Zone matières premières liquides</li>Dans cette zone, l’étude ne portera que sur une seule matière première, (un seul réservoir tampon). Le niveau de liquide dans ce réservoir doit être maintenu constant (hauteur h).<li>Zone de fabrication</li>Elle est composée d’une cuve de fabrication à double paroi dans laquelle on mélange et on chauffe la matière première et le principe actif (Expectorant). Le principe utilisé pour le chauffage est basé sur l’échange calorifique entre la double enveloppe et le contenant. Dans la double enveloppe circule de la vapeur à 120°C et à 2 bars.</ul>
+C#<img src="./files/CIRA1/_Copies/_Sujets/TD4/img/01.png"/>
+L#
+Q#
+
+C#<h2>Mesure de niveau dans le réservoir tampon</h2>
+C#La mesure du niveau h de matière première est réalisée par un capteur-transmetteur de pression LT1. Il existe des capteurs-transmetteurs de pression relative, absolue et différentielle. Au dessus du liquide se trouve un gaz non condensable maintenu à une pression P0 constante (par un procédé non représenté ici).
+Q#Quel type de capteur-transmetteur doit-on utiliser ici ? Justifier la réponse.#0.5
+T#
+Q#Donner l'expression de la pression Pm mesurée en fonction du niveau h.#0.5
+T#
+Q#En excluant les capteurs de pression, citer deux autres principes de mesure de niveau.#0.5
+T#	
+L#
+
+C#<h2>Régulation de niveau dans le réservoir tampon</h2>
+Q#Déterminer les différentes grandeurs fonctionnelles (grandeur réglée, grandeur réglante et la principale grandeur perturbatrice).#1
+U#
+Q#Indiquer le nom et la fonction des appareils numérotés 1 et 2 dans la zone matière première.#1
+T#
+Q#Déterminer et justifier le sens d’action du régulateur. La vanne LV1 est fermée par manque d'air (normalement fermée, signal ouvre). Le capteur-transmetteur LT1 fournit au régulateur un signal de mesure directement proportionnel au niveau h.#1
+U#
+L#
+
+C#<h2>Régulation de température de la cuve à double enveloppe</h2>
+C#Le sirop dans la cuve doit être maintenu à une température de 90°C. On dispose des appareils ci-dessous :<ul><li>Une sonde de température type PT100 (montage 3 fils)</li><li>Un transmetteur de température analogique -> Entrée : PT100 (3 fils) ; sortie : 4 - 20mA (réglage possible du 0 et de la pleine échelle).</li><li>Un régulateur numérique -> Entrée mesure analogique (X) : 4 - 20mA ; sortie analogique (Yr) : 4 - 20mA.</li><li>Une vanne TV2 avec positionneur électro-pneumatique (commande en 4-20 mA).</li></ul>
+Q#Compléter le schéma d’instrumentation (TI) de la boucle de régulation de température.#1
+I#./files/CIRA1/_Copies/_Sujets/TD4/img/02.png
+L#
+
+C#On désire enregistrer l’évolution de la mesure (Tcuve ) et la valeur du signal (Yr) de pilotage de la vanne TV2, en fonction du temps. On utilise un enregistreur à 2 voies 4-20 mA.
+Q#Compléter le schéma de raccordement électrique permettant de mesurer X sur la voie 1 de l’enregistreur et Yr sur la voie 2 de l’enregistreur : on précisera les polarités et on ajoutera les fils nécessaires.#1
+I#./files/CIRA1/_Copies/_Sujets/TD4/img/03.png
+L#
+
+C#<h2>Comportement du procédé en boucle ouverte</h2>
+Q#Décrire le protocole expérimental permettant de vérifier que ce procédé est naturellement stable. Préciser si le régulateur doit être en automatique ou en manuel.#1
+U#
+C#Après avoir effectué cet essai, on constate que X=f(t)  peut être approximé par la réponse à un échelon d'un système du premier ordre avec retard pur.
+Q#Tracer l’allure de X = f(t) sachant que : le gain statique K = ΔM/ΔYr = 1 ; le retard T = 8min  et la constante de temps τ = 20 min. Faire apparaître ces différents paramètres sur le graphique.#1
+I#./files/CIRA1/_Copies/_Sujets/TD4/img/04.png
+L#
+
+
+C#<h2>Essais du système en boucle fermée</h2>
+C#<h3>Essai n°1 : </h3>
+C#<img src="./files/CIRA1/_Copies/_Sujets/TD4/img/05.png"/>
+Q#Faire l’analyse critique de ce résultat.#1
+U#
+L#
+
+C#<h3>Essai n°2 : </h3>
+C#On conserve les paramètres Ti = 99 min et Td = 0 min. On effectue 3 enregistrements avec 3 valeurs différentes de gain, respectivement A1 pour la courbe 1, A2 pour la courbe 2 et A3 pour la courbe 3. Le protocole expérimental reste inchangé par rapport au 1er essai. Résultats obtenus :
+C#<img src="./files/CIRA1/_Copies/_Sujets/TD4/img/06.png"/>
+Q#Calculer les écarts statiques ε1 pour la courbe 1, ε2 pour la courbe2 et ε3 pour la courbe 3.#1
+T#
+Q#Comment a évolué le gain A pour les courbes 1, 2 et 3 ?#1
+T#
+L#
+
+C#<h3>Essai n°3 : </h3>
+C#<img src="./files/CIRA1/_Copies/_Sujets/TD4/img/07.png"/>
+Q#Calculer la valeur de l’écart statique entre la mesure et la consigne.#1
+T#
+Q#Quelle est l’action qui a permis d’obtenir cette valeur ?#1
+T#
+L#
+
+Q#Quel critère de performance d’une boucle de régulation, le paramètre tr définit-il ?#1
+T#
+Q#Que provoquerait une augmentation excessive de l’action intégrale (Ti trop petit) ?#1
+T#
+Q#Quel compromis doit on obligatoirement faire pour le réglage de cette boucle ?#1
+T#
+L#
+
+C#<h2>Étude du mélange</h2>
+C#La fabrication du sirop impose d’avoir un débit de matière première Qs1 = K.Qpa (débit de produit du principe actif). Le débit Qs1 est mesuré avec le débitmètre FT3. Le débit Qpa est mesuré avec le débitmètre FT4.
+Q#Donner le nom de cette régulation (voir TD3).#1
+T#
+Q#Déterminer le débit libre et le débit asservi.#1
+T#
+Q#Indiquer le nom et la fonction de l'élément FY3  (voir TD3).#1
+T#
+Q#Faire apparaître ci-dessous la mesure X3, la consigne W3 et la sortie Yr3 du régulateur FIC3.#0.5
+I#./files/CIRA1/_Copies/_Sujets/TD4/img/08.png#0.5

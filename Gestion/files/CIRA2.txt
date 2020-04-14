@@ -1,0 +1,14 @@
+Audiffren:Loic:09/05/2000:Au367:06 50 91 66 02:loicaudiff@gmail.com:STI2D EE:Bourg-Saint-Andéol [53]:non:::non:NON:
+Ayza:Cyril:25/11/2000:vdcsn6jkj:+33625254091:cyril.ayza@aol.fr:Microtechniques B:Saint Joseph [5]:non:::non:NON:
+Bichon:Tristan:06/09/1998:mt22ci34:+33643051771:Mustine@outlook.com:MEI AB:Cisson [3]:non:::non:NON:
+Blanchon:Adrien:23/09/2000:kymfwrdd8:06 33 40 91 73:adrien.blanchon@outlook.com:STL AB:Rouvière [48]:non:::non:NON:
+Charpin:Léo:21/12/2000:qegt3j3h5:+33687192984:lolovale.charpin@orange.fr:EE P:Pierre-Gilles De Gennes [40]:non:::non:NON:
+Chevillard:Tomi:06/01/2000:tomi2654:+33687693745:tomi-chevillard@hotmail.com:EE P:Lycée Du Dauphine [71]:non:::non:NON:
+Feyrit:Antoine *:01/06/2000:4c4ucyjk:+33683141738:antoine.feyrit@gmail.com:SIN AB:Lycée Militaire d'Aix-en-Provence [5]:non:::oui:NON:
+Lothmann:Theo *:10/07/1999:zezm8zepd: +33662772464: lothmann@lycee-rouviere.fr:EEEC AB (3):Cisson [13]:non:::non:NON:
+Marin:Benjamin:09/09/2000:xpzrnfhg4:06 01 02 27 75:bmdu83@hotmail,fr:ITEC P:Rouvière [38]:non:::non:NON:
+Mrabet:Ali:14/05/2000:v7kp2ps8i:06 27 26 78 55:mrabet.cira83100@gmail.com:ITEC AB:Rouvière [26]:non:::non:NON:
+Sanna:Gaëtan:22/01/2001:nr6hypj6:06 03 42 38 26:gaetansanna@gmail.com:STL B:Rouvière [3]:non:::non:NON:
+Sibilo:Rémi:01/03/2000:re3aq8hy:+33786092986:r.sibilo@orange.fr:ITEC AB:Rouvière [62]:non:::non:NON:
+Vasapolli:Lois:02/02/2001:nuzdytf9:07 67 42 30 88: lois.vasapolli@laposte.net:S P:Lycée Maximilien Perret [39]:non:::non:NON:
+Vincent:Peter:20/05/1997:wzt2aanjn:+33635766251:peter.vincent@hotmail.fr:EE AB:Rouvière + L1 physique [76]:non:::non:NON:

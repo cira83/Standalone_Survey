@@ -458,7 +458,7 @@ if($DS_password == $copie_password) {
 					if(!file_exists("$repertoire_rep/I$i.txt")){// Pas de réponse
 						$image_link = "./icon/interro.png";
 						if(strpos("_$part[1]","./files/")) $image_link = "$part[1]";
-						$dimensions = getimagesize($image_link);
+						if(file_exists($image_link)) $dimensions = getimagesize($image_link);
 						if($dimensions[0]>700) affiche_image($image_link,700);//Pour les petites images
 						else affiche_image($image_link,$dimensions[0]);
 						question("I$i",$nb2pages+1,"");

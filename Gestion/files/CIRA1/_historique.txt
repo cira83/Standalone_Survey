@@ -1,3 +1,11 @@
+/Gestion/DSZone.php
+/Gestion/DSZone.php
+/Gestion/DSZone.php
+/Gestion/DSZone.php
+/Gestion/DSZone.php
+/Gestion/DSZone.php
+/Gestion/DSZone.php
+/Gestion/DSZone.php
 /Gestion/DSNew.php?TAG=TP11&page=8
 /Gestion/DSNew.php?action=41&ligne=41&TAG=TP11&page=8
 /Gestion/DSNew.php?action=4&ligne=41&TAG=TP11&page=8
@@ -6,11 +14,3 @@
 /Gestion/DSNew.php?action=4&ligne=42&TAG=TP11&page=8
 /Gestion/DSNew.php?TAG=TP11&page=8
 /Gestion/DSNew.php?TAG=TP11&page=7
-/Gestion/DSNew.php?action=41&ligne=33&TAG=TP11&page=6
-/Gestion/DSNew.php?action=4&ligne=33&TAG=TP11&page=6
-/Gestion/DSNew.php?page=6
-/Gestion/DSNew.php?TAG=TP11&page=6
-/Gestion/DSNew.php?TAG=TP11&page=5
-/Gestion/DSNew.php?TAG=TP11&page=6
-/Gestion/DSNew.php?TAG=TP11&page=5
-/Gestion/DSNew.php?TAG=TP11&page=4

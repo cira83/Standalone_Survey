@@ -171,7 +171,7 @@
 			if($part[0]=="I") {//Réponse sour la forme d'une image
 				$limage = $part[1];
 				if($limage) {
-					$dimensions = getimagesize($limage);
+					if(file_exists($limage)) $dimensions = getimagesize($limage);
 					affiche_image($limage,$dimensions[0],1);
 				}
 			}

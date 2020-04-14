@@ -30,6 +30,7 @@
 
 		<tr><td colspan="3">																											<!-- GRAPHIQUE -->
 			<svg id="graphe" width="700" height="350">
+				<rect width="700" height="350" style="fill:rgb(255,255,255);stroke-width:0;stroke:rgb(255,255,255)" />
 				<text x="450" y="65" fill="#DDD" id="Session"><?php echo($numero); ?></text><!-- FILIGRAMME -->
 				<text x="450" y="40" fill="#DDD" id="Nom"><?php echo($name); ?></text>
 				<!--
@@ -49,8 +50,8 @@
 				<text transform="matrix(-0, -1, 1, -0, 20, 250)" id="Echelle_Y">1% par graduation</text>
 				<text x="500" y="345" fill="black" id="Echelle_X">1% par graduation</text>
 
-				<polyline points="" style="fill:none;stroke:blue;stroke-width:1" id="courbe1"/>
-				<polyline points="" style="fill:none;stroke:green;stroke-width:1" id="courbe2"/>
+				<polyline points="" style="fill:none;stroke:blue;stroke-width:2" id="courbe1"/>
+				<polyline points="" style="fill:none;stroke:green;stroke-width:2" id="courbe2"/>
 
 			</svg>
 		</td></tr>
@@ -109,10 +110,10 @@
 				<input type="text" id="X_min" value="0" size="10px"/>
 			</td>
 			<td width="12.5%">
-				<input type="text" id="X_max" value="10" size="10px"/>
+				<input type="text" id="X_max" value="100" size="10px"/>
 			</td>
 			<td width="12.5%">
-				<input type="text" id="X_step" value="1" size="10px"/>
+				<input type="text" id="X_step" value="10" size="10px"/>
 			</td>
 			<td width="12.5%">
 				<input type="text" id="X_unit" value="%" size="5px"/>
@@ -121,10 +122,10 @@
 				<input type="text" id="Y_min" value="0" size="10px"/>
 			</td>
 			<td width="12.5%">
-				<input type="text" id="Y_max" value="10" size="10px"/>
+				<input type="text" id="Y_max" value="100" size="10px"/>
 			</td>
 			<td width="12.5%">
-				<input type="text" id="Y_step" value="1" size="10px"/>
+				<input type="text" id="Y_step" value="10" size="10px"/>
 			</td>
 			<td>
 				<input type="text" id="Y_unit" value="%" size="5px"/>

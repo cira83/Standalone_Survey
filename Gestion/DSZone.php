@@ -434,7 +434,7 @@
 			else $classetd =" bgcolor=\"#FF4000\" ";
 			if(!$sujet_present) $classetd =" bgcolor=\"#c0c0c0\" ";
 			$info_session = "<span id=\"etat_$nom17\"></span>";
-			$hauteur_photo = "80px";
+			$hauteur_photo = "100px";
 			if($nb2sessions) $info_session = "<span id=\"etat_$nom17\"></span>";
 			if($sujet_present) $imp = "<a href=\"./copie2DS.php?name=$nom17&file=$nomsujet2DS\" target=\"_blank\" title=\"imprimer\"><img src=\"icon/imp.gif\" height=\"13px\"></a>";
 			else $imp = "";

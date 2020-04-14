@@ -32,7 +32,7 @@
 			<svg id="graphe" width="700" height="350">
 				<rect width="700" height="350" style="fill:rgb(255,255,255);stroke-width:0;stroke:rgb(255,255,255)" />
 				<text x="450" y="65" fill="#DDD" id="Session"><?php echo($numero); ?></text><!-- FILIGRAMME -->
-				<text x="450" y="40" fill="#DDD" id="Nom"><?php echo($name); ?></text>
+				<text x="450" y="45" fill="#DDD" id="Nom"><?php echo($name); ?></text>
 				<!--
 					(0,0) = 25,330
 				-->

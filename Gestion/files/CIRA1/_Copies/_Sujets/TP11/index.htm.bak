@@ -30,7 +30,7 @@ Q#Le procédé est-il stable ? Justifiez votre réponse.#1
 U#
 L#
 Q#Relever la caractéristique statique de votre procédé. Logiciel pour faire la courbe : <a href="../EasyGraph" target="_blank ">EasyGraph</a>#1
-I#
+I#./files/CIRA1/_Copies/_Sujets/TP11/img/06.png
 L#
 Q#Votre procédé est-il direct ou inverse ?#1
 T#
@@ -39,7 +39,7 @@ T#
 L#
 Q#Enregistrer la réponse indicielle du système à une augmentation de la commande de 100%.#1
 I#
-Q#Donner le temps de réponse à ±10%. Faire apparaître les constructions sur l’image précédente.#1
+Q#Donner le temps de réponse Tr à ±10%. Faire apparaître les constructions sur l’image précédente.#1
 T#
 Q#Donner la valeur du premier dépassement. Faire apparaître les constructions sur l’image précédente.#1
 T#

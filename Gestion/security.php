@@ -1,15 +1,6 @@
 <?php
 	session_start();
 
-	function alert2020($texte) {
-		echo("<!-- $texte -->");
-	}
-
-	function info_name_file() {
-		$nom_script = $_SERVER['SCRIPT_NAME'];
-		echo("<!-- fichier : $nom_script -->");
-	}
-
 	function estfichier2($nom){// Fichier ou non ?
 		$drap = true;
 		$data = explode(".", $nom);
@@ -49,17 +40,18 @@
 	if($action1==1){
 		$elv = $_POST['nom'];
 		setcookie("nom", $elv,time()+3600*24*8,"/");
-		$classe = $_POST['classe'];
-		setcookie("laclasse", $classe,time()+3600*24*8);
+		//$classe = $_POST['classe'];
+		//setcookie("laclasse", $classe,time()+3600*24*8);
 		$password = $_POST['password'];
 		setcookie("password", $password,time()+3600*24*8);
 	}
 	else {
-		$classe = $_COOKIE['laclasse'];
+		
 		$elv = $_COOKIE['nom'];
 		$password = $_COOKIE['password'];
 	}
 
+	$classe = $_COOKIE['laclasse'];
 	//MENU DEROULANT CLASSES        -----------------------------------------------------------------------------------------------------
 	$select_classe = "<select name=\"classe\" id=\"classe\" onchange=\"login();\">";
 	$select_classe .= "<option>Selectionner votre classe</option>";

@@ -496,6 +496,8 @@
 		echo("<p>$texte</p>");
 	}
 	
+	
+	###
 	function photode($nom) { //fournie la photo et un lien vers la fiche de l'élève
 		$lesnom = explode(" ", $nom);
 		for($i=0;$i<count($lesnom);$i++) $lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/$lesnom[$i].jpg\" height=\"133px\"/></a>";
@@ -503,10 +505,12 @@
 	}
 
 	function photobord($nom,$couleur) { //fournie la photo et un lien vers la fiche de l'élève
+		$classe = $_COOKIE['laclasse'];
 		$lesnom = explode(" ", $nom);
 		for($i=0;$i<count($lesnom);$i++) {
-			if(file_exists("./photos/$lesnom[$i].jpg"))
-				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/$lesnom[$i].jpg\" height=\"133px\" style=\"border:solid 4px $couleur;\" id=\"$nom\"/></a>";
+			$filephoto = "./files/$classe/_Photos/$lesnom[$i].jpg";
+			if(file_exists($filephoto))
+				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"$filephoto\" height=\"133px\" style=\"border:solid 4px $couleur;\" id=\"$nom\"/></a>";
 			else 
 				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/----.jpg\" height=\"133px\" style=\"border:solid 4px $couleur;\"id=\"$nom\"/></a>";
 		}

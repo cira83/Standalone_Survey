@@ -1,7 +1,0 @@
-TP1 Debit2,/Gestion/files/CIRA1/_Sujets2TP/TP1 Debit2.php
-TP1 Multi,/Gestion/files/CIRA1/_Sujets2TP/TP1 Multi.php
-TP1 Niveau1,/Gestion/files/CIRA1/_Sujets2TP/TP1 Niveau1.php
-TP1 Niveau2,/Gestion/files/CIRA1/_Sujets2TP/TP1 Niveau2.php
-TP1 NiveauDR,/Gestion/files/CIRA1/_Sujets2TP/TP1 NiveauDR.php
-TP1 SADB,/Gestion/files/CIRA1/_Sujets2TP/TP1 SADB.php
-TP1 SADH,/Gestion/files/CIRA1/_Sujets2TP/TP1 SADH.php

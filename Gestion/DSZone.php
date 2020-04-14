@@ -426,7 +426,7 @@
 			}
 			$deroulant_disponibles = deroulant_sujet($nom17,$classe,$titre_sujet);
 			$i++;
-			$photo = "./photos/$nom17.jpg";
+			$photo = "./files/$classe/_Photos/$nom17.jpg";
 			if(!file_exists($photo)) $photo = "./photos/----.jpg";
 			$bouton = bouton_onoff($nom17,$classe);
 			$etatonoff = state_onoff($nom17, $classe);
@@ -439,8 +439,8 @@
 			if($sujet_present) $imp = "<a href=\"./copie2DS.php?name=$nom17&file=$nomsujet2DS\" target=\"_blank\" title=\"imprimer\"><img src=\"icon/imp.gif\" height=\"13px\"></a>";
 			else $imp = "";
 			$efface = "<a href=\"./DSZone.php?action=111&nom=$nom17&td=$titre_sujet\" color=\"red\"><img src=\"./icon/effacer.jpg\" height=\"15px\" align=\"bottom\"></a>";
-			echo("<td $classetd><b><u>$nom17</u></b><br/>");
-			echo("$deroulant_disponibles $imp<hr/><a href=\"./devoir_comp.php?name=$nom17\" target=\"_blank\"><img src=\"$photo\" height=\"$hauteur_photo\"></a>");
+			echo("<td $classetd><b>$nom17</b>");
+			echo("<br>$deroulant_disponibles $imp<br><a href=\"./devoir_comp.php?name=$nom17\" target=\"_blank\"><img src=\"$photo\" height=\"$hauteur_photo\"></a>");
 			echo("<br>$info_session $bouton $efface</a><br><div id=\"$nom17\"></div></td>");
 			$Nom_et_sujet[$k] = "$nom17:$titre_sujet:"; $k++; //La liste de nom et du sujet associé
 			if($i==7){

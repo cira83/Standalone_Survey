@@ -3,7 +3,7 @@
 	cursor:pointer;
 }
 
-.button 
+.button
 {
 	color: black;
     text-align: center;
@@ -150,12 +150,15 @@ img{
 }
 h1{
 	font-size: 28px;
+	font-style: normal;
 }
 h2{
 	font-size: 22px;
+	font-style: normal
 }
 p{
 	font-size: 16px;
+	font-style: normal
 }
 
 p.question{
@@ -213,6 +216,3 @@ table.reponse{
 	color: black;
 	line-height: 18px;
 }
-
-
-

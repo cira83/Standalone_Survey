@@ -2,8 +2,11 @@
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	$action44 = "./DSZone.php?action=44";
 
-	$repertoire_Sujets = "./files/$classe/_Copies/_Sujets";
+
 	$repertoire_DS = "./files/$classe/_Copies/";
+	$repertoire_Sujets = "./files/$classe/_Copies/_Sujets";
+	if(!file_exists($repertoire_DS)) mkdir($repertoire_DS);
+	if(!file_exists($repertoire_Sujets)) mkdir($repertoire_Sujets);
 	$lesrepertoires = scandir($repertoire_DS);
 	$i = 0;
 	$arrayjava = "var liste2nom = [";

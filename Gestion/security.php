@@ -1,6 +1,8 @@
 <?php
 	session_start();
-
+	$prof_password = "b7wd5c";//Mot du passe du professeur
+	
+	
 	function estfichier2($nom){// Fichier ou non ?
 		$drap = true;
 		$data = explode(".", $nom);
@@ -31,12 +33,11 @@
 	}
 
 	//Partie connexion sécurisé - V00
-	$prof_password = "b7wd5c";//Mot du passe du professeur
 	$classe_text = les_classes();// echo($classe_text);
 	$classe_dispo = explode(":", $classe_text);
 	$repertoire = "./files/";
 
-	$action1 = $_POST['action'];
+	$action1 = $_POST['action'];//--------------------------------------------------------------------------   LOGIN
 	if($action1==1){
 		$elv = $_POST['nom'];
 		setcookie("nom", $elv,time()+3600*24*8,"/");

@@ -19,7 +19,7 @@
 
 	include("./lesfonctions.php");
 	$passwordOK = password($nom,$password,$classe);//=1 eleve, =2 prof
-	
+
 	//Ajouter le 8 septembre 2016
 	if(!$passwordOK){
 		$tableaudesmatieres = "";
@@ -29,8 +29,8 @@
 		$tableauplanning = "";
 		$tableaudesTP = "";
 	}
-	
-	
+
+
 	//historique
 	$adressdelapage = $_SERVER['REQUEST_URI'];
 	$historique = "./files/$classe/_historique.txt";
@@ -57,8 +57,8 @@
 			$historique_select .= "<option>$ligne_histo[$histo_nb2]</option>";
 		}
 		fclose($histo);
-		
-		
+
+
 	}
 	$historique_select .= "<select name=\"histo\" onchange=\"redirect(this.value);\" style=\"max-width:150px;\"></select>";
 	if(!$passwordOK) $historique_select="";
@@ -75,7 +75,7 @@
                  $ligne = fgets($fp);
                  $part = explode(":", $ligne);
                  $nom = $part[0];
-                 $repertoire_elv = "$repertoire$nom";
+                 if($nom&&($nom!="\n")) $repertoire_elv = "$repertoire$nom";
                  if(!file_exists($repertoire_elv)) {
                     mkdir($repertoire_elv);
                     $drap = 1;
@@ -106,13 +106,13 @@
 		<link rel="icon" type="image/jpg" href="./icon/favicon.jpg" />
 		<title><?php echo("$titre_page");?></title>
 <?php
-	if(($action)||($creation_repertoire)) echo("<meta http-equiv=\"refresh\" content=\"5;URL=./DSZone.php\">\n"); 
+	if(($action)||($creation_repertoire)) echo("<meta http-equiv=\"refresh\" content=\"5;URL=./DSZone.php\">\n");
 
 ?>
 	</head>
-	
+
 	<body onload="tailledelafenetre();">
-	<center>	
+	<center>
 		<table>
 		<tr>
 			<td><a href="./index.php" title="Appel"><img src="./icon/home.png" height="15px" style="border:solid 4px #fff"></a></td>

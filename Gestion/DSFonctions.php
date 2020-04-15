@@ -20,16 +20,16 @@
 		}
 		return($icone);
 	}
-	
-	
+
+
 	function est_image($image) {
 		$type_img = array("jpg","jpeg","gif","png","JPG","JPEG","GIF","PNG");
-		
+
 		$part = explode(".",rtrim($image));
 		$ext = $part[count($part)-1];
 		return(in_array($ext,$type_img));
 	}
-	
+
 
 	function TAGdufichier($filename) {
 		$TAG = "TD?";
@@ -42,7 +42,7 @@
 		}
 		return trim($TAG);
 	}
-	
+
 	function TitreduTAG($TAG,$classe) {
 		$filename = "./files/$classe/_Copies/_Sujets/$TAG/index.htm";
 		$Titre = "Titre?";
@@ -55,7 +55,25 @@
 		}
 		return trim($Titre);
 	}
-		
 
+	function myintdiv($dividend,$divisor){
+		$frac = 0;
+		while($dividend-$divisor>=0) {
+			$frac++;
+			$dividend = $dividend-$divisor;
+		}
+		return($frac);
+	}
+
+	function magiqueNB($nd_elv,$max){
+		$div = myintdiv($nd_elv,$max);
+		$reste = $nd_elv-$div*$max;
+		while(($max-$reste>$div)&&$reste) {
+			$max--;
+			$div = myintdiv($nd_elv,$max);
+			$reste = $nd_elv-$div*$max;
+		}
+		return $max;
+	}
 
 ?>

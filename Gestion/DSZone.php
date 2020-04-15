@@ -1,4 +1,6 @@
 <?php
+	include("DSFonctions.php");
+
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	$action44 = "./DSZone.php?action=44";
 
@@ -288,18 +290,18 @@
 		echo("<form method=\"post\" action=\"DSZone.php?action=20202&name=$nom111\">");
 		echo("<table><tr><td>Supprimer le répertoire de $nom111 ? <input type=\"submit\" value=\"OUI\"> ");
 		echo("<input type=\"button\" value=\"NON\" onclick=\"gotolien('./DSZone.php')\"></td></tr></table>");
-		echo("</form>");		
+		echo("</form>");
 	}
-	
-	if($action==20202){//--------------------------------------------------------------------------------------- Supprime repertoire 
+
+	if($action==20202){//--------------------------------------------------------------------------------------- Supprime repertoire
 		$nom111 = $_GET[name];
-		$depart = "./files/$classe/_Copies/$nom111";	
+		$depart = "./files/$classe/_Copies/$nom111";
 		$arrive = "./files/$classe/_Copies/_$nom111";
 		rename($depart, $arrive);
 		echo("Dossier $nom111 supprimé");
-	}	
-	
-	
+	}
+
+
 	if($action==44){//--------------------------------------------------------------------------------------- Distribue les sujets
 		$lebonnom = $_POST[nom];
 		$lebontd = $_POST[td];
@@ -452,6 +454,10 @@
 
 	$i=0;
 	echo("<table><tr valign=\"Bottom\">");
+	$nd_elv=0;
+	foreach($lesrepertoires as $nom17)
+		if(($nom17[0]!="_")&&($nom17[0]!=".")) $nd_elv++;
+	$maginumber = magiqueNB($nd_elv,7);
 	foreach($lesrepertoires as $nom17){
 		$nomsujet2DS = "$repertoire_DS$nom17/rep/index.htm";
 		if(($nom17[0]!="_")&&($nom17[0]!=".")){
@@ -484,7 +490,7 @@
 			echo("<br>$deroulant_disponibles $imp<br><a href=\"./devoir_comp.php?name=$nom17\" target=\"_blank\"><img src=\"$photo\" height=\"$hauteur_photo\"></a>");
 			echo("<br>$info_session $bouton $efface</a><br><div id=\"$nom17\"></div></td>");
 			$Nom_et_sujet[$k] = "$nom17:$titre_sujet:"; $k++; //La liste de nom et du sujet associé
-			if($i==7){
+			if($i==$maginumber){
 				echo("</tr><tr valign=\"Bottom\">");
 				$i=0;
 			}
@@ -615,7 +621,7 @@
 	echo("<td>Mot de passe : <input type=\"password\" name=\"pwd1\"></td> ");
 	echo("<td>Confirmation : <input type=\"password\" name=\"pwd2\"></td> ");
 	echo("<td><input type=\"submit\" value=\"Ajouter\"></td> ");
-	echo("</tr></table></form>");		
+	echo("</tr></table></form>");
 
 	include("./bas_DS.php");
 ?>

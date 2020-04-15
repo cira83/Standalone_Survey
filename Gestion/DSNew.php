@@ -225,11 +225,13 @@
 	//Liste des images
 	$Deroulant_image = "<select name=\"image\" onchange=\"addimage(this.value);\">";
 	$Deroulant_image .= "<option>+ Image</option>";
-	$LaListeDesImages = scandir($repertoire_Images);
-	foreach($LaListeDesImages as $img) //echo("$img<br>");
-	if(est_image($img)) $Deroulant_image .= "<option value=\"$img\">$img</option>";
-	$Deroulant_image .= "</select>";
-
+	if(file_exists($repertoire_Images)){
+		$LaListeDesImages = scandir($repertoire_Images);
+		foreach($LaListeDesImages as $img) //echo("$img<br>");
+		if(est_image($img)) $Deroulant_image .= "<option value=\"$img\">$img</option>";
+		$Deroulant_image .= "</select>";
+	}
+	else echo("<font color=\"red\">Fichier non standard !!</font>");
 
 	if($action==3) {//------------------------------------------------------------------- X : Suppression
 		$contenu = lecture($chemin_du_sujet, $num2ligne);

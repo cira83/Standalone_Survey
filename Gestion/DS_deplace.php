@@ -36,7 +36,7 @@
 	$copy_possible = file_exists($depart);
 	if($copy_possible) copy($depart,$arrive);
 
-	$depart = "./files/$classe/$TAG/index.htm";
+	$depart = "./files/$classe/_Copies/_Sujets/$TAG/index.htm";
 	$arrive = "./files/$classe/_Copies/$elv/rep/index.htm";
 	$copy_possible = file_exists($depart);
 	$drap = start($elv, $classe);
@@ -56,6 +56,7 @@
 			</tr></table>
 
 <?php
+	$sujet2TP = TitreduTAG($TAG,$classe);
 	if($copy_possible&&$drap) {
 		echo("<p>Le sujet $sujet2TP est disponible pour travailler.</p>");
 		echo("<p><a href=\"./devoir.php\">$sujet2TP</a></p>");

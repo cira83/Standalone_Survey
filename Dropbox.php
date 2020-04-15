@@ -1,4 +1,7 @@
 <?php //Version du 06/06/2019
+	include("DSFonctions.php");
+	
+	
 	function commente($com) {
 		echo("<!-- $com -->\n");
 	}
@@ -110,8 +113,7 @@
 	}
 
 	//Pour les sujets de TP version 2021
-	function Dropbox_link2($titre,$filename,$link){
-		if($titre) echo("<h2>$titre</h2>");
+	function Dropbox_link2($filename,$name,$classe){
 		echo("\n<!-- /DropBox($titre,$filename) -->\n");
 		if(file_exists($filename)){
 			$fp=fopen($filename, "r");
@@ -120,30 +122,12 @@
 			while(!feof($fp)) {
 				$ligne=fgets($fp);
 				$part = explode(",",$ligne);
-				if($part[1]) {//C'est une ligne normale
+				if($part[0]) {//C'est une ligne normale
+					$DS = "./files/$classe/_Copies/_Sujets/$part[0]";
 					if($k==0) echo("<tr align=\"left\">");//première colonne
-					echo("<td><a href=\"DS_deplace.php?sujet=$part[0]&tag=$part[1]\" class=\"annales\">$part[0]</a></td>");
+					$Sujet = TitreduTAG($part[0],$classe);
+					echo("<td><a href=\"DS_deplace.php?tag=$part[0]\" class=\"annales\">$Sujet</a></td>");
 					$k++;
-				}
-				else
-				if($part[0][0]!="/") {//Commentaires dans le fichier source - Permet plus de clarté dans ce fichier
-					if(!strpos("_$ligne","[")) {//Cas des titres sur 3 colonnes
-						if($k==0) echo("<tr align=\"left\">");
-						echo("<td><p class=\"annales_blanc\">$part[0]</p></td>");
-						$k++;
-					}
-					else {
-						while($k>0){
-							echo("<td></td>");
-							$k++;
-							if($k==3) {
-								$k=0;
-								echo("</tr>");
-							}
-						}
-						$part[0] = substr($part[0], strpos("_$ligne","[" ));
-						echo("<tr align=\"center\"><td colspan=3 align=center><p class=\"annales_titre\">$part[0]</p></td></tr>");
-					}
 				}
 
 				if($k==3){

@@ -42,6 +42,20 @@
 		}
 		return trim($TAG);
 	}
+	
+	function TitreduTAG($TAG,$classe) {
+		$filename = "./files/$classe/_Copies/_Sujets/$TAG/index.htm";
+		$Titre = "Titre?";
+		if(file_exists($filename)) {
+			$fp = fopen($filename, "r");
+			$ligne = fgets($fp);
+			$part = explode("#", $ligne);
+			$Titre = $part[0];
+			fclose($fp);
+		}
+		return trim($Titre);
+	}
+		
 
 
 ?>

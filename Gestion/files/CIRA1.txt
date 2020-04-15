@@ -9,3 +9,4 @@ Menini:Mario:01/08/2001:eb3cb7vq:::STL (P):[17] 13/15:non:::non:NON:Costebelle
 Touita:Azeddine:30/07/2001:d2pbjzhh:::ITEC (P):[77] 2/15:non:::non:NON:Jean Henri Fabre - Carpentras
 Vernhet:Dristan:03/10/2000:y4kdnnyfz:::MEEC (B):M PO [1] 14,5/15:non:::oui:NON:Adam De Craponne (Salon)
 Vogel:Pierrick:27/12/2001:ph5fvrmq:::S SVT ISN (P):[39] 9/15:non:::non:NON:Rouvière
+Professeur::::

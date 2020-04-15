@@ -19,7 +19,7 @@
 
 <?php
 
-	Dropbox_link2("Liste des TP disponibles :","./files/$classe/_Sujets2TP/liste.txt","elv=$elv");//Liste des documents nom,adresse web
+	Dropbox_link2("./files/$classe/_Sujets2TP/liste.txt",$elv,$classe);//Liste des documents nom,adresse web
 
 
 	include("../foot2.html");

@@ -261,7 +261,45 @@
 
 	if($creation_repertoire) affiche($creation_repertoire);
 
+	//###
+	if($action==20203){//--------------------------------------------------------------------------------------- Ajoute un élève
+		$nom111 = $_POST[nom];
+		$pwd1 = $_POST[pwd1];
+		$pwd2 = $_POST[pwd2];
+		if($nom111&&($pwd1==$pwd2)) {
+			$fileclasse111 = "./files/$classe.txt";
+			if(file_exists($fileclasse111)) {
+				$fp111 = fopen($fileclasse111, "a");
+				fwrite($fp111, "\n$nom111:::$pwd2:");
+				fclose($fp111);
+			}
+			else echo("$fileclasse111 n'existe pas !!<br>");
 
+			echo("$nom111 ajouté <br>");
+		}
+		if(!$nom111) echo("Pas de nom fourni !!<br>");
+		if($pwd1!=$pwd2) echo("Mots de passe non identiques !!<br>");
+	}
+
+
+
+	if($action==20201){//--------------------------------------------------------------------------------------- Supprime repertoire confirmation
+		$nom111 = $_GET[name];
+		echo("<form method=\"post\" action=\"DSZone.php?action=20202&name=$nom111\">");
+		echo("<table><tr><td>Supprimer le répertoire de $nom111 ? <input type=\"submit\" value=\"OUI\"> ");
+		echo("<input type=\"button\" value=\"NON\" onclick=\"gotolien('./DSZone.php')\"></td></tr></table>");
+		echo("</form>");		
+	}
+	
+	if($action==20202){//--------------------------------------------------------------------------------------- Supprime repertoire 
+		$nom111 = $_GET[name];
+		$depart = "./files/$classe/_Copies/$nom111";	
+		$arrive = "./files/$classe/_Copies/_$nom111";
+		rename($depart, $arrive);
+		echo("Dossier $nom111 supprimé");
+	}	
+	
+	
 	if($action==44){//--------------------------------------------------------------------------------------- Distribue les sujets
 		$lebonnom = $_POST[nom];
 		$lebontd = $_POST[td];
@@ -303,7 +341,7 @@
 	}
 
 	if($action==110){//-------------------------------------------------------------------------------------------------     Déplace les réponses de nom111 et le sujet dans rep/$TAG
-		$nom111 = $_GET[nom]; //###
+		$nom111 = $_GET[nom];
 		$td111 = $_GET[td];
 		$DS_password = DSMDP($classe, $nom111);
 
@@ -505,6 +543,7 @@
 	titre_tab("Création & Édition");
 	//--------------------------------------------------------------------------------------------------------------------                NOUVEAU SUJET
 ?>
+<!-- NOUVEAU SUJET -->
 <table><tr>
 	<form method="post" action="DSNew.php">
 	<td>
@@ -523,6 +562,7 @@
 		</td><td>
 		<input name="bouton" value="Editer" type="submit">
 	</td>
+	</form>
 	</tr>
 </table>
 
@@ -549,7 +589,8 @@
 		if(file_exists($lesreponses)&&($nom17!=".")){
 			$i++;
 			$contenu_case1 .= "<td><font color=\"black\" size=\"+1\">$nom17</font> $code2DS </td>";
-			$contenu_case2 .= "<td>".file_liste2($lesreponses)."</td>";
+			$contenu_case1 .= "<td><a href=\"./DSZone.php?action=20201&name=$nom17\"><img src=\"./icon/effacer.jpg\" height=\"15px\" align=\"bottom\"></a></td>";
+			$contenu_case2 .= "<td colspan=\"2\">".file_liste2($lesreponses)."</td>";
 			if($i==3){
 				echo("<tr valign=\"top\" bgcolor=\"white\">$contenu_case1</tr>");
 				echo("<tr valign=\"top\">$contenu_case2</tr>");
@@ -565,6 +606,16 @@
 
 	$pirate = analyse_log();
 	echo("<table><tr><td><font color=\"red\">$pirate</font></td></tr></table>");
+
+	//----------------------------------------------------------------------------------------    Ajout d'un élève
+	//###
+	echo("<form method=\"post\" action=\"DSZone.php?action=20203&name=$nom111\">");
+	echo("<table><tr>");
+	echo("<td>Nom : <input type=\"text\" name=\"nom\"></td> ");
+	echo("<td>Mot de passe : <input type=\"password\" name=\"pwd1\"></td> ");
+	echo("<td>Confirmation : <input type=\"password\" name=\"pwd2\"></td> ");
+	echo("<td><input type=\"submit\" value=\"Ajouter\"></td> ");
+	echo("</tr></table></form>");		
 
 	include("./bas_DS.php");
 ?>

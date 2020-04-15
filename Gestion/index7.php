@@ -40,10 +40,10 @@
 <center>
 <?php
 	if($password_OK){
-	  if($sujet2TP) echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets disponibles</a></p>") ;
+	  	echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets disponibles</a></p>") ;
 		$questionnaire_perso = "$repertoire$classe/_Copies/$elv/rep/index.htm";
 		echo("<p class=\"liste\"><a href=\"./index9.php?elv=$elv\" class=\"no-under\">Logiciels</a></p>") ;
-		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\" target=\"_blank\">Sujet actuel</a></p>");
+		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\">Sujet actuel</a></p>");
 	}
 ?>
 
@@ -52,7 +52,7 @@
 <?php
 	if($prof_login){
 		echo("<hr><h2>Complément Professeur</h2>");
-		echo("<p class=\"liste\"><a href=\"DSZone.php\" class=\"no-under\" target=\"_blank\" >Gestion des devoirs</a></p>");
+		echo("<p class=\"liste\"><a href=\"DSZone.php\" class=\"no-under\">Gestion des devoirs</a></p>");
 
 	}
 	include("../foot1.html");

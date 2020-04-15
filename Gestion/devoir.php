@@ -376,8 +376,14 @@
 		<center>
 		<table>
 			<tr><td width="52px"></td><td><font size="+5"><?php echo($titredudocument);?></font></td>
-			<td width="52px"><a href="../tui.image-editor/editor/" target="_blank">
-			<img src="icon/image_editor.png" width="50px" title="Editeur d'image"\></a></td></tr></table>
+			<td width="52px">
+<?php
+			if(!file_exists("../B800")) 
+				echo("<a href=\"../tui.image-editor/editor/\" target=\"_blank\"><img src=\"icon/image_editor.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");
+			else 
+				echo("<a href=\"./index7.php\"><img src=\"icon/home.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");	
+?>
+			</td></tr></table>
 
 <?php
 	//Dans le fichier sujet.txt qui est dans le répertoire de l'élève
@@ -398,14 +404,14 @@
 
 $_SESSION[sujet2DS] = $filename;
 if($DS_password == $copie_password) {
-	echo("<p><font color=\"#0000FF\">$Message</font></p>");
+	if($Message) echo("<p><font color=\"#0000FF\">$Message</font></p>");
 
-	if(sujet_ouvert($filename,$repertoire_rep,$password_OK)) echo(sujet_ouvert($filename,$repertoire_rep,$password_OK));
+	if(sujet_ouvert($filename,$repertoire_rep,$password_OK)) echo(sujet_ouvert($filename,$repertoire_rep,$password_OK));//Affichage du problème si existe
 	else {
 		$fp = fopen($filename, "r");
 		$titre = fgets($fp);
 		$code_rep = explode("#", $titre);
-		echo("<table><tr><td><h1>$code_rep[0]</h1></td><td><div class=\"bulles\">$le_bon_message</div></td></tr></table>");
+		echo("<table><tr><td><h1>$code_rep[0]</h1></td><td width=\"100px\"><div class=\"bulles\">$le_bon_message</div></td></tr></table>");
 		$i=0;
 		while(!feof($fp)){
 			$ligne = fgets($fp);
@@ -503,8 +509,7 @@ if($DS_password == $copie_password) {
 
 			if($part[0]=="L") {//Code L = Saut de page
 				$nb2pages++;
-				echo("<p></p>");
-				echo("<div class=\"breakafter\"></div>\n");
+				//echo("<div class=\"breakafter\"></div>\n");
 			}
 		}
 

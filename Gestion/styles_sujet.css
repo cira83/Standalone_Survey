@@ -32,6 +32,11 @@ table {
 	width: 790px;
 	margin-right: auto;
 	margin-left: auto;
+	text-align: center;
+}
+
+td {
+	vertical-align: middle;
 }
 
 table.left {
@@ -151,9 +156,16 @@ h1{
 }
 h2{
 	font-size: 22px;
+	font-style: normal
 }
+
+h3{
+	font-size: 18px;
+	font-style: normal
+}
+
 p{
-	font-size: 16px;
+	font-size: 14px;
 }
 tr.entete {
 	color: black;

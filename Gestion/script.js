@@ -21,7 +21,7 @@ function message(msg){
 function newclasse(lavaleur){
 	document.cookie = 'laclasse='+lavaleur;
 	lien = './index.php';
-	window.location.replace(lien);
+	location.reload() ;
 }
 
 function motdepasse(){
@@ -31,7 +31,7 @@ function motdepasse(){
 	document.cookie = 'elv='+elv+"; expires="+date.toUTCString();
 	motdepasse = document.getElementById('pwd').value;
 	document.cookie = 'password='+motdepasse+"; expires="+date.toUTCString();
-	
+
 	location.reload() ;
 }
 
@@ -47,13 +47,3 @@ function out(){
 function gotolien(lien){
 	window.location.replace(lien);
 }
-
-
-
-
-
-
-
-
-
-

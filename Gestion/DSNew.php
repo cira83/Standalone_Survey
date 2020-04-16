@@ -1,21 +1,27 @@
 <?php
-	$action = $_POST[action];//1. Nouveau Sujet 2.Editer sujet 3.Supprimer Ligne 4.Editer Ligne 5. Ajouter ligne 6. Saut de page
+	$action = isset($_POST['action']) ? $_POST['action'] : NULL;
+	//$action = $_POST[action];//1. Nouveau Sujet 2.Editer sujet 3.Supprimer Ligne 4.Editer Ligne 5. Ajouter ligne 6. Saut de page
 	if($action==1) $TAG = $_POST[TAG];//nouveau sujet
-	else $TAG = $_POST[td];//edition sujet
-	$num2ligne = $_GET[ligne];
+	//else $TAG = $_POST['td'];//edition sujet
+	else $TAG = isset($_POST['td']) ? $_POST['td'] : NULL;
+	
+	$num2ligne = isset($_GET['ligne']) ? $_GET['ligne'] : NULL;
+		//$num2ligne = $_GET['ligne'];
 
-	$champs = $_POST[Champs]; //$champs = str_replace("%", "p0ur100", $champs);
-
-	if(!$action) $action = $_GET[action];
-	if(!$TAG) $TAG = $_GET[TAG];
-	$pageaafficher = $_GET[page];
+	$champs = isset($_POST['Champs']) ? $_POST['Champs'] : NULL; //$champs = str_replace("%", "p0ur100", $champs);
+	//$champs = $_POST['Champs'];
+	$message = "";
+	
+	if(!isset($action)) $action = isset($_GET['action']) ? $_GET['action'] : NULL;
+	if(!isset($TAG)) $TAG = isset($_GET['TAG']) ? $_GET['TAG'] : NULL;
+	$pageaafficher = isset($_GET['page']) ? $_GET['page'] : NULL;
 	$requete = "./imagesES.php?TAG=$TAG";
 	$lettres = array("C","Q","I","T","I","U","L");
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	$repertoire_Sujets = "./files/$classe/_Copies/_Sujets/";
 	$repertoire_Images = "./files/$classe/_Copies/_Sujets/$TAG/img/";
 
-	$titre = $_POST[titre];
+	$titre = isset($_POST['titre']) ? $_POST['titre'] : NULL;
 
 	include("./haut_DS2.php");
 
@@ -96,10 +102,10 @@
 		$bgcolor = "bgcolor=\"#e0e0e0\"";// Tableau = #c0c0c0
 		switch($code) {
 			case "C":
-				echo("<table><tr><td align=\"left\"><i>$contenu</i></td><td width=\"10px\"><img src=\"icon/C_vert.gif\" title=\"Commentaire\"/>$HR$SUP$BR$Mod$BR$C$BR$Q$BR$L</td><tr></table>");
+				echo("<table><tr><td align=\"left\"><p class=\"commentaires\">$contenu</p></td><td width=\"10px\"><img src=\"icon/C_vert.gif\" title=\"Commentaire\"/>$HR$SUP$BR$Mod$BR$C$BR$Q$BR$L</td><tr></table>");
 				break;
 			case "Q":
-				echo("<table id=\"Q$quest\"><tr><td align=\"left\"><font color=\"blue\"><b>Q$quest)</b></font> $contenu</td><td width=\"10px\"><img src=\"icon/Q_vert.gif\" title=\"Question\"/><br><b>$coef</b>$HR$SUP$BR$Mod$BR$C$BR$T$BR$U$BR$I</td><tr></table>");
+				echo("<table id=\"Q$quest\"><tr><td align=\"left\"><p class=\"question\"><font color=\"blue\"><b>Q$quest)</b></font> $contenu</p></td><td width=\"10px\"><img src=\"icon/Q_vert.gif\" title=\"Question\"/><br><b>$coef</b>$HR$SUP$BR$Mod$BR$C$BR$T$BR$U$BR$I</td><tr></table>");
 				break;
 			case "T":
 				echo("<table><tr><td $bgcolor>Réponse texte sur une ligne</td><td width=\"10px\"><img src=\"icon/T_vert.gif\" title=\"R&eacute;ponse courte\"/>$HR$SUP$BR$C$BR$Q$BR$L</td><tr></table>");
@@ -127,6 +133,7 @@
 	function lecture($filename, $numero) {
 		add_event("lecture($filename, $numero)");
 		$fp = fopen($filename, "r");
+		$i = 0;
 		while(!feof($fp)){
 			$ligne = fgets($fp);
 			$i++;
@@ -148,7 +155,7 @@
 		$replace = '<br/>';
 		$champs1 = str_replace($order, $replace, $champs);// nettoie le champs à ajouter
 		$champs1 = str_replace("\\","",$champs1);//pour enlever les \ ajouter par je ne sais qui
-
+		$i=0;
 		while(!feof($source)){
 			$ligne = fgets($source);
 			$i++;
@@ -172,6 +179,7 @@
 		rename($chemin_du_sujet, "$chemin_du_sujet.bak");
 		$source = fopen("$chemin_du_sujet.bak", "r");
 		$cible = fopen($chemin_du_sujet, "w");
+		$i=0;
 		while(!feof($source)){
 			$ligne = fgets($source);
 			$i++;
@@ -188,6 +196,7 @@
 		rename($chemin_du_sujet, "$chemin_du_sujet.bak");
 		$source = fopen("$chemin_du_sujet.bak", "r");
 		$cible = fopen($chemin_du_sujet, "w");
+		$i=0;
 		while(!feof($source)){
 			$ligne = fgets($source);
 			$i++;
@@ -352,7 +361,7 @@
 
 
 //------------------------------------------------------------------------------------------------------ AFFICHAGE
-	$pageaafficher_vu = $pageaafficher + 1;
+	$pageaafficher_vu = intval($pageaafficher) + 1;
 	$vu_eleve = "</td><td><a href=\"./devoir.php?name=_Sujets/$TAG&file=./files/$classe/_Copies/_Sujets/$TAG&page=$pageaafficher_vu\" target=\"_blank\"><img src=\"./icon/sujet_mod.png\" height=\"40px\" title=\"Vu candidat\"/></a>";
 	// Première Ligne avec le Titre
 	ligne($i,"X","<a href=\"./DSZone.php\"><img src=\"./icon/home.png\" height=\"20px\" title=\"Home\"/></a></td><td width=\"30px\"><a href=\"./DSNew.php?TAG=$TAG&action=101&page=$pageaafficher\"><img src=\"./icon/reload.png\" height=\"20px\" title=\"Annuler la derni&egrave;re modification\"/></a></td><td><font size=\"+3\">$TAG - $part[0]</font>$vu_eleve",$part[1],$quest,$page,$TAG,$pageaafficher);
@@ -360,27 +369,28 @@
 
 	//if($i==$num2ligne-1) echo($message);
 	//if($racourcie) echo($racourcie);
+	$sur = 0;
 	while(!feof($fp)){
 		$ligne = fgets($fp);
 		$i++;
 		$part = explode("#", $ligne);
 		if($part[0]=="Q") {
 			$quest++;
-			$sur = $sur + $part[2];
+			$sur = $sur + floatval(isset($part[2])?$part[2]:0);
 		}
 		if($part[0]=="L") $page++;
 		if($pageaafficher==$page) {
 			if($part[0]=="Q") {
 				$quest_page++;
-				$sur_page = $sur_page + $part[2];
+				$sur_page = $sur_page + floatval(isset($part[2])?$part[2]:0);
 			}
 			if(in_array($part[0],$lettres)) {
-				ligne($i,$part[0],$part[1],$part[2],$quest,$page,$TAG,$pageaafficher);
+				ligne($i,$part[0],$part[1],isset($part[2])?$part[2]:"",$quest,$page,$TAG,$pageaafficher);//= isset($_POST['action']) ? $_POST['action'] : NULL;
 			}
 		}
 		if($i==$num2ligne) echo($message);//informations et edition
 
-		if(($part[0]=="L")&&($pageaafficher==$page-1)) ligne($i,$part[0],$part[1],$part[2],$quest,$page,$TAG,$pageaafficher);//dernière ligne avec numèro de page
+		if(($part[0]=="L")&&($pageaafficher==$page-1)) ligne($i,$part[0],$part[1],isset($part[2])?$part[2]:"",$quest,$page,$TAG,$pageaafficher);//dernière ligne avec numèro de page
 	}
 	fclose($fp);
 

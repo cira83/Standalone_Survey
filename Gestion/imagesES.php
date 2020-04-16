@@ -1,7 +1,7 @@
 <?php
 	$classe = $_COOKIE["laclasse"];
 	if(!$classe) $classe="CIRA1";
-	$TAG = $_GET[TAG];
+	$TAG = isset($_GET['TAG']) ? $_GET['TAG'] : NULL;
 
 	function est_image($image) {
 		$type_img = array("jpg","jpeg","gif","png");

@@ -2,6 +2,7 @@
 	include("./security.php");
 	include("./DSFonctions.php");
 	$numero2session = session_id();//Numero de session
+	$Message = "";
 
 	$fait = "&#9679;";
 	$non_fait = "&#9675;";
@@ -13,18 +14,22 @@
 	$classe = $_COOKIE['laclasse'];
 	$nb2pages = 0;
 
-	$pagenumber = $_GET[page];//numéro de la page
-	$sujet_tag = $_GET[name];//_Sujets/$TAG
+	$pagenumber = isset($_GET['page']) ? $_GET['page'] : NULL;
+	//$pagenumber = $_GET['page'];//numéro de la page
+	$sujet_tag = isset($_GET['name']) ? $_GET['name'] : NULL;
+	//$sujet_tag = $_GET['name'];//_Sujets/$TAG
 	//$touttag = explode("/", $sujet_tag);
 
 	$ip_adresse = $_SERVER['REMOTE_ADDR'];
 
-	$action = $_GET[action];
-	$rep = $_POST[rep];
+	$action = isset($_GET['action']) ? $_GET['action'] : NULL;
+	//$action = $_GET[action];
+	$rep = isset($_POST['rep']) ? $_POST['rep'] : NULL;
+	//$rep = $_POST['rep'];
 	$repertoire = "./files/$classe/_Copies/$nom";
 
-
-	$sujet = $_GET[file];//Pour le professeur uniquement 01 fevrier 2017
+	$sujet = isset($_GET['file']) ? $_GET['file'] : NULL;
+	//$sujet = $_GET['file'];//Pour le professeur uniquement 01 fevrier 2017
 	include("./quest_dyn.php");//Questions Dynamiques le 9 octobre 2017
 
 
@@ -63,7 +68,8 @@
 	if($prof_login) {
 		$repertoire = "$sujet";
 		$repertoire_rep = "$sujet/rep212";//pour éviter la fraude
-		$_SESSION[sujet2DS]=$sujet;
+		$action = isset($_SESSION['sujet2DS']) ? $_SESSION['sujet2DS'] : NULL;
+		//$_SESSION['sujet2DS']=$sujet;
 		$nomdufichier = "$sujet/index.htm";
 		if(file_exists($nomdufichier)) {
 			$fp = fopen($nomdufichier, "r");
@@ -133,7 +139,8 @@
 
 	function question($nom,$page,$image_source){
 		$link = "./devoir.php?action=1&page=$page";
-		$sujet2DS = $_SESSION[sujet2DS];
+		$sujet2DS = isset($_SESSION['sujet2DS']) ? $_SESSION['sujet2DS'] : NULL;
+		//$sujet2DS = $_SESSION['sujet2DS'];
 		if($sujet2DS) {
 			$link = "./devoir.php?action=1&file=$sujet2DS&page=$page";
 		}
@@ -149,7 +156,8 @@
 
 	function charge_programme($nom,$page){
 		$link = "./devoir.php?action=2&page=$page";
-		$sujet2DS = $_SESSION[sujet2DS];
+		$sujet2DS = isset($_SESSION['sujet2DS']) ? $_SESSION['sujet2DS'] : NULL;
+		//$sujet2DS = $_SESSION[sujet2DS];
 		if($sujet2DS) {
 			$link = "./devoir.php?action=2&file=$sujet2DS&page=$page";
 		}
@@ -181,7 +189,8 @@
 
 	function affiche_texte($texte,$name,$size,$page){
 		$link = "./devoir.php?action=3&page=$page";
-		$sujet2DS = $_SESSION[sujet2DS];
+		$sujet2DS = isset($_SESSION['sujet2DS']) ? $_SESSION['sujet2DS'] : NULL;
+		//$sujet2DS = $_SESSION[sujet2DS];
 		if($sujet2DS) {
 			$link = "./devoir.php?action=3&file=$sujet2DS&page=$page";
 		}
@@ -193,7 +202,8 @@
 
 	function affiche_long_texte($texte,$name,$size,$page){
 		$link = "./devoir.php?action=3&page=$page";
-		$sujet2DS = $_SESSION[sujet2DS];
+		$sujet2DS = isset($_SESSION['sujet2DS']) ? $_SESSION['sujet2DS'] : NULL;
+		//$sujet2DS = $_SESSION[sujet2DS];
 		if($sujet2DS) {
 			$link = "./devoir.php?action=3&file=$sujet2DS&page=$page";
 		}
@@ -272,8 +282,10 @@
 	}
 
 	if($action==3){//Enregistre la réponse texte
-		$question = $_POST[question];
-		$reponse = $_POST[reponse];
+		$question = isset($_POST['question']) ? $_POST['question'] : NULL;
+		//$question = $_POST['question'];
+		$reponse = isset($_POST['reponse']) ? $_POST['reponse'] : NULL;
+		//$reponse = $_POST['reponse'];
 		$filename_reponse_text = "$repertoire_rep/$question.txt";
 		$fp = fopen($filename_reponse_text, "w");
 		fwrite($fp, "$reponse\n");
@@ -350,6 +362,8 @@
 		}
 
 		//On construit les bulles
+		$le_bon_message = "";
+		$wall2 = 0;
 		for($wall=0;$wall<$walli;$wall++) {
 			$le_bon_message .= $bulle[$wall];
 			$wall2++;
@@ -402,7 +416,7 @@
     echo("<!-- filename $filename  -->");
     echo("<!-- repertoire_rep $repertoire_rep  -->");
 
-$_SESSION[sujet2DS] = $filename;
+$_SESSION['sujet2DS'] = $filename;
 if($DS_password == $copie_password) {
 	if($Message) echo("<p><font color=\"#0000FF\">$Message</font></p>");
 
@@ -416,7 +430,7 @@ if($DS_password == $copie_password) {
 		while(!feof($fp)){
 			$ligne = fgets($fp);
 			$part = explode("#", $ligne);
-			$part[1] = chemin_relatif($part[1]);
+			if(count($part)>1) $part[1] = chemin_relatif($part[1]);
 
 			if($pagenumber){
 				$affiche = 0;
@@ -431,8 +445,8 @@ if($DS_password == $copie_password) {
 				if($part[0]=="Q") {//Code Q = Question
 					$i++;
 					$bareme = "";
-					if($part[2]) $bareme = "</td><td class=\"pt\">$part[2]";
-					echo("<table id=\"Q$i\"><tr><td align=\"left\">\n<font color=\"#0000FF\">Q$i :</font> $part[1] $bareme</td></tr></table>");
+					if(isset($part[2])) $bareme = "</td><td class=\"pt\">$part[2]";
+					echo("<table id=\"Q$i\"><tr><td align=\"left\">\n<p class=\"question\"><font color=\"#0000FF\">Q$i :</font> $part[1]</p> $bareme</td></tr></table>");
 				}
 
 
@@ -455,7 +469,7 @@ if($DS_password == $copie_password) {
 
 
 				if($part[0]=="C") {//Code C = Commentaires
-					echo("<table><tr><td align=\"left\"><i>$part[1]</i></td></tr></table>");
+					echo("<table><tr><td align=\"left\"><p class=\"commentaires\">$part[1]</p></td></tr></table>");
 				}
 				if($part[0]=="H") {
 					echo("<table><tr><td align=\"left\">$part[1]</td></tr></table>");

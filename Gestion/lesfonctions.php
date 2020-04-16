@@ -50,7 +50,8 @@
 	$deroulant3 Menu déroulant des élèves - onchange=addelv
 	$listedesclasses Menu déroulant des classes - onchange=newclasse
 */
-
+	$lepreuve1 = 0;
+	
 	function info_sujet($file){//Lien vers le sujet et sa correction
 		if(file_exists($file)) {
 			$fp = fopen($file, "r");
@@ -694,35 +695,39 @@
 	$deroulant1 .= "</SELECT>";
 
 	//LISTE DES EPREUVES VERSION 2
-	if($lepreuve1) sort($lepreuve1);
-	$listedesepreuves = "Epreuves : ";
-	$deroulant2 = "<SELECT name=\"epr\">";
-	for($i=0;$i<count($lepreuve1);$i++){
-		$part = explode(".", $lepreuve1[$i]);
-		$tableaudesepreuves[$i]=$part[0];
-		$deroulant2 .= "<OPTION>$part[0]</OPTION>";
-		$listedesepreuves .= "<a href=\"./epreuve.php?mat=$part[2]&epr=$part[0].$part[1]\">$part[0]</a> ";
+	if($lepreuve1) {
+		sort($lepreuve1);
+		$listedesepreuves = "Epreuves : ";
+		$deroulant2 = "<SELECT name=\"epr\">";
+		for($i=0;$i<count($lepreuve1);$i++){
+			$part = explode(".", $lepreuve1[$i]);
+			$tableaudesepreuves[$i]=$part[0];
+			$deroulant2 .= "<OPTION>$part[0]</OPTION>";
+			$listedesepreuves .= "<a href=\"./epreuve.php?mat=$part[2]&epr=$part[0].$part[1]\">$part[0]</a> ";
+		}
+		$deroulant2 .= "</SELECT>";
 	}
-	$deroulant2 .= "</SELECT>";
-
+	else $deroulant2 = "";
+	
 	//LISTE DES PLANNINGS
 	$repertoire = "./files/$classe/_Plannings";
 	if(file_exists($repertoire)) {
 		$plannings = scandir($repertoire);
 		$plannings = plan_sort($plannings);
-	}
-	$listedesplannings = "Plannings : ";
-	$i=0;$k=0;
-	while($i < count($plannings)){
-		if(estfichier($plannings[$i])){
-			$labonnedate = explode(".", $plannings[$i]);
-			$ladatetxt=str_replace("_","/",$labonnedate[0]);
-			$listedesplannings .= "<a href=\"./planning.php?action=3&ladate=$labonnedate[0]\">$ladatetxt</a> ";
-			$tableauplanning[$k] = $ladatetxt;
-			$k++;
+		$listedesplannings = "Plannings : ";
+		$i=0;$k=0;
+		while($i < count($plannings)){
+			if(estfichier($plannings[$i])){
+				$labonnedate = explode(".", $plannings[$i]);
+				$ladatetxt=str_replace("_","/",$labonnedate[0]);
+				$listedesplannings .= "<a href=\"./planning.php?action=3&ladate=$labonnedate[0]\">$ladatetxt</a> ";
+				$tableauplanning[$k] = $ladatetxt;
+				$k++;
+			}
+			$i++;
 		}
-		$i++;
 	}
+	else $listedesplannings = "";
 
 	//LISTE DES ELEVES DE LA CLASSE
 	$deroulant3 = "<SELECT name=\"elv\" id=\"elv\" onchange=\"addelv(this.value);\"><OPTION>----</OPTION>";
@@ -756,19 +761,19 @@
 	if(file_exists($repertoire)) {
 		$appels = scandir($repertoire);
 		sort($appels);
-	}
-	$i=0;
-	$k=0;
-	while($i < count($appels)){
-		if(estfichier($appels[$i])){
-			$labonnedate = explode(".", $appels[$i]);
-			$ladatetxt=str_replace("_","/",$labonnedate[0]);
-			$listedesappels .= "<a href=\"./appel.php?ladate=$labonnedate[0]\">$ladatetxt</a> ";
-			$tableaudesappels[$k] = $ladatetxt; $k++;
+		$i=0;
+		$k=0;
+		while($i < count($appels)){
+			if(estfichier($appels[$i])){
+				$labonnedate = explode(".", $appels[$i]);
+				$ladatetxt=str_replace("_","/",$labonnedate[0]);
+				$listedesappels .= "<a href=\"./appel.php?ladate=$labonnedate[0]\">$ladatetxt</a> ";
+				$tableaudesappels[$k] = $ladatetxt; $k++;
+			}
+			$i++;
 		}
-		$i++;
 	}
-
+	
 	//LISTE DES CLASSES
 	$listedesclasses = "<select name=\"classe\" id=\"classe\" onchange=\"newclasse(this.value);\">";
 	$repertoire = "./files";
@@ -778,7 +783,7 @@
 	while($i < count($classes)){
 		if(estfichier($classes[$i])){
 			$labonneclasse = explode(".", $classes[$i]);
-			if($labonneclasse[1]!="")
+			if(count($labonneclasse)>1)
 				if($labonneclasse[0] != $classe) $listedesclasses .= "<option>$labonneclasse[0]</option>";
 				else $listedesclasses .= "<option selected>$labonneclasse[0]</option>";
 		}

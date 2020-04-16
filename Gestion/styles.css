@@ -161,9 +161,14 @@ p{
 	font-style: normal
 }
 
+p.commentaires{
+	color: black;
+	font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
 p.question{
 	color: black;
-	font: 13px "Lucida Grande", Lucida, Verdana, sans-serif;
+	font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
 table.reponse{

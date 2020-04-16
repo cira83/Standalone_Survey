@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$prof_password = "b7wd5c";//Mot du passe du professeur
+	include("./_Clef_Prof.php");
 	
 	
 	function estfichier2($nom){// Fichier ou non ?
@@ -22,9 +22,9 @@
 		foreach($classes as $classe) {
 			if(estfichier2($classe)){
 				$part = explode(".", $classe);
-				if(!$part[1]) {
-					if($i) $classe_text .= ":$classe";
-					else $classe_text = "$classe";
+				if(count($part)>1) {
+					if($i) $classe_text .= ":$part[0]";
+					else $classe_text = "$part[0]";
 					$i++;
 				}
 			}
@@ -37,7 +37,8 @@
 	$classe_dispo = explode(":", $classe_text);
 	$repertoire = "./files/";
 
-	$action1 = $_POST['action'];//--------------------------------------------------------------------------   LOGIN
+	$action1 = isset($_POST['action']) ? $_POST['action'] : NULL;
+	//$action1 = $_POST['action'];//--------------------------------------------------------------------------   LOGIN
 	if($action1==1){
 		$elv = $_POST['nom'];
 		setcookie("nom", $elv,time()+3600*24*8,"/");
@@ -67,6 +68,7 @@
 	//MENU DEROULANT ELEVES        ------------------------------------------------------------------------------------------------------
 	$select_elv = "<select name=\"nom\" id=\"nom\">\n";
 	$fichieralire = "$repertoire$classe.txt";
+	$bon_password = "";
 	if(file_exists($fichieralire)){
 		$fp = fopen($fichieralire, "r");
 		while(!feof($fp)){
@@ -113,16 +115,11 @@
 	//FICHIER LOG        -----------------------------------------------------------------------------------------------------------
 	if($action1==1){
 		$session_nb = session_id();
-		$nbDssaies = $_SESSION['essai'];
+		$nbDssaies = isset($_SESSION['essai']) ? $_SESSION['essai'] : NULL;
 		$ip_client = $_SERVER['REMOTE_ADDR'];
 		if($password_OK) $info_pwd = "Bon MdP";
 		else $info_pwd = $password;
 		$date_heure = date("d/m/y G:i");
-		$logfilename = $repertoire."$classe/_logindeseleves.txt";
-		$fp = fopen($logfilename, "a");
-		if($prof_login) fwrite($fp, "\n<td>$elv</td><td>$ip_client [$nbDssaies]</td><td>Prof Login</td><td>$date_heure</td>");
-		else fwrite($fp, "\n<td>$elv</td><td>$ip_client [$nbDssaies]</td><td>$info_pwd</td><td>$date_heure</td>");
-		fclose($fp);
 		$write = "MaJ";
 	}
 

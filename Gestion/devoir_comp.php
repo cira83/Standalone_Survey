@@ -8,7 +8,8 @@
 	$numero2session = session_id();//Numero de session
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	
-	$nom_elv = $_GET[name];
+	$nom_elv = isset($_GET['name']) ? $_GET['name'] : NULL;
+	//$nom_elv = $_GET[name];
 	$DS_password = DSMDP($classe, $nom_elv);
 	$fichier_elv = "./files/$classe/_Copies/$nom_elv/rep/index.htm"; //echo("<!-- $fichier_elv -->\n");
 	$rep_elv = "./files/$classe/_Copies/$nom_elv/rep/$DS_password";
@@ -18,7 +19,7 @@
 	$fichier_prof= "./files/$classe/_Copies/_Sujets/$TAG/index.htm"; //echo("<!-- $fichier_prof -->\n");
 	$rep_prof = "./files/$classe/_Copies/_Sujets/$TAG/rep212";
 	$titredudocument = "$TAG $nom_elv";
-	
+	$content = "";
 	
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------

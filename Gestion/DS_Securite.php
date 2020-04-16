@@ -1,8 +1,8 @@
 <?php 
 	//Recherche du mot de passe du DS
 	function DSMDP($classe, $elv) {
+		$password = 0;
 		$filename = "./files/$classe/_Copies/$elv/rep/on.txt";
-		$password = "";
 		if(file_exists($filename)) {
 			$fp = fopen($filename, "r");
 			$password = fgets($fp);
@@ -13,7 +13,7 @@
 			$fp = fopen($filename, "r");
 			if(!$password) $password = fgets($fp);
 			fclose($fp);
-		}	
+		}
 				
 		$password++;
 		$password--;

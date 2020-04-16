@@ -1,5 +1,6 @@
 <?php
 	function icone4lettre($lettre) {
+		$icone = "";
 		$SUP = "<img src=\"icon/Moins.gif\" title=\"Supprimer\"/>";
 		$C = "<img src=\"icon/C_vert.gif\" title=\"Commentaire\"/>";
 		$Mod = "<img src=\"icon/Editer.gif\" title=\"Mofifier\/>";

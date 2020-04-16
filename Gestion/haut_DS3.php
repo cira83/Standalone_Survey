@@ -5,6 +5,7 @@
 	if(!file_exists("./files/$classe.txt")) $classe = $_COOKIE["laclasse"];  //$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="TS2CIRA";
 	$largeurdelecran = $_COOKIE["largeur"];
 	$password = $_COOKIE["password"];
+	$nom = $_COOKIE["nom"];
 	$accueil = "<a href=\"./index.php\">";
 	$date = date("j/m");
 	$cheminfichiertp = "../Commun/tp/";
@@ -15,8 +16,9 @@
 	//$repertoire_copies =  "./files/$classe/_Copies";
 	$file2delete = "Pas de fichier &agrave; supprimer";
 
-	$action = $_GET[action];
-
+	$action = isset($_POST['action']) ? $_POST['action'] : NULL;
+	if(!$action) $action = isset($_GET['action']) ? $_GET['action'] : NULL;
+	
 	include("./lesfonctions.php");
 	$passwordOK = password($nom,$password,$classe);//=1 eleve, =2 prof
 

@@ -114,7 +114,7 @@
 
 	//Pour les sujets de TP version 2021
 	function Dropbox_link2($filename,$name,$classe){
-		echo("\n<!-- /DropBox($titre,$filename) -->\n");
+		echo("\n<!-- /DropBox($filename) -->\n");
 		if(file_exists($filename)){
 			$fp=fopen($filename, "r");
 			echo("<table>");

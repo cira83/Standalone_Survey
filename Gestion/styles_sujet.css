@@ -167,6 +167,12 @@ h3{
 p{
 	font-size: 14px;
 }
+p.commentaires{
+	color: black;
+	font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+
 tr.entete {
 	color: black;
 	font-variant: small-caps;
@@ -174,7 +180,7 @@ tr.entete {
 }
 p.question{
 	color: black;
-	font: 13px "Lucida Grande", Lucida, Verdana, sans-serif;
+	font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
 table.reponse{

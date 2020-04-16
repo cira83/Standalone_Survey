@@ -3,8 +3,10 @@
 
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	$action44 = "./DSZone.php?action=44";
-
-
+	$nom111 = "";
+	$titre_page = "DSZone";
+	$Message = "";
+	
 	$repertoire_DS = "./files/$classe/_Copies/";
 	$repertoire_Sujets = "./files/$classe/_Copies/_Sujets";
 	if(!file_exists($repertoire_DS)) mkdir($repertoire_DS);
@@ -98,6 +100,8 @@
 <?php
 	include("./haut_DS3.php");
 	include("./DS_Securite.php");// function DSMDP($classe, $elv)
+	
+	echo("<!-- action = $action -->");
 
 	function start($nom, $classe){//---------------------------------------------- passe en mode ON
 		$drap = false;
@@ -149,19 +153,20 @@
 	}
 
 	function file_liste2($dir){
+		$id = "";
 		$session_file_name = "$dir/sessions.txt";
 		$synthese_session = "./files/_liste2session.txt";
 
 		$fp_liste = fopen($synthese_session, "a");
 		fwrite($fp_liste, "#$dir:");
-
+		$id = "";
 		if(file_exists($session_file_name)) {
 			$fp2020 = fopen($session_file_name, "r");
 			while(!feof($fp2020)) {
 				$ligne = fgets($fp2020);
 				$part = explode(":", $ligne);
 				$part3 = explode("/", $part[1]);
-				$id .= "<font color=\"green\">$part3[2]/$part3[3] $part3[1]h$part3[0]</font>$br<font size=\"-1\">$part2[2]</font><br>$part[0]<br>";
+				$id .= "<font color=\"green\">$part3[2]/$part3[3] $part3[1]h$part3[0]</font><br><font size=\"-1\">$part3[2]</font><br>$part[0]<br>";
 				fwrite($fp_liste, "$part[0]:");
 			}
 			fclose($fp2020);
@@ -172,6 +177,7 @@
 	}
 
 	function analyse_log() {
+		$jumeau = "";
 		$synthese_session = "./files/_liste2session.txt";
 		$fp_liste = fopen($synthese_session, "r");
 		$ligne = fgets($fp_liste);
@@ -224,7 +230,7 @@
 			$listedu = scandir($repertoire_reponses);
 			foreach($listedu as $fichier) {
 				$part = explode(".", $fichier);
-				if((ord($part[0])>64)&&(!$part[1])) {
+				if((ord($part[0])>64)&&(!isset($part[1]))) {
 					$deroulant .= "<option value=\"$part[0]\">$part[0]</option>";
 				}
 			}
@@ -256,7 +262,7 @@
 
 
 	if($action=="OnOff"){
-		$name17 = $_GET[name];
+		$name17 = isset($_GET['name']) ? $_GET['name'] : NULL;
 		affiche("OnOff -- $name17");
 		start_stop($name17, $classe);
 	}
@@ -286,7 +292,7 @@
 
 
 	if($action==20201){//--------------------------------------------------------------------------------------- Supprime repertoire confirmation
-		$nom111 = $_GET[name];
+		$nom111 = isset($_GET['name']) ? $_GET['name'] : "";
 		echo("<form method=\"post\" action=\"DSZone.php?action=20202&name=$nom111\">");
 		echo("<table><tr><td>Supprimer le répertoire de $nom111 ? <input type=\"submit\" value=\"OUI\"> ");
 		echo("<input type=\"button\" value=\"NON\" onclick=\"gotolien('./DSZone.php')\"></td></tr></table>");
@@ -294,7 +300,7 @@
 	}
 
 	if($action==20202){//--------------------------------------------------------------------------------------- Supprime repertoire
-		$nom111 = $_GET[name];
+		$nom111 = isset($_GET['name']) ? $_GET['name'] : "";
 		$depart = "./files/$classe/_Copies/$nom111";
 		$arrive = "./files/$classe/_Copies/_$nom111";
 		rename($depart, $arrive);
@@ -303,8 +309,8 @@
 
 
 	if($action==44){//--------------------------------------------------------------------------------------- Distribue les sujets
-		$lebonnom = $_POST[nom];
-		$lebontd = $_POST[td];
+		$lebonnom = isset($_POST['nom']) ? $_POST['nom'] : NULL;
+		$lebontd = isset($_POST['td']) ? $_POST['td'] : NULL;
 		$nomTemporaire = "$repertoire_Sujets/$lebontd/index.htm";
 
 		if($lebonnom=="Tous"){
@@ -334,8 +340,10 @@
 
 
 	if($action==111){//----------------------------------------------------------------------------------------    Efface les réponses de nom111 et le sujet - demande de confirmation
-		$nom111 = $_GET[nom];
-		$td111 = $_GET[td];
+		$nom111= isset($_GET['nom']) ? $_GET['nom'] : NULL;
+		//$nom111 = $_GET['nom'];
+		$td111= isset($_GET['td']) ? $_GET['td'] : NULL;
+		//$td111 = $_GET['td'];
 		echo("<form method=\"post\" action=\"DSZone.php?action=110&nom=$nom111&td=$td111\">");
 		echo("<table><tr><td>Archiver le $td111 de $nom111 ? <input type=\"submit\" value=\"OUI\"> ");
 		echo("<input type=\"button\" value=\"NON\" onclick=\"gotolien('./DSZone.php')\"></td></tr></table>");
@@ -343,8 +351,8 @@
 	}
 
 	if($action==110){//-------------------------------------------------------------------------------------------------     Déplace les réponses de nom111 et le sujet dans rep/$TAG
-		$nom111 = $_GET[nom];
-		$td111 = $_GET[td];
+		$nom111= isset($_GET['nom']) ? $_GET['nom'] : NULL;
+		$td111= isset($_GET['td']) ? $_GET['td'] : NULL;
 		$DS_password = DSMDP($classe, $nom111);
 
 		$dossier_rep = "./files/$classe/_Copies/$nom111/rep/$DS_password";
@@ -360,7 +368,7 @@
 			}
 			foreach($listeDreponses as $filename){
 				$partiesdunom2020 = explode(".", $filename);
-				if($partiesdunom2020[1]) {// tous les fichiers sauf .. et .
+				if(isset($partiesdunom2020[1])) {// tous les fichiers sauf .. et .
 					$avant = "./files/$classe/_Copies/$nom111/rep/$filename";
 					$apres = "$dossier_bak$filename";
 					rename($avant, $apres);
@@ -482,7 +490,7 @@
 			if(!$sujet_present) $classetd =" bgcolor=\"#c0c0c0\" ";
 			$info_session = "<span id=\"etat_$nom17\"></span>";
 			$hauteur_photo = "100px";
-			if($nb2sessions) $info_session = "<span id=\"etat_$nom17\"></span>";
+			//if($nb2sessions) $info_session = "<span id=\"etat_$nom17\"></span>";
 			if($sujet_present) $imp = "<a href=\"./copie2DS.php?name=$nom17&file=$nomsujet2DS\" target=\"_blank\" title=\"imprimer\"><img src=\"icon/imp.gif\" height=\"13px\"></a>";
 			else $imp = "";
 			$efface = "<a href=\"./DSZone.php?action=111&nom=$nom17&td=$titre_sujet\" color=\"red\"><img src=\"./icon/effacer.jpg\" height=\"15px\" align=\"bottom\"></a>";
@@ -520,7 +528,9 @@
 				$partiesdunom = explode("#", $titre2ds);
 				fclose($fp);
 				$hauteur = "15px";
-				echo("<td><font size=\"+1\"><b>$nom01</b> - $partiesdunom[0] - <font color=\"blue\">$partiesdunom[2]</font></font></td>");
+				$partiesdunom0 = isset($partiesdunom[0]) ? $partiesdunom[0] : "";
+				$partiesdunom2 = isset($partiesdunom[2]) ? $partiesdunom[2] : "";
+				echo("<td><font size=\"+1\"><b>$nom01</b> - $partiesdunom0 - <font color=\"blue\">$partiesdunom2</font></font></td>");
 				echo("<td><a href=\"./devoir.php?name=_Sujets/$nom01&file=$repsujet\" target=\"_blank\" Title=\"Corriger\"><img src=\"./icon/sujet_mod.png\" height=\"$hauteur\"></a></td>");
 				echo("<td><a href=\"./copie2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Correction\"><img src=\"./icon/sujet.png\" height=\"$hauteur\"></a></td>");
 				echo("<td><a href=\"./sujet2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Sujet\"><img src=\"./icon/distrib.png\" height=\"$hauteur\"></a></td>");
@@ -574,7 +584,7 @@
 
 
 <?php
-	//----------------------------------------------------------------------------------------    Liste des fichiers .txt des répertoires réponses
+	//----------------------------------------------------------------------------------------    INFORMATIONS
 	titre_tab("Informations");
 
 	$synthese_session = "./files/_liste2session.txt";
@@ -588,8 +598,8 @@
 	foreach($Nom_et_sujet as $nom1_sujet1){
 		$part_of1 = explode(":", $nom1_sujet1);
 		$nom17 = $part_of1[0];
-		$code2DS = DSMDP($classe, $nom17);
-		$code2DS = "<font color=\"#000000\" title=\"$code2DS\">----</font>";
+		$code2DS1 = DSMDP($classe, $nom17);
+		$code2DS = "<font color=\"#000000\" title=\"$code2DS1\">--$code2DS1--</font>";
 
 		$lesreponses = "$repertoire_DS$nom17/rep";
 		if(file_exists($lesreponses)&&($nom17!=".")){

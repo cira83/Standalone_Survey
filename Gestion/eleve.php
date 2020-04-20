@@ -1,5 +1,5 @@
 <?php
-	$nom = $_GET[nom];
+	$nom = $_GET['nom'];
 	setcookie("nom", $nom,time()+3600*24*8,"/");
 	$nom_doc = $nom;
 	$titre_page = "$nom";
@@ -52,9 +52,10 @@ function precedent_suivant($liste2nom,$nom){
 	$tabsynth1 = "./geo.php?nomfichier=./files/$classe/_Semestre%201.txt";
 	
 	tableau("$accueil$classe</a> - <a href=\"$tabsynth1\">Semestre 1</a> - <a href=\"$tabsynth2\">Semestre 2</a>");	
-	if($_GET[modif]==1){
+	//$_GET['modif']
+	if(my_GET("modif")==1){
 		affiche("Fichier modifié");
-		$nom = $_POST[nom];
+		$nom = $_POST['nom'];
 		$handle = fopen($fichierdesnoms, "a");
 		fprintf($handle, "\n$_POST[nom]:$_POST[Prenom]:$_POST[nez]:$_POST[Mot]:");
 		fprintf($handle, "$_POST[Tel]:$_POST[Mail]:$_POST[Bac]:$_POST[Remarque]:");
@@ -64,8 +65,8 @@ function precedent_suivant($liste2nom,$nom){
 	}
 	
 	
-	if($_GET[modif]==2){
-		$nom = $_POST[nom];
+	if(my_GET("modif")==2){
+		$nom = $_POST['nom'];
 		$repertoire2eleve .= $nom."/";
 		$chemin = $repertoire2eleve;
 		//on vérifie que le champ est bien rempli:
@@ -149,6 +150,7 @@ function precedent_suivant($liste2nom,$nom){
 	$champs = champs("Remarque",$remarque);	
 	echo("\n[7] RQ [rang] : $champs<br/>");
 	$champs = "<select name=\"demission\">";
+	$oui = ""; $non = "";
 	if($demission=="oui") $oui = "selected"; else $non = "selected";
 	$champs .= "<option value=\"non\" $non>Non</option>";
 	$champs .= "<option value=\"oui\" $oui>Oui</option>";

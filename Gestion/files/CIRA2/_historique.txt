@@ -1,4 +1,6 @@
 /Gestion/DSZone.php
+/Gestion/DSZone.php?action=110&nom=Feyrit&td=TP11
+/Gestion/DSZone.php?action=111&nom=Feyrit&td=TP11
 /Gestion/DSZone.php
 /Gestion/DSZone.php
 /Gestion/DSZone.php
@@ -10,7 +12,5 @@
 /Gestion/DSZone.php
 /Gestion/DSZone.php
 /Gestion/DSZone.php
-/Gestion/Classes.php
-/Gestion/Classes.php
 /Gestion/DSZone.php
-/Gestion/Classes.php
+/Gestion/DSZone.php

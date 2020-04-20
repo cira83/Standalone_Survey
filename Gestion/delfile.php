@@ -10,8 +10,8 @@ function non(lefichier){
 </script>
 <?php include("./haut.php");?>
 <?php
-	$action = $_GET[action];
-	$filename15 = $_GET[name];
+	$action = $_GET['action'];
+	$filename15 = $_GET['name'];
 	
 	if($action==0){
 		echo("<table><tr><td>");

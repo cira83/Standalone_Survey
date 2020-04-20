@@ -1,15 +1,16 @@
 <?php
-	include("./security.php");
+	include("./security.php");//$prof_password
 	include("./DSFonctions.php");
 	$numero2session = session_id();//Numero de session
 	$Message = "";
+	$script_name = "";
 
 	$fait = "&#9679;";
 	$non_fait = "&#9675;";
 
 
-	$nom = $_COOKIE['nom'];
-	$password = $_COOKIE['password'];
+	$nom = isset($_COOKIE['nom']) ? $_COOKIE['nom'] : "";
+	$password = isset($_COOKIE['password']) ? $_COOKIE['password'] : NULL;
 	$files = "./files/";
 	$classe = $_COOKIE['laclasse'];
 	$nb2pages = 0;
@@ -35,12 +36,10 @@
 
 	include("./DS_Securite.php");
 	$DS_password = DSMDP($classe, $nom);
-	$copie_password = $_COOKIE['code4'];
+	$copie_password = isset($_COOKIE['code4']) ? $_COOKIE['code4'] : "";
 	$repertoire_rep = "./files/$classe/_Copies/$nom/rep/$copie_password";
-	$repertoire_rep1 = "./files/$classe/_Copies/$nom/rep";
+	$repertoire_rep1 = "./files/$classe/_Copies/$nom/rep/";
 	$filename = "$repertoire/rep/index.htm";
-
-
 
 ?>
 
@@ -64,13 +63,13 @@
 </script>
 
 <?php
-  $prof_login = strpos($sujet,"Sujet"); //C'est le prof qui corrige le sujet
+  	$prof_login = strpos($sujet,"Sujet"); //------------------------------------------------------   C'est le prof qui corrige le sujet
 	if($prof_login) {
 		$repertoire = "$sujet";
-		$repertoire_rep = "$sujet/rep212";//pour éviter la fraude
-		$action = isset($_SESSION['sujet2DS']) ? $_SESSION['sujet2DS'] : NULL;
-		//$_SESSION['sujet2DS']=$sujet;
-		$nomdufichier = "$sujet/index.htm";
+		$repertoire_rep = str_replace("index.htm", "rep212", $repertoire);
+		$repertoire_rep1 = $repertoire_rep;
+		if(strpos($sujet, "index.htm")) $nomdufichier = $sujet;
+		else $nomdufichier = "$sujet/index.htm";
 		if(file_exists($nomdufichier)) {
 			$fp = fopen($nomdufichier, "r");
 			$ligne1 = fgets($fp);
@@ -79,6 +78,7 @@
 		}
 		$nom = "Correction";
 		$filename = $nomdufichier;
+		$DS_password = $copie_password;
 	}
 
 	function sujet_ouvert($sujet,$repertoire_rep,$passwordOK){
@@ -295,36 +295,39 @@
 
 	if(!file_exists($repertoire_rep)) mkdir($repertoire_rep, 0777);//-------------------------------------------         Création du répertoire réponse si non existant
 
-	//Gestion des sessions
-	$date_ext = date("i/G/d/m");
-	$sessions_file_name = "$repertoire_rep1/sessions.txt";
-	if(!file_exists($sessions_file_name)) {
-		echo("<script>premier(\"$DS_password\");</script>");
-		$session_fp = fopen($sessions_file_name, "w");
-		fwrite($session_fp, "$numero2session:$date_ext:$ip_adresse:");
-		fclose($session_fp);
-		$copie_password = $DS_password;
-	}
-	else {
-		$session_fp = fopen($sessions_file_name, "r");
-		$flag = false;
-		while(!feof($session_fp)){
-			$ligne_first = explode(":", fgets($session_fp));
-			if($ligne_first[0]=="$numero2session") $flag = true;
-		}
-		fclose($session_fp);
-		if(!$flag){//Nouveau numéro de session
-			$session_fp = fopen($sessions_file_name, "a");
-			fwrite($session_fp, "\n$numero2session:$date_ext:$ip_adresse");
+	//###
+	if(!$prof_login) {
+		//Gestion des sessions
+		$date_ext = date("i/G/d/m");
+		$sessions_file_name = $repertoire_rep1."sessions.txt";
+		if(!file_exists($sessions_file_name)) {
+			echo("<script>premier(\"$DS_password\");</script>");
+			$session_fp = fopen($sessions_file_name, "w");
+			fwrite($session_fp, "$numero2session:$date_ext:$ip_adresse:");
 			fclose($session_fp);
+			$copie_password = $DS_password;
 		}
+		else {
+			$session_fp = fopen($sessions_file_name, "r");
+			$flag = false;
+			while(!feof($session_fp)){
+				$ligne_first = explode(":", fgets($session_fp));
+				if($ligne_first[0]=="$numero2session") $flag = true;
+			}
+			fclose($session_fp);
+			if(!$flag){//Nouveau numéro de session
+				$session_fp = fopen($sessions_file_name, "a");
+				fwrite($session_fp, "\n$numero2session:$date_ext:$ip_adresse");
+				fclose($session_fp);
+			}
+		}
+		$infos_file_name = $repertoire_rep1."infos.txt";
+		$infos_fp = fopen($infos_file_name, "w");
+		$info_time = time();
+		fwrite($infos_fp, "$info_time");
+		fclose($infos_fp);
 	}
-	$infos_file_name = "$repertoire_rep1/infos.txt";
-	$infos_fp = fopen($infos_file_name, "w");
-	$info_time = time();
-	fwrite($infos_fp, "$info_time");
-	fclose($infos_fp);
-
+	
 	//----------------------------------------------------------------------------         BULLE JAUNE
 	if(file_exists($filename)) {
 		$script_name = $_SERVER['SCRIPT_NAME'];
@@ -415,6 +418,7 @@
     echo("<!-- script_name $script_name -->");
     echo("<!-- filename $filename  -->");
     echo("<!-- repertoire_rep $repertoire_rep  -->");
+    echo("<!-- action $action  -->");
 
 $_SESSION['sujet2DS'] = $filename;
 if($DS_password == $copie_password) {
@@ -479,6 +483,7 @@ if($DS_password == $copie_password) {
 						$image_link = "./icon/interro.png";
 						if(strpos("_$part[1]","./files/")) $image_link = "$part[1]";
 						if(file_exists($image_link)) $dimensions = getimagesize($image_link);
+						else $dimensions[0] = "";
 						if($dimensions[0]>700) affiche_image($image_link,700);//Pour les petites images
 						else affiche_image($image_link,$dimensions[0]);
 						question("I$i",$nb2pages+1,"");

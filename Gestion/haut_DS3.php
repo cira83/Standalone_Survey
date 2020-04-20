@@ -1,11 +1,9 @@
 <?php
+	include("./lesfonctions.php");
+	
 	$photos = "../photos/";
 	$files = "./files/";
 	$nbphotoslignes = 5;
-	if(!file_exists("./files/$classe.txt")) $classe = $_COOKIE["laclasse"];  //$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="TS2CIRA";
-	$largeurdelecran = $_COOKIE["largeur"];
-	$password = $_COOKIE["password"];
-	$nom = $_COOKIE["nom"];
 	$accueil = "<a href=\"./index.php\">";
 	$date = date("j/m");
 	$cheminfichiertp = "../Commun/tp/";
@@ -19,8 +17,7 @@
 	$action = isset($_POST['action']) ? $_POST['action'] : NULL;
 	if(!$action) $action = isset($_GET['action']) ? $_GET['action'] : NULL;
 	
-	include("./lesfonctions.php");
-	$passwordOK = password($nom,$password,$classe);//=1 eleve, =2 prof
+	
 
 	//Ajouter le 8 septembre 2016
 	if(!$passwordOK){
@@ -117,14 +114,14 @@
 	<center>
 		<table>
 		<tr>
-			<td><a href="./index.php" title="Appel"><img src="./icon/home.png" height="15px" style="border:solid 4px #fff"></a></td>
+			<td width="50px"><a href="./index.php" title="Appel"><img src="./icon/home.png" height="25px"></a></td>
 			<td><?php echo($listedesclasses);?></td>
 		<?php
+			echo("<!-- passwordOK=$passwordOK-->\n");
 			if(!$passwordOK){
 				echo("<td><input type=\"text\" name=\"nom\" id=\"nom\" size=\"8\"><input type=\"password\" name=\"pwd\" id=\"pwd\" size=\"8\"></td>");
 			}
 		?>
-		<td><input type="submit" onclick="<?php if($passwordOK) echo("out();"); else echo("motdepasse();");?>" value="<?php if($passwordOK) echo("Logout"); else echo("Login");?>"></td>
 		<td align="right"><?php echo($historique_select);?></td>
 		</tr></table>
 <!-- haut.php -->

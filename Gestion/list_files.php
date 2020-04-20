@@ -1,5 +1,5 @@
 <?php
-	$origine_filename = $_GET[file];
+	$origine_filename = $_GET['file'];
 	$affichage = "<table><tr><td bgcolor=\"yellow\">Pas de fichier enregistré dans $origine_filename</td></tr></table>";
 	
 	$repertoire = "$origine_filename";

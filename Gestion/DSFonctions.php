@@ -38,7 +38,7 @@
 			$fp = fopen($filename, "r");
 			$ligne = fgets($fp);
 			$part = explode("#", $ligne);
-			$TAG = $part[1];
+			$TAG = isset($part[1])?$part[1]:"";
 			fclose($fp);
 		}
 		return trim($TAG);

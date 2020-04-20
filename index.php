@@ -12,7 +12,7 @@
 			location.reload() ;
 		}
 	</script>
-		<meta http-equiv="refresh" content="2;URL=./Gestion/index7.php">
+		<meta http-equiv="refresh" content="2;URL=./Gestion">
 	</head>
 	<body>
 		<img src="head.png"/>

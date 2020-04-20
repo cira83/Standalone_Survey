@@ -11,9 +11,10 @@
 	$matieres = scandir($repertoire);
 	sort($matieres);
 	
-	$font_orange = "<font color=\"orange\">";
+	$font_orange = "<font color=\"#ffff00\">";
 	
 	//les apréciations
+	$apres122016 = "";
 	$file_eleve2016 = fopen("./files/$classe.txt", "r");
 	while(!feof($file_eleve2016)){
 		$ligne122016 = fgets($file_eleve2016);
@@ -32,7 +33,10 @@
 	//les absences 14 novembre
 	$lesabsences = lesabsences2($classe,$nom,$tableaudesappels);
 	echo($lesabsences);
-	
+	$somme_note = 0;
+	$somme_coef = 0;
+	$somme_sem = array_fill(0, 3, 0);
+	$somme_coef_sem = array_fill(0, 3, 0);
 	for($i=0;$i<count($matieres);$i++){
 		$lamatiere = $matieres[$i];
 		if(estfichier($lamatiere)) {
@@ -63,7 +67,7 @@
 							$lanote = $note;
 							$lecoef = $coef;
 							$lenonfait = $nonfait;
-							$commentaire = $data[6];
+							$commentaire = my_array_value($data,6);
 							$liens = lescopies2($nom2,$classe,$lepreuve,$repertoire_copies);
 							if($data[3]=="Non Fait") $liens="<img src=\"./icon/absent.gif\"/>";	//On vire la copie si le copain la fait seul						
 							if($lanote) $Description .= "\n$lanote le $data[3] ($data[4])";
@@ -78,7 +82,7 @@
 						$liens = " ";
 					}
 					if($liens=="") $liens = lescopies2($nom,$classe,$lepreuve,$repertoire_copies);//Au cas où la copie est dans son répertoire
-					$somme_note += $lanote*$lecoef;
+					$somme_note += floatval($lanote)*floatval($lecoef);// $lanote*$lecoef;
 					
 					$fichier = $files."$classe/$lamatiere/_$lepreuve";
 					$file_image = str_replace("txt", "svg", $fichier);
@@ -132,6 +136,7 @@
 		}
 	}
 	echo("<br/>");
+	$graphe = "";
 	for($i=0;$i<count($somme_coef_sem);$i++){
 		if($somme_coef_sem[$i]>0) {
 			$lamoyennesem = number_format($somme_sem[$i]/$somme_coef_sem[$i],2);
@@ -143,7 +148,7 @@
 			$legraphe = graphe_plus($lamoyennesem,$file_image);
 			
 			
-			echo("<table class=\"notes\"><tr><td>La moyenne du$font_orange semestre $semestre</font> est de $lamoyennesem ($somme_coef_sem[$i])<br>$legraphe</td></tr></table>\n");
+			echo("<table class=\"notes\"><tr><td>La moyenne du$font_orange semestre $semestre</font> est de $lamoyennesem ($somme_coef_sem[$i])</td><td $tabgphw>$legraphe</td></tr></table>\n");
 		}
 	}
 	echo("<br/>");	

@@ -1,6 +1,7 @@
 ﻿<?php
 	include("../head1.html");
 	include("../Dropbox.php");
+	include("DSFonctions.php");
 
 	if($_COOKIE["laclasse"]) $classe = $_COOKIE["laclasse"];
 	else $classe = "CIRA1";

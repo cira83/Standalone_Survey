@@ -31,7 +31,7 @@ function menutab($numero,$action)
 		$_SESSION['menu'] = "2,0,0,0,1,1,0,0";
 	}
 	
-	$menuforme = explode(",", $menuformes); //La liste définissant l'état du menu avant
+	$menuforme = explode(",", isset($menuformes)?$menuformes:""); //La liste définissant l'état du menu avant
 	$menuforme = explode(",", $_SESSION['menu']);
 
 	if($action=="save")
@@ -82,7 +82,7 @@ function menutab($numero,$action)
 
 	echo("<table><tr>");
 //                                                  PREMIERE LIGNE		
-
+	$ordre = isset($ordre)?$ordre:0;
 	if($ordre==0) cases("Nouveau fichier","<a href=\"./index.php?action=newfile\">",$menuforme[0]);		
 	cases("Faire les calculs","<a href=\"./index.php?action=calcul\">",$menuforme[3]);
 	cases("<b>Les valeurs</b>","",$menuforme[6]);

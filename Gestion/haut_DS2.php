@@ -4,8 +4,8 @@
 	$nbphotoslignes = 5;
 	if(!file_exists("./files/$classe.txt")) $classe = $_COOKIE["laclasse"];  //$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="TS2CIRA";
 	$largeurdelecran = $_COOKIE["largeur"];
-	$password = $_COOKIE["password"];
-	$nom = $_COOKIE["nom"];
+	$password = isset($_COOKIE['password']) ? $_COOKIE['password'] : NULL;	
+	$nom = isset($_COOKIE['nom']) ? $_COOKIE['nom'] : NULL;
 	$accueil = "<a href=\"./index.php\">";
 	$date = date("j/m");
 	$cheminfichiertp = "../Commun/tp/";
@@ -17,17 +17,6 @@
 	$file2delete = "Pas de fichier &agrave; supprimer";
 
 	include("./lesfonctions.php");
-	$passwordOK = password($nom,$password,$classe);//=1 eleve, =2 prof
-	
-	//Ajouter le 8 septembre 2016
-	if(!$passwordOK){
-		$tableaudesmatieres = "";
-		$tableaudesappels = "";
-		$leleve = "";
-		$lepreuve1 = "";
-		$tableauplanning = "";
-		$tableaudesTP = "";
-	}
 	
 	
 	//historique
@@ -66,7 +55,7 @@
 <script type="text/javascript" src="./script.js"></script>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="styles_sujet.css">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<link rel="icon" type="image/jpg" href="./icon/favicon.jpg" />
 		<title>Edition DS</title>
@@ -77,7 +66,7 @@
 	<table class="max"><tr><td valign="top">	
 		<table>
 		<tr>
-			<td><a href="./index.php" title="Appel"><img src="./icon/home.png" height="15px" style="border:solid 4px #fff"></a></td>
+			<td width=\"50px\"><a href="./index.php" title="Appel"><img src="./icon/home.png" height="25px"></a></td>
 			<td><?php echo($listedesclasses);?></td>
 		<?php
 			if(!$passwordOK){

@@ -3,7 +3,11 @@
 	$numero = session_id();//Numero des fichiers 
 	include("./menutab.php");
 	
-	$action = $_GET[action];//Action fournie par le menu
+	$action = isset($_GET['action'])?$_GET['action']:"";//Action fournie par le menu
+	$arg_N = 0;
+	$arg_D = 0;
+ 	$Seps = 0;
+ 	$Sx = 0;
 ?>
 <html>
 <head>
@@ -26,9 +30,9 @@
 			$D = $elts[1];
 			$R = $elts[2];
 		
-			echo("var NP = \"$N\"\n");
-			echo("var DP = \"$D\"\n");
-			echo("var RP = \"$R\"\n");
+			echo("var NP = \"$N\";\n");
+			echo("var DP = \"$D\";\n");
+			echo("var RP = \"$R\";\n");
 			
 			if($action=="black") 
 			{
@@ -44,8 +48,10 @@
 				while($i<$nb_pts)
 				{
 					$DATA=explode(";", $Ligne[$i]);
-					$mod = (float)$DATA[1];
-					$arg = (float)$DATA[2];
+					$DATA1 = isset($DATA[1])?$DATA[1]:"";
+					$mod = (float)$DATA1;
+					$DATA2 = isset($DATA[2])?$DATA[2]:"";
+					$arg = (float)$DATA2;
 					$X[$i] = ($arg + 180)*2.85 + 513;
 					$Y[$i] = -$mod*74/5 + 320;	
 					$i++;
@@ -90,7 +96,8 @@
 				{
 					$DATA=explode(";", $Ligne[$i]);
 					$x[$i] = (float)$DATA[0];
-					$y[$i] = (float)$DATA[2];
+					$DATA2 = isset($DATA[2])?$DATA[2]:"";
+					$y[$i] = (float)$DATA2;
 					if($miny>$y[$i]) $miny = $y[$i];
 					if($maxy<$y[$i]) $maxy = $y[$i];
 					$i++;
@@ -288,10 +295,11 @@
 	$scaley = 15;
 
 	
-	$N = $_POST[N];//Numerateur de T(p)
-	$D = $_POST[D];//Denominateur de T(p)
-	$R = $_POST[R];//Valeur du retard en s
-	$T = $_POST[T];//Valeur de la constante de temps
+	
+	$N = isset($_POST['N']) ? $_POST['N'] : "";//Numerateur de T(p)
+	$D = isset($_POST['D'])?$_POST['D']:"";//Denominateur de T(p)
+	$R = isset($_POST['R'])?$_POST['R']:"";//Valeur du retard en s
+	$T = isset($_POST['T'])?$_POST['T']:"";//Valeur de la constante de temps
 
 /*-----------------------------------------------------------------      Liste des Fonctions disponibles
 function menutab($numero) //Remplacé par include("./menutab.php");
@@ -360,7 +368,9 @@ ________________________________________________________________________________
 	function multpoly($poly1,$poly2)//Multiplie 2 polynomes 
 	{
 		$nbcoef = 9;//puissance MAX
-		
+		$coef = array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		$poly1_tab = array(0,0,0,0,0,0,0,0,0,0);
+		$poly2_tab = array(0,0,0,0,0,0,0,0,0,0);
 		$poly1_tab = explode(";", $poly1);
 		$poly2_tab = explode(";", $poly2);
 		$imax = count($poly1_tab);
@@ -485,7 +495,7 @@ ________________________________________________________________________________
 		$R = $elts[2];
 		$T = $elts[3];
  		
-		if($N!="") $formulaire = formulaire($N,$D,$R,$numero,$T);
+		if($N!="") $formulaire = formulaire($N,$D,$R,isset($numero)?$numero:0,$T);
 		else $formulaire = "VIDE";
 	
 		return($formulaire);
@@ -733,7 +743,8 @@ function tableauCoef($poly,$nom,$var)//Bel affichage des polynomes
 		
 		$NumPolyZ = Trans_Z($NumPoly,$Te);
 		$DenPolyZ = Trans_Z($DenPoly,$Te);
-		$_SESSION['transfert'] .= $RZ_txt.$NumPolyZ."#";
+		$RZ_txt0 = isset($RZ_txt)?$RZ_txt:"";
+		$_SESSION['transfert'] .= $RZ_txt0.$NumPolyZ."#";
 		$_SESSION['transfert'] .= "$DenPolyZ#";
 				
 		$formulaire = lecturepoly($_SESSION['transfert']);
@@ -893,8 +904,8 @@ function tableauCoef($poly,$nom,$var)//Bel affichage des polynomes
 		{
 			$DATA=explode(";", $Ligne[$i]);
 			$puls = $DATA[0];
-			$mod = $DATA[1];
-			$arg = $DATA[2];
+			$mod = isset($DATA[1])?$DATA[1]:0;
+			$arg = isset($DATA[2])?$DATA[2]:0;
 			$content1 .= "<tr><td>$puls</td><td>$mod</td><td>$arg</td></tr>";
 			$i++;
 		}
@@ -916,8 +927,8 @@ function tableauCoef($poly,$nom,$var)//Bel affichage des polynomes
 		{
 			$DATA=explode(";", $Ligne[$i]);
 			$puls = $DATA[0];
-			$mod = $DATA[1];
-			$arg = $DATA[2];
+			$mod = isset($DATA[1])?$DATA[1]:0;
+			$arg = isset($DATA[2])?$DATA[2]:0;
 			$content1 .= "<tr><td>$puls</td><td>$mod</td><td>$arg</td></tr>";
 			$i++;
 		}
@@ -949,8 +960,8 @@ function tableauCoef($poly,$nom,$var)//Bel affichage des polynomes
 	
 			
 	menutab($numero,$action);
-	echo($formulaire);
-	echo($content1);
+	if(isset($formulaire)) echo($formulaire);
+	if(isset($content1)) echo($content1);
 ?>
 <table>
 <tr><td>

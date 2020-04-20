@@ -2,6 +2,7 @@
 	include("./haut.php");
 
 	function nombre2icket($epr,$classe,$participants){
+		$result = "";
 		$filename = "./files/$classe/_$epr";
 		if(file_exists($filename)) {
 			$nom = explode(" ", $participants);
@@ -16,19 +17,28 @@
 		return($result);
 	}
 	
-	$mat = $_GET[mat];
-	$epr = $_GET[epr];
-	$modif = $_GET[modif];
-	$laliste = $_POST[laliste];
-	$action = $_GET[action];
+	$mat = $_GET['mat'];
+	$epr = $_GET['epr'];
+	$modif = isset($_GET['modif']) ? $_GET['modif'] : "";
+	$laliste = isset($_POST['laliste']) ? $_POST['laliste'] : "";
+	$action = isset($_GET['action']) ? $_GET['action'] : "";
 	$nb2copies = 0; //nb de copies rendues
+	// rajouté le 18/04/2020
+	$liens_vus = "";
+	$drap_passe = "";
+	$coef = "";
+	$nombre_total2participants = 0;
+	$somme_coef = 0;
+	$moyenne = 0;
+	//$lesnotes = "";
+	//$lesnoms14[0] = ""; 
 	
 	
 	$nbphotoslignes = 7.5;
 	
-	if($epr=="") $epr=$_POST[epreuve].".txt";
-	if($mat=="") $mat=$_POST[mat];
-	$lien_sujet = $_POST[lien];//Lien http vers le sujet -- modif du 21 novembre 2017
+	if($epr=="") $epr=$_POST['epreuve'].".txt";
+	if($mat=="") $mat=$_POST['mat'];
+	$lien_sujet = isset($_POST['lien']) ? $_POST['lien'] : "";//Lien http vers le sujet -- modif du 21 novembre 2017
 	$nomdufichierlien = "$files$classe/$mat/_link$epr";
 
 	//FTP 
@@ -44,6 +54,7 @@
 	
 	
 	//-- Entête de la page ---------------------------------------------------------------------
+	$info_sujet = "";
 	$danger = info_sujet_ouvert($nomdufichierlien);
 	if($danger) $info_sujet = "<td width=\"25px\"><img src=\"./icon/danger.png\" height=\"20px\"></td>";
 	$lien_vers_doc = info_sujet($nomdufichierlien);
@@ -156,14 +167,15 @@
 		echo("<p>Action 45 : $Message</p>");
 	}
 	
-	//Lecture du fichier, toutes les lignes sont dans $ligne[]
-	$handle = fopen($fichier, "r");
+	//Lecture du fichier, toutes les lignes sont dans $ligne[] ###
+	if(file_exists($fichier)) $handle = fopen($fichier, "r");
+	else $handle = "";
 	if($handle){
 		$i = 0;
-		$j = 0;
+		$j = 0;//nb d'élèves
 		while (!feof($handle)){
-			$ligne[$i] = fgets($handle);
-			$data = explode(":", $ligne[$i]); //echo("<!-- $data[3] -->");
+			$ligne2020[$i] = fgets($handle);
+			$data = explode(":", $ligne2020[$i]); // ligne[] remplacé par ligne2020[] 
 			if($j==0){
 				$listeofname[0]=$data[0];
 				$j++;
@@ -186,11 +198,16 @@
 
 	$j = 0;
 	$n = 0;
+	$date0212 = "";
+	$note = "";
+	$listedesnonfait = "";
+	$somme_note = 0;
 	echo("<table>");
 	for($i=0;$i<count($listeofname);$i++){
-		
-		for($k=0;$k<count($ligne);$k++){
-			$data = explode(":", $ligne[$k]);
+		if(is_array($ligne2020)) $ligne_count = count($ligne2020);
+		else $ligne_count = 0;
+		for($k=0;$k<$ligne_count;$k++){
+			$data = explode(":", $ligne2020[$k]);
 			if($data[0]==$listeofname[$i]){
 				$note = $data[1];
 				$coef = $data[2]; if($coef=="") $coef=1;
@@ -200,12 +217,14 @@
 				$part0917_1 = explode(" ", $date0212);
 				$part0917_2 = explode(" ", $date_heure);
 				$drap_passe = false;
-				$signe = $data[4][0];
+				$data4 = isset($data[4]) ? $data[4] : "";
+				$signe = isset($data4[0]) ? $data4[0] : "";
 				if(($part0917_2[0]==$part0917_1[0])&&($signe=="+")) $drap_passe = true;
 			}
 		}
 		$nom = $listeofname[$i];
 		$lien = "./modif.php?mat=$mat&epr=$epr&nom=$nom";
+		$listedesparticipants = "";
 		if($date0212!=$nonfait){
 			$listedesparticipants .= $nom.":";//Necessaire à la création de nouvelles copies
 			
@@ -213,15 +232,13 @@
 			//GESTION DES TICKETS
 			$nb2tickets = nombre2icket($epr,$classe,$nom);
 			
-			$somme_note += $note; 
+			$somme_note += floatval($note); 
 			if($note!="") {
 				$somme_coef++;//ne prendre que les copies notées
 				$lesnoms14[$n]=$listeofname[$i];
 				$lesnotes[$n] = $note; $n++;
 			}
-			
 																													//CREATION DU TABLEAU
-			
 			$pas = nbparticipants($nom);//pour les groupes de plusieurs personnes
 								
 			//Fichiers
@@ -312,12 +329,16 @@
 	//mars 2018
 	$savefileicon = "<a href=\"exportxls.php?filesave=$filesave&file=$epr&moy=$moyenne\"><img src=\"./icon/backup.gif\" width=\"49px\" style=\"border:solid 1px #000000;\"></a>";
 	
-	$texte_notes = liste2texte($lesnotes);
-	$texte_noms = liste2texte($lesnoms14);
+	if(isset($lesnotes)) $texte_notes = liste2texte($lesnotes);
+	else $texte_notes = "";
+	if(isset($lesnoms14)) $texte_noms = liste2texte($lesnoms14);
+	else $texte_noms = "";
 
 	// Graphe .svg avril 2020 ###
+	// afficheliste($lesnoms14);
 	echo("<table><tr><td>");
-	$notes = explode(":", $texte_notes);
+	if($texte_notes) $notes = explode(":", $texte_notes);
+	else $notes = null;//si pas de notes
 	$noms = explode(":", $texte_noms);
 	echo("<a href=\"./geo.php?nomfichier=$filesave\">");
 	include("grapheSVG_fct.php");

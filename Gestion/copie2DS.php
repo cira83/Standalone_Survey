@@ -2,9 +2,11 @@
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	include("./DS_Securite.php");// function DSMDP($classe, $elv);
 
-	$nom2eleve = $_GET[name];
-	$titre_copie = $_COOKIE["elv"];
-	$sujet2DS = $_GET[file];
+	$nom2eleve = isset($_GET['name']) ? $_GET['name'] : NULL;
+	//$nom2eleve = $_GET['name'];
+	$titre_copie = $_COOKIE['nom'];
+	$sujet2DS = isset($_GET['file']) ? $_GET['file'] : NULL;
+	//$sujet2DS = $_GET['file'];
 	$DS_password = DSMDP($classe, $nom2eleve);
 	$repertoire_rep = "./files/$classe/_Copies/$nom2eleve/rep/$DS_password";
 
@@ -39,22 +41,25 @@
 
 
 
-	$sujet = $_GET[file2];//-------------------------------------------------------------                  Pour le professeur uniquement 18 fevrier 2017
+	$sujet = isset($_GET['file2']) ? $_GET['file2'] : NULL;//-------------------------------------------------------------                  Pour le professeur uniquement 18 fevrier 2017
+	//$sujet = $_GET['file2'];
 	$prof_login = strpos($sujet,"Sujet"); //C'est le prof qui corrige le sujet
 	$cestleprof = 0;
 	if($prof_login) {
 		$cestleprof = 1;
 		$repertoire_rep = "$sujet/rep212";//pour éviter la fraude
-		$_SESSION[sujet2DS]=$sujet;
+		$_SESSION['sujet2DS']=$sujet;
 		$nom2eleve = "Professeur";
-		$emplacement = $_GET[name];
+		$emplacement = isset($_GET['name']) ? $_GET['name'] : NULL;
+		//$emplacement = $_GET['name'];
 		$sujet2DS = "./files/$classe/_Copies/$emplacement/index.htm";
-
+		
+		$nom_court = "";
 		if(file_exists($sujet2DS)) {
 			$fp = fopen($sujet2DS, "r");
 			$ligne1 = fgets($fp);
 			$part = explode("#", $ligne1);
-			$nom_court .= $part[1];
+			$nom_court .= isset($part[1]) ? $part[1] : "";
 			fclose($fp);
 		}
 	}
@@ -177,7 +182,7 @@
 	$sommaire_td = bandeau("./files/$classe/_Copies/$nom2eleve",$DS_password);
 	if($cestleprof) $sommaire_td[1] = "";
 ?>
-
+<!-- __________________________________________________________________________________________ DEBUT DU DOCUMENT ___________________ -->
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" media="screen" href="styles_sujet.css">
@@ -186,8 +191,12 @@
 		<title><?php echo("$nom_court $nom2eleveimp");?></title>
 	</head>
 	<body>
-			<table><tr id="sommaire"><td><font size="+4"><?php echo("$nom_court $nom2eleve");?></font></td>
-			<td width="120px"><?php echo($sommaire_td[1]);?></td></tr></table>
+			<table>
+				<tr id="sommaire">
+					<td><font size="+4"><?php echo("$nom_court $nom2eleve");?></font></td>
+<?php				if($nom2eleve!="Correction") echo("<td width=\"120px\">$sommaire_td[1]</td>"); ?>
+				</tr>
+			</table>
 <?php
 	//echo("<p>$repertoire_rep</p>");
 	$sessions_file_name = "$repertoire_rep/sessions.txt";
@@ -204,9 +213,10 @@
 	if(file_exists($sujet2DS)){
 		//------------------------------------------------------------------------------  Sommaire avec toutes les questions
 
-
+		$numero2page = 0;
 		$rebelote =  sommaire_document($sujet2DS);
-		ligne2tableauOcentre($rebelote,$sommaire_td[0]);
+		if($nom2eleve=="Correction") ligne2tableauOcentre($rebelote,"");
+		else ligne2tableauOcentre($rebelote,$sommaire_td[0]);
 		//Fin du sommaire
 
 		$fp = fopen($sujet2DS, "r");
@@ -214,12 +224,12 @@
 		$part = explode("#", $ligne);
 		echo("<h1>$part[0]</h1>");
 		//if($flag2017>1) echo("<center><p><font size=\"-1\">$flag2017</font></p></center>");//Nombre de sessions ouvertes
-		$_SESSION[points]=0;
+		$_SESSION['points']=0;
 		$i=0;
 		while(!feof($fp)){
 			$ligne = fgets($fp);
 			$part = explode("#", $ligne);
-			$part[1] = chemin_relatif($part[1]);
+			$part[1] = chemin_relatif(isset($part[1]) ? $part[1]:"");
 
 			if($part[0]=="C"){//Commentaire
 				ligne2tableau("<i>$part[1]</i>");
@@ -227,15 +237,15 @@
 			if($part[0]=="Q") {//Question
 				$i++;
 				$bareme = "";
-				$nd2pt = $part[2];
+				$nd2pt = isset($part[2])?$part[2]:0;
 				$reponsefaite = 0;
 				if(!file_exists("$repertoire_rep/I$i.txt")) $reponsefaite = 1;
 				$lettre_elv = lettre($repertoire_rep,$i);
-				if($part[2]) {
+				if(isset($part[2])) {
 					if(!$reponsefaite) $bareme = "</td><td class=\"pt\">$nd2pt";
 					else $bareme = "</td><td class=\"pas2pt\">$nd2pt";
 
-					$_SESSION[points] = $_SESSION[points] + $part[2];
+					$_SESSION['points'] = $_SESSION['points'] + floatval($part[2]);
 				}
 				//ligne2tableau("<p class=\"question\" id=\"Q$i\" ><font color=\"#0000FF\">\n<b>Q$i : </b></font>$part[1]</p> $bareme");
 				ligne2tableau("<a id=\"Q$i\" href=\"#sommaire\"><b>Q$i :</b></a> $part[1] $bareme $lettre_elv");
@@ -316,9 +326,7 @@
     else{
 		echo("Pas de fichier  $sujet2DS !!");
 	}
-	$nb_points = $_SESSION[points];
+	$nb_points = $_SESSION['points'];
 	$numero2page++;
 	ligne2tableau("</td><td align=\"center\" bgcolor=\"white\">Page $numero2page</td><td>");
-
-	if($_GET[calc])  echo("<script type=\"text/javascript\">message(\"$nb_points\");</script>");
 ?>

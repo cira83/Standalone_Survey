@@ -1,18 +1,18 @@
 <?php
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
+	$numero2page = 0;
 
-
-	$nom2eleve = $_GET[name];
-	$titre_copie = $_COOKIE["elv"];
-	$sujet2DS = $_GET[file];
+	$nom2eleve = isset($_GET['name']) ? $_GET['name'] : "";
+	$titre_copie = isset($_COOKIE['nom']) ? $_COOKIE['nom'] : "";
+	$sujet2DS = isset($_GET['file']) ? $_GET['file'] : "";
 	$repertoire_rep = "./files/$classe/_Copies/$nom2eleve/rep";
 
-	$sujet = $_GET[file2];//Pour le professeur uniquement 18 fevrier 2017
+	$sujet = isset($_GET['file2']) ? $_GET['file2'] : "";//Pour le professeur uniquement 18 fevrier 2017
 	if($sujet) {
 		$repertoire_rep = "$sujet/rep212";//pour éviter la fraude
-		$_SESSION[sujet2DS]=$sujet;
+		$_SESSION['sujet2DS']=$sujet;
 		$nom2eleve = "Professeur";
-		$emplacement = $_GET[name];
+		$emplacement = isset($_GET['name']) ? $_GET['name'] : "";
 		$sujet2DS = "./files/$classe/_Copies/$emplacement/index.htm";
 	}
 
@@ -143,12 +143,12 @@
 		//$fp = fopen($sujet2DS, "r");
 		//$titre = fgets($fp);
 		echo("<center><h1>$titre</h1></center>");
-		$_SESSION[points]=0;
+		$_SESSION['points']=0;
 		$i=0;
 		while(!feof($fp)){
 			$ligne = fgets($fp);
 			$part = explode("#", $ligne);
-			$part[1] = chemin_relatif($part[1]);
+			$part[1] = chemin_relatif(isset($part[1])?$part[1]:"");
 
 			if($part[0]=="C"){//Commentaire
 				ligne2tableau("$part[1]");
@@ -156,15 +156,15 @@
 			if($part[0]=="Q") {//Question
 				$i++;
 				$bareme = "";
-				$nd2pt = $part[2];
+				$nd2pt = isset($part[2]) ? $part[2] : 0;
 				$reponsefaite = 0;
 				if(!file_exists("$repertoire_rep/I$i.txt")) $reponsefaite = 1;
 
-				if($part[2]) {
+				if(isset($part[2])) {
 					if(!$reponsefaite) $bareme = "</td><td class=\"pt\">$nd2pt";
 					else $bareme = "</td><td class=\"pas2pt\">$nd2pt";
 
-					$_SESSION[points] = $_SESSION[points] + $part[2];
+					$_SESSION['points'] = $_SESSION['points'] + floatval($part[2]);
 				}
 				ligne2tableau("<p class=\"question\"><font color=\"#0000FF\">\n<b>Q$i : </b></font>$part[1]</p> $bareme");
 			}
@@ -172,6 +172,7 @@
 				$limage = $part[1];
 				if($limage) {
 					if(file_exists($limage)) $dimensions = getimagesize($limage);
+					else $dimensions[0] = "";
 					affiche_image($limage,$dimensions[0],1);
 				}
 			}
@@ -188,9 +189,9 @@
 	}else{
 		echo("Pas de fichier  $sujet2DS !!");
 	}
-	$nb_points = $_SESSION[points];
+	$nb_points = $_SESSION['points'];
 	$numero2page++;
 	ligne2tableau("</td><td align=\"center\" bgcolor=\"white\">Page $numero2page</td><td>");
 
-	if($_GET[calc])  echo("<script type=\"text/javascript\">message(\"$nb_points\");</script>");
+	if(isset($_GET['calc']))  echo("<script type=\"text/javascript\">message(\"$nb_points\");</script>");
 ?>

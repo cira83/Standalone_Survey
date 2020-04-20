@@ -1,7 +1,8 @@
 <?php
-	session_start();
 	include("./_Clef_Prof.php");
-	
+	$elv = isset($_COOKIE['nom']) ? $_COOKIE['nom'] : "";
+	$password = isset($_COOKIE['password']) ? $_COOKIE['password'] : "";
+	$classe = isset($_COOKIE['laclasse'])?$_COOKIE['laclasse']:"";	
 	
 	function estfichier2($nom){// Fichier ou non ?
 		$drap = true;
@@ -32,28 +33,11 @@
 		return $classe_text;
 	}
 
-	//Partie connexion sécurisé - V00
-	$classe_text = les_classes();// echo($classe_text);
+	//Partie connexion sécurisé - V01 2020
+	$classe_text = les_classes();
 	$classe_dispo = explode(":", $classe_text);
 	$repertoire = "./files/";
 
-	$action1 = isset($_POST['action']) ? $_POST['action'] : NULL;
-	//$action1 = $_POST['action'];//--------------------------------------------------------------------------   LOGIN
-	if($action1==1){
-		$elv = $_POST['nom'];
-		setcookie("nom", $elv,time()+3600*24*8,"/");
-		//$classe = $_POST['classe'];
-		//setcookie("laclasse", $classe,time()+3600*24*8);
-		$password = $_POST['password'];
-		setcookie("password", $password,time()+3600*24*8);
-	}
-	else {
-		
-		$elv = $_COOKIE['nom'];
-		$password = $_COOKIE['password'];
-	}
-
-	$classe = $_COOKIE['laclasse'];
 	//MENU DEROULANT CLASSES        -----------------------------------------------------------------------------------------------------
 	$select_classe = "<select name=\"classe\" id=\"classe\" onchange=\"login();\">";
 	$select_classe .= "<option>Selectionner votre classe</option>";
@@ -88,7 +72,7 @@
 
 
 
-	//CLEF MOT DE PASSE        -----------------------------------------------------------------------------------------------------------
+	//CLEF MOT DE PASSE        ----------------------------------------------------------------------------------------------------------
 	$password_OK = $bon_password==$password;
 	if(!$bon_password) $password_OK = 0;
 
@@ -98,29 +82,24 @@
 		$password_OK = 1;
 		$prof_login = 1;
 	}
-
-	if($password_OK){
-		$password_in = "<input type=\"hidden\" name=\"password\" value=\"##\">";
-		$submit = "<input type=\"submit\" value=\"Logout\">\n";
-		$select_classe = "<font color=\"yellow\" size=\"+2\">$elv</font><input type=\"hidden\" name=\"classe\" value=\"$classe\">";
-		$select_elv = "<input type=\"hidden\" name=\"nom\" value=\"$elv\">";
-	}
+	$passwordOK = $password_OK;
 
 
-	$invite = "<form action=\"./index7.php\" method=\"post\"><input type=\"hidden\" value=\"1\" name=\"action\">\n";
-	$invite .= "<table><tr><td align=\"left\">$select_classe $select_elv $password_in</td><td align=\"right\">$submit</td></tr></table>";
-	$invite .= "</form>";
 
+
+	// invite logout
+	$submit = "<input type=\"submit\" value=\"Logout\" onclick=\"logout();\" >\n";
+	$select_classe = "<font color=\"yellow\" size=\"+2\">$elv</font>";
+	$invite = "<table><tr><td align=\"left\">$select_classe</td><td align=\"right\">$submit</td></tr></table>";
 
 	//FICHIER LOG        -----------------------------------------------------------------------------------------------------------
-	if($action1==1){
-		$session_nb = session_id();
-		$nbDssaies = isset($_SESSION['essai']) ? $_SESSION['essai'] : NULL;
-		$ip_client = $_SERVER['REMOTE_ADDR'];
-		if($password_OK) $info_pwd = "Bon MdP";
-		else $info_pwd = $password;
-		$date_heure = date("d/m/y G:i");
-		$write = "MaJ";
-	}
-
+	$session_nb = session_id();
+	$nbDssaies = isset($_SESSION['essai']) ? $_SESSION['essai'] : NULL;
+	$ip_client = $_SERVER['REMOTE_ADDR'];
+	if($password_OK) $info_pwd = "Bon MdP";
+	else $info_pwd = $password;
+	$date_heure = date("d/m/y G:i");
+	$write = "MaJ";
+	
+	if(!$password_OK) stop();
 ?>

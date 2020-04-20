@@ -6,7 +6,7 @@
 	$numero2session = session_id();
 
   $titredudocument = "$classe - $elv";
-  $sujet2TP = $_GET['sujet'];
+  $sujet2TP = isset($_GET['sujet']) ? $_GET['sujet'] : NULL;
   $TAG = $_GET['tag'];
 
 	function start($nom, $classe){//---------------------------------------------- passe en mode ON
@@ -58,6 +58,9 @@
 <?php
 	$sujet2TP = TitreduTAG($TAG,$classe);
 	if($copy_possible&&$drap) {
+		$fp = fopen("./files/_Sujet_Ouvert.txt", "w");
+		fwrite($fp, "$classe:$elv:$TAG:");
+		fclose($fp);
 		echo("<p>Le sujet $sujet2TP est disponible pour travailler.</p>");
 		echo("<p><a href=\"./devoir.php\">$sujet2TP</a></p>");
 	}

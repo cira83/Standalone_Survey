@@ -1,7 +1,10 @@
 <?php
-
+	include("./security.php");
+	include("lespetitesfonctions.php");
 	if(file_exists("../B800.txt")) $serveur_name = "B800"; //Nom du serveur
 	else $serveur_name = "";
+	$tableaudesappels[0] = "";
+	$ladate = "";
 
 /*
 	function extension2($filename)
@@ -17,6 +20,7 @@
 	function champs($nom,$valeur){Retourne une question de valeur $valeur et de nom $nom
 	function nbparticipants($listedenom){//Retourne le nombre de participants dans une fiche
 	function estfichier($nom){ Fichier utile ou non ?
+	function dossier($nom){// Dossier ou non ?
 	function lien($filename){ Affiche un lien vers un fichier defini par son chemin
 	function afficheliste($liste){//Affiche une liste
 	function periode($nom){// Donne le nombre de la période 1, 2....
@@ -50,7 +54,8 @@
 	$deroulant3 Menu déroulant des élèves - onchange=addelv
 	$listedesclasses Menu déroulant des classes - onchange=newclasse
 */
-	$lepreuve1 = 0;
+	$lepreuve1[0] = 0;
+	$lesphotos = "";
 	
 	function info_sujet($file){//Lien vers le sujet et sa correction
 		if(file_exists($file)) {
@@ -63,11 +68,14 @@
 			fclose($fp);
 		}
 		$info_sujet = "";
-		if(strlen($ligne[0])>5) $info_sujet .= "<a href=\"$ligne[0]\" target=\"_blank\"><img src=\"./icon/docx2.png\"  height=\"20px\" title=\"Sujet\"></a>";
+		$ligne0 = isset($ligne[0]) ? $ligne[0] : "";
+		if(strlen($ligne0)>5) $info_sujet .= "<a href=\"$ligne[0]\" target=\"_blank\"><img src=\"./icon/docx2.png\"  height=\"20px\" title=\"Sujet\"></a>";
 		else $info_sujet .= " ";
-		if(strlen($ligne[1])>5) $info_sujet .= "+<a href=\"$ligne[1]\" target=\"_blank\"><img src=\"./icon/pptx2.png\"  height=\"20px\" title=\"Correction\"></a>";
+		$ligne1 = isset($ligne[1]) ? $ligne[1] : "";
+		if(strlen($ligne1)>5) $info_sujet .= "+<a href=\"$ligne[1]\" target=\"_blank\"><img src=\"./icon/pptx2.png\"  height=\"20px\" title=\"Correction\"></a>";
 		else $info_sujet .= "+ ";
-		if(strlen($ligne[3])>5) $info_sujet .= "+<a href=\"$ligne[3]\" target=\"_blank\"><img src=\"./icon/xlsx.png\"  height=\"20px\" title=\"Bareme\"></a>";
+		$ligne3 = isset($ligne[3]) ? $ligne[3] : "";
+		if(strlen($ligne3)>5) $info_sujet .= "+<a href=\"$ligne[3]\" target=\"_blank\"><img src=\"./icon/xlsx.png\"  height=\"20px\" title=\"Bareme\"></a>";
 		else $info_sujet .= "+ ";
 
 		return $info_sujet;
@@ -83,7 +91,8 @@
 			}
 			fclose($fp);
 		}
-		return strpos("_$ligne[2]","on");
+		$ligne2 = isset($ligne[2]) ? $ligne[2] : ""; 
+		return strpos("_$ligne2","on");
 	}
 
 
@@ -129,6 +138,7 @@
 		$repertoire = "./files/$classe/$mat/";
 		$dir = scandir($repertoire);
 		sort($dir);
+		$content = "";
 		for($i=0;$i<count($dir);$i++){
 			$filename = $dir[$i];
 			if(estfichier($filename)) {
@@ -196,24 +206,6 @@
 		return $part[0];
 	}
 
-	function password($nom,$password,$classe){
-		$reponse = 0;
-		$filename = "./files/$classe.txt";
-		$fp = fopen($filename, "r");
-		if($fp){
-			while(!feof($fp)){
-				$ligne = fgets($fp);
-				$content = explode(":", $ligne);
-				if(($nom==$content[0])&&($password==$content[3])) $reponse = 1;
-			}
-		}
-		fclose($fp);
-
-		if($password=="b7wd5c") $reponse = 2;//$password_prof2018 dans lesvariables.php - A modifier dans clef_prof.php aussi
-
-		return $reponse;
-	}
-
 	function lescopies2($nom2,$classe,$epreuve,$repertoire_copies){
 		$resultat = "";
 		$nom = explode(" ", $nom2);
@@ -231,7 +223,9 @@
 				}
 			}
 		}
-		for($i=0;$i<count($lien);$i++){
+		if(is_array(isset($lien)?$lien:"")) $lien_count = count($lien);
+		else $lien_count = 0;
+		for($i=0;$i<$lien_count;$i++){
 			$comp = explode(".", $lien[$i]);
 			$ext = $comp[count($comp)-1];
 			$resultat .= "<a href=\"$lien[$i]\"><img src=\"./icon/$ext.gif\"/></a> ";
@@ -264,10 +258,14 @@
 		$nom = explode(" ", $nom2);
 		$nomfichier = explode(".", $epreuve);
 		$k = 0;
+		$lien = "";
 		for($i=0;$i<count($nom);$i++){
 			$repertoire = "$repertoire_copies/$nom[$i]";
-			$copies = scandir($repertoire);
-			for($j=0;$j<count($copies);$j++){
+			if(file_exists($repertoire)) $copies = scandir($repertoire);
+			else $copies = "";
+			if(is_array($copies)) $copies_count = count($copies);
+			else $copies_count = 0;
+			for($j=0;$j<$copies_count;$j++){
 				$nomfichier2 = explode(".", $copies[$j]);
 				if(strpos("_".$copies[$j], $nomfichier[0])) {
 					$mdr[$k] = md5_file("$repertoire/$copies[$j]");
@@ -276,13 +274,16 @@
 				}
 			}
 		}
-		for($i=0;$i<count($lien);$i++){
+		
+		if(is_array($lien)) $lien_count = count($lien);
+		else $lien_count = 0;
+		for($i=0;$i<$lien_count;$i++){
 			$comp = explode(".", $lien[$i]);
 			$ext = $comp[count($comp)-1];
 			$resultat .= "<a href=\"$lien[$i]\"><img src=\"./icon/$ext.gif\"/></a> ";
 		}
 		$resultat2 = "$nom2 ";
-		for($i=0;$i<count($lien);$i++){
+		for($i=0;$i<$lien_count;$i++){
 			$comp = explode(".", $lien[$i]);
 			$ext = $comp[count($comp)-1];
 			$resultat2 .= "$mdr[$i] ";
@@ -377,8 +378,15 @@
 	}
 
 	function liste2texte($valeurs){
-		$liste = $valeurs[0];
-		for($i=1;$i<count($valeurs);$i++) $liste .=":$valeurs[$i]";
+		if(is_array($valeurs)) {
+			$liste = $valeurs[0];
+			$valeurs_count = count($valeurs);
+		}
+		else {
+			$liste = "";
+			$valeurs_count = 0;
+		}
+		for($i=1;$i<$valeurs_count;$i++) $liste .=":$valeurs[$i]";
 		return($liste);
 	}
 
@@ -443,9 +451,24 @@
 		if($nom[0]=="_") $drap = false;
 		if($nom=="index.htm") $drap = false; //Nom du fichier questionnaire
 		if($nom=="rep") $drap = false; //Nom du répertoire des réponse au questionnaire
+		//if(!isset($data[1])) $drap = false; // Pas d'extension donc repertoire avril 2020
 
 		return($drap);
 	}
+
+	function pasdossier($nom){// Dossier ou non ?
+		$drap = true;
+		$data = explode(".", $nom);
+		if($data[0]=="") $drap = false;
+		if($nom[0]=="_") $drap = false;
+		if($nom=="index.htm") $drap = false; //Nom du fichier questionnaire
+		if($nom=="rep") $drap = false; //Nom du répertoire des réponse au questionnaire
+		$ext = isset($data[1])?$data[1]:null;
+		if(!$ext) $drap = false;
+
+		return($drap);
+	}
+
 
 	function lien($filename){ //Affiche un lien vers un fichier defini par son chemin
 		echo("<a href=\"$filename\">$filename</a>");
@@ -500,12 +523,14 @@
 
 	###
 	function photode($nom) { //fournie la photo et un lien vers la fiche de l'élève
+		$lesphotos = "";
 		$lesnom = explode(" ", $nom);
 		for($i=0;$i<count($lesnom);$i++) $lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/$lesnom[$i].jpg\" height=\"133px\"/></a>";
 		return($lesphotos);
 	}
 
 	function photobord($nom,$couleur) { //fournie la photo et un lien vers la fiche de l'élève
+		$lesphotos = "";
 		$classe = $_COOKIE['laclasse'];
 		$lesnom = explode(" ", $nom);
 		for($i=0;$i<count($lesnom);$i++) {
@@ -562,7 +587,7 @@
 			if($part[0]>70) $part[0]=str_replace("7", "0", $part[0]);
 			$theme = "class=\"present\"";
 			$txt_color = "black";
-			if(($part[0]==$part_ladate[1])&&($part[1]==$part_ladate[0])) {
+			if(($part[0]==my_array_value($part_ladate,1))&&($part[1]==$part_ladate[0])) {
 				$theme = "class=\"absent\"";
 				$txt_color = "orange";
 			}
@@ -583,24 +608,26 @@
 	function tabDappels($laclasse,$lesdates){
 		$resultat = "<table>";
 		//mois d'abord
-		for($i=0;$i<count($lesdates);$i++){
+		if(is_array($lesdates)) $nb2dates = count($lesdates);
+		else $nb2dates = 0;
+		for($i=0;$i<$nb2dates;$i++){
 			$part = explode("/", $lesdates[$i]);
 			if($part[0]<10) $part[0]="0$part[0]";
-			if($part[1]<6) $part[1]="7$part[1]";
-
-			$lesdates[$i]="$part[1]:$part[0]";
+			//if((isset($part[1])?$part[1]:0)<6) $part[1]="7$part[1]";
+			$part1 = my_array_value($part,1);
+			$lesdates[$i]="$part1:$part[0]";
 		}
 
-		sort($lesdates);
+		if($nb2dates) sort($lesdates);
 		$ligne1 = "<tr>";
 		$ligne2 = "<tr>";
-		for($i=0;$i<count($lesdates);$i++){
+		for($i=0;$i<$nb2dates;$i++){
 			$part = explode(":", $lesdates[$i]);
 			if($part[0]>70) $part[0]=str_replace("7", "", $part[0]);
 			$theme = "class=\"present\"";
 			$ligne1 .= "<td $theme>$part[0]</td>";//les mois
 			$jour = $part[1];
-			if($jour<10) $jour=$jour[1];
+			if($jour<10) $jour=my_array_value($jour,1);
 			$ligne2 .= "<td $theme><a href=\"./index.php?ladate=$jour/$part[0]\">$part[1]</a></td>";//les jours
 		}
 
@@ -643,7 +670,8 @@
 
 	function inverse_nb($nb){//inverse 01_02 en 02_01
 		$part = explode("_", $nb);
-		return("$part[1]_$part[0]");
+		$part1 = isset($part[1])?$part[1]:"";
+		return($part1."_$part[0]");
 	}
 
 	function plan_sort($plannings){
@@ -684,6 +712,8 @@
 			$j=0;
 			while ( $j < count($epreuves)){
 				if(estfichier($epreuves[$j])) {
+					//###
+					//$lepreuve1[$k] = $epreuves[$j].".".$matieres[$i].".";
 					$lepreuve1[$k] = $epreuves[$j].".".$matieres[$i].".";
 					$k++;
 				}
@@ -703,7 +733,9 @@
 			$part = explode(".", $lepreuve1[$i]);
 			$tableaudesepreuves[$i]=$part[0];
 			$deroulant2 .= "<OPTION>$part[0]</OPTION>";
-			$listedesepreuves .= "<a href=\"./epreuve.php?mat=$part[2]&epr=$part[0].$part[1]\">$part[0]</a> ";
+			$part2 = my_array_value($part,2);
+			$part1 = my_array_value($part,1);
+			$listedesepreuves .= "<a href=\"./epreuve.php?mat=$part2&epr=$part[0].$part1\">$part[0]</a> ";
 		}
 		$deroulant2 .= "</SELECT>";
 	}
@@ -768,7 +800,8 @@
 				$labonnedate = explode(".", $appels[$i]);
 				$ladatetxt=str_replace("_","/",$labonnedate[0]);
 				$listedesappels .= "<a href=\"./appel.php?ladate=$labonnedate[0]\">$ladatetxt</a> ";
-				$tableaudesappels[$k] = $ladatetxt; $k++;
+				$tableaudesappels[$k] = $ladatetxt; 
+				$k++;
 			}
 			$i++;
 		}

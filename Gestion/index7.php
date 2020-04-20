@@ -1,24 +1,16 @@
 <?php
-	//Version portable
 	include("./security.php");
 	include("../head1.html");
+		
 	if($password_OK) echo("<title>$classe - $elv</title>");
 	else echo("<title>$classe</title>");
 ?>
 	<script type="text/javascript">
-		function login(){
+		function logout(){
 			var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
-			classe = document.getElementById('classe').value;
-			document.cookie = 'laclasse='+classe+"; expires="+date.toUTCString();
-			location.reload() ;
+			document.cookie = 'password=none; path=/; expires='+date.toUTCString();
+			window.location.replace('./index.php');
 		}
-
-		function init(){
-			var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
-			classe = document.getElementById('classe').value;
-			document.cookie = 'laclasse='+classe+"; expires="+date.toUTCString();
-		}
-
 
 	</script>
 
@@ -43,9 +35,10 @@
 	  	echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets disponibles</a></p>") ;
 		$questionnaire_perso = "$repertoire$classe/_Copies/$elv/rep/index.htm";
 		echo("<p class=\"liste\"><a href=\"./index9.php?elv=$elv\" class=\"no-under\">Logiciels</a></p>") ;
-		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\">Sujet actuel</a></p>");
+		echo("<p class=\"liste\"><a href=\"./sav9.php\" class=\"no-under\">Rendre un fichier</a></p>");
+		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\">Sujet du moment</a></p>");
 		if(!file_exists("../B800")){
-			echo("<p class=\"liste\"><a href=\"./sav9.php\" class=\"no-under\">Rendre un fichier</a></p>");
+			
 			echo("<p class=\"liste\"><a href=\"./documents.php\" class=\"no-under\">Mes documents</a></p>");
 			echo("<p class=\"liste\"><a href=\"./info4elv.php\" class=\"no-under\">Mes Notes</a></p>");
 			echo("<p class=\"liste\"><a href=\"./doclasse.php\" class=\"no-under\">Documents de la classe</a></p>");
@@ -59,9 +52,8 @@
 
 <?php
 	if($prof_login){
-		echo("<hr><h2>Complément Professeur</h2>");
-		echo("<p class=\"liste\"><a href=\"DSZone.php\" class=\"no-under\">Gestion des devoirs</a></p>");
-
+		echo("<hr><p class=\"liste\"><a href=\"DSZone.php\" class=\"no-under\">Gestion des devoirs</a></p>");
+		echo("<p class=\"liste\"><a href=\"appel.php\" class=\"no-under\">Appels</a></p>");
 	}
 	include("../foot1.html");
 ?>

@@ -1,7 +1,7 @@
 <?php
 	$action = isset($_POST['action']) ? $_POST['action'] : NULL;
 	//$action = $_POST[action];//1. Nouveau Sujet 2.Editer sujet 3.Supprimer Ligne 4.Editer Ligne 5. Ajouter ligne 6. Saut de page
-	if($action==1) $TAG = $_POST[TAG];//nouveau sujet
+	if($action==1) $TAG = $_POST['TAG'];//nouveau sujet
 	//else $TAG = $_POST['td'];//edition sujet
 	else $TAG = isset($_POST['td']) ? $_POST['td'] : NULL;
 	
@@ -262,8 +262,11 @@
 		$icone = icone4lettre($part2ligne[0]);
 		$h2 = "<input type=\"button\"value=\"+ Titre 2\" onclick=\"addh(2);\"> ";
 		$h3 = "<input type=\"button\"value=\"+ Titre 3\" onclick=\"addh(3);\"> ";
-		if($num2ligne==1) $part2ligne[1] = $part2ligne[0]."#".$part2ligne[1]."#".$part2ligne[2];
-		if($part2ligne[0]=="Q") $part2ligne[1] = $part2ligne[1]."#".$part2ligne[2];
+		$part2ligne1 = isset($part2ligne[1]) ? $part2ligne[1] : "";
+		$part2ligne2 = isset($part2ligne[2]) ? $part2ligne[2] : "";
+		if($num2ligne==1) $part2ligne[1] = $part2ligne[0]."#".$part2ligne1."#".$part2ligne2;
+		$part2ligne2 = isset($part2ligne[2])?$part2ligne[2]:"";
+		if($part2ligne[0]=="Q") $part2ligne[1] = $part2ligne[1]."#".$part2ligne2;
 
 		$message = "<table id=\"Edition\"><form method=\"POST\" action=\"./DSNew.php?action=41&ligne=$num2ligne&TAG=$TAG&page=$pageaafficher\">";
 		$message .= "<tr><td bgcolor=\"white\"><textarea cols=\"90\" rows=\"5\" name=\"Champs\" id=\"Champs\">$part2ligne[1]</textarea></td><td>";

@@ -171,7 +171,10 @@ p.commentaires{
 	color: black;
 	font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
 }
-
+li {
+	color: black;
+	font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
 
 tr.entete {
 	color: black;

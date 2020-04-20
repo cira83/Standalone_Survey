@@ -1,5 +1,5 @@
 <?php
-	include("./security.php");
+	include("./lesfonctions.php");
 	include("../head1.html");
 	
 	
@@ -87,8 +87,8 @@
 </form></table>
 <!-- /sav8_form.html -->
 <?php
-		
-	echo("<font color=\"yellow\" size=\"-1\">$Message</font>");	
+	$Message2 = isset($Message) ? $Message : null;
+	echo("<font color=\"yellow\" size=\"-1\">$Message2</font>");	
 	echo("<!-- /CODE SAUVEGARDE -->");	
 		
 	include("../foot2.html");

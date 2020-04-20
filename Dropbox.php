@@ -1,6 +1,5 @@
 <?php //Version du 06/06/2019
-	include("DSFonctions.php");
-	
+	//include("DSFonctions.php");	
 	
 	function commente($com) {
 		echo("<!-- $com -->\n");
@@ -21,7 +20,7 @@
 			while(!feof($fp)) {
 				$ligne=fgets($fp);
 				$part = explode(",",$ligne);
-				if($part[1]) {//C'est une ligne normale
+				if(my_array_value($part,1)) {//C'est une ligne normale
 					if($k==0) echo("<tr align=\"left\">");//première colonne
 					echo("<td><a href=\"$part[1]?name=$part[0]\" class=\"annales\" target=\"_blank\">$part[0]</a></td>");
 					$k++;

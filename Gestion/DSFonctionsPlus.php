@@ -26,6 +26,7 @@ function ligne2tableauOcentre($texte1,$texte2) {
 
 function bandeau($repertoire_elv,$code) {
 	$sujet2DS = "$repertoire_elv/rep/index.htm";
+	$coef[0]=0;
 	if(file_exists($sujet2DS)) {
 		$fp = fopen($sujet2DS, "r");
 		$ligne = fgets($fp);
@@ -45,10 +46,11 @@ function bandeau($repertoire_elv,$code) {
 	else $total = "non trouvé";
 	echo("<!-- $sujet2DS : NB de points du DS : $total -->");
 
+	$sommaire_td = "";
 	$note_C = 0;
 	$repertoireDreponses = "$repertoire_elv/rep/$code";
 	if(file_exists($repertoireDreponses))	$elements = scandir($repertoireDreponses);
-	else $elements = "";
+	else $elements[0] = "";
 	for($i=1;$i<count($coef)+1;$i++) {
 		$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/X.gif\" title=\"Q$i\"></a>";
 		if(in_array("N$i.txt", $elements)) {

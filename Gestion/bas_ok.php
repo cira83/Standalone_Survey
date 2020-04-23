@@ -113,7 +113,7 @@ function redirect_epreuve(lacible){
 ?>
 
 	<td><a href="./DSZone.php" title="DS Perso"><img src="./icon/quest.jpg" height="15px" style="border:solid 4px #fff"></a></td>	
-	<td><a href="./index.php" title="Les sujets de TP"><img src="./icon/elv_web.jpg" height="15px" style="border:solid 4px #fff"></a></td>
+	<td><a href="./index7.php" title="Accueil <?php echo($_COOKIE['nom']);?>"><img src="./icon/elv_web.jpg" height="15px" style="border:solid 4px #fff"></a></td>
 <td><?php echo("$file2delete");?><td>
 <td><?php if(isset($filecompare)) echo("$filecompare");?><td>	
 </tr></table>

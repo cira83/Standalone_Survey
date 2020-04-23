@@ -75,13 +75,14 @@
 		return($menu);
 	}
 
-
+	$leleve_count = count($leleve);
+	$nbphotoslignes = magiqueNB($leleve_count,$nbphotoslignes);//###
 	//Partie avec les photos
 	echo("<table>");
 	$i = 1;
 	$k = 0;
 	$nbeleve = 0;
-	while($k<count($leleve)){
+	while($k<$leleve_count){
 		$nom = $leleve[$k];
 		if($lefichierexiste) {//modifié le 1 septembre 2016
 			//Cherche le nom dans la liste de nom disponibles dans le fichier

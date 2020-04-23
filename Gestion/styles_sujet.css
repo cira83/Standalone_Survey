@@ -35,9 +35,14 @@ table {
 	text-align: center;
 }
 
-td {
-	vertical-align: middle;
+table.max {
+	width: 1000px;
 }
+
+table.bulle{
+	width: 210px;
+}
+
 
 table.left {
 	text-align: left;

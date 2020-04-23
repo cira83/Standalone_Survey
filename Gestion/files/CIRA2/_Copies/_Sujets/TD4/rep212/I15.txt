@@ -1,0 +1,1 @@
+Le fluide passe dans un coude où il est soumis à un champs électromagnétique sinusoïdale. On mesure le déphase entre ce champs magnétique et les oscillations induite dans la canalisation.

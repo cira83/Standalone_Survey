@@ -17,8 +17,8 @@
 		fclose($fp);
 	}
 	
-	if($Mdp==$prof_password) $drap = 1;
+	if($Mdp==$prof_password) $drap = 2;
 	
-	
+	//Mauvais login = 0 ; Bon login = 1 ; Prof login = 2 ;
 	echo("$drap");	
 ?>

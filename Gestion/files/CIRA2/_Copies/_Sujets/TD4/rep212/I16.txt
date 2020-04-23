@@ -1,0 +1,1 @@
+Cela permet de communiquer avec le transmetteur sans modifier la boucle de courant classique.

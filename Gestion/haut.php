@@ -1,5 +1,6 @@
 <?php
 	include("./lesfonctions.php");
+	include("./DSFonctions.php");
 	
 	$photos = "../photos/";
 	$files = "./files/";
@@ -76,7 +77,10 @@
 		?>	
 		<tr>
 			<td width="50"><a href="./appel.php" title="Appel"><img src="./icon/home.png" height="25px"></a></td>
+			<td width="50px"><a href="../pi" title="Pi"><img src="../pi/pi.png" height="25px"></a></td>
+
 			<td><?php echo($listedesclasses);?></td>
+			<td><?php echo($_COOKIE['nom']);?></td>
 		<td align="right"><?php echo($historique_select);?></td>
 		</tr></table>
 <!-- haut.php -->

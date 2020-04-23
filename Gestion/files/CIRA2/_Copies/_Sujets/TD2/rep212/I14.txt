@@ -1,0 +1,1 @@
+T(0) égale à l'infini. Donc l'erreur statique est nulle.

@@ -1,0 +1,85 @@
+Régulation à un élément#TD2
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../../../styles.css">
+</head>
+<!-- 
+	-Dans le fichier sujet.txt qui est dans le répertoire de l'élève
+	-La première ligne est le titre
+	-Code Q = Question
+	-Code I = Image réponse - Mettre l'adresse de l'image par défaut si nécéssaire
+	-Code C = Commentaires
+	-Code P = Programme à rendre 
+	-Code T = Réponse texte sur une ligne
+	-Code U = Réponse texte sur plusieurs lignes
+	-Code D = Question dynamique !!
+	-Code L = Saut de page
+	-Code H ??
+-->
+C#<p>Dans un premier temps, installer le logiciel <a href="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/steamer.zip">steamer</a> sur votre ordinateur.<br>Lancer le logiciel pour répondre aux questions suivantes : <br> <img src="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/icn.gif"/> </p><p>Le <a href="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/Aide.pdf">fichier aide</a> pour bien débuter.</p>
+C#<h2>I. Analyse de la boucle</h2>
+Q#Donner le nom de la boucle de régulation.#0.5
+T#
+Q#Donner le nom de la grandeur réglée.#0.5
+T#
+Q#Donner le nom de l'organe de réglage.#0.5
+T#
+Q#Donner le nom de la grandeur réglante.#0.5
+T#
+Q#Donner le nom d'une perturbation.#0.5
+T#
+Q#Donner le nom des éléments intervenants dans la boucle de régulation.#0.5
+T#
+
+L#<! --- Saut de page. -->
+C#<center><p><img src="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/steamer.gif" width="450px"></p></center>
+Q#Sur la capture d'écran ci-dessus, donner la valeur de la consigne.#0.5
+T#
+Q#Sur la capture d'écran ci-dessus, donner la valeur de la mesure.#0.5
+T#
+Q#En déduire la valeur de l'erreur statique.#1
+T#
+
+L#<! --- Saut de page. -->
+C#<h2>II. Boucle ouverte</h2>
+C#<p>Attendre que la mesure se stabilise vers 50%, puis mettre le système dans l'état initial et manuel en cliquant sur les boutons : <img src="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/raz.gif"/> <img src="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/manu.gif"/> <img src="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/go.gif"/></p>
+C#<p>On pourra régler le défilement sur 4s/carreau. <img src="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/tmp.gif"/></p>
+C#<p>On pourra réinitialiser le graphe. <img src="./files/CIRA1/_Copies/_Sujets/TD2/Steamer/cls.gif"/></p>
+
+Q#Enregistrer la réponse du système à un échelon de commande de 5%.
+I#
+Q#Le système est-il stable ?#1
+U#
+Q#Le système est-il intégrateur ?#1
+U#
+Q#Expliquer l'évolution de la mesure.#1
+U#
+Q#Quelle sera la valeur de l'erreur statique en boucle fermée, pour une régulation proportionnelle ?#1
+T#
+Q#Pourquoi ne peut-on pas utiliser une méthode de réglage en boucle ouverte ?#1
+T#
+
+L#<! --- Saut de page. -->
+C#<h2>III. Réglage de la boucle - Méthode de Ziegler&Nichols</h2>
+Q#Quel doit être le sens d'action du régulateur ? Justifier votre réponse.#1
+U#
+Q#Enregistrer l'évolution de la mesure pour un gain égal au gain critique A<sub>c</sub>.#1
+I#
+Q#Donner la valeur du gain critique ainsi que celle de la période des oscillations.#1
+T#
+Q#En déduire les réglages du régulateur PID.#1
+T#
+Q#Enregistrer l'évolution de la mesure en réponse à un échelon de consigne de 5% avec les réglages précédemment déterminés.#1
+I#
+Q#Mesurer les performances (temps de réponse à &pm;10%, valeur du premier dépassement) de votre réglage. Faire apparaitre les constructions sur l'enregistrement précédent.#1
+T#
+
+L#<! --- Saut de page. -->
+Q#Déterminer des réglages du correcteur PID permettant une réponse à &pm;10% la plus rapide possible.#1
+T#
+Q#Enregistrer l'évolution de la mesure en réponse à un échelon de consigne de 5% avec les réglages précédemment déterminés.#1
+I#
+Q#Mesurer les performances (temps de réponse à &pm;10%, valeur du premier dépassement) de votre réglage. Faire apparaitre les constructions sur l'enregistrement précédent.#1
+T#
+Q#Quelles sont les performances améliorées avec votre réglage par rapport à celui proposé par Ziegler&Nichols.#1
+U#

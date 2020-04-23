@@ -1,0 +1,96 @@
+Réacteur industriel#TD3#BTS 2014
+C#Le réacteur permet de faire réagir un réactif A et un réactif B. La réaction se produit à la température de 95 °C. L’apport d’énergie thermique est assuré par un fluide caloporteur (vapeur) circulant dans la double enveloppe du réacteur. Les vapeurs produites dans le réacteur sont liquéfiées dans le condenseur, une partie retourne au réacteur et une autre partie est soutirée en tant que distillat. Le niveau dans l'appareil est contrôlé par le débit de soutirage.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD3/img/01.png" width="600px"/>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD3/img/02.png" width="400px"/>
+C#Les signaux des transmetteurs sont linéaires. Les caractéristiques installées des vannes sont considérées comme linéaires.
+L#
+
+C#<h2>Mesure de température dans la double enveloppe</h2>
+C#On désire réaliser le câblage complet d’une sonde de température du procédé au transmetteur. La mesure de température dans la double enveloppe est réalisée par un thermocouple « J » (TE 10-2) relié à un transmetteur de température (TT10-2), celui-ci étant un convertisseur universel Hart.
+C#<a href="./files/CIRA2/_Copies/_Sujets/TD3/img/03.png" target="_blank"><img src="./files/CIRA2/_Copies/_Sujets/TD3/img/03.png" width="760px"></a>
+Q#Compléter le document réponse ci-dessous en vous aidant de la documentation ci-dessus.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/04.png
+L#
+
+C#<h2>Mesure de température dans la cuve</h2>
+C#Lors d’une maintenance, on désire vérifier le bon fonctionnement de la chaîne de mesure de la température T1 comprise entre 0 °C à 120 °C. La mesure de température dans la cuve est analogue à la mesure de la température dans la double enveloppe. Elle est cette fois-ci réalisée par un thermocouple « T » (TE 10-1) relié à un transmetteur de température (TT 10-1). L’intervention est faite au niveau des bornes de raccordement de la sonde.
+Q#Dans un premier temps, on vérifiera le fonctionnement et la justesse de la sonde. Compléter le document réponse ci-dessous.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/05.png
+L#
+
+Q#Dans un second temps, on vérifiera la calibration du transmetteur. Compléter le document réponse ci-dessous.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/06.png
+L#
+
+C#<h2>Mesure du niveau dans le réacteur par LT10</h2>
+C#La mesure du niveau est réalisée avec un transmetteur de niveau électrique (4 < I s < 20 mA) par pression différentielle et séparateurs à membrane. Le montage utilise un système avec deux capillaires de longueur identique (voir schéma ci-dessous). On désire obtenir le signal de sortie du transmetteur (Is) proportionnel à la hauteur (H) du liquide.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD3/img/07.png"/>
+Q#Donner l’affectation de la chambre HP(Haute Pression) en fonction de la lettre A ou B.#1
+T#
+
+L#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD3/img/07.png"/>
+C#Pour simplifier les calculs, la masse volumique de la vapeur &rho;<sub>V</sub> sera négligée et on ne tiendra pas compte de la variation de la masse volumique &rho; du liquide. On appelle &rho;<sub>c</sub> la masse volumique du fluide de remplissage des capillaires. On considère que le transmetteur est étalonné avec les valeurs suivantes :<ul><li>&rho; = 950 kg/m 3 ;</li><li>&rho;<sub>c</sub> = 940 kg/m 3 ;</li><li>h1 = 0,3 m ;</li><li> h2 = 2,7 m ;</li><li> h3 = 0,4 m ;</li><li> 0 m < H < 2 m.</li><li>g = 10 m.s<sup>-2</sup></li></ul>
+Q#Calculer l’étendue de l’échelle EE.#1
+T#
+Q#Calculer le décalage de zéro DZ.#1
+T#
+
+L#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD3/img/07.png"/>
+Q#En respectant les approximations des question précédentes, établir le protocole de vérification d’étalonnage du transmetteur de niveau in situ. Proposer un protocole en indiquant la position des vannes (ouverte ou fermée), leur chronologie et les effets de ces actions. Noter la (ou les) valeur(s) de pression à appliquer au(x) point(s) C ou D (à l’aide d’un calibrateur de pression à pompe) afin de vérifier le zéro et la pleine échelle du transmetteur, puis rédiger la démarche pour le retour au fonctionnement normal.#1
+U#
+Q#Donner la valeur du courant de sortie Is (au standard 4-20 mA) lorsque le niveau est à sa valeur nominale de 120 cm.#1
+T#
+
+L#
+C#<h2>Régulation du débit de soutirage</h2>
+C#Sans aucune régulation, on a imposé un échelon de 10 % sur la vanne FCV 15 et on a enregistré la variation du signal du transmetteur de débit FT 15.
+Q#Déterminer les valeurs de la constante de temps &tau; et du gain statique K. #1
+T#
+Q#Faire apparaître les traits de construction permettant la détermination de ces valeurs.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/08.png
+L#
+
+Q#Compléter le schéma TI en ajoutant une boucle de régulation du débit de soutirage. Le régulateur a le repère FIC15.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/09.png
+Q#Les actions de réglage du régulateur PI série (FIC 15) sont : Xp = 140 % et Ti=&tau;. Déterminer T<sub>15</sub>(p) la fonction de transfert en boucle ouverte.#1
+T#
+Q#Donner l’allure de la réponse temporelle x<sub>15</sub> à l'aide du logiciel <a href="./files/CIRA1/_Sujets2TP/EasyRegPhp/" target="blank">EasyReg</a>.#1
+I#
+Q#Conclure sur la stabilité et la précision de cette régulation.#1
+T#
+L#
+
+C#<h2>Régulation niveau</h2>
+C#Il s’agit de réguler le niveau du réacteur par action sur le débit de soutirage.
+Q#Compléter le schéma TI pour faire apparaître la boucle de régulation de niveau.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/09.png
+Q#Comment se nomme ce type de boucle ?#1
+T#
+Q#Indiquer, en justifiant la réponse, le sens d’action du régulateur de niveau.#1
+U#
+Q#Indiquer, en justifiant la réponse, le sens d’action du régulateur de débit.#1
+U#
+L#
+
+Q#Compléter le schéma de configuration des blocs du SNCC ; faire apparaître les liaisons et préciser la valeur des paramètres.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/10.png
+L#
+
+C#<h2>Régulation de température</h2>
+C#On désire régler la température dans le réacteur (95 °C) par action sur le débit vapeur, avec une limitation de la température (150 °C) dans la double enveloppe afin d’éviter les risques de « croûtage » sur les parois internes. Lorsque la température dans la double enveloppe atteint 150 °C, on bascule automatiquement en régulation de température du fluide circulant dans la double enveloppe.
+Q#Quel est le type de boucle à utiliser ?#1
+T#
+Q#Faire le schéma TI.#1
+I#./files/CIRA2/_Copies/_Sujets/TD3/img/11.png
+L#
+
+C#On a identifié la fonction de transfert (les temps sont en min et les signaux en %) :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD3/img/12.png"/>
+C#Le régulateur de température est du type PI dont on a réglé le temps d’intégrale à 4 min.
+Q#Donner le plan de Black sur <a href="./files/CIRA1/_Sujets2TP/EasyRegPhp/" target="blank">EasyReg</a> pour une marge de gain de 6 dB. Pour cela vous devrez déterminer le gain A du correcteur.#1
+I#
+
+
+

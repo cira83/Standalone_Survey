@@ -1,0 +1,1 @@
+Je choisi la régulation cascade, car elle est plus rapide que la boucle simple.

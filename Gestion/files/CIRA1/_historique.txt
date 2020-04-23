@@ -1,3 +1,11 @@
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/eleve.php?nom=Vernhet
+/Gestion/appel.php
+/Gestion/DSZone.php
+/Gestion/DSZone.php
+/Gestion/appel.php
+/Gestion/appel.php
 /Gestion/DSZone.php
 /Gestion/DSZone.php?action=20202&name=toto1
 /Gestion/DSZone.php?action=20201&name=toto1
@@ -6,11 +14,3 @@
 /Gestion/DSZone.php?action=20202&name=toto3
 /Gestion/DSZone.php?action=20201&name=toto3
 /Gestion/DSZone.php?action=20202&name=toto4
-/Gestion/DSZone.php?action=20201&name=toto4
-/Gestion/DSZone.php?action=20202&name=toto5
-/Gestion/DSZone.php?action=20201&name=toto5
-/Gestion/DSZone.php
-/Gestion/DSZone.php
-/Gestion/DSZone.php
-/Gestion/DSZone.php?action=20203&name=
-/Gestion/DSZone.php

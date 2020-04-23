@@ -60,13 +60,64 @@
 		if(code>999) alert("Copier le mot de passe document : " + code);
 		MDP1semaine(code);
 	}
+	
+	function question(bouton){
+		laquestion = prompt('Posez votre question','');
+		
+		var xhr = null;
+	    var xhr = new XMLHttpRequest();	
+	    var tdquestion = document.getElementById('maquestion');
+	    var case_Q = document.getElementById('stateQ');
+	    
+	    if(laquestion) {
+		    tdquestion.innerHTML = laquestion;
+		    case_Q.setAttribute("bgcolor", '#f00');
+		    bouton.setAttribute("onclick", 'alert(\'Pas encore de reponse\');');
+		    chemin = './poser1question.php?question='+laquestion;	
+			xhr.open("GET", chemin, true);
+			xhr.send(null);
+		}
+	}
+
+	function refresh_Q(){
+		var request = new XMLHttpRequest();
+		var case_Q = document.getElementById('stateQ');
+		var tdquestion = document.getElementById('maquestion');
+		var tdreponse = document.getElementById('lareponse');
+		var bouton = document.getElementById('bullebd');
+		
+		request.open('GET', "./lecture_question.php");
+		request.responseType = 'text';
+		
+		request.onload = function() {
+			data = request.response;
+			if(data!='null###') {//null### = pas de fichier
+				part = data.split('#');
+				tdquestion.innerHTML = part[0];
+				if(part[1]) {
+					tdreponse.innerHTML = part[1];
+					case_Q.setAttribute("bgcolor", '#fff');
+					bouton.setAttribute("onclick", 'question(this);');
+				}
+				
+				else {
+					tdreponse.innerHTML = "";
+					case_Q.setAttribute("bgcolor", '#f00');
+					bouton.setAttribute("onclick", 'alert(\'Pas encore de reponse\');');
+				}
+			}
+		};	
+		request.send();
+	}
+	setInterval(refresh_Q, 1000);
 </script>
 
 <?php
   	$prof_login = strpos($sujet,"Sujet"); //------------------------------------------------------   C'est le prof qui corrige le sujet
 	if($prof_login) {
 		$repertoire = "$sujet";
-		$repertoire_rep = str_replace("index.htm", "rep212", $repertoire);
+		if(strpos($repertoire, "index")) $repertoire_rep = str_replace("index.htm", "rep212", $repertoire);
+		else $repertoire_rep = "$repertoire/rep212";		
 		$repertoire_rep1 = $repertoire_rep;
 		if(strpos($sujet, "index.htm")) $nomdufichier = $sujet;
 		else $nomdufichier = "$sujet/index.htm";
@@ -295,7 +346,7 @@
 
 	if(!file_exists($repertoire_rep)) mkdir($repertoire_rep, 0777);//-------------------------------------------         Création du répertoire réponse si non existant
 
-	//###
+	//
 	if(!$prof_login) {
 		//Gestion des sessions
 		$date_ext = date("i/G/d/m");
@@ -380,7 +431,6 @@
 
 	$TAG = TAGdufichier($filename);//Récupération du TAG
 	$titredudocument = "$TAG $nom";
-
 ?>
 <html>
 	<head>
@@ -389,19 +439,27 @@
 		<title><?php echo($titredudocument);?></title>
 		<meta name="Description" content="<?php echo($numero2session);?>">
 	</head>
-	<body>
+	<body onload="refresh_Q();">
 		<center>
 		<table>
-			<tr><td width="52px"></td><td><font size="+5"><?php echo($titredudocument);?></font></td>
-			<td width="52px">
-<?php
-			if(!file_exists("../B800")) 
-				echo("<a href=\"../tui.image-editor/editor/\" target=\"_blank\"><img src=\"icon/image_editor.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");
-			else 
-				echo("<a href=\"./index7.php\"><img src=\"icon/home.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");	
+			<tr>
+				<td width="52px" bgcolor="#fff" id="stateQ"><img src="../pi/Question.gif" width="40px" onclick="question(this);" id="bullebd"></td>
+				<td><font size="+5"><?php echo($titredudocument);?></font></td>
+				<td width="52px">
+<?php //###
+				if(!file_exists("../B800")) 
+					echo("<a href=\"../tui.image-editor/editor/\" target=\"_blank\"><img src=\"icon/image_editor.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");
+				else 
+					echo("<a href=\"./index7.php\"><img src=\"icon/home.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");	
 ?>
-			</td></tr></table>
-
+				</td>
+		</tr></table>
+		<table>
+			<tr bgcolor="white">
+				<td id="maquestion" align="left"></td>
+				<td id="lareponse" align="left"></td>
+			</tr>
+		</table>		
 <?php
 	//Dans le fichier sujet.txt qui est dans le répertoire de l'élève
 	//La première ligne est le titre

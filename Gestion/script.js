@@ -39,6 +39,12 @@ function tailledelafenetre(){
 	document.cookie = 'largeur='+window.innerWidth;
 }
 
+function C_leprof(){
+	var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
+	document.cookie = 'nom=Gatt; path=/; expires='+date.toUTCString();
+}
+
+
 function out(){
 	document.cookie = 'password= ';
 	location.reload() ;

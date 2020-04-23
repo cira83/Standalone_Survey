@@ -125,7 +125,7 @@
 				echo("<table><tr><td bgcolor=\"white\">$link4page Page $page</a></td><td width=\"10px\"><img src=\"icon/Page.gif\" title=\"Saut de page\"/>$HR$SUP$BR$C$BR$Q</td><tr></table>");
 				break;
 			case "X": // Ligne 0
-				echo("<table id=\"Q$quest\"><tr bgcolor=\"yellow\"><td width=\"30px\">$contenu</td><td width=\"10px\">$C$BR$Mod</td><tr></table>");
+				echo("<table id=\"Q$quest\"><tr bgcolor=\"yellow\"><td width=\"30px\">$contenu</td><td width=\"10px\">$Mod$BR$C</td><tr></table>");
 				break;
 		}
 	}

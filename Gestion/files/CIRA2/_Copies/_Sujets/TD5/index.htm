@@ -1,0 +1,58 @@
+Réglage d’un réacteur chimique#TD5#
+C#La fabrication d’un engrais nécessite l’utilisation d’un réacteur chimique à double enveloppe, permettant :<ul><li>Le maintien de la température du mélange réactionnel en régime stabilisé.</li><li>Une évolution contrôlée de la température pendant les changements de phase de la fabrication.</li></ul>En fin de fabrication, le produit est soutiré par gravitation, le réacteur est lavé puis à nouveau chargé pour le départ d’un nouveau lot.<br/><br/><img src="./files/CIRA2/_Copies/_Sujets/TD5/img/01.png"><br/>Le procédé peut être considéré comme approximativement linéaire dans toute la plage de variation de la température, grâce au choix judicieux de la vanne. Les transmetteurs sont des transmetteurs 2 fils 4-20 mA et les vannes sont à commande 4-20 mA.
+C#<b>Contraintes :</b> le procédé peut permettre un dépassement de la consigne de 20% maximum. L'erreur statique doit être nulle.<br/><br/>Le système sera simulé par le logiciel <a href="http://gatt.fr/Process4" target="_blank" >Process IV</a> qui vous permet de tester différents réglages.
+L#
+C#<h2>Boucle simple</h2>Le technicien décide dans un premier temps de réaliser une régulation simple pilotée par un régulateur P.I.D. mixte TC1.
+Q#Compléter le schéma TI pour faire apparaître la boucle de régulation.#1
+I#./files/CIRA2/_Copies/_Sujets/TD5/img/01.png
+L#
+Q#Identifier le procédé à un modèle de Broïda. On donnera le gain K, la constante de temps &tau; et le retard T.#1
+T#
+Q#Fournir le graphique qui a permis d'identifier le procédé.#1
+I#
+Q#À l’aide des réglages de Dindeleux fournis dans le cours, déterminer les paramètres A1, Td1 et Ti1 de votre correcteur.#1
+T#
+L#
+Q#Compléter le programme ci-dessous correspondant à la régulation monoboucle. Vous utiliserez les réglages obtenus précédemment.#1
+I#./files/CIRA2/_Copies/_Sujets/TD5/img/02.png
+L#
+Q#Enregistrer la réponse obtenu de votre régulation en réponse à un échelon de consigne.#1
+I#
+Q#Faire l’analyse critique de ce résultat.#1
+T#
+L#
+C#Déterminer un réglage des actions PID qui respectent les contraintes du procédé (page 1), avec un temps de réponse le plus court possible.
+Q#Enregistrer la réponse obtenu de votre régulation en réponse à un échelon de consigne.#1
+I#
+Q#Mesurer les performances de votre régulation (Erreur statique ε<sub>s</sub>, Temps de réponse à ±10% Tr et premier dépassement D1). Faire apparaitre les constructions sur le graphique précédent.#1
+T#
+Q#Meilleurs temps de réponse que la correction ?#1
+T#
+L#
+C#<h2>Boucle cascade</h2>Le technicien décide d'essayer une régulation cascade sur la grandeur intermédiaire (la température de l’enveloppe) en ajoutant un régulateur TC2.
+Q#Compléter le schéma TI pour faire apparaître la boucle cascade.#1
+I#./files/CIRA2/_Copies/_Sujets/TD5/img/01.png
+L#
+C#<h3>Réglage de la boucle esclave</h3>D'expérience le technicien sait que la boucle esclave fonctionne correctement avec Ti = Td = 20 s et un dépassement limité à 10%. Déterminer un réglage des actions PID qui respectent ces contraintes, avec un temps de réponse le plus court possible.
+Q#Enregistrer la réponse obtenu de votre régulation en réponse à un échelon de consigne.#1
+I#
+Q#Mesurer les performances de votre régulation (Erreur statique εs, Temps de réponse à ±10% Tr et premier dépassement D1). Faire apparaitre les constructions sur le graphique précédent.#1
+T#
+L#
+C#<h3>Réglage de la boucle maitre</h3>Déterminer un réglage des actions PID, par la méthode du régleur, qui respectent les contraintes du procédé (page 1), avec un temps de réponse le plus court possible.
+Q#Enregistrer la réponse obtenu de votre régulation en réponse à un échelon de consigne.#1
+I#
+Q#Mesurer les performances de votre régulation (Erreur statique εs, Temps de réponse à ±10% Tr et premier dépassement D1). Faire apparaitre les constructions sur le graphique précédent.#1
+T#
+Q#Meilleurs temps de réponse que la correction ?#1
+T#
+L#
+C#<h2>Conclusion</h2>
+Q#Quand une régulation cascade se justifie-t'elle ? Appliquer ce raisonnement au procédé étudier ici.#0.5
+U#
+Q#Comparer les performances de la boucle simple et de la boucle cascade.#0.5
+U#
+Q#Qu'apporte la régulation cascade dans ce procédé ?#1
+U#
+Q#Quelle régulation choisissez-vous ? Justifier votre réponse.#1
+U#

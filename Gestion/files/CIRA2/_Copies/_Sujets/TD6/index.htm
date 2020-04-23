@@ -1,0 +1,53 @@
+Fabrication de lessive carbonatée#TD6#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD6/img/03.gif">
+C#<p>La réaction chimique de la fabrication de la lessive carbonatée est la suivante : <p><br/><center>2 KOH + CO<sub>2</sub> ->  K<sub>2</sub>CO<sub>3</sub> + H<sub>2</sub>O<br>lessive de potasse -> lessive carbonatée </center><br/>Cette lessive dissoute dans l'eau doit être séchée et cristallisée en vue de sa commercialisation. <br/>La cristallisation et l'évaporation de l'eau nécessitent trois étapes. Nous nous intéresserons lors de cette étude à la première étape qui consiste en une évaporation de la lessive. <br/>La  lessive  carbonatée  filtrée  (de  concentration  et  pression  constantes)  qui  provient  d'une  salle d'électrolyse, arrive dans un bac à lessive fermé et maintenu en légère surpression d’azote constante pour éviter tout risque d’oxydation du produit. Ce produit, par l'intermédiaire d'une pompe, est envoyé dans un réchauffeur avant de subir une première évaporation. La lessive parvient enfin dans un séparateur où a lieu la concentration. La lessive sort du séparateur à une température de 125 °C et la vapeur secondaire produite par l'évaporation issue du séparateur est réutilisée dans le réchauffeur. <br/>Une seconde pompe permet le recyclage de la lessive afin de maintenir un débit minimum de 5 kg.h<sup>-1</sup> à  la  sortie  du  séparateur  afin  d’éviter  tout  risque  de  colmatage.  Ce  recyclage  se  referme progressivement dès que le débit de sortie qS lessive augmente. Il est complètement fermé lorsque ce débit de sortie qS dépasse les 5 kg.h<sup>-1</sup>. <br/>Les vannes automatiques sont de caractéristiques linéaires. Les vannes automatiques V1, V2 et V3 sont de type fermées par manque d'air (FMA ou NF). La vanne de recyclage V4 est de type ouverte par manque d'air (OMA ou NO).<br/>Les signaux des transmetteurs et des vannes sont au standard 4-20 mA.
+L#
+C#<h2>Régulation de la température de l'évaporateur</h2><br/>La régulation de la température de l'évaporateur est simulé par le logiciel <a href="../Mixed" target="_blank" >MIXED</a>.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD6/img/02.gif">
+L#
+C#<h3>Boucle simple</h3>
+Q#Quel capteur mesure la perturbation Z représentée dans le schéma fonctionnel du logiciel <a href="../Mixed" target="_blank" >MIXED</a> ?#1
+T#
+Q#Identifier H(p) à un modèle de Broïda. On donnera le gain K, la constante de temps τ et le retard T.#2
+T#
+Q#Fournir le graphique avec les construction qui ont permis d'identifier le procédé.#1
+I#
+Q#À l’aide des réglages de Dindeleux fournis dans le cours, déterminer les paramètres A1, Td1 et Ti1 de votre correcteur.#1
+T#
+L#
+Q#Compléter le programme ci-dessous correspondant à la régulation simple de la température dans l'évaporateur. Vous utiliserez les réglages obtenus précédemment.#1
+I#./files/CIRA2/_Copies/_Sujets/TD6/img/01.png
+L#
+Q#Enregistrer la réponse obtenu de votre régulation en réponse à un échelon de consigne.#1
+I#
+Q#Mesurer les performances de votre régulation (Erreur statique εs, Temps de réponse à ±10% Tr et premier dépassement D1). Faire apparaitre les constructions sur le graphique précédent.#1
+T#
+L#
+Q#Enregistrer la réponse obtenu de votre régulation en réponse à un échelon de perturbation Z.#1
+I#
+Q#Mesurer le temps de retour au régime permanent Tret. Faire apparaitre les constructions sur le graphique précédent.#1
+T#
+L#
+C#<h3>Régulation mixte</h3>Pour limiter les effets de la perturbation Z, on mets en place une régulation mixte utilisant le transmetteur qui mesure Z.
+Q#Compléter le schéma TI pour faire apparaître la boucle de tendance.#1
+I#./files/CIRA2/_Copies/_Sujets/TD6/img/02.gif
+L#
+Q#Déterminer le gain statique K<sub>z</sub> de Hz en utilisant le logiciel <a href="../Mixed" target="_blank" >MIXED</a>.#1
+T#
+Q#Fournir la courbe qui a permit de répondre à la question précédente.#1
+I#
+Q#En déduire la valeur du gain de tendance A2 à l'aide de la formule présente dans le cours.#1
+T#
+L#
+Q#Compléter le programme ci-dessous correspondant à la régulation mixte de la température dans l'évaporateur. Vous utiliserez les réglages obtenus précédemment.#2
+I#./files/CIRA2/_Copies/_Sujets/TD6/img/01.png
+L#
+Q#Enregistrer la réponse obtenu de votre régulation en réponse à un échelon de perturbation Z.#1
+I#
+Q#Mesurer le temps de retour au régime permanent Tret. Faire apparaitre les constructions sur le graphique précédent.#1
+T#
+L#
+Q#Modifier le gain de tendance afin de réduire le temps de retour Tret. Fournir la réponse obtenu de votre régulation en réponse à un échelon de perturbation Z.#1
+I#
+Q#Faire une analyse de l'apport de la boucle de tendance dans la régulation de température étudiée.#1
+U#

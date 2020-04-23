@@ -1,0 +1,74 @@
+Influence du temps intégral#TD1
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../../../styles.css">
+</head>
+C#Soit une régulation de niveau dont la fonction de transfert réglante est :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD1/img/01.gif"/>
+C#Avec un gain statique K = 2 et une constante de temps τ = 3min. On associe à ce procédé un correcteur P.I. série C(p) de gain A et de constante de temps d'intégration Ti.</p>
+Q#Donner la fonction de transfert en boucle ouverte T(p)en fonction de A et Ti.#1
+T#
+Q#Donner la fonction de transfert F(p) en boucle fermée en fonction de A et Ti.#1
+T#
+L#
+
+C#Répondre aux questions suivantes en utilisant le logiciel <a href="./files/CIRA1/_Sujets2TP/EasyRegPhp/" target="blank">EasyReg</a>.
+C#<center><p><font color="red">Sur EasyReg choisir une constante de temps pour le calcul de 60s.</font></p></center>
+C#<p>On effectue 4 essais avec les réglages suivant du régulateur :</p><ol><li>Régulateur en P seul : A = 2,5</li><li>Régulateur en PI : A = 2,5 ; Ti = 1/3 min</li><li>Régulateur en PI : A = 2,5 ; Ti = 2 min</li><li>Régulateur en PI : A = 2,5 ; Ti = 3 min</li></ol>
+C#<b>Pour l'essai 1 :</b>
+Q#Tracer la courbe de réponse indicielle en boucle fermée. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
+I#
+Q#Relever la valeur du premier dépassement, l'erreur statique et le temps de réponse à 2%.#1
+T#
+L#
+
+Q#Tracer la courbe de réponse fréquentielle en boucle ouverte dans le plan de Black.#1
+I#
+Q#Quelle est la valeur de la marge de phase ?#1
+T#
+L#
+
+C#<b>Pour l'essai 2 :</b>
+Q#Tracer la courbe de réponse indicielle en boucle fermée. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
+I#
+Q#Relever la valeur du premier dépassement, l'erreur statique et le temps de réponse à 2%.#1
+T#
+L#
+
+Q#Tracer la courbe de réponse fréquentielle en boucle ouverte dans le plan de Black.#1
+I#
+Q#Quelle est la valeur de la marge de phase ?#1
+T#
+L#
+
+C#<b>Pour l'essai 3 :</b>
+Q#Tracer la courbe de réponse indicielle en boucle fermée. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
+I#
+Q#Relever la valeur du premier dépassement, l'erreur statique et le temps de réponse à 2%.#1
+T#
+L#
+
+Q#Tracer la courbe de réponse fréquentielle en boucle ouverte dans le plan de Black.#1
+I#
+Q#Quelle est la valeur de la marge de phase ?#1
+T#
+L#
+
+C#<b>Pour l'essai 4 :</b>
+Q#Tracer la courbe de réponse indicielle en boucle fermée. (Enregistrer l'image sur votre ordinateur avec un clic droit, puis insérer là dans votre compte rendu).#1
+I#
+Q#Relever la valeur du premier dépassement, l'erreur statique et le temps de réponse à 2%.#1
+T#
+L#
+
+Q#Tracer la courbe de réponse fréquentielle en boucle ouverte dans le plan de Black.#1
+I#
+Q#Quelle est la valeur de la marge de phase ?#1
+T#
+L#
+
+
+Q#Comparer les réponses et en déduire l’influence de l’action intégrale sur la précision, la stabilité et le temps de réponse à ±2% du système.#1
+U#
+Q#Comparer les courbes sur le plan de Black et en déduire l’influence de l’action int&eacute;grale l'allure de la courbe.#1
+U#

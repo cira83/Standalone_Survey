@@ -1,0 +1,1 @@
+Ce type de régulation se justifie quand on a une grande inertie du système vis-à-vis d'une perturbation sur la grandeur réglante, ou sur une grandeur intermédiaire. Ici est devant une régulation de température d'une double enveloppe avec une inertie importante.

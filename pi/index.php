@@ -1,0 +1,145 @@
+<html>
+<?php
+	$noire_t = "#000000";//noir 
+	$violet_t = "#8d1682";//violet 27min
+	$rouge_t = "#fd0002";//rouge 9min
+	$orange_t = "#ff8b01";//orange 3min
+	$jaune_t = "#ffed02";//jaune 1min
+	$vert_t = "#02fe00";//vert 20s
+	
+	$lut = "['$vert_t','$jaune_t','$orange_t','$rouge_t','$violet_t','$noire_t'];";
+?>
+	
+	<head>
+		<link rel="icon" type="image/gif" href="../img/LOGO_Flamme.gif" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../Gestion/styles_sujet.css"  />
+		<title>CIRA TP</title>
+
+
+		<script type="text/javascript">
+		var pastille = <?php echo($lut); ?>
+		
+			function photo(classe, nom){
+				laphoto = '<br><img src="../Gestion/files/'+classe+'/_Photos/'+ nom + '.jpg" height="100px"/>';
+				return(laphoto);
+			}
+		
+			function pastille_color(duree){
+				couleur = pastille[0];
+				if(duree>20) couleur = pastille[1];
+				if(duree>60) couleur = pastille[2];
+				if(duree>180) couleur = pastille[3];
+				if(duree>540) couleur = pastille[4];
+				if(duree>1620) couleur = pastille[5];
+
+				bulle = '<font color=\"'+ couleur + '\" size=\"+2\" \">&#9679;</font> ';
+				return(bulle);
+			}
+		
+			function refresh(){
+				var request = new XMLHttpRequest();
+				var reponse;
+				
+				request.open('GET', "./lecture.php");
+				request.responseType = 'text';
+				
+				request.onload = function() {
+					data = request.response.split("#");
+					classe = data[4];
+					nom = data[0].split(':');
+					timer = data[1].split(':');
+					TP = data[5].split(':');
+					nb_rep = data[2].split(':');
+					question = data[7].split(':');
+					for(i=0;i<8;i++){
+						if(question[i]) interrogation = '<img src="PI_orange.gif" height="20px" onclick="repondre(\''+question[i]+'\',\''+nom[i]+'\');"> ';
+						else interrogation = '';						
+						cellule = document.getElementById(i);
+						celluleQ = document.getElementById('Q'+i);
+						if(i<data[3]) {
+							cellule.innerHTML =  pastille_color(timer[i])+nom[i]+' '+nb_rep[i]+'<br>'+TP[i]+photo(classe, nom[i]);
+							celluleQ.innerHTML = interrogation;
+						}
+						else cellule.innerHTML = '';
+					}	
+				};	
+				
+				request.send();
+			}
+
+			function refresh_bak(){
+				var cellule = document.getElementById('T0');
+				retour = lecture_fichier("./lecture.php");
+
+
+				cellule.innerHTML = retour;
+			}
+
+			setInterval(refresh, 1000);
+			
+			function repondre(question,nom){
+				lareponse = prompt(question,'');
+				
+				var xhr = null;
+			    var xhr = new XMLHttpRequest();	
+			    
+			    if(lareponse) {
+				    chemin = './repondre1question.php?lareponse='+lareponse+'&lenom='+nom;	
+					xhr.open("GET", chemin, true);
+					xhr.send(null);
+				}
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body onload="refresh()">
+			<table><tr><!-- ENTETE -->
+				<td width="50px"><a href="../Gestion/DSZone.php" title="Appel"><img src="../Gestion/icon/home.png" height="25px"></a></td>
+				<td align="center"><font size="+2">TP CIRA</font></td>
+				<td width="50px"><a href="http://localhost:1880/ui/"><img src="./node-red-icon.png" height="35px"></a></td>
+			</tr></table>
+			<!-- LUT -->
+			<?php
+				echo("<table><tr>");	
+				echo("<td bgcolor=\"black\"></td>");
+				echo("<td bgcolor=\"white\" width=\"35px\" align=\"center\"><font size=\"-2\">27 min</font></td><td bgcolor=\"$violet_t\"></td>");
+				echo("<td bgcolor=\"white\" width=\"30px\" align=\"center\"><font size=\"-2\">9 min</font></td><td bgcolor=\"$rouge_t\"></td>");
+				echo("<td bgcolor=\"white\" width=\"30px\" align=\"center\"><font size=\"-2\">3 min</font></td><td bgcolor=\"$orange_t\"></td>");
+				echo("<td bgcolor=\"white\" width=\"30px\" align=\"center\"><font size=\"-2\">1 min</font></td><td bgcolor=\"$jaune_t\"></td>");
+				echo("<td bgcolor=\"white\" width=\"30px\" align=\"center\"><font size=\"-2\">20 s</font></td><td bgcolor=\"$vert_t\"></td>");
+				echo("<td bgcolor=\"white\" width=\"10px\" align=\"center\"><font size=\"-2\">0</font></td>");
+				echo("</tr></table>");	
+			?>
+			<table><!-- ETUDIANTS -->
+				<tr>
+					<td id="0">----</td>
+					<td id="1">----</td>
+					<td id="2">----</td>
+					<td id="3">----</td>
+				</tr>
+				<tr>
+					<td id="Q0"></td>
+					<td id="Q1"></td>
+					<td id="Q2"></td>
+					<td id="Q3"></td>
+				</tr>
+				
+				<tr>
+					<td id="4">----</td>
+					<td id="5">----</td>
+					<td id="6">----</td>
+					<td id="7">----</td>
+				</tr>
+				<tr>
+					<td id="Q4"></td>
+					<td id="Q5"></td>
+					<td id="Q6"></td>
+					<td id="Q7"></td>
+				</tr>
+
+			</table>
+	</body>
+</html>

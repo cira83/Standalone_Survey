@@ -1,0 +1,105 @@
+Production de sucre#TD4#BTS 2016
+C#Le procédé étudié dans ce sujet est basé sur la production de sucre cristal à partir de la betterave sucrière. <br/>Le Plan de Circulation des Fluides (PCF) de l’ensemble de l’installation est représenté ci-dessous. <br/>- La première étape consiste à épurer le jus sucré de débit volumique Q<sub>Js</sub> (4) dans trois zones distinctes (le chaulage, la carbonisation et la filtration).<br/>- Le jus sucré filtré obtenu de débit volumique Q<sub>JsF</sub> (5) est ensuite chauffé dans un four de cuisson par de la vapeur de débit Q<sub>Vap</sub> (6) afin d’obtenir un jus concentré sucré de teneur en saccharose imposé de débit volumique Q<sub>JsC85</sub> (8).<br/>- On obtiendra enfin le sucre cristal par une unité de cristallisation non étudiée dans ce sujet.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD4/img/1.png">
+C#Cinq régulations distinctes seront développées ci-après : <ol><li>Le débit massique de pierres à chaux Q<sub>mPC</sub> (1) est mesuré par une bande peseuse et réglé par la vitesse d’entrainement du tapis.</li><li>Le débit volumique de lait de chaux Q<sub>vLC</sub> (3) est obtenu par mélange des pierres à chaux et d’eau de débit volumique Q<sub>vE</sub> (2) selon un ratio précis.</li><li>Le niveau de jus sucré filtré dans le four de cuisson est réglé par action sur le débit volumique Q<sub>JsF</sub>.</li><li>La température du jus filtré dans le four est réglée par action sur le débit vapeur Q<sub>Vap</sub>.</li><li>La densité du jus concentré est réglée par action sur les débits volumiques de recirculation Q<sub>Rec</sub> (7) et de jus concentré Q<sub>JsC85<sub> (8).</li></ol>
+C#Les signaux des transmetteurs sont linéaires de sortie normalisée 4-20 mA. Les caractéristiques installées des vannes sont considérées linéaires.
+L#
+C#<h2>Fabrication du lait de chaux</h2>
+Q#Compléter le plan T.I. de la régulation de débit massique de pierre à chaux.#.5
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/2.png
+Q#À partir du plan T.I. préciser la technologie utilisée pour la mesure du débit d’eau.#.5
+T#
+Q#Donner le nom de la stratégie de régulation du régulateur FIC2 proposée ci-dessus. Préciser la grandeurs menée.#1
+T#
+L#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD4/img/2.png">
+Q#Compléter le schéma-bloc SNCC correspondant à cette stratégie.#1
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/3.png
+L#
+C#Le cahier des charges impose un débit volumique de lait de chaux Q<sub>vLC</sub> de 18 m<sup>3</sup>.h<sup>-1</sup> et de masse volumique ρ<sub>LC</sub> = 1 200 kg.m<sup>-3</sup>. On cherche à régler précisément le débit d’eau de dissolution par ajustage du coefficient K%.<br/>Le débit massique total de lait de chaux Q<sub>mLC</sub> est égal à la somme du débit massique de pierres à chaux Q<sub>mPC</sub> (1) et du débit massique d’eau Q<sub>mE</sub> (2).
+Q#Écrire l’égalité reliant Q<sub>mLC</sub> à Q<sub>mPC</sub> et du débit volumique de l'eau Q<sub>ve</sub>.#.5
+T#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD4/img/4.png">
+Q#À partir du tableau de données du procédé ci-dessus, calculer le débit massique de lait de chaux Q<sub>mLC</sub> en t.h<sup>-1</sup>.#.5
+T#
+Q#En déduire, le débit massique d’eau de dissolution Q<sub>mE</sub> (t.h<sup>-1</sup>).#.5
+T#
+Q#Donner le débit volumique d’eau de dissolution Q<sub>vE</sub> (2) (m<sup>3</sup>.h<sup>-1</sup>).#.5
+T#
+Q#Calculer le coefficient de proportionnalité R = Q<sub>vE</sub>/Q<sub>mPC</sub> en m<sup>3</sup>.t<sup>-1</sup>#.5
+T#
+L#
+C#On choisira un coefficient de proportionnalité R = 12 pour la question suivante.<br/>Le coefficient de proportionnalité K% entre les deux signaux normalisés X1(%) et X2(%), à implémenter dans le bloc SNCC « ANCON » dépend des étendues de mesure de FT1 et FT 2, ainsi que de R.<br/>On rappelle que le coefficient d’étalonnage désigne la constante qui relie le signal normalisé (compris entre 0 et 100%) de mesure à la grandeur physique.<br/>- X1(%) est le signal normalisé de la mesure du débit massique Q<sub>mPC</sub> (t.h<sup>-1</sup>).<br/>- X2(%) est le signal normalisé de la mesure du débit volumique Q<sub>vE</sub> (2) (m<sup>3</sup>.h<sup>-1</sup>).
+Q#Exprimer X1(%) en fonction de Q<sub>mPC</sub>.#.25
+T#
+Q#Exprimer X2(%) en fonction de Q<sub>vE</sub>.#.25
+T#
+Q#Calculer numériquement K%.#1
+T#
+L#
+C#<h2>Gestion du four de cuisson</h2>
+C#<h3>Régulation de niveau de jus sucré filtré</h3>Le jus sucré filtré (forme liquide) de débit Q<sub>JsF</sub> (5) est envoyé dans plusieurs fours de cuisson (un seul est représenté sur le plan T.I.). Ce débit est donc sujet à de grandes variations en fonction de la demande sur l’ensemble des fours.
+Q#Afin que le niveau mesuré par LT3 demeure insensible à ces variations, proposer une stratégie de régulation faisant intervenir la vanne FV4 et le transmetteurs FT4.#.5
+T#
+Q#Compléter le plan T.l. de cette stratégie.#1
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/5.png
+L#
+C#Le transmetteur de débit FT4 est un débitmètre massique à force de Coriolis.
+Q#Donner son principe de fonctionnement en 5 lignes maximum.#.5
+U#
+C#Le débitmètre massique utilisé est le modèle OPTIMASS 7000 de marque KROHNE. Il est communiquant sous le protocole HART.
+Q#Donner un intérêt de ce type de communication.#.5
+T#
+Q#À l’aide de <a href="https://www.dropbox.com/s/kclsdxcvwudadzk/OPTIMASS.pdf?dl=0">la notice technique</a> , donner son débit massique maximum en kg.h<sup>-1</sup> pour un DN (Diamètre Nominal) de 25.#.5
+T#
+Q#En déduire la stabilité de son zéro en kg.h<sup>-1</sup> pour un modèle en Acier Inox à l’aide de la notice.#.5
+T#
+C#Le débit massique mesuré réel Q<sub>JsF</sub> (5) est de 10 t.h<sup>-1</sup>.
+Q#Calculer son incertitude de mesure totale maximale en kg.h<sup>-1</sup> à l’aide de la notice.#.5
+T#
+L#
+C#<h3>Régulation de température du jus sucré filtré dans le four</h3>La température du jus sucré dans le four de cuisson est réglée par le débit vapeur Q<sub>Vap</sub> (6).
+Q#Compléter le plan T.I. de cette stratégie.#1
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/5.png
+L#
+C#On désire régler le procédé de température par une méthode appropriée. Auparavant, il sera nécessaire d’identifier le procédé dont la réponse x<sub>5</sub>(t) à un échelon de commande y<sub>5</sub>(t) sur la vanne (TV 5).
+Q#Déterminer le modèle de Broïda de la fonction de transfert H<sub>5</sub>(p).#.5
+T#
+Q#Faire figurer les traits de construction sur l'enregistrement.#1
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/6.png
+L#
+C#On considérera que la fonction de transfert du procédé s’écrira : <br/><img src="./files/CIRA2/_Copies/_Sujets/TD4/img/7.png"><br/>Le correcteur utilisé est de type PI mixte de gain A<sub>5</sub> et de temps intégral Ti<sub>5</sub>.
+Q#Déterminer judicieusement la valeur de la constante de temps d’intégration Ti<sub>5</sub>.#.5
+T#
+Q#à l'aide d'<a href="http://gatt.fr/Gestion/files/CIRA1/_Sujets2TP/EasyRegPhp/" target="_blank">EasyReg</a>, déterminer la valeur de A<sub>5</sub> pour avoir une marge de gain de 10 dB. Donner seulement le plan de Black correspondant à ce réglage.#1
+I#
+L#
+C#<h2>Production du sirop</h2>
+C#<h3>Concentration en saccharose du jus concentré sucré</h3>Pour connaître l’avancement de la cristallisation, on mesure la concentration en saccharose en sortie du four de cuisson à l’aide d’un module de mesure par micro-ondes. On souhaite alors que la concentration du jus en saccharose atteigne environ 90 °Brix (le °Brix est le pourcentage massique de saccharose dissous dans le mélange).<br/>Lorsque les micro-ondes traversent le produit à mesurer, elles subissent une forte interaction due à la présence d’eau. Des mesures de déphasage et d’atténuation permettent de déterminer la teneur en eau avec une grande précision et donc d’en déduire la concentration en °Brix.
+C#<p>La grandeur <b>Concentration</b> est une fonction linéaire de la grandeur <b>Déphasage</b> de la forme :</p><center><b>Concentration</b> = A<sub>1</sub> × <b>Déphasage</b> + A<sub>0</sub><br/>(<b>Déphasage</b> entre 0 et 360°, <b>Concentration</b> en °Brix)</center><p>Les coefficients  A<sub>1</sub> et A<sub>0</sub> ont été déterminés à l’aide d’échantillons de jus en concentrations connues.</p>
+Q#Ajouter la droite ayant permis la détermination des coefficients A<sub>1</sub>  et A<sub>0</sub> sur le graphique représentant les mesures.#.5
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/8.png
+Q#Déterminer A<sub>0</sub>.#.5
+T#
+Q#Déterminer A<sub>1</sub>.#.5
+T#
+L#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD4/img/8.png">
+C#Le transmetteur de concentration est étalonné pour une mesure de 78 à 88 °Brix.
+Q#Relever la valeur de déphasage correspondante à 78 °Brix.#.5
+T#
+Q#Relever la valeur de déphasage correspondante à 88 °Brix.#.5
+T#
+Q#Pour une concentration de 85 °Brix, donner la valeur du courant généré par le transmetteur à sortie 4-20 mA.#.5
+T#
+L#
+C#<h3>Régulation de concentration en saccharose du concentré sucré</h3>La concentration imposée pour le jus concentré sucré est de 85 °Brix. Cet ajustement est assuré par le débit de recirculation Q<sub>ReC</sub> (7) (permettant de réinjecter ce jus dans le four si sa concentration est insuffisante) et par le débit de produit fini Q<sub>JsC85</sub> (8).
+Q#Donner le nom de la stratégie de régulation réalisée.#.5
+T#
+Q#Compléter le plan T.l. de cette stratégie.#1
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/9.png
+L#
+Q#Représenter sur le diagramme de partage en % d’ouverture (le point de partage est fixé à 50%). Compléter les dénominations de chaque vanne DV6A et DV6B sur chaque caractéristique.#1
+I#./files/CIRA2/_Copies/_Sujets/TD4/img/10.png
+Q#Donner le sens d’action du régulateur de concentration DIC 6. Justifier.#.5
+T#

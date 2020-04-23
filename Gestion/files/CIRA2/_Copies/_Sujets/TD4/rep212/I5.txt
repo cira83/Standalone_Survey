@@ -1,0 +1,1 @@
+QmLC = QmPC + QmE = QmPC + 1000Qve

@@ -1,0 +1,9 @@
+1. Fermer V2, ouvrir V3.
+2. Fermer V1, ouvrir V5, puis V4.
+3. Régler le 0.
+4. Fermer V5.
+5. Mettre 19 000 Pa sur C.
+6. Régler l'étendue de mesure.
+7. Fermer V4, ouvrir V1.
+8. Fermer V3, ouvrir V2.
+

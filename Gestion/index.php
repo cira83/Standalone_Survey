@@ -90,15 +90,21 @@
 
 		function passvite(){
 			var request = new XMLHttpRequest();
+			var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
 			
 			request.open('GET', "./validMdP.php");
 			request.responseType = 'text';
 				
 			request.onload = function() {
 				data = request.response;
-				if(data==1) {
+				if(data==1) {//login élève ok
 					message.innerHTML = '<font color="#00ff00">Bon mot de passe</font>';
 					window.location.replace('./index7.php');
+				}
+				if(data==2) {// login prof
+					message.innerHTML = '<font color="#00ff00">Bon mot de passe</font>';
+					document.cookie = 'nom=Professeur; path=/; expires='+date.toUTCString();
+					window.location.replace('./appel.php');
 				}
 			};	
 				

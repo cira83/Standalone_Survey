@@ -51,7 +51,7 @@
 <!-- En travaux. Revenez plus tard. Merci. -->
 
 <?php
-	if($prof_login){
+	if(false){
 		echo("<hr><p class=\"liste\"><a href=\"DSZone.php\" class=\"no-under\">Gestion des devoirs</a></p>");
 		echo("<p class=\"liste\"><a href=\"appel.php\" class=\"no-under\">Appels</a></p>");
 	}

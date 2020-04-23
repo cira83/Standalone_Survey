@@ -1,0 +1,1 @@
+Quand on augmente la commande de LIC, le débit de soutirage augmente, le niveau dans le réacteur baisse. Le procédé est inverse, pour compenser le régulateur est direct.

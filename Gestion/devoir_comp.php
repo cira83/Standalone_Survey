@@ -1,9 +1,7 @@
 <?php
 	include("./security.php");
 	include("./DSFonctions.php");
-	include("./DS_Securite.php");// function DSMDP($classe, $elv);
-	
-	
+	include("./DS_Securite.php");// function DSMDP($classe, $elv);	
 	
 	$numero2session = session_id();//Numero de session
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
@@ -72,6 +70,7 @@
 	}
 
 	function lire_note($filename,$num){
+		$note = "";	
 		if(file_exists($filename)) {
 			$fp = fopen($filename, "r");
 			$note = fgets($fp);
@@ -99,7 +98,8 @@
 		return $icon;
 	}
 
-	function calcul_note($filename,$coef) {		
+	function calcul_note($filename,$coef) {
+		$note = "";	
 		$res = 0;
 		if(file_exists($filename)) {
 			$fp = fopen($filename, "r");

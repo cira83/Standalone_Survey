@@ -1,0 +1,23 @@
+----::1:
+Blanc Vogel::1:03/12 - 13h47:0 Correction:::
+Menini::1:
+Blanc Vogel:10.3:1:05/12 - 09h20:0 Correction:::
+Menini:5.9:1:05/12 - 09h20:0 Correction:::
+Vernhet Fabri::1:
+Fabri::1:11/12 - 13h14:0 Correction:::
+Bertolotti::1:
+Vernhet Fabri::1:Non Fait:0 Correction:::
+Fabri::1:13/12 - 09h09:0 Correction:::
+Fabri:7.6:1:13/12 - 09h18:0 Correction:::
+----::1:Non Fait:0 Correction:::
+Bertolotti:8.4:1:19/12 - 07h32:0 Correction:::
+Touita Bayssac::1:
+Gonzalez Grapin::1:
+Bagur Laou-Hap::1:
+Touita Bayssac::1:07/01 - 17h13:0 Correction::Absents:
+Gonzalez Grapin::1:08/01 - 13h23:0 Correction::+1 Bricolage:
+Gonzalez Grapin:10.1:1:09/01 - 09h07:0 Correction::+1 Bricolage:
+Gonzalez Grapin:10.1:1:09/01 - 09h07:0 Correction::+1 Bricolage:
+Gonzalez Grapin:11.1:1:09/01 - 09h07:0 Correction::+1 Bricolage:
+Bagur Laou-Hap:12.4:1:14/01 - 16h58:0 Correction:::
+Touita Bayssac::1:Non Fait:0 Correction::Absents:

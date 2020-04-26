@@ -63,6 +63,20 @@
 ?>
 <!--                                  DEBUT DU FICHIER                         -->
 <script type="text/javascript" src="./script.js"></script>
+<script>
+	function ip() {
+		var request = new XMLHttpRequest();
+		
+		request.open('GET', "../ip.php");
+		request.responseType = 'text';
+		
+		request.onload = function() {
+			data = request.response;
+			alert(data);
+		};	
+		request.send();
+	}
+</script>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" media="screen" href="styles.css">
@@ -76,9 +90,10 @@
 			echo("<table>");
 		?>	
 		<tr>
-			<td width="50"><a href="./appel.php" title="Appel"><img src="./icon/home.png" height="25px"></a></td>
-			<td width="50px"><a href="../pi" title="Pi"><img src="../pi/pi.png" height="25px"></a></td>
-
+			<td width="70px"><a href="./appel.php" title="Appel"><img src="./icon/home.png" height="40px"></a></td>
+			<td width="70px"><a href="../pi" title="Pi"><img src="../pi/pi.png" height="30px"></a></td>
+			<td width="70px"><img src="./icon/ip.gif" height="30px" onclick="ip();"></td>
+			
 			<td><?php echo($listedesclasses);?></td>
 			<td><?php echo($_COOKIE['nom']);?></td>
 		<td align="right"><?php echo($historique_select);?></td>

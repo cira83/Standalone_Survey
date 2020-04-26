@@ -1,0 +1,77 @@
+Audiffren::1:
+Ayza::1:
+Bichon::1:
+Blanchon::1:
+Charpin::1:
+Chevillard::1:
+Feyrit::1:
+Lothmann::1:
+Marin::1:
+Mrabet::1:
+Sanna::1:
+Sibilo::1:
+Vasapolli::1:
+Vincent::1:
+Feyrit:11:1:13/01 - 15h26:+1 Tableau:::
+Mrabet:11:1:13/01 - 15h36:+1 Tableau:::
+Feyrit:11.5:1:13/01 - 15h40:+0.5 Tableau:::
+Blanchon:11:1:13/01 - 15h45:+1 Tableau:::
+Vasapolli:11:1:13/01 - 15h54:+1 Tableau:::
+Audiffren:9:1:13/01 - 15h56:-1 Retard:::
+Charpin:9:1:21/01 - 08h48:-1 Retard:::
+Lothmann:9:1:21/01 - 08h49:-1 Retard:::
+Sanna:9:1:21/01 - 08h49:-1 Retard:::
+Feyrit:12.5:1:22/01 - 11h21:+1 Tableau:::
+Blanchon:12:1:22/01 - 11h34:+1 Tableau:::
+Charpin:10:1:22/01 - 11h39:+1 Tableau:::
+Feyrit:13:1:22/01 - 11h47:+0.5 Tableau:::
+Feyrit:13:1:22/01 - 11h47:+0.5 Tableau:::
+Audiffren:10:1:22/01 - 11h59:+1 Tableau:::
+Sanna:10:1:27/01 - 15h17:+1 Tableau:::
+Sanna:10.5:1:27/01 - 15h34:+0.5 Tableau:::
+Sanna:11:1:27/01 - 15h45:+0.5 Tableau:::
+Feyrit:12:1:28/01 - 08h02:-1 Retard:::
+Audiffren:9:1:28/01 - 08h05:-1 Retard:::
+Sanna:10:1:28/01 - 08h05:-1 Retard:::
+Lothmann:8:1:28/01 - 08h07:-1 Retard:::
+Vincent:9:1:28/01 - 08h08:-1 Retard:::
+Charpin:9:1:28/01 - 08h24:-1 Retard:::
+Blanchon:11:1:28/01 - 08h28:-1 Retard:::
+Chevillard:9:1:28/01 - 13h25:-1 Retard:::
+Charpin:10:1:03/02 - 15h27:+1 Tableau:::
+Audiffren:8:1:03/02 - 15h28:-1 Retard:::
+Ayza:9:1:03/02 - 15h29:-1 Retard:::
+Feyrit:13:1:03/02 - 15h44:+1 Tableau:::
+Sanna:11:1:03/02 - 15h45:+1 Tableau:::
+Blanchon:11.5:1:03/02 - 15h58:+0.5 Tableau:::
+Vincent:8:1:03/02 - 16h02:-1 Retard:::
+Chevillard:10:1:10/02 - 15h16:+1 Tableau:::
+Sanna:12:1:10/02 - 15h26:+1 Tableau:::
+Vincent:9:1:10/02 - 15h43:+1 Tableau:::
+Blanchon:10.5:1:11/02 - 08h52:-1 Retard:::
+Audiffren:7:1:02/03 - 18h03:-1 Retard:::
+Vincent:8:1:02/03 - 18h04:-1 Retard:::
+Lothmann:7:1:02/03 - 18h04:-1 Retard:::
+Blanchon:9.5:1:03/03 - 08h44:-1 Retard:::
+Charpin:9:1:03/03 - 08h44:-1 Retard:::
+Chevillard:9:1:03/03 - 08h45:-1 Retard:::
+Feyrit:12:1:03/03 - 10h42:-1 Retard:::
+Sanna:13:1:04/03 - 12h00:+1 Tableau:::
+Sanna:13:1:04/03 - 12h00:+1 Tableau:::
+Audiffren:6:1:09/03 - 15h47:-1 Retard:::
+Sanna:14:1:09/03 - 15h47:+1 Tableau:::
+Sanna:14.5:1:10/03 - 08h04:+0.5 Tableau:::
+Blanchon:8.5:1:10/03 - 10h39:-1 Retard:::
+Blanchon:8.5:1:10/03 - 10h39:-1 Retard:::
+Charpin:8:1:10/03 - 10h40:-1 Retard:::
+Chevillard:8:1:10/03 - 10h40:-1 Retard:::
+Charpin:9:1:11/03 - 10h40:+1 Tableau:::
+Lothmann:8:1:11/03 - 10h46:+1 Tableau:::
+Blanchon:9:1:11/03 - 10h46:+0.5 Tableau:::
+Audiffren:7:1:11/03 - 11h02:+1 Tableau:::
+Vincent:8.5:1:11/03 - 11h11:+0.5 Tableau:::
+Sanna:15.5:1:11/03 - 11h17:+1 Tableau:::
+Feyrit:12.5:1:11/03 - 11h27:+0.5 Tableau:::
+Vincent:9.5:1:11/03 - 11h34:+1 Tableau:::
+Audiffren:8:1:11/03 - 11h37:+1 Tableau:::
+Chevillard:9:1:11/03 - 11h51:+1 Tableau:::

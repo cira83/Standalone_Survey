@@ -27,16 +27,26 @@
 	if($class_cook) echo("<table><tr><td><p class=\"titre\">$class_cook</p></td></tr></table>");
 	else echo("<table><tr><td><p class=\"titre\">Pour mes élèves</p></td></tr></table>");
 	echo("<br>$invite");
+	
+	$le_sujet_perso = "";
+	$questionnaire_perso = "$repertoire$classe/_Copies/$elv/rep/index.htm";
+	if(file_exists($questionnaire_perso)) {
+		$fp_sujet = fopen($questionnaire_perso, "r");
+		$premiere_ligne = fgets($fp_sujet);
+		$parties = explode("#", $premiere_ligne);
+		$le_sujet_perso = "$parties[1] $parties[0]";
+	}
+
+	
 ?>
 
 <center>
 <?php
 	if($password_OK){
+		if($le_sujet_perso) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\">$le_sujet_perso</a></p>");		
 	  	echo("<p class=\"liste\"><a href=\"./tp.php?elv=$elv\" class=\"no-under\">Sujets disponibles</a></p>") ;
-		$questionnaire_perso = "$repertoire$classe/_Copies/$elv/rep/index.htm";
 		echo("<p class=\"liste\"><a href=\"./index9.php?elv=$elv\" class=\"no-under\">Logiciels</a></p>") ;
 		echo("<p class=\"liste\"><a href=\"./sav9.php\" class=\"no-under\">Rendre un fichier</a></p>");
-		if(file_exists($questionnaire_perso)) echo("<p class=\"liste\"><a href=\"./devoir.php\" class=\"no-under\">Sujet du moment</a></p>");
 		if(!file_exists("../B800")){
 			
 			echo("<p class=\"liste\"><a href=\"./documents.php\" class=\"no-under\">Mes documents</a></p>");

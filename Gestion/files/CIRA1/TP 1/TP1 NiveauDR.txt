@@ -1,0 +1,20 @@
+----::1:
+Vernhet Fabri::1:10/09 - 13h53:0 Correction:::
+Touita Bayssac::1:
+Vernhet Fabri:8.5:1:12/09 - 10h09:0 Correction:::
+Touita Bayssac:13.3:1:19/09 - 14h59:0 Correction:::
+Touita Bayssac:14.3:1:Alerte Incendie +1:0 Correction:::
+Bertolotti::1:
+Bertolotti Menini::1:22/09 - 08h14:0 Correction:::
+----::1:Non Fait:0 Correction:::
+Bertolotti::1:Non Fait:0 Correction:::
+Bertolotti Menini::1:25/09 - 13h32:0 Correction::Absents:
+Bagur Laou-Hap::1:
+Bertolotti Menini::1:Non Fait:0 Correction::Absents:
+Bagur Laou-Hap:12.3:1:04/10 - 09h44:0 Correction:::
+Gonzalez Grapin::1:
+Gonzalez Grapin:12.7:1:11/10 - 08h09:0 Correction:::
+Vernhet Fabri:8.5:0:11/10 - 08h25:0 Correction:::
+Vogel Blanc::1:
+Vogel Blanc::0:15/10 - 16h42:0 Correction::Pb d'ordinateur:
+Vogel Blanc:4.5:0:18/10 - 08h34:0 Correction::Pb d'ordinateur:

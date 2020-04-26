@@ -1,0 +1,42 @@
+TP3 Pression#TP36
+C#<h2>I. Régulation de pression simple boucle</h2>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP36/img/01.png">
+C#<u>Cahier des charges :</u> On se propose de réaliser une régulation de pression sur la maquette Pignat 1 (à votre gauche). L'organe de réglage sera la vanne V1.
+Q#Programmer votre T2550 afin de réaliser la régulation représentée ci-dessus.#0.5
+I#
+Q#Régler votre maquette pour avoir une mesure de 50% pour une commande de 50%.#0.5
+I#
+L#
+Q#Déterminer le modèle de Broïda du procédé, en faisant un échelon de 10% autour du point de fonctionnement.#1.5
+T#
+Q#Donner le graphique avec les constructions qui ont permis de répondre à la question précédente.#1.5
+I#
+L#
+Q#Déterminer un correcteur PI (avec Ti = τ) qui minimise le temps de réponse ainsi que le dépassement du système en boucle fermée, à l'aide du logiciel <a href="../EasyRegPhp" target="_blank" >EASYREG</a>. Relever les valeurs théoriques du temps de réponse à ±5%, ainsi que la valeur du premier dépassement.#2
+T#
+Q#Donner le graphique avec les constructions qui ont permis de répondre à la question précédente.#1.5
+I#
+L#
+Q#Déduire de la question 5 les valeurs de Xp, Ti et Td du régulateur mixte.#0.5
+T#
+Q#Comparer les performances théoriques avec les performances réelles.#1
+T#
+Q#Donner le graphique avec les constructions qui ont permis de répondre à la question précédente.#0.5
+I#
+L#
+C#<h2>II. Supervision</h2>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP36/img/03.jpg">
+Q#Réaliser la programmation du superviseur en respectant le synopsis ci-dessous. On devra pouvoir contrôler la commande, la consigne et le mode de fonctionnement par l'intermédiaire d'Intouch. La mesure s'affichera en temps réel.#3
+I#
+L#
+C#<h2>III. Profil de consigne</h2>
+C#<u>Cahier des charges :</u> On désire rajouter au fonctionnement normal, un fonctionnement "profil". Après un appui sur le bouton "Start", la consigne devra suivre le profil ci-dessous.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP36/img/02.png">
+Q#Ajouter un bouton "Start" sur la vue du superviseur.#0.5
+I#
+Q#Proposer un GRAFCET qui réponde au cahier des charges.#2
+I#
+Q#Implémenter votre solution sur le régulateur.#2
+I#
+Q#Réaliser des mesures qui permettent la validation de votre solution.#3
+I#

@@ -93,12 +93,30 @@
 		window.location.replace(lien);
 	}
 
+	function les_sujets(){
+		var div = document.getElementById('LesSujets');
+		var filtre = document.getElementById('filtre');
+		var request = new XMLHttpRequest();
+		
+		chemin = './DSSujets.php?filtre='+filtre.value;
+		request.open('GET', chemin);
+		request.responseType = 'text';
+			
+		request.onload = function() {
+			data = request.response;
+			div.innerHTML = data;
+		};	
+			
+		request.send();		
+	}
+
+
 </script>
 
 
 
 <?php
-	include("./haut_DS3.php");
+	include("./haut_DS4.php");
 	include("./DS_Securite.php");// function DSMDP($classe, $elv)
 	
 	echo("<!-- action = $action -->");
@@ -512,37 +530,17 @@
 
 
 <?php
-	titre_tab("Les sujets");//---------------------------------------------------------------------------------------------------------    LES SUJETS
-	echo("<!-- LES SUJETS -->");
-	echo("<table><tr><td>");
+	titre_tab("Les sujets </td><td width=\"120px\" bgcolor=\"yellow\"> <input type=\"text\"id=\"filtre\"><input type=\"button\" onclick=\"les_sujets();\" value=\"Filtrer\">");
+	//--------------------------------------------------------------------------------------------------------------------------------    LES SUJETS
 	$lessujets = scandir($repertoire_Sujets);
 	$menu_td = "<select name=\"td\">";
-	foreach($lessujets as $nom01){
-		if(estfichier($nom01)) {
-			$filename = "$repertoire_Sujets/$nom01/index.htm";
-			$repsujet = "$repertoire_Sujets/$nom01";
+	foreach($lessujets as $nom01)
+		if(estfichier($nom01)) 
 			$menu_td .= "<option>$nom01</option>";
-			if(file_exists($filename)){
-				$fp = fopen($filename, "r");
-				$titre2ds = fgets($fp);
-				$partiesdunom = explode("#", $titre2ds);
-				fclose($fp);
-				$hauteur = "15px";
-				$partiesdunom0 = isset($partiesdunom[0]) ? $partiesdunom[0] : "";
-				$partiesdunom2 = isset($partiesdunom[2]) ? $partiesdunom[2] : "";
-				echo("<td><font size=\"+1\"><b>$nom01</b> - $partiesdunom0 - <font color=\"blue\">$partiesdunom2</font></font></td>");
-				echo("<td><a href=\"./devoir.php?name=_Sujets/$nom01&file=$repsujet\" target=\"_blank\" Title=\"Corriger\"><img src=\"./icon/sujet_mod.png\" height=\"$hauteur\"></a></td>");
-				echo("<td><a href=\"./copie2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Correction\"><img src=\"./icon/sujet.png\" height=\"$hauteur\"></a></td>");
-				echo("<td><a href=\"./sujet2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Sujet\"><img src=\"./icon/distrib.png\" height=\"$hauteur\"></a></td>");
-				echo("</tr><tr><td>\n");
-			}
-
-		}
-	}
-	echo("</td></tr></table>");
 	$menu_td .= "</select>";
 
 ?>
+	<div id="LesSujets">JavaScript les_sujets()</div>
 	<table>
 		<form name="envoi fichier 2" enctype="multipart/form-data" method="post" action="<?php echo("$action44");?>">
 		<tr><td>Envoi d'un sujet à</td>
@@ -567,16 +565,6 @@
 		TAG du sujet : <input type="text" name="TAG" size="10px"></td><td>
 		Titre du sujet : <input type="text" name="titre" size="50px"></td><td>
 		<input name="bouton" value="Nouveau sujet" type="submit">
-	</td>
-	</form>
-	</tr>
-	<tr>
-	<form method="post" action="DSNew.php">
-	<td>
-		<input type="hidden" value="2" name="action">
-		TAG du sujet : <?php echo($menu_td);?></td><td>
-		</td><td>
-		<input name="bouton" value="Editer" type="submit">
 	</td>
 	</form>
 	</tr>

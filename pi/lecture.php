@@ -39,7 +39,7 @@
 					$fp = fopen($sujet, "r");
 					$ligne1 = explode("#",fgets($fp));
 					fclose($fp);
-					$TP .= "$ligne1[0]:";					
+					$TP .= "$ligne1[1]:";					
 				}
 				else $TP .= ":";
 				$on_file = "$repertoire_documents/$nom/rep/on.txt";

@@ -1,0 +1,31 @@
+Bagur::1:
+Bayssac::1:
+Bertolotti::1:
+Blanc::1:
+Bouchlagham::1:
+Fabri::1:
+Gonzalez::1:
+Grapin::1:
+Laou-Hap::1:
+Menini::1:
+Touita::1:
+Vernhet::1:
+Vogel::1:
+Bertolotti::1:11/09 - 14h04:0 Correction::absent:
+Bouchlagham::1:11/09 - 14h04:0 Correction::absent:
+Bagur:12.8:1:12/09 - 08h18:0 Correction:::
+Blanc:7.0:1:12/09 - 08h26:0 Correction:::
+Vogel:18.6:1:12/09 - 08h50:0 Correction:::
+Laou-Hap:8.3:1:12/09 - 08h56:0 Correction:::
+Grapin:4.8:1:12/09 - 09h02:0 Correction:::
+Fabri:10.1:1:12/09 - 09h09:0 Correction:::
+Vernhet:12.5:1:12/09 - 09h13:0 Correction:::
+Gonzalez:14.4:1:12/09 - 09h18:0 Correction:::
+Touita:7.7:1:12/09 - 09h23:0 Correction:::
+Menini:8.3:1:12/09 - 09h28:0 Correction:::
+Bayssac::1:12/09 - 09h30:0 Correction:::
+Bayssac:5.4:1:12/09 - 09h36:0 Correction:::
+Bertolotti::1:12/09 - 18h24:0 Correction::absent:
+Bertolotti:15.7:0:18/09 - 13h55:0 Correction::absent:
+Bouchlagham::1:24/09 - 16h29:0 Correction::absent:
+Bouchlagham::1:Non Fait:0 Correction::absent:

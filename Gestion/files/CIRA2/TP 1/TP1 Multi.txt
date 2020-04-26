@@ -1,0 +1,22 @@
+----::1:
+Audiffren Ayza::1:10/09 - 08h32:0 Correction:::
+Audiffren Ayza::0:10/09 - 11h40:0 Correction::Pb vanne V2:
+Audiffren Ayza::0:10/09 - 11h40:0 Correction::Pb vanne V2:
+Blanchon Feyrit::1:
+Audiffren Ayza:4.4:0:13/09 - 09h35:0 Correction::Pb vanne V2:
+Blanchon Feyrit:7.4:1:20/09 - 08h41:0 Correction:::
+Lothmann::1:
+Lothmann Vincent::1:22/09 - 08h16:0 Correction:::
+----::1:Non Fait:0 Correction:::
+Lothmann::1:Non Fait:0 Correction:::
+Sanna Sibilo::1:
+Lothmann Vincent:11.6:1:26/09 - 09h25:0 Correction:::
+Sanna Sibilo:15.8:1:03/10 - 08h41:0 Correction:::
+Marin Mrabet::1:
+Marin Mrabet:14:1:10/10 - 10h08:0 Correction:::
+Charpin Chevillard::1:
+Charpin Chevillard:17.0:1:17/10 - 07h56:0 Correction:::
+Bichon Vincent::1:
+Bichon Vasapolli::1:04/11 - 11h07:0 Correction:::
+Bichon Vasapolli::1:Non Fait:0 Correction:::
+Bichon Vincent::1:Non Fait:0 Correction:::

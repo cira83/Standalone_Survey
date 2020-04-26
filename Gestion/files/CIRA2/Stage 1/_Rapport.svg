@@ -1,0 +1,39 @@
+<svg id="./files/CIRA2/Stage 1/_Rapport.txt" width="400" height="50">
+<!-- max=4 -->
+<rect width="400" height="50" style="fill:rgb(0,0,0);stroke-width:2;stroke:rgb(0,0,0)" />
+<rect width="400" height="35" style="fill:#fdfdfd;stroke-width:2;stroke:rgb(0,0,0)" />
+<line x1="1" y1="26" x2="399" y2="26" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="18" x2="399" y2="18" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="9" x2="399" y2="9" style="stroke:#333;stroke-width:1"/>
+<!-- 0 = 0 -->
+<rect x="4" y="35" id="BN0" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<!-- 1 = 1 -->
+<rect x="44" y="26.5" id="BN1" width="34" height="8.5" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="38" y="47" fill="white" font-family="Times" font-size="12">2</text>
+<!-- 2 = 2 -->
+<rect x="84" y="18" id="BN2" width="34" height="17" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="78" y="47" fill="white" font-family="Times" font-size="12">4</text>
+<!-- 3 = 3 -->
+<rect x="124" y="9.5" id="BN3" width="34" height="25.5" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="118" y="47" fill="white" font-family="Times" font-size="12">6</text>
+<!-- 4 = 2 -->
+<rect x="164" y="18" id="BN4" width="34" height="17" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="158" y="47" fill="white" font-family="Times" font-size="12">8</text>
+<!-- 5 = 4 -->
+<rect x="204" y="1" id="BN5" width="34" height="34" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="194" y="47" fill="white" font-family="Times" font-size="12">10</text>
+<!-- 6 = 0 -->
+<rect x="244" y="35" id="BN6" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="234" y="47" fill="white" font-family="Times" font-size="12">12</text>
+<!-- 7 = 2 -->
+<rect x="284" y="18" id="BN7" width="34" height="17" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="274" y="47" fill="white" font-family="Times" font-size="12">14</text>
+<!-- 8 = 0 -->
+<rect x="324" y="35" id="BN8" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="314" y="47" fill="white" font-family="Times" font-size="12">16</text>
+<!-- 9 = 0 -->
+<rect x="364" y="35" id="BN9" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="354" y="47" fill="white" font-family="Times" font-size="12">18</text>
+<line id="note" x1="###" y1="1" x2="###" y2="36" style="stroke:#0f9d58;stroke-width:3"/>
+<line id="moyenne" x1="184.71428571429" y1="1" x2="184.71428571429" y2="36" style="stroke:rgb(255,0,0);stroke-width:3"/>
+</svg>

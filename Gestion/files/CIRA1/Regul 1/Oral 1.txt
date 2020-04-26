@@ -1,0 +1,204 @@
+Bagur::1:
+Bayssac::1:
+Bertolotti::1:
+Blanc::1:
+Bouchlagham::1:
+Fabri::1:
+Gonzalez::1:
+Grapin::1:
+Henry::1:
+Laou-Hap::1:
+Menini::1:
+Rinuit::1:
+Seghi::1:
+Touita::1:
+Vernhet::1:
+Vogel::1:
+Vernhet:11:1:03/09 - 14h46:+1 Tableau:::
+Menini:11:1:03/09 - 15h11:+1 Tableau:::
+Gonzalez:11:1:03/09 - 15h27:+1 Tableau:::
+Seghi::1:Non Fait:0 Correction:::
+Henry::1:Non Fait:0 Correction:::
+Grapin:10.5:1:04/09 - 14h29:+0.5 Tableau:::
+Bagur:10.25:1:04/09 - 14h43:+0.25 Tableau:::
+Bayssac:10.5:1:04/09 - 14h47:+0.5 Tableau:::
+Grapin:11:1:04/09 - 14h48:+0.5 Tableau:::
+Rinuit:9.5:1:04/09 - 14h49:-0.5 Telephone:::
+Laou-Hap:10.5:1:04/09 - 14h56:+0.5 Tableau:::
+Bayssac:11:1:04/09 - 14h58:+0.5 Tableau:::
+Fabri:11:1:04/09 - 15h15:+1 Tableau:::
+Rinuit:9:1:04/09 - 15h26:-0.5 Telephone:::
+Bagur:11.25:1:04/09 - 15h44:+1 Tableau:::
+Menini:10.5:1:04/09 - 15h47:-0.5 Telephone:::
+Vernhet:12:1:04/09 - 16h12:+1 Tableau:::
+Vernhet:12.5:1:04/09 - 16h30:+0.5 Tableau:::
+Menini:10:1:04/09 - 16h31:-0.5 Telephone:::
+Bayssac:12:1:04/09 - 16h36:+1 Tableau:::
+Bagur:12.25:1:04/09 - 16h47:+1 Tableau:::
+Menini:11:1:04/09 - 16h57:+1 Tableau:::
+Vogel:NaN:1:04/09 - 16h58:+1 Tableau:::
+Bayssac:12.5:1:04/09 - 17h03:+0.5 Tableau:::
+Rinuit:9:1:Non Fait:0 Correction:::
+Vogel:11:1:06/09 - 16h15:0 Correction:::
+Bayssac:11.5:1:11/09 - 14h03:-1 Retard:::
+Menini:10.5:1:11/09 - 15h46:-0.5 Telephone:::
+Bayssac:11:1:11/09 - 15h46:-0.5 Telephone:::
+Bayssac:10.5:1:11/09 - 15h46:-0.5 Telephone:::
+Menini:11:1:11/09 - 15h48:+0.5 Tableau:::
+Bagur:12.5:1:11/09 - 15h48:+0.25 Tableau:::
+Menini:11.5:1:11/09 - 16h14:+0.5 Tableau:::
+Grapin:11.5:1:11/09 - 16h18:+0.5 Tableau:::
+Gonzalez:12:1:11/09 - 16h24:+1 Tableau:::
+Fabri:12:1:11/09 - 16h41:+1 Tableau:::
+Vernhet:13:1:11/09 - 16h46:+0.5 Tableau:::
+Bayssac:11:1:11/09 - 16h46:+0.5 Tableau:::
+Gonzalez:12.5:1:11/09 - 16h54:+0.5 Tableau:::
+Bagur:13.5:1:17/09 - 13h58:+1 Tableau:::
+Vogel:12:1:17/09 - 14h19:+1 Tableau:::
+Bayssac:12:1:17/09 - 14h21:+1 Tableau:::
+Vernhet:14:1:17/09 - 14h28:+1 Tableau:::
+Grapin:12.5:1:17/09 - 14h42:+1 Tableau:::
+Menini:12:1:17/09 - 14h42:+0.5 Tableau:::
+Laou-Hap:11.5:1:17/09 - 14h52:+1 Tableau:::
+Vogel:12.5:1:17/09 - 14h55:+0.5 Tableau:::
+Menini:12.5:1:17/09 - 15h07:+0.5 Tableau:::
+Vernhet:14.5:1:17/09 - 15h10:+0.5 Tableau:::
+Bayssac:11.5:1:17/09 - 15h13:-0.5 Telephone:::
+Touita:9.5:1:17/09 - 15h13:-0.5 Telephone:::
+Bayssac:12:1:17/09 - 15h22:+0.5 Tableau:::
+Vogel:13:1:17/09 - 15h24:+0.5 Tableau:::
+Bagur:14:1:17/09 - 15h30:+0.5 Tableau:::
+Grapin:13.5:1:17/09 - 15h32:+1 Tableau:::
+Gonzalez:13.5:1:17/09 - 15h35:+1 Tableau:::
+Bayssac:11:1:18/09 - 13h38:-1 Retard:::
+Bertolotti:9:1:18/09 - 13h38:-1 Retard:::
+Blanc:9:1:18/09 - 13h38:-1 Retard:::
+Bouchlagham::1:Non Fait:0 Correction:::
+Bagur:15:1:24/09 - 14h46:+1 Tableau:::
+Bayssac:12:1:24/09 - 14h54:+1 Tableau:::
+Touita:10.5:1:24/09 - 15h04:+1 Tableau:::
+Grapin:14.5:1:24/09 - 15h08:+1 Tableau:::
+Gonzalez:14.5:1:24/09 - 15h17:+1 Tableau:::
+Gonzalez:15:1:24/09 - 15h25:+0.5 Tableau:::
+Blanc:10:1:24/09 - 15h33:+1 Tableau:::
+Vernhet:15:1:24/09 - 15h34:+0.5 Tableau:::
+Vernhet:15.5:1:24/09 - 15h41:+0.5 Tableau:::
+Fabri:13:1:24/09 - 15h46:+1 Tableau:::
+Vernhet:16:1:24/09 - 15h53:+0.5 Tableau:::
+Bayssac:11:1:01/10 - 13h07:-1 Retard:::
+Vernhet:16.5:1:01/10 - 13h21:+0.5 Tableau:::
+Bagur:14:1:01/10 - 13h21:-1 Cahier:::
+Touita:11:1:01/10 - 13h26:+0.5 Tableau:::
+Menini:13.5:1:01/10 - 13h29:+1 Tableau:::
+Bayssac:12:1:01/10 - 13h57:+1 Tableau:::
+Vernhet:17:1:01/10 - 14h20:+0.5 Tableau:::
+Bagur:14.5:1:01/10 - 14h22:+0.5 Tableau:::
+Touita:11.5:1:01/10 - 14h26:+0.5 Tableau:::
+Bayssac:12.5:1:01/10 - 14h29:+0.5 Tableau:::
+Bayssac:13:1:01/10 - 14h35:+0.5 Tableau:::
+Vernhet:17.5:1:01/10 - 14h36:+0.5 Tableau:::
+Bayssac:12.5:1:01/10 - 14h37:-0.5 Telephone:::
+Bagur:15:1:01/10 - 15h11:+0.5 Tableau:::
+Touita:12:1:01/10 - 15h21:+0.5 Tableau:::
+Menini:14:1:01/10 - 15h41:+0.5 Tableau:::
+Touita:12.5:1:01/10 - 15h46:+0.5 Tableau:::
+Menini:13.5:1:02/10 - 13h19:-0.5 Telephone:::
+Menini:13:1:02/10 - 14h19:-0.5 Telephone:::
+Bagur:16:1:08/10 - 15h01:+1 Tableau:::
+Vernhet:18:1:08/10 - 15h06:+0.5 Tableau:::
+Bagur:16.5:1:08/10 - 15h16:+0.5 Tableau:::
+Fabri:13.5:1:08/10 - 15h28:+0.5 Tableau:::
+Laou-Hap:12.5:1:08/10 - 15h38:+1 Tableau:::
+Bagur:17:1:08/10 - 15h45:+0.5 Tableau:::
+Vogel:13.5:1:08/10 - 15h51:+0.5 Tableau:::
+Menini:12:1:15/10 - 13h02:-1 Retard:::
+Bayssac:11.5:1:15/10 - 13h07:-1 Retard:::
+Gonzalez:16:1:05/11 - 13h16:+1 Tableau:::
+Bayssac:10.5:1:05/11 - 13h16:-1 Retard:::
+Menini:11:1:05/11 - 13h17:-1 Retard:::
+Bagur:18:1:05/11 - 13h18:+1 Tableau:::
+Touita:11.5:1:05/11 - 13h18:-1 Retard:::
+Blanc:9:1:05/11 - 13h19:-1 Retard:::
+Gonzalez:16.5:1:05/11 - 13h22:+0.5 Tableau:::
+Menini:12:1:05/11 - 13h50:+1 Tableau:::
+Vernhet:19:1:05/11 - 13h54:+1 Tableau:::
+Vogel:14.5:1:05/11 - 14h07:+1 Tableau:::
+Fabri:14.5:1:05/11 - 14h07:+1 Tableau:::
+Grapin:15.5:1:05/11 - 14h11:+1 Tableau:::
+Bayssac:11.5:1:05/11 - 14h14:+1 Tableau:::
+Menini:12.5:1:05/11 - 14h17:+0.5 Tableau:::
+Gonzalez:17:1:05/11 - 14h23:+0.5 Tableau:::
+Menini:13:1:05/11 - 14h29:+0.5 Tableau:::
+Menini:13.5:1:05/11 - 14h31:+0.5 Tableau:::
+Fabri:15.5:1:05/11 - 14h34:+1 Tableau:::
+Vogel:15.5:1:05/11 - 14h36:+1 Tableau:::
+Menini:14:1:05/11 - 14h39:+0.5 Tableau:::
+Vogel:16:1:05/11 - 15h27:+0.5 Tableau:::
+Bagur:18.5:1:05/11 - 15h32:+0.5 Tableau:::
+Touita:10.5:1:06/11 - 13h02:-1 Retard:::
+Bayssac:10.5:1:06/11 - 13h03:-1 Retard:::
+Menini:13:1:12/11 - 13h07:-1 Retard:::
+Bayssac:9.5:1:19/11 - 14h26:-1 Retard:::
+Bertolotti:8:1:19/11 - 14h26:-1 Retard:::
+Touita:9.5:1:19/11 - 14h26:-1 Retard:::
+Vogel:17:1:19/11 - 14h37:+1 Tableau:::
+Menini:13.25:1:19/11 - 14h38:+0.25 Tableau:::
+Menini:13.75:1:19/11 - 14h42:+0.5 Tableau:::
+Menini:14:1:19/11 - 14h44:+0.25 Tableau:::
+Bagur:19.5:1:19/11 - 14h55:+1 Tableau:::
+Bagur:20:1:19/11 - 15h01:+0.5 Tableau:::
+Bagur:20.25:1:19/11 - 15h09:+0.25 Tableau:::
+Gonzalez:17.5:1:19/11 - 15h14:+0.5 Tableau:::
+Vogel:17.5:1:19/11 - 15h28:+0.5 Tableau:::
+Grapin:16.5:1:19/11 - 15h44:+1 Tableau:::
+Bayssac:8.5:1:26/11 - 13h13:-1 Retard:::
+Bertolotti:7:1:26/11 - 13h14:-1 Retard:::
+Blanc:8:1:26/11 - 13h14:-1 Retard:::
+Touita:8.5:1:26/11 - 13h14:-1 Retard:::
+Vernhet:19.5:1:26/11 - 13h20:+0.5 Tableau:::
+Bagur:20.5:1:26/11 - 13h21:+0.25 Tableau:::
+Fabri:16:1:26/11 - 13h30:+0.5 Tableau:::
+Laou-Hap:12.75:1:26/11 - 13h30:+0.25 Tableau:::
+Vernhet:19.75:1:26/11 - 13h33:+0.25 Tableau:::
+Bagur:20.75:1:26/11 - 13h40:+0.25 Tableau:::
+Vernhet:20:1:26/11 - 13h45:+0.25 Tableau:::
+Laou-Hap:13.75:1:26/11 - 13h51:+1 Tableau:::
+Vogel:17.75:1:26/11 - 14h02:+0.25 Tableau:::
+Gonzalez:18:1:26/11 - 14h12:+0.5 Tableau:::
+Vogel:18:1:26/11 - 14h18:+0.25 Tableau:::
+Grapin:17:1:26/11 - 14h26:+0.5 Tableau:::
+Vernhet:20.25:1:26/11 - 14h27:+0.25 Tableau:::
+Fabri:16.5:1:26/11 - 15h28:+0.5 Tableau:::
+Fabri:16.75:1:26/11 - 15h37:+0.25 Tableau:::
+Bagur:21.25:1:26/11 - 15h43:+0.5 Tableau:::
+Vogel:18.5:1:26/11 - 15h48:+0.5 Tableau:::
+Bayssac:7.5:1:03/12 - 16h41:-1 Retard:::
+Bertolotti:6:1:03/12 - 16h42:-1 Retard:::
+Menini:13:1:03/12 - 16h42:-1 Retard:::
+Touita:7.5:1:03/12 - 16h42:-1 Retard:::
+Grapin:16:1:10/12 - 13h16:-1 Retard:::
+Vernhet:20.75:1:10/12 - 14h49:+0.5 Tableau:::
+Grapin:17:1:10/12 - 14h52:+1 Tableau:::
+Bayssac:8.5:1:10/12 - 14h54:+1 Tableau:::
+Fabri:17.25:1:10/12 - 14h57:+0.5 Tableau:::
+Vogel:19:1:10/12 - 14h57:+0.5 Tableau:::
+Blanc:8.5:1:10/12 - 14h59:+0.5 Tableau:::
+Bagur:21.5:1:10/12 - 15h05:+0.25 Tableau:::
+Vernhet:21.25:1:10/12 - 15h09:+0.5 Tableau:::
+Blanc:8.75:1:10/12 - 15h13:+0.25 Tableau:::
+Bagur:22:1:10/12 - 15h15:+0.5 Tableau:::
+Vogel:19.5:1:10/12 - 15h19:+0.5 Tableau:::
+Vernhet:21.75:1:10/12 - 15h26:+0.5 Tableau:::
+Fabri:17.75:1:10/12 - 15h30:+0.5 Tableau:::
+Vernhet:22.25:1:10/12 - 15h31:+0.5 Tableau:::
+Grapin:17.5:1:10/12 - 15h43:+0.5 Tableau:::
+Laou-Hap:14:1:10/12 - 15h44:+0.25 Tableau:::
+Bagur:22.5:1:10/12 - 15h52:+0.5 Tableau:::
+Vogel:20:1:17/12 - 14h05:+0.5 Tableau:::
+Bagur:23:1:17/12 - 14h10:+0.5 Tableau:::
+Bagur:23.5:1:17/12 - 14h17:+0.5 Tableau:::
+Vogel:20.5:1:17/12 - 15h44:+0.5 Tableau:::
+Bagur:24:1:17/12 - 15h45:+0.5 Tableau:::
+Bayssac:10.5:1:17/12 - 15h53:+2 Tableau:::
+Bayssac:10.5:1:17/12 - 15h53:+2 Tableau:::
+Grapin:16.5:1:07/01 - 13h07:-1 Retard:::

@@ -1,8 +1,9 @@
 <?php
+
 	$photos = "../photos/";
 	$files = "./files/";
 	$nbphotoslignes = 5;
-	if(!file_exists("./files/$classe.txt")) $classe = $_COOKIE["laclasse"];  //$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="TS2CIRA";
+	$classe = $_COOKIE['laclasse'];
 	$largeurdelecran = $_COOKIE["largeur"];
 	$password = isset($_COOKIE['password']) ? $_COOKIE['password'] : NULL;	
 	$nom = isset($_COOKIE['nom']) ? $_COOKIE['nom'] : NULL;

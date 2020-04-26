@@ -1,0 +1,30 @@
+Bagur::1:
+Bayssac::1:
+Bertolotti::1:
+Blanc::1:
+Fabri::1:
+Gonzalez::1:
+Grapin::1:
+Laou-Hap::1:
+Menini::1:
+Touita::1:
+Vernhet::1:
+Vogel::1:
+Fabri:12.8:1:08/10 - 16h30:0 Correction:::
+Grapin:15.3:1:08/10 - 16h31:0 Correction:::
+Fabri:12.8:1:08/10 - 16h38:0 Correction:::
+Vernhet:14.5:1:08/10 - 16h44:0 Correction:::
+Vernhet:14.5:1:08/10 - 16h44:0 Correction:::
+Gonzalez:9.4:1:08/10 - 16h52:0 Correction:::
+Bagur:12.0:1:08/10 - 16h57:0 Correction:::
+Bagur:12.0:1:08/10 - 16h58:0 Correction:::
+Blanc:11.6:1:08/10 - 16h58:0 Correction:::
+Touita:4.3:1:08/10 - 17h06:0 Correction:::
+Touita:4.3:1:08/10 - 17h06:0 Correction:::
+Laou-Hap:5.6:1:08/10 - 17h07:0 Correction:::
+Vogel:18.2:1:08/10 - 17h12:0 Correction:::
+Vogel:18.2:1:08/10 - 17h15:0 Correction:::
+Menini:6.8:1:08/10 - 17h21:0 Correction:::
+Menini:6.8:1:08/10 - 17h21:0 Correction:::
+Bayssac:4.0:1:08/10 - 17h26:0 Correction:::
+Bertolotti:2.0:1:08/10 - 17h27:0 Correction:::

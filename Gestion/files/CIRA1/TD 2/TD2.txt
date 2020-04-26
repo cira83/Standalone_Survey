@@ -1,0 +1,22 @@
+Bagur::1:
+Bertolotti::1:
+Blanc::1:
+Fabri::1:
+Gonzalez::1:
+Grapin::1:
+Laou-Hap::1:
+Menini::1:
+Touita::1:
+Vernhet::1:
+Vogel::1:
+Bagur:17.5:1:20/03 - 08h23:0 Correction:::
+Bertolotti:5.0:0:20/03 - 08h34:0 Correction:::
+Blanc:15.7:1:20/03 - 08h37:0 Correction:::
+Fabri:17.5:1:20/03 - 08h45:0 Correction:::
+Gonzalez:13.1:1:20/03 - 08h57:0 Correction:::
+Grapin:16.3:1:20/03 - 08h58:0 Correction:::
+Laou-Hap:4.0:0:20/03 - 09h05:0 Correction:::
+Menini:8.2:1:20/03 - 09h11:0 Correction:::
+Menini:8.2:0:20/03 - 09h11:0 Correction:::
+Touita:17.1:1:20/03 - 09h12:0 Correction:::
+Vogel:17.7:1:20/03 - 09h17:0 Correction:::

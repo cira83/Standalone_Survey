@@ -41,7 +41,7 @@ function tailledelafenetre(){
 
 function C_leprof(){
 	var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
-	document.cookie = 'nom=Gatt; path=/; expires='+date.toUTCString();
+	document.cookie = 'nom=Professeur; path=/; expires='+date.toUTCString();
 }
 
 

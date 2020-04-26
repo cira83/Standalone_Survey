@@ -125,7 +125,7 @@
 					$DS = "./files/$classe/_Copies/_Sujets/$part[0]";
 					if($k==0) echo("<tr align=\"left\">");//première colonne
 					$Sujet = TitreduTAG($part[0],$classe);
-					echo("<td><a href=\"DS_deplace.php?tag=$part[0]\" class=\"annales\">$Sujet</a></td>");
+					echo("<td><a href=\"DS_deplace.php?tag=$part[0]\" class=\"annales\">$part[0] $Sujet</a></td>");
 					$k++;
 				}
 
@@ -143,5 +143,35 @@
 		}
 	}
 
+	function Dropbox_link3($titre,$filename,$classe){
+		if($titre) echo("<h2>$titre</h2>");
+		echo("\n<!-- /DropBox($filename) -->\n");
+		if(file_exists($filename)){
+			$fp=fopen($filename, "r");
+			echo("<table>");
+			$k=0;
+			while(!feof($fp)) {
+				$ligne=fgets($fp);
+				$part = explode(",",$ligne);
+				if($part[0]) {//C'est une ligne normale
+					if($k==0) echo("<tr align=\"left\">");//première colonne
+					$Sujet = TitreduTAG($part[0],$classe);
+					echo("<td><a href=\"DSNew.php?action=2&TAG=$part[0]\" class=\"annales\">$part[0] $Sujet</a></td>");
+					$k++;
+				}
+
+				if($k==3){
+					$k=0;
+					echo("</tr><tr align=\"left\">");
+				}
+			}
+			echo("</tr></table>");
+			fclose($fp);
+		}
+		else {
+			echo("Le fichier n'existe pas !!");
+			commente($filename);
+		}
+	}
 
 ?>

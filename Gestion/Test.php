@@ -1,16 +1,14 @@
+<html>
+	<head>
 <script>
-	function mot2passe() {
-		code = prompt('Donner le code','');
-		document.cookie = "code4="+code;
+	function test() {
+		var div = document.getElementById('test');
+		
+		div.innerHTML = "<table><tr><td>coucou</td></tr></table><table><tr><td>coucou</td></tr></table>";
 	}
 </script>
-
-
-
-
-
-<?php
-	$rentre = "<script>mot2passe();</script>";
-	if($_COOKIE['code4']!="hello") echo($rentre);
+	</head>
+<body onload="test();">
+	<div id="test"> ---- </div>
 	
-?>
+</body>

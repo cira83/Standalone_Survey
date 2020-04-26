@@ -1,0 +1,35 @@
+Bagur::1:
+Bertolotti::1:
+Blanc::1:
+Fabri::1:
+Gonzalez::1:
+Grapin::1:
+Laou-Hap::1:
+Menini::1:
+Touita::1:
+Vernhet::1:
+Vogel::1:
+Vernhet:0:1:03/04 - 10h56:0 Correction:::
+Bagur:17.8:2:03/04 - 11h05:0 Correction:::
+Bertolotti:14.9:1:03/04 - 11h05:0 Correction:::
+Bagur:16.9:2:03/04 - 11h13:0 Correction:::
+Blanc:12.1:1:03/04 - 11h13:0 Correction:::
+Fabri:16.1:2:03/04 - 11h28:0 Correction:::
+Gonzalez:15.9:2:03/04 - 11h28:0 Correction:::
+Grapin:18.3:2:03/04 - 11h32:0 Correction:::
+Laou-Hap:8.3:1:03/04 - 11h42:0 Correction:::
+Menini:10.3:1:03/04 - 11h49:0 Correction:::
+Touita:16.7:2:03/04 - 11h49:0 Correction:::
+Vogel:18.4:1:03/04 - 11h52:0 Correction:::
+Vogel:18.4:2:03/04 - 11h57:0 Correction:::
+Bagur:16.7:2:03/04 - 13h48:0 Correction:::
+Blanc:12.3:1:03/04 - 13h49:0 Correction:::
+Fabri:15.8:2:03/04 - 13h49:0 Correction:::
+Gonzalez:16.1:2:03/04 - 13h51:0 Correction:::
+Grapin:18.2:2:03/04 - 13h51:0 Correction:::
+Menini:10.2:1:03/04 - 13h52:0 Correction:::
+Touita:16.5:2:03/04 - 13h53:0 Correction:::
+Fabri:15.8:2:03/04 - 14h06:0 Correction:::
+Gonzalez:16.1:2:03/04 - 14h07:0 Correction:::
+Laou-Hap:8.3:1:03/04 - 14h11:0 Correction:::
+Laou-Hap:8.3:0:03/04 - 15h56:0 Correction:::

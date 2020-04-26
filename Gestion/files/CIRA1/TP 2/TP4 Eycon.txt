@@ -1,0 +1,17 @@
+----::1:
+::1:
+Laou-Hap Bagur::1:28/01 - 13h21:0 Correction:::
+::1:Non Fait:0 Correction:::
+----::1:Non Fait:0 Correction:::
+Menini::1:
+Laou-Hap Bagur:16.2:1:31/01 - 10h05:0 Correction:::
+Menini:8.9:1:31/01 - 10h20:0 Correction:::
+Bertolotti Touita:::03/02 - 11h11:0 Correction:::
+Bertolotti Touita::1:05/02 - 15h06:0 Correction::Absents:
+Vernhet Fabri::1:
+Bertolotti Touita::1:Non Fait:0 Correction::Absents:
+Vernhet Fabri:10.6:1:14/02 - 09h07:0 Correction:::
+Gonzalez Grapin::1:
+Blanc Vogel::1:
+Blanc Vogel:16.2:1:05/03 - 14h59:0 Correction:::
+Gonzalez Grapin:6.1:1:05/03 - 15h07:0 Correction:::

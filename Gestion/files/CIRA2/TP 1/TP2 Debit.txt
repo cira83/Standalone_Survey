@@ -1,0 +1,24 @@
+----::1:
+Charpin::1:12/11 - 08h40:0 Correction:::
+Charpin::1:12/11 - 08h40:0 Correction:::
+Charpin Chevillard::1:12/11 - 09h34:0 Correction:::
+Bichon Vincent::1:
+Charpin::1:Non Fait:0 Correction:::
+Charpin Chevillard:17.4:1:14/11 - 13h28:0 Correction:::
+Bichon Vincent:11.6:1:21/11 - 09h36:0 Correction:::
+Marin Mrabet::1:
+Marin Mrabet:13.6:1:29/11 - 08h15:0 Correction:::
+Ayza Audiffren::1:
+Ayza Audiffren::1:06/12 - 08h08:0 Correction:::
+Ayza Audiffren:8.4:1:06/12 - 08h11:0 Correction:::
+Sibilo Sanna::1:
+Sibilo Sanna::1:10/12 - 10h13:0 Correction::+7 Bricolage:
+Sibilo Sanna:21.8:1:13/12 - 08h18:0 Correction::+7 Bricolage:
+Sibilo::1:13/12 - 08h18:0 Correction:::
+Sibilo::1:Non Fait:0 Correction:::
+Sibilo Sanna:21.8:1:13/12 - 08h51:0 Correction::+7 Bricolage:
+Blanchon Vasapolli::1:15/12 - 09h15:0 Correction:::
+Lothmann Feyrit::1:
+Blanchon Vasapolli:16.1:1:18/12 - 08h26:0 Correction:::
+----::1:Non Fait:0 Correction:::
+Lothmann Feyrit:13.3:1:08/01 - 08h39:0 Correction:::

@@ -1,0 +1,49 @@
+<svg id="./files/CIRA2/Stage 1/_Inscription.txt" width="400" height="50">
+<!-- max=14 -->
+<rect width="400" height="50" style="fill:rgb(0,0,0);stroke-width:2;stroke:rgb(0,0,0)" />
+<rect width="400" height="35" style="fill:#fdfdfd;stroke-width:2;stroke:rgb(0,0,0)" />
+<line x1="1" y1="32" x2="399" y2="32" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="30" x2="399" y2="30" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="27" x2="399" y2="27" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="25" x2="399" y2="25" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="22" x2="399" y2="22" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="20" x2="399" y2="20" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="18" x2="399" y2="18" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="15" x2="399" y2="15" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="13" x2="399" y2="13" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="10" x2="399" y2="10" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="8" x2="399" y2="8" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="5" x2="399" y2="5" style="stroke:#333;stroke-width:1"/>
+<line x1="1" y1="3" x2="399" y2="3" style="stroke:#333;stroke-width:1"/>
+<!-- 0 = 0 -->
+<rect x="4" y="35" id="BN0" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<!-- 1 = 0 -->
+<rect x="44" y="35" id="BN1" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="38" y="47" fill="white" font-family="Times" font-size="12">2</text>
+<!-- 2 = 0 -->
+<rect x="84" y="35" id="BN2" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="78" y="47" fill="white" font-family="Times" font-size="12">4</text>
+<!-- 3 = 0 -->
+<rect x="124" y="35" id="BN3" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="118" y="47" fill="white" font-family="Times" font-size="12">6</text>
+<!-- 4 = 0 -->
+<rect x="164" y="35" id="BN4" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="158" y="47" fill="white" font-family="Times" font-size="12">8</text>
+<!-- 5 = 14 -->
+<rect x="204" y="1" id="BN5" width="34" height="34" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="194" y="47" fill="white" font-family="Times" font-size="12">10</text>
+<!-- 6 = 0 -->
+<rect x="244" y="35" id="BN6" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="234" y="47" fill="white" font-family="Times" font-size="12">12</text>
+<!-- 7 = 0 -->
+<rect x="284" y="35" id="BN7" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="274" y="47" fill="white" font-family="Times" font-size="12">14</text>
+<!-- 8 = 0 -->
+<rect x="324" y="35" id="BN8" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="314" y="47" fill="white" font-family="Times" font-size="12">16</text>
+<!-- 9 = 0 -->
+<rect x="364" y="35" id="BN9" width="34" height="0" style="fill:#ffff00;stroke-width:1;stroke:rgb(0,0,0)" />
+<text x="354" y="47" fill="white" font-family="Times" font-size="12">18</text>
+<line id="note" x1="###" y1="1" x2="###" y2="36" style="stroke:#0f9d58;stroke-width:3"/>
+<line id="moyenne" x1="201" y1="1" x2="201" y2="36" style="stroke:rgb(255,0,0);stroke-width:3"/>
+</svg>

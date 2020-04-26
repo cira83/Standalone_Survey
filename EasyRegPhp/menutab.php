@@ -25,8 +25,8 @@ function cases($texte,$lien,$actif)
 function menutab($numero,$action)
 {
 
-	
-	if($_SESSION['menu']=="")
+	$Menu_session = isset($_SESSION['menu']) ? $_SESSION['menu'] : "";
+	if($Menu_session=="")
 	{
 		$_SESSION['menu'] = "2,0,0,0,1,1,0,0";
 	}

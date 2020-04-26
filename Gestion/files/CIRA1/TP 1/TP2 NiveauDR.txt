@@ -1,0 +1,16 @@
+----::1:
+Gonzalez Grapin::1:16/10 - 13h53:0 Correction:::
+Gonzalez Grapin:5.5:1:23/10 - 07h26:0 Correction:::
+Vernhet Fabri::1:
+Bagur Laou-Hap::1:
+Blanc Bertolotti::1:
+Vernhet Fabri:7.4:1:08/11 - 16h58:0 Correction:::
+Bagur Laou-Hap:8.1:1:14/11 - 09h03:0 Correction:::
+Blanc Bertolotti:11.0:1:14/11 - 09h07:0 Correction:::
+Menini Vogel::1:
+Menini Vogel:18.6:1:22/11 - 09h01:0 Correction:::
+Bayssac::1:
+Bayssac Touita::1:25/11 - 07h48:0 Correction:::
+Bayssac::1:Non Fait:0 Correction:::
+----::1:Non Fait:0 Correction:::
+Bayssac Touita:8.6:1:28/11 - 09h05:0 Correction:::

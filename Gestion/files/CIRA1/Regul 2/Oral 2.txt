@@ -1,0 +1,89 @@
+Bagur::1:
+Bayssac::1:
+Bertolotti::1:
+Blanc::1:
+Fabri::1:
+Gonzalez::1:
+Grapin::1:
+Laou-Hap::1:
+Menini::1:
+Touita::1:
+Vernhet::1:
+Vogel::1:
+Vernhet:9:1:14/01 - 13h09:-1 Retard:::
+Grapin:9:1:14/01 - 13h10:-1 Retard:::
+Gonzalez:9:1:14/01 - 13h11:-1 Retard:::
+Fabri:9:1:14/01 - 13h11:-1 Retard:::
+Vogel:11:1:15/01 - 14h30:+1 Tableau:::
+Vogel:11:1:15/01 - 14h30:+1 Tableau:::
+Fabri:10:1:15/01 - 14h39:+1 Tableau:::
+Grapin:10:1:15/01 - 14h44:+1 Tableau:::
+Vogel:11.5:1:15/01 - 14h47:+0.5 Tableau:::
+Menini:11:1:15/01 - 14h48:+1 Tableau:::
+Laou-Hap:11:1:15/01 - 14h52:+1 Tableau:::
+Vogel:12:1:15/01 - 14h55:+0.5 Tableau:::
+Menini:11.5:1:15/01 - 15h25:+0.5 Tableau:::
+Laou-Hap:11.5:1:15/01 - 15h46:+0.5 Tableau:::
+Menini:12:1:15/01 - 15h54:+0.5 Tableau:::
+Bayssac::1:Non Fait:0 Correction:::
+Menini:12.25:1:21/01 - 13h51:+0.25 Tableau:::
+Fabri:11:1:21/01 - 13h54:+1 Tableau:::
+Vogel:12.5:1:21/01 - 14h09:+0.5 Tableau:::
+Menini:13.25:1:21/01 - 14h15:+1 Tableau:::
+Grapin:11:1:21/01 - 14h22:+1 Tableau:::
+Vernhet:10:1:21/01 - 14h24:+1 Tableau:::
+Menini:13.75:1:21/01 - 14h25:+0.5 Tableau:::
+Menini:14:1:21/01 - 14h35:+0.25 Tableau:::
+Laou-Hap:12.5:1:21/01 - 14h45:+1 Tableau:::
+Grapin:11.25:1:21/01 - 14h55:+0.25 Tableau:::
+Bagur:11:1:21/01 - 14h55:+1 Tableau:::
+Grapin:11.75:1:21/01 - 14h59:+0.5 Tableau:::
+Menini:14.5:1:21/01 - 15h05:+0.5 Tableau:::
+Bagur:11.5:1:21/01 - 15h08:+0.5 Tableau:::
+Blanc:11:1:21/01 - 15h11:+1 Tableau:::
+Bagur:12:1:21/01 - 15h15:+0.5 Tableau:::
+Touita:11:1:21/01 - 15h18:+1 Tableau:::
+Menini:14.75:1:21/01 - 15h19:+0.25 Tableau:::
+Menini:15.25:1:21/01 - 15h22:+0.5 Tableau:::
+Menini:15.5:1:21/01 - 15h34:+0.25 Tableau:::
+Bagur:12.5:1:21/01 - 15h39:+0.5 Tableau:::
+Fabri:11.25:1:21/01 - 15h42:+0.25 Tableau:::
+Menini:15.75:1:21/01 - 15h49:+0.25 Tableau:::
+Fabri:10.25:1:22/01 - 13h03:-1 Retard:::
+Vernhet:9:1:22/01 - 13h03:-1 Retard:::
+Grapin:10.75:1:22/01 - 13h04:-1 Retard:::
+Bertolotti:9:1:22/01 - 13h05:-1 Retard:::
+Blanc:10:1:22/01 - 13h05:-1 Retard:::
+Touita:10:1:22/01 - 13h05:-1 Retard:::
+Menini:16.75:1:22/01 - 13h08:+1 Tableau:::
+Bagur:13.5:1:22/01 - 13h13:+1 Tableau:::
+Fabri:11.25:1:22/01 - 13h13:+1 Tableau:::
+Touita:11:1:22/01 - 13h17:+1 Tableau:::
+Vogel:13.5:1:22/01 - 13h20:+1 Tableau:::
+Grapin:11.75:1:22/01 - 13h25:+1 Tableau:::
+Vogel:14:1:22/01 - 14h36:+0.5 Tableau:::
+Grapin:12.25:1:22/01 - 14h46:+0.5 Tableau:::
+Menini:17.25:1:22/01 - 15h27:+0.5 Tableau:::
+Menini:17.5:1:22/01 - 15h34:+0.25 Tableau:::
+Menini:17.5:1:22/01 - 15h34:+0.25 Tableau:::
+Gonzalez:10:1:22/01 - 15h45:+1 Tableau:::
+Menini:16.5:1:29/01 - 09h55:-1 Rangement TP:::
+Menini:15.5:1:05/02 - 15h54:-1 Rangement TP:::
+Gonzalez:9:1:12/02 - 10h01:-1 Rangement TP:::
+Grapin:11.25:1:12/02 - 10h02:-1 Rangement TP:::
+Bertolotti:8:1:12/02 - 10h02:-1 Rangement TP:::
+Touita:10:1:12/02 - 10h02:-1 Rangement TP:::
+Grapin:12.25:1:12/02 - 13h21:+1 Tableau:::
+Menini:16.5:1:12/02 - 13h31:+1 Tableau:::
+Menini:16.5:1:12/02 - 13h31:+1 Tableau:::
+Bagur:14.5:1:12/02 - 13h54:+1 Tableau:::
+Gonzalez:10:1:12/02 - 13h58:+1 Tableau:::
+Bertolotti:9:1:12/02 - 14h03:+1 Tableau:::
+Fabri:12.25:1:12/02 - 14h09:+1 Tableau:::
+Grapin:12.75:1:12/02 - 14h16:+0.5 Tableau:::
+Grapin:12.75:1:12/02 - 14h16:+0.5 Tableau:::
+Vernhet:10:1:12/02 - 14h27:+1 Tableau:::
+Menini:17:1:12/02 - 14h27:+0.5 Tableau:::
+Bertolotti:8:1:10/03 - 13h45:-1 Retard:::
+Blanc:9:1:10/03 - 13h46:-1 Retard:::
+Touita:9:1:10/03 - 13h46:-1 Retard:::

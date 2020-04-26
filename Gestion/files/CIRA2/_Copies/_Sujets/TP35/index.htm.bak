@@ -1,0 +1,32 @@
+TP3 Niveau DR#TP35
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP35/img/01.png">
+C#<u>Cahier des charges :</u> On se propose de réaliser une régulation de niveau du réservoir du haut. L'organe de réglage sera la pompe P1. Les vannes V1 et V2 seront contrôlées manuellement, on devra régler le transmetteur de niveau. La régulation sera assurée par l'automate TSX37 Micro équipé de cartes d’E/S TOR et analogiques.
+L#
+C#<h2>I. Instrumentation</h2>
+Q#Configurer le transmetteur pour une étendue de mesure imposée : 0% à 100% du niveau du réservoir supérieur.#1
+I#
+Q#Donner la valeur fournie par le transmetteur en mA et en points (sur l'API) pour un niveau de 20% et 80%.#1
+T#
+Q#Réaliser le câblage de l'automate lui permettant de contrôler le niveau du réservoir.#1
+I#
+Q#Vérifier que l’API contrôle bien le niveau au moyen d’une table d’animation.#2
+I#
+L#
+C#<h2>II. Régulation</h2>
+Q#En s'aidant de la <a href="./files/CIRA2/_Sujets2TP/img4_2018/TP4%20PID%20-%20PL7.pdf" target="_blank" >documentation constructeur</a>, réaliser une boucle de régulation PID permettant de contrôler le niveau dans le réservoir. La consigne sera égale à 50%, Xp = 30%, Ti = 20s et Td = 10s.#2
+U#
+Q#Vérifier le fonctionnement de votre régulation. On donnera les manipulations, les résultats attendus et les résultats obtenus.#3
+U#
+L#
+C#<h2>III. Séquence d'alarme</h2>
+C#On souhaite déclencher une séquence d’alarme dès lors qu’un des deux seuils de niveau Nmini (20%) et Nmax (80%), est atteint. Alors un voyant AL clignotera à la fréquence de 1 Hz jusqu’à l’appui sur un bouton poussoir acq puis le voyant AL sera allumé de manière permanente jusqu’à disparition du défaut. On rappelle que le bit %S6 bat la seconde.
+Q#Proposer un GRAFCET qui réponde au cahier des charges.#2
+I#
+Q#Implémenter ce GRAFCET dans votre automate.#1
+I#
+Q#Vérifier le fonctionnement de votre GRAFCET. On donnera les manipulations, les résultats attendus et les résultats obtenus.#3
+U#
+L#
+C#<h2>IV. Supervision</h2>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP35/img/02.gif">
+Q#À l'aide de la <a href="./files/CIRA2/_Sujets2TP/img4_2018/Editeur ecran PL7.pdf" target="_blank" >documentation constructeur</a>, réaliser la programmation d'une vue respectant le synopsis ci-dessus. On devra pouvoir afficher la commande, la consigne et le niveau en temps réel. Ne pas oublier le voyant AL.<br/>#4

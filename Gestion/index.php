@@ -119,22 +119,8 @@
 
 			document.cookie = 'password='+ mot2passe +'; path=/; expires='+date.toUTCString();
 			document.cookie = 'nom='+ nomelv +'; path=/; expires='+date.toUTCString();
-			
-			var request = new XMLHttpRequest();
-			
-			request.open('GET', "./validMdP.php");
-			request.responseType = 'text';
-				
-			request.onload = function() {
-				data = request.response;
-				if(data!=1) message.innerHTML = '<font color="#ff0000">Mauvais mot de passe</font>';
-				else {
-					message.innerHTML = '<font color="#00ff00">Bon mot de passe</font>';
-					window.location.replace('./index7.php');
-				}
-			};	
-				
-			request.send();
+							
+			location.reload() ;
 		}
 
 	</script>

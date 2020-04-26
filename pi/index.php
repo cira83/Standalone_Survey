@@ -53,7 +53,12 @@
 					nb_rep = data[2].split(':');
 					question = data[7].split(':');
 					for(i=0;i<8;i++){
-						if(question[i]) interrogation = '<img src="PI_orange.gif" height="20px" onclick="repondre(\''+question[i]+'\',\''+nom[i]+'\');"> ';
+						//if(question[i]) interrogation = '<img src="PI_orange.gif" height="20px" onclick="repondre(\''+question[i]+'\',\''+nom[i]+'\');"> ';
+						if(question[i]) {
+							laquestion = question[i].toString();
+							lenom = nom[i].toString();
+							interrogation = '<img src="PI_orange.gif" height="20px" id="' + laquestion + '" onclick="repondre(this.id,\''+lenom+'\');">';
+						}
 						else interrogation = '';						
 						cellule = document.getElementById(i);
 						celluleQ = document.getElementById('Q'+i);
@@ -91,15 +96,47 @@
 				}
 			}
 			
+			function ip() {
+				var request = new XMLHttpRequest();
+				
+				request.open('GET', "../ip.php");
+				request.responseType = 'text';
+				
+				request.onload = function() {
+					data = request.response;
+					alert(data);
+				};	
+				request.send();
+			}
 			
 			
+			function classe() {
+				var request = new XMLHttpRequest();
+				var laclasse = document.getElementById('laclasse');
+				
+				request.open('GET', "./classe.php");
+				request.responseType = 'text';
+				
+				request.onload = function() {
+					data = request.response.split(':');
+					laclasse.innerHTML = data[0];
+				};	
+				request.send();				
+			}
+				
+			function debut(){
+				refresh();
+				classe();
+			}	
 		</script>
 	</head>
-	<body onload="refresh()">
+	<body onload="debut()">
 			<table><tr><!-- ENTETE -->
-				<td width="50px"><a href="../Gestion/DSZone.php" title="Appel"><img src="../Gestion/icon/home.png" height="25px"></a></td>
+				<td width="50px"><a href="../Gestion/DSZone.php" title="Appel"><img src="../Gestion/icon/home.png" height="40px"></a></td>
+				<td width="50px"><img src="../Gestion/icon/ip.gif" height="40px" onclick="ip();"></td>
 				<td align="center"><font size="+2">TP CIRA</font></td>
-				<td width="50px"><a href="http://localhost:1880/ui/"><img src="./node-red-icon.png" height="35px"></a></td>
+				<td align="center"><font size="+2"><div id="laclasse">----</div></font></td>
+				<td width="50px"><a href="http://localhost:1880/ui/"><img src="./node-red-icon.png" height="40px"></a></td>
 			</tr></table>
 			<!-- LUT -->
 			<?php

@@ -1,0 +1,17 @@
+----::1:
+::1:
+Gonzalez Grapin::1:28/01 - 13h19:0 Correction:::
+----::1:Non Fait:0 Correction:::
+::1:Non Fait:0 Correction:::
+Blanc Vogel::1:
+Blanc Vogel:11.0:1:31/01 - 08h59:0 Correction:::
+Gonzalez Grapin:8.2:1:31/01 - 09h08:0 Correction:::
+Laou-Hap Bagur:::03/02 - 11h11:0 Correction:::
+Laou-Hap Bagur:14.1:1:06/02 - 08h50:0 Correction:::
+Menini::1:
+Menini:9.4:1:14/02 - 08h45:0 Correction:::
+Bertolotti Touita::1:
+Fabri Vernhet::1:
+Fabri Vernhet:-1:1:04/03 - 16h56:-1 Rangement TP:::
+Bertolotti Touita:4.8:1:05/03 - 14h26:0 Correction:::
+Fabri Vernhet:10.6:1:05/03 - 14h32:0 Correction::-1 Rangement TP:

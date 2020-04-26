@@ -1,0 +1,22 @@
+TP3 Niveau 2#TP34
+C#<font color="red"> Important : Pour ce TP vous devez utiliser le régulateur T2550_02.</font>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP34/img/01.jpg">
+C#<h2>Description fonctionnelle</h2>
+C#L'installation ci-dessus doit permettre de remplir le pot situé en dessous d'un volume V réglable.<ul><li>L'opérateur fournira le volume V désiré en litre, puis un appui sur un bouton poussoir lancera un cycle afin de délivrer le volume V.</li><li>Un autre bouton devra permettre de vidanger la cuve.</li></ul>
+C#Réaliser la programmation du régulateur afin de répondre au cahier des charges ci-dessus. On fournira toutes les informations nécessaires à la compréhension de votre démarche et plusieurs enregistrements permettant de valider son fonctionnement.
+L#
+C#<h2>Instrumentation</h2>
+Q#Relation : Mesure en % / Volume#6
+U#
+L#
+C#<h2>Régulation</h2>
+Q#Régulation Alimentation#3
+I#
+Q#Régulation Vidange#3
+I#
+L#
+C#<h2>Automatismes</h2>
+Q#GRAFCET Vidange de la cuve#4
+I#
+Q#GRAFCET Remplissage du pot#4
+I#

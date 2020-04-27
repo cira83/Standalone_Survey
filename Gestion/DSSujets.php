@@ -29,8 +29,11 @@
 				fclose($fp);
 				$hauteur = "25px";
 				$partiesdunom0 = isset($partiesdunom[0]) ? $partiesdunom[0] : "";
+				$partiesdunom1 = isset($partiesdunom[1]) ? $partiesdunom[1] : "";
 				$partiesdunom2 = isset($partiesdunom[2]) ? $partiesdunom[2] : "";
-				echo("<td><font size=\"+1\"><b>$nom01</b> - $partiesdunom0 - <font color=\"blue\">$partiesdunom2</font></font></td>");
+				$TAG_Affiche = "<font size=\"+1\"><b>$nom01</b></font>";
+				if($partiesdunom1!=$nom01) $TAG_Affiche = "<font size=\"+1\" color=\"red\"><b>$nom01 ? $partiesdunom1</b></font>";
+				echo("<td>$TAG_Affiche - $partiesdunom0 - <font color=\"blue\">$partiesdunom2</font></td>");
 				echo("<td width=\"10px\"><a href=\"./devoir.php?name=_Sujets/$nom01&file=$repsujet\" target=\"_blank\" Title=\"Repondre\"><img src=\"./icon/Q_vert.gif\"></a></td>");
 				echo("<td width=\"10px\"><a href=\"./copie2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"La Correction\"><img src=\"./icon/C.gif\"></a></td>");
 				echo("<td width=\"10px\"><a href=\"./sujet2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Le sujet\"><img src=\"./icon/Page.gif\"></a></td>");

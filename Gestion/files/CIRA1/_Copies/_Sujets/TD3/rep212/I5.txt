@@ -1,2 +1,2 @@
-Quand on augmente la commande de TC, la vanne TV se ferme, le débit d'eau froide baisse, la température de l'eau chaude augmente. Le procédé est direct, pour équilibrer il faut régler le régulateur avec une action inverse.
+Quand on augmente la commande de TC, la vanne TV se ferme, le débit d'eau froide baisse, la température de l'eau chaude augmente. Le procédé est direct, pour équilibrer il faut régler le régulateur avec une action inverse.
 

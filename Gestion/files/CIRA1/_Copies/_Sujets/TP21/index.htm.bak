@@ -1,0 +1,77 @@
+Débit 2#TP21#XP Perturbation
+C#<h2>I. Rappels sur le schéma fonctionnel</h2>
+Q#On donne le schéma bloc suivant, représentant la régulation de débit. Mettre en évidence sur ce schéma fonctionnel les éléments suivants : <li>La mesure de débit X ;</li><li>Le régulateur ;</li><li>Le régulateur ;</li><li>La sortie Y du régulateur ;<br/></li><li>L'entrée X du régulateur ;</li><li>La vanne de régulation.</li>#1
+I#./files/CIRA1/_Copies/_Sujets/TP21/img/01.gif
+Q#Quel doit être le sens d'action du régulateur. Justifiez votre réponse.#1
+U#
+L#
+C#<h2>II. Prédéterminations</h2>
+C#On donne ci-dessus la caractéristique théorique débit en fonction de la commande de la vanne de la maquette de régulation de débit.
+C#<img src="./files/CIRA1/_Copies/_Sujets/TP21/img/02.gif">
+L#
+C#<h3>Fonctionnement 1 - Sans perturbation</h3>
+Q#Mesurer Xm<sub>1</sub>.#1
+I#
+Q#Mesurer Yd<sub>1</sub>.#0.5
+I#
+Q#Ya<sub>1</sub>.#0.5
+I#
+L#
+C#Fonctionnement 2 - Avec perturbation
+Q#Mesurer Xm<sub>2</sub>.#1
+I#
+Q#Mesurer Yd<sub>2</sub>.#0.5
+I#
+Q#Mesurer Ya<sub>2</sub>.#0.5
+I#
+L#
+C#<font color="red">On choisi une consigne W égale à Xm<sub>2</sub>/2.</font>
+Q#Déterminer la valeur du gain K<sub>1</sub> du procédé, pour un système sans perturbation.#1
+T#
+Q#Déterminer la valeur du gain K<sub>2</sub> du procédé, pour un système avec perturbation.#1
+T#
+Q#Rappeler la relation entre le gain du régulateur A et la bande proportionnelle Xp du régulateur.#0.5
+T#
+Q#Exprimer la mesure X en fonction de la commande Y,  le gain du procédé K et Yd.#0.5
+U#
+Q#En déduire X en fonction de la consigne W, le gain du régulateur A, K et Yd.#1
+U#
+L#
+C#<h2>III. Réglage du régulateur</h2>
+Q#Régler l'affichage du régulateur en %. On s'aidera du <a href="./Doc_Tech/Parametres_regulateurs_Eurotherm.pdf" target="_blank" >document</a> sur les paramètres des régulateurs.#1
+I#
+Q#Régler le régulateur pour un fonctionnement en régulation proportionnelle. On n'oubliera pas d'annuler les actions intégrale et dérivée.#1
+I#
+Q#Régler la consigne à W. Placer le régulateur en mode automatique.#1
+I#
+L#
+C#<h2>IV. La bande proportionnelle et l'erreur statique</h2>
+C#<font color="red">Le système fonctionne sans perturbation.</font>
+Q#À l'aide de la formule trouvée Q13), déterminer la valeur de la mesure X<sub>41</sub> pour une bande proportionnelle de 40%.#0.5
+T#
+Q#Vérifier la valeur de X<sub>41</sub> de manière expérimentale.#0.5
+I#
+L#
+Q#À l'aide de la formule trouvée Q13), déterminer la valeur de la mesure X<sub>61</sub> pour une bande proportionnelle de 60%.#0.5
+T#
+Q#Vérifier la valeur de X<sub>61</sub> de manière expérimentale.#0.5
+I#
+Q#Comparer les résultats théoriques avec les résultats pratiques. Expliquer s'il y a lieu leur différence.#1
+U#
+L#
+C#<h2>V. La bande proportionnelle et la perturbation</h2>
+C#<font color="red">Le système fonctionne avec perturbation.</font>
+Q#À l'aide de la formule trouvée Q13), déterminer la valeur de la mesure X<sub>62</sub> pour une bande proportionnelle de 60%.#0.5
+T#
+Q#Vérifier la valeur de X62 de manière expérimentale.#0.5
+I#
+L#
+Q#À l'aide de la formule trouvée Q13), déterminer la valeur de la mesure X42 pour une bande proportionnelle de 40%.#0.5
+T#
+Q#Vérifier la valeur de X42 de manière expérimentale.#0.5
+I#
+L#
+Q#Que peut-on dire de l'influence de la bande proportionnelle sur l'effet de la perturbation.#1
+U#
+Q#Comparer les résultats théoriques avec les résultats pratiques. Le modèle proposé vous satisfait-il ?#1
+U#

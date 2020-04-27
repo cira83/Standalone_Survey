@@ -6,6 +6,8 @@
 	$numero2session = session_id();//Numero de session
 	$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="CIRA1";
 	
+	$laquestionposee = isset($_GET['quest'])?$_GET['quest']:"";
+	
 	$nom_elv = isset($_GET['name']) ? $_GET['name'] : NULL;
 	//$nom_elv = $_GET[name];
 	$DS_password = DSMDP($classe, $nom_elv);
@@ -208,6 +210,7 @@
 		<input type="hidden" id="coderep" value="<?php echo($DS_password);?>"/>
 		
 <?php
+	if($laquestionposee) echo("<table width=\"100%\"><tr><td bgcolor=\"yellow\" width=\"50%\">$laquestionposee</td><td></td></tr></table>");
 	echo($feuille2notes);
 	echo($content);
 ?>

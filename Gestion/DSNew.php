@@ -109,6 +109,7 @@
 	$menu_balise .= "<option value=\"0\">----</option>";
 	$menu_balise .= "<option value=\"h2\">Titre 2</option>";
 	$menu_balise .= "<option value=\"h3\">Titre 3</option>";
+	$menu_balise .= "<option value=\"li\">Liste</option>";
 	$menu_balise .= "<option value=\"b\">Gras</option>";
 	$menu_balise .= "<option value=\"i\">Italic</option>";
 	$menu_balise .= "<option value=\"u\">Souligné</option>";
@@ -293,10 +294,9 @@
 		$h3 = "<input type=\"button\"value=\"+ Titre 3\" onclick=\"addh(3);\"> ";
 		$part2ligne1 = isset($part2ligne[1]) ? $part2ligne[1] : "";
 		$part2ligne2 = isset($part2ligne[2]) ? $part2ligne[2] : "";
-		if($num2ligne==1) $part2ligne[1] = $part2ligne[0]."#".$part2ligne1."#".$part2ligne2;
+		if($num2ligne==1) $part2ligne[1] = $part2ligne[0]."#".$TAG."#".$part2ligne2;
 		$part2ligne2 = isset($part2ligne[2])?$part2ligne[2]:"";
-		if($part2ligne[0]=="Q") $part2ligne[1] = $part2ligne[1]."#".$part2ligne2;//###
-
+		if($part2ligne[0]=="Q") $part2ligne[1] = $part2ligne[1]."#".$part2ligne2;//###		
 		$message = "<table id=\"Edition\"><form method=\"POST\" action=\"./DSNew.php?action=41&ligne=$num2ligne&TAG=$TAG&page=$pageaafficher#Li$num2ligne\">";
 		$message .= "<tr><td bgcolor=\"white\"><textarea cols=\"90\" rows=\"5\" name=\"Champs\" id=\"Champs\">$part2ligne[1]</textarea></td><td width=\"100px\">";
 		$message .= "$icone<br>$Deroulant_image<br><br>$menu_balise<hr><input type=\"submit\"><input type=\"hidden\" id=\"tipe\" value=\"$part2ligne[0]\"></td><tr></form></table>";

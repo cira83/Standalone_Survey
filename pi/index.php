@@ -20,8 +20,8 @@
 		<script type="text/javascript">
 		var pastille = <?php echo($lut); ?>
 		
-			function photo(classe, nom){
-				laphoto = '<br><img src="../Gestion/files/'+classe+'/_Photos/'+ nom + '.jpg" height="100px"/>';
+			function photo(classe, nom,laquestion){
+				laphoto = '<br><a href="../Gestion/devoir_comp.php?name='+nom+'&quest='+laquestion+'" target="_blank"><img src="../Gestion/files/'+classe+'/_Photos/'+ nom + '.jpg" height="100px"/></a>';
 				return(laphoto);
 			}
 		
@@ -59,11 +59,14 @@
 							lenom = nom[i].toString();
 							interrogation = '<img src="PI_orange.gif" height="20px" id="' + laquestion + '" onclick="repondre(this.id,\''+lenom+'\');">';
 						}
-						else interrogation = '';						
+						else {
+							interrogation = '';	
+							laquestion = '';
+						}					
 						cellule = document.getElementById(i);
 						celluleQ = document.getElementById('Q'+i);
 						if(i<data[3]) {
-							cellule.innerHTML =  pastille_color(timer[i])+nom[i]+' '+nb_rep[i]+'<br>'+TP[i]+photo(classe, nom[i]);
+							cellule.innerHTML =  pastille_color(timer[i])+nom[i]+' '+nb_rep[i]+'<br>'+TP[i]+photo(classe, nom[i],laquestion);
 							celluleQ.innerHTML = interrogation;
 						}
 						else cellule.innerHTML = '';

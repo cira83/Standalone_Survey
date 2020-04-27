@@ -1,4 +1,4 @@
-Grandeur réglée : Température eau chaude.
-Grandeur réglante : Débit eau froide.
-Grandeur perturbatrice : Température moût chaud ou eau froide ou débit moût chaud.
+Grandeur réglée : Température eau chaude.
+Grandeur réglante : Débit eau froide.
+Grandeur perturbatrice : Température moût chaud ou eau froide ou débit moût chaud.
 

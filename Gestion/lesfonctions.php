@@ -253,12 +253,11 @@
 	}
 
 
-	function lescopies3($nom2,$classe,$epreuve,$repertoire_copies){// A corriger...
+	function lescopies3($nom2,$classe,$epreuve,$repertoire_copies){// ###
 		$resultat = "";
-		$nom = explode(" ", $nom2);
+		$nom = explode(" ", $nom2);//Liste des noms si c'est un groupe
 		$nomfichier = explode(".", $epreuve);
 		$k = 0;
-		$lien = "";
 		for($i=0;$i<count($nom);$i++){
 			$repertoire = "$repertoire_copies/$nom[$i]";
 			if(file_exists($repertoire)) $copies = scandir($repertoire);
@@ -270,20 +269,18 @@
 				if(strpos("_".$copies[$j], $nomfichier[0])) {
 					$mdr[$k] = md5_file("$repertoire/$copies[$j]");
 					$lien[$k] = "$repertoire/$copies[$j]";
-					$k++;
+					$k++;//Nombre de lien
 				}
 			}
 		}
 		
-		if(is_array($lien)) $lien_count = count($lien);
-		else $lien_count = 0;
-		for($i=0;$i<$lien_count;$i++){
+		for($i=0;$i<$k;$i++){
 			$comp = explode(".", $lien[$i]);
 			$ext = $comp[count($comp)-1];
 			$resultat .= "<a href=\"$lien[$i]\"><img src=\"./icon/$ext.gif\"/></a> ";
 		}
 		$resultat2 = "$nom2 ";
-		for($i=0;$i<$lien_count;$i++){
+		for($i=0;$i<$k;$i++){
 			$comp = explode(".", $lien[$i]);
 			$ext = $comp[count($comp)-1];
 			$resultat2 .= "$mdr[$i] ";

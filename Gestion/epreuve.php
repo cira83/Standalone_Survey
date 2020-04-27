@@ -167,7 +167,7 @@
 		echo("<p>Action 45 : $Message</p>");
 	}
 	
-	//Lecture du fichier, toutes les lignes sont dans $ligne[] ###
+	//Lecture du fichier, toutes les lignes sont dans $ligne[] 
 	if(file_exists($fichier)) $handle = fopen($fichier, "r");
 	else $handle = "";
 	if($handle){
@@ -242,7 +242,7 @@
 			$pas = nbparticipants($nom);//pour les groupes de plusieurs personnes
 								
 			//Fichiers
-			$lien_copies_tab = explode(":",lescopies3($nom,$classe,$epr,$repertoire_copies));//Liens vers les copies :+ codes md5
+			$lien_copies_tab = explode(":",lescopies3($nom,$classe,$epr,$repertoire_copies));//Liens vers les copies :+ codes md5 ###
 			$lien_copies = $lien_copies_tab[0];// Les liens vers les copies rendues
 			if($lien_copies) $nb2copies++; //compte le nombre de copie rendue
 			fwrite($mdr_file, "$lien_copies_tab[1]\n");//

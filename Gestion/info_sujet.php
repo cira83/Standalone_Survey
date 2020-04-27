@@ -1,18 +1,18 @@
 <?php 
 	include("./haut.php");
-	$sujetlink = $_GET[file]; 	//echo($sujet);
+	$sujetlink = $_GET['file']; 	//echo($sujet);
 	$part1 = explode("_link", $sujetlink);
 	$part0 = explode(".", $part1[1]); //echo($part[1]);
 	$part3 = explode("/", $sujetlink);
 	
-	if($_GET[src]==1){
+	if(my_GET("src")==1){
 		//affiche("Modification du fichier info : $sujetlink");
-		$sujet = $_POST[doc];
+		$sujet = $_POST['doc'];
 		//affiche("Sujet : $sujet");
-		$cor = $_POST[ppt];
+		$cor = $_POST['ppt'];
 		//affiche("Correction : $cor");
 		$active = $_POST[active];
-		$bar= $_POST[xls];
+		$bar= $_POST['xls'];
 		//affiche("Barème : $bar");
 		//affiche("Disponibles : $active");
 		
@@ -57,6 +57,7 @@
 	
 	$action = "info_sujet.php?file=$sujetlink";	
 	if(strpos("_$ligne[2]","on")) $checked = "checked";
+	else $checked = "";
 ?>
 <table><form name="envoie fichier" enctype="multipart/form-data" method="post" action="<?php echo("$action&src=1");?>">
 	<tr>

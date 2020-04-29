@@ -1,0 +1,1 @@
+Les bobines servent à créer le champs magnétique, les électrodes à mesurer le champs électrique. Le fluide doit être conducteur.

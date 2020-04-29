@@ -1,0 +1,3 @@
+On vérifie 2 valeurs :
+θmin : 15 ºC ; R = 105,85 Ω ; on doit avoir une mesure de 4 mA.
+θmax : 80 ºC ; R = 130,9 Ω ; on doit avoir une mesure de 20 mA.

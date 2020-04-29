@@ -1,0 +1,1 @@
+La différence de pression est proportionnelle au carré du débit, d'où la nécessité de mettre un bloc racine carré.

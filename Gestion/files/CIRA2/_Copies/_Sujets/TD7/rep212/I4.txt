@@ -1,0 +1,2 @@
+Lorsque le signal de commande augmente, le niveau augmente. Le positionneur électropneumatique est réglé de manière à ce que la pression augmente lorsque le signal de type 4-20 mA augmente. Donc, schéma numero 4.
+

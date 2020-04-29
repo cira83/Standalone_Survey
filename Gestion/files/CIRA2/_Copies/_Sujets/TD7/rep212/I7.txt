@@ -1,0 +1,1 @@
+Le montage trois fils permet de limiter les erreurs de mesure induites par la variation de résistance des fils de liaison.

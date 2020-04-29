@@ -1,0 +1,112 @@
+Fabrication d’une crème dessert#TD7#BTS 2015 - En travaux
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/01.gif">
+C#Le procédé partiellement dessiné ci-dessus est issu d’une industrie laitière. <br/>Pour la fabrication du produit final, on réalise un melange entre trois produits, issus des trois cuves A, B et C. <br/>L’envoi des produits dans la cuve de melange est géré par un automate programmable. L’etude ne portera pas sur le pilotage des électrovannes qui servent a assurer la bonne recette. <br/>Pour la cuve A, une regulation de niveau sera a mettre en place au cours de l’épreuve. <br/>Pour  des  raisons  de  fabrication,  le  produit  de  la  cuve  B  doit  être  maintenu  a  une temperature constante. D’autre part, la cuve est maintenue sous pression afin de faciliter l’écoulement du produit. <br/>Pour la cuve C, I’instrumentation sera étudiée et la stratégie de regulation sera améliorée lors de I’épreuve.
+L#
+C#<h2>Étude de la cuve A</h2>
+C#<h3>Mesure de niveau de la cuve A</h3>
+C#<u>Caractéristiques de la cuve et du transmetteur de niveau.<br/></u>Cuve A : cuve cylindrique de diamètre D = 2,00 m.<br/>Le transmetteur de niveau à ultrasons délivre un signal de type 4-20 mA pour un niveau variant de 0 à 2,50 m.
+Q#D'après le principe de fonctionnement du transmetteur, quelle grandeur physique, mesurée par ce transmetteur, évolue lorsque le niveau varie ?#1
+T#
+C#<h3>Indication du volume de la cuve A</h3>
+C#Le transmetteur possède une option qui permet d'afficher le volume de produit restant dans la cuve, en m<sup>3</sup>.
+Q#À partir des informations concernant la cuve A, déterminer le coefficient multiplicateur k à programmer dans le transmetteur de niveau sachant que :<br/>V = k .N, avec V le volume en m<sup>3</sup> et N le niveau en %.#.5
+T#
+L#
+C#<h3>Vanne et boucle de niveau</h3>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/02.gif">
+C#<u>Cahier des charges :</u><br/><br/>Plusieurs schémas concernant l'ensemble « corps de vanne-servomoteur » et la régulation de niveau sont proposés.<ul><li>Le positionneur électropneumatique (non représenté) est réglé de manière à ce que la pression augmente lorsque le signal de type 4-20 mA augmente.</li><li>En absence de signal de commande, la vanne de régulation LV est fermée.</li><li>Lorsque le signal de commande augmente, le niveau augmente.</li></ul>
+Q#En interprétant les informations du cahier des charges, choisir le numéro du schéma de la vanne adaptée en justifiant votre réponse.#1
+U#
+L#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/03.gif">
+Q#Choisir le numéro du schéma TI adapté au cahier des charges en justifiant votre réponse.#1
+U#
+L#
+C#<h2>Mesure du débit de recyclage du produit A</h2>
+C#Le fluide est visqueux. La mesure de débit se fait par un organe déprimogène associé à un transmetteur de pression différentielle.
+Q#Tracer l'allure de l'évolution de la pression statique dans cet élément sur le schéma ci-dessous.#1
+I#./files/CIRA2/_Copies/_Sujets/TD7/img/04.gif
+Q#Justifier l'utilité d'un extracteur de racine carrée.#1
+U#
+L#
+C#<h2>Étude de la cuve B</h2>
+C#<h3>La chaîne de mesure de température</h3>
+C#<li>La mesure de température est réalisée à l'aide d'une sonde de type PT100 3 fils.</li><li>Celle-ci est reliée à un conditionneur qui délivre en sortie un courant d'intensité variant de 4 mA à 20 mA. Il a été réglé de façon à prendre en compte une température minimale de 15 °C et une température maximale de 80 °C.</li><li>Sur la documentation technique du régulateur, il est mentionné que pour une utilisation avec un transmetteur de type 4-20 mA, il faut brancher entre les 2 bornes (V+) et (V-) une résistance de 2,49 ohms.</li><li>Le régulateur est programmé de façon à avoir en affichage des informations en unités physiques.</li>
+C#Le schéma d'aide au câblage est fourni ci-dessous.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/05.gif">
+Q#Expliquer l'intérêt d'un montage à 3 fils par rapport à un montage à 2 fils.#.5
+U#
+L#
+C#Au cours d'une opération de maintenance préventive avec un thermomètre étalon, l'opérateur observe un décalage de 7,5 °C entre la mesure affichée sur le régulateur et celle indiquée par cet étalon.
+C#Il décide de vérifier les 3 éléments présents dans cette chaîne.
+C#<h3>Test n°1 : le régulateur</h3>
+C#Il remplace le transmetteur d'étendue de mesure (15 - 80 °C) par un générateur de courant.<br/>Pour un courant d'intensité 12 mA, le régulateur affiche une température de 40 °C. Un voltmètre de précision branché en parallèle sur l'entrée du régulateur mesure 29,88 mV.<br/>Pour un courant d'intensité 4 mA, le régulateur affiche une température de 15 °C et le voltmètre indique 9,96 mV.
+Q#Vérifier par calcul que la résistance branchée en entrée du régulateur est correcte.#.5
+U#
+Q#Justifier que le paramètre dans le régulateur, correspondant à l'échelle maximale du transmetteur, est mal configuré.#.5
+U#
+L#
+C#<h3>Test n°2 : la sonde PT 100</h3>
+C#Résistance (Ω) de la sonde PT 100 en fonction de la température (°C) (documentation du fournisseur de la sonde).
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/06.gif">
+C#L'opérateur déconnecte la sonde PT 100 et branche entre ses bornes un ohmmètre.
+Q#Quelle valeur doit-il obtenir à la température ambiante de 25 °C ?#1
+T#
+Q#Proposer un encadrement de la température si la valeur de la résistance mesurée est de 120,7 Ω ?#1
+T#
+L#
+C#<h3>Test n°3 : le transmetteur</h3>
+Q#Proposer un schéma de câblage qui permet de tester le transmetteur seul en vous aidant du schéma de la figure ci-dessous.<br/>#1
+I#./files/CIRA2/_Copies/_Sujets/TD7/img/05.gif
+Q#Proposer en 5 lignes maximum un protocole de test pour valider un bon réglage du transmetteur.#1
+U#
+L#
+C#<h3>Sens d’action et identification de la boucle de température</h3>
+C#Afin de déterminer les paramètres du régulateur TC1, celui-ci est positionné en mode manuel avec un signal de commande Y qui assure une mesure M au point de fonctionnement.<br/>L’opérateur ne disposant pas de système d’enregistrement, il réalise une réponse  indicielle en prenant des points de mesure à des intervalles de temps réguliers après avoir effectué une variation du signal de commande de 15 %.
+C#Le tableau des relevés est fourni ci-dessous :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/07.gif">
+C#<u>Rappel :</u> le transmetteur de température est étalonné entre 15,0 °C et 80,0 °C. À la fin de l’enregistrement, la mesure de température se stabilise à 53,4 °C.<br/>L’opérateur estime alors que la fonction de transfert peut être assimilée à celle d’un système du premier ordre retardé.
+Q#En exploitant le tableau de mesures, indiquer en le justifiant le sens d’action du régulateur.#.5
+U#
+Q#Déduire des mesures les paramètres de la fonction de transfert du procédé, notée H(p). (Le gain statique est noté K, la constante de temps τ et le retard Tr)#1
+U#
+L#
+C#<h3>Calcul des paramètres du régulateur</h3>
+C#Pour la suite du problème, la fonction de transfert utilisée sera :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/08.gif">
+C#Les temps sont exprimés en minutes. Le schéma fonctionnel est le suivant :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/09.gif">
+Q#Exprimer T(p) = M(p)/ε(p), la fonction de transfert en boucle ouverte, en fonction de C(p) et H(p).#.5
+T#
+C#On décide d’utiliser la technique du modèle de référence pour déterminer les paramètres du régulateur.<br/>On s’impose comme fonction de transfert en boucle fermée :<br/>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/10.gif">
+Q#Quelle doit être la valeur de T(p) pour satisfaire le modèle de référence imposé ci-dessus.#.5
+T#
+Q#En déduire alors C(p) imposé par le modèle de référence. Attention ! C(p) n'a pas une forme classique.#.5
+T#
+L#
+C#<h3>Régulation numérique</h3>
+C#Pour la suite, l’automaticien décide d’enlever l’action dérivée et choisit la structure série. Pour réaliser la régulation de manière numérique, il doit déterminer l’équation de récurrence liant la commande Y à l’écart E en prévision de la programmation du bloc PI.
+C#L’équation en Z du correcteur est la suivante :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/11.png">
+Q#Déterminer l’équation de récurrence utile à l’automaticien y(n) en fonction de e(n).#1
+T#
+L#
+C#<h2>Étude de la cuve C</h2>
+C#<h3>Caractéristiques de la cuve C et de son instrumentation</h3>
+C#Cuve cylindrique de diamètre D = 1,00 m.<br/>Transmetteur de niveau hydrostatique : Le transmetteur de niveau délivre un signal de 4-20 mA pour un niveau variant de 0,20 m à 2,50 m.
+Q#Déterminer le niveau dans la cuve en mètre si le transmetteur délivre une intensité de 11,0 mA.#1
+T#
+Q#La mesure de débit se fait par un débitmètre électromagnétique. Indiquer pour ce type d’appareil le rôle des électrodes et des bobines ainsi que la condition sur le fluide pour qu’on puisse utiliser ce type de débitmètre.#1
+U#
+L#
+C#Le niveau de la cuve C est régulièrement soumis à une perturbation : la variation du débit de recyclage.<br/>Afin de l'atténuer, on décide de mettre en place une stratégie de régulation conforme au schéma fonctionnel ci-dessous :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/12.gif">
+Q#Quel est le nom donné à cette stratégie ?#1
+T#
+Q#Complétez le schéma TI afin de respecter la stratégie du schéma fonctionnel.#1
+I#./files/CIRA2/_Copies/_Sujets/TD7/img/01.gif
+L#
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD7/img/12.gif">
+Q#Déterminer R(p) pour que M(p) ne dépende pas de Qrc(p).#1
+U#

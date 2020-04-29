@@ -1,0 +1,2 @@
+C'est le schéma 3 qui correspond à la description. En effet, c'est le seul schéma pour lequel la vanne s'ouvre quand la pression augmente.
+

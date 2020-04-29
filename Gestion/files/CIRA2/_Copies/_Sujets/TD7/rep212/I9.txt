@@ -1,0 +1,3 @@
+Le zéro (4 mA) est correct. 
+12 mA (50%) ne donne pas la bonne valeur de température (47,5 ºC).
+La valeur correspondant à l'échelle maximale est mal réglée.

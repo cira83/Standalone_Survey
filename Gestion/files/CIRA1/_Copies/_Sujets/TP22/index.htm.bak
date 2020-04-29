@@ -1,0 +1,46 @@
+Multiboucle#TP22#En travaux
+C#<h2>I. Compréhension</h2>
+Q#Compléter le schéma ci-dessous pour faire apparaître la boucle de régulation de température. L'organe de réglage sera FV2.#1
+I#./files/CIRA1/_Copies/_Sujets/TP22/img/01.gif
+Q#Proposez un schéma fonctionnel de la régulation. Faire apparaître, FV2, la température de l'eau froide et l'échangeur thermique.#1
+I#./files/CIRA1/_Copies/_Sujets/TP22/img/02.gif
+L#
+C#<img src="./files/CIRA1/_Copies/_Sujets/TP22/img/03.jpg">
+Q#Rappeler la signification des indications fournies par le régulateur ci-dessus.#1
+U#
+Q#Placer ces indications sur le schéma fonctionnel.#1
+I#
+L#
+Q#Quelle différence faites-vous entre un fonctionnement en boucle ouverte et un fonctionnement en boucle fermée.#1
+U#
+Q#Quels sont les principaux paramètres à régler sur iTools et leur valeur respective, pour obtenir une régulation proportionnelle avec une bande proportionnelle de 10 % ? On s'aidera du <a href="./Doc_Tech/Parametres_regulateurs_Eurotherm.pdf" target="_blank" >document</a> sur les paramètres des régulateurs.#1.5
+U#
+Q#Régler le débit d'eau froide avec une commande de 100%. Relever la valeur du débit affiché sur le débitmètre.#.5
+T#
+L#
+C#<h2>II. Prédéterminations et vérifications</h2>
+Q#Relever Θ<sub>f</sub>, la température de l'eau froide. Expliquez comment vous avez procédé.#1
+U#
+C#On suppose que Θ-Θ<sub>f</sub>=K×Y, avec &Theta; la mesure de la température et Y la commande de la vanne FV2.
+Q#Mesurer K.#1
+U#
+L#
+Q#Prédéterminer graphiquement la valeur de la température en régime permanent pour Xp=40% et W=40°C à l'aide de la valeur obtenue de K à la question précédente. On utilisera le logiciel <a href="../EasyGraph" target="_blank" >EasyGraph</a>.#2
+C#<img src="./files/CIRA1/_Copies/_Sujets/TP22/img/04.gif">
+Q#Vérifiez ce point de fonctionnement dans la pratique en passant le régulateur en automatique.#1
+I#
+L#
+Q#Prédéterminer graphiquement la valeur de la température en régime permanent pour Xp=20% et W=40°C.#2
+I#
+Q#Vérifiez ce point de fonctionnement dans la pratique.#1
+I#
+Q#Conclure sur l’influence de la bande proportionnelle sur l’erreur statique.#2
+U#
+L#
+C#<h2>III. Instabilité</h2>
+Q#Déterminer la valeur maximale Xp<sub>max</sub> de la bande proportionnelle qui correspond à un fonctionnement instable (W=40°C).#1
+T#
+Q#Donner la courbe qui correspond au fonctionnement de la question précédente.#1
+I#
+Q#Mesurer la valeur de la période d'oscillation.#1
+T#

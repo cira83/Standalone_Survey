@@ -9,6 +9,7 @@
 	//$sujet2DS = $_GET['file'];
 	$DS_password = DSMDP($classe, $nom2eleve);
 	$repertoire_rep = "./files/$classe/_Copies/$nom2eleve/rep/$DS_password";
+	$nom_court = "";
 
 
 	include("./DSFonctionsPlus.php");

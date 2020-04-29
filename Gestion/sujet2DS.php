@@ -159,11 +159,13 @@
 				$nd2pt = isset($part[2]) ? $part[2] : 0;
 				$reponsefaite = 0;
 				if(!file_exists("$repertoire_rep/I$i.txt")) $reponsefaite = 1;
-
+				
+				$nd2pt = "<font color=\"red\">$nd2pt</font>";
 				if(isset($part[2])) {
-					if(!$reponsefaite) $bareme = "</td><td class=\"pt\">$nd2pt";
-					else $bareme = "</td><td class=\"pas2pt\">$nd2pt";
-
+					/*if(!$reponsefaite) $bareme = "</td><td class=\"pt\">$nd2pt";
+					else $bareme = "</td><td class=\"pas2pt\">$nd2pt";*/
+					
+					$bareme = "</td><td width=\"10px\">$nd2pt";
 					$_SESSION['points'] = $_SESSION['points'] + floatval($part[2]);
 				}
 				ligne2tableau("<p class=\"question\"><font color=\"#0000FF\">\n<b>Q$i : </b></font>$part[1]</p> $bareme");

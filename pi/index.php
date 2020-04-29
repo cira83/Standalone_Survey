@@ -52,7 +52,7 @@
 					TP = data[5].split(':');
 					nb_rep = data[2].split(':');
 					question = data[7].split(':');
-					for(i=0;i<8;i++){
+					for(i=0;i<18;i++){
 						//if(question[i]) interrogation = '<img src="PI_orange.gif" height="20px" onclick="repondre(\''+question[i]+'\',\''+nom[i]+'\');"> ';
 						if(question[i]) {
 							laquestion = question[i].toString();
@@ -137,6 +137,7 @@
 			<table><tr><!-- ENTETE -->
 				<td width="50px"><a href="../Gestion/DSZone.php" title="Appel"><img src="../Gestion/icon/home.png" height="40px"></a></td>
 				<td width="50px"><img src="../Gestion/icon/ip.gif" height="40px" onclick="ip();"></td>
+				<td width="150px"><font size="-1">18 élèves<br>maximum</font></td>
 				<td align="center"><font size="+2">TP CIRA</font></td>
 				<td align="center"><font size="+2"><div id="laclasse">----</div></font></td>
 				<td width="50px"><a href="http://localhost:1880/ui/"><img src="./node-red-icon.png" height="40px"></a></td>
@@ -159,25 +160,51 @@
 					<td id="1">----</td>
 					<td id="2">----</td>
 					<td id="3">----</td>
+					<td id="4">----</td>
+					<td id="5">----</td>
 				</tr>
 				<tr>
 					<td id="Q0"></td>
 					<td id="Q1"></td>
 					<td id="Q2"></td>
 					<td id="Q3"></td>
-				</tr>
-				
-				<tr>
-					<td id="4">----</td>
-					<td id="5">----</td>
-					<td id="6">----</td>
-					<td id="7">----</td>
-				</tr>
-				<tr>
 					<td id="Q4"></td>
 					<td id="Q5"></td>
+				</tr>
+
+				<tr>
+					<td id="6">----</td>
+					<td id="7">----</td>
+					<td id="8">----</td>
+					<td id="9">----</td>
+					<td id="10">----</td>
+					<td id="11">----</td>
+				</tr>
+				<tr>
 					<td id="Q6"></td>
 					<td id="Q7"></td>
+					<td id="Q8"></td>
+					<td id="Q9"></td>
+					<td id="Q10"></td>
+					<td id="Q11"></td>
+				</tr>
+
+
+				<tr>
+					<td id="12">----</td>
+					<td id="13">----</td>
+					<td id="14">----</td>
+					<td id="15">----</td>
+					<td id="16">----</td>
+					<td id="17">----</td>
+				</tr>
+				<tr>
+					<td id="Q12"></td>
+					<td id="Q13"></td>
+					<td id="Q14"></td>
+					<td id="Q15"></td>
+					<td id="Q16"></td>
+					<td id="Q17"></td>
 				</tr>
 
 			</table>

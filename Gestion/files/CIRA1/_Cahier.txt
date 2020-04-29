@@ -1,0 +1,46 @@
+<td colspan="3"><h2>Cahier de texte des CIRA1 2020</h2></td>
+<td width="50px"><b>Jour</b></td><td width="50px"><b>Mois</b></td><td><b>Activit&eacute;s</b></td>
+<td><input type="hidden" value="10903">03</td><td>09</td><td>§2 + Fiche 1)5</td>
+<td><input type="hidden" value="10904">04</td><td>09</td><td>Fiche 1) + DS1 2019</td>
+<td><input type="hidden" value="10910">10</td><td>09</td><td>TP serie 1 - 1/7</td>
+<td><input type="hidden" value="10911">11</td><td>09</td><td>DS1 2020 + Fiche 2 + &3</td>
+<td><input type="hidden" value="10917">17</td><td>09</td><td>DS2 2019 + &4 +  Fiche 3</td>
+<td><input type="hidden" value="10918">18</td><td>09</td><td>TP serie 1 - 2/7</td>
+<td><input type="hidden" value="10923">23</td><td>09</td><td>Après midi cohésion</td>
+<td><input type="hidden" value="10924">24</td><td>09</td><td>DS2 2020 + Fiche 4 + DS3 2019)5</td>
+<td><input type="hidden" value="10925">25</td><td>09</td><td>TP serie 1 - 3/6</td>
+<td><input type="hidden" value="11001">01</td><td>10</td><td>DS3 2019 + §6 + Fiche 5)6</td>
+<td><input type="hidden" value="11002">02</td><td>10</td><td>TP serie 1 - 4/6</td>
+<td><input type="hidden" value="11008">08</td><td>10</td><td>DS3 2020 + Fiche 5)10</td>
+<td><input type="hidden" value="11009">09</td><td>10</td><td>TP serie 1 - 5/6</td>
+<td><input type="hidden" value="11015">15</td><td>10</td><td>TP serie 1 - 6/6</td>
+<td><input type="hidden" value="11016">16</td><td>10</td><td>TP serie 2 - 1/6</td>
+<td><input type="hidden" value="11106">06</td><td>11</td><td>Fiche 5) + DS4 2019 + §7 + Fiche 6)2</td>
+<td><input type="hidden" value="11107">07</td><td>11</td><td>TP serie 2 - 2/6</td>
+<td><input type="hidden" value="11112">12</td><td>11</td><td>TP serie 2 - 3/6</td>
+<td><input type="hidden" value="11113">13</td><td>11</td><td>TP serie 2 - 4/6</td>
+<td><input type="hidden" value="11119">19</td><td>11</td><td> DS4 2020 + Fiche 6)</td>
+<td><input type="hidden" value="11120">20</td><td>11</td><td>TP serie 2 - 5/6</td>
+<td><input type="hidden" value="11127">26</td><td>11</td><td>DS5 2019 + Fiche 7)4 + §8 + §9</td>
+<td><input type="hidden" value="11127">27</td><td>11</td><td>TP serie 2 - 6/6</td>
+<td><input type="hidden" value="11203">03</td><td>12</td><td>TP serie 3 - 1/7</td>
+<td><input type="hidden" value="11204">04</td><td>12</td><td>TP serie 3 - 2/7</td>
+<td><input type="hidden" value="11210">10</td><td>12</td><td>DS5 2020 + DS6 2019)12</td>
+<td><input type="hidden" value="11211">11</td><td>12</td><td>TP serie 3 - 3/7</td>
+<td><input type="hidden" value="11218">18</td><td>12</td><td>TP serie 3 - 4/7</td>
+<td><input type="hidden" value="11217">17</td><td>12</td><td>§10 + Fiche 8)4</td>
+<td><input type="hidden" value="20107">07</td><td>01</td><td>TP serie 3 - 5/7</td>
+<td><input type="hidden" value="20108">08</td><td>01</td><td>TP serie 3 - 6/7</td>
+<td><input type="hidden" value="20115">14</td><td>01</td><td>TP serie 3 - 7/7</td>
+<td><input type="hidden" value="20115">15</td><td>01</td><td>DS6 2020 - Fiche 8)15</td>
+
+<td><input type="hidden" value="20121">21</td><td>01</td><td>Fiche 8) + DS6 correction + DS7 2019)10</td>
+<td><input type="hidden" value="20122">22</td><td>01</td><td>DS7 2019 + §11 + Fiche 9</td>
+<td><input type="hidden" value="20128">28</td><td>01</td><td>TP serie 4 - 1/6</td>
+<td><input type="hidden" value="20129">29</td><td>01</td><td>TP serie 4 - 2/6</td>
+<td><input type="hidden" value="20205">05</td><td>02</td><td>TP serie 4 - 3/6</td>
+<td><input type="hidden" value="20211">11</td><td>02</td><td>TP serie 4 - 4/6</td>
+<td><input type="hidden" value="20212">12</td><td>02</td><td>DS7  2020 + DS8 2019 + TD1 </td>
+<td><input type="hidden" value="20304">04</td><td>03</td><td>TP serie 4 - 6/6</td>
+<td><input type="hidden" value="20303">03</td><td>03</td><td>TP serie 4 - 5/6</td>
+<td><input type="hidden" value="20311">11</td><td>03</td><td>DS7 correction + DS8 2020 + TD1</td>

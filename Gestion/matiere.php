@@ -1,8 +1,39 @@
+<script>
+	function changer_coef(div){
+		var valeur = div.innerHTML;
+		var filename = div.title;
+		var question = 'Donner la nouvelle valeur du coefficient';
+		var xhr = null;
+	    var xhr = new XMLHttpRequest();	
+	    		
+		lareponse = prompt(question,valeur);
+		div.innerHTML = lareponse;
+	    
+	    chemin = "./changer_coef.php?infos="+filename+":"+lareponse+":";	
+		xhr.open("GET", chemin, true);
+		xhr.send(null);		
+	}
+</script>
 <?php
 	$matieres = $_GET['mat'];
 	$titre_page = "$matieres";
 	include("./haut.php");
 	$casetab = array_fill(0, 500, 0);
+	
+	$fichier_coef = "./files/$classe/_Coef $titre_page.txt";
+	if(!file_exists($fichier_coef)) {
+		$f_coef = fopen($fichier_coef, "w");
+		fwrite($f_coef, "2:$titre_page:");
+		fclose($f_coef);
+		$coef_matiere = 2;
+	}
+	else {
+		$f_coef = fopen($fichier_coef, "r");
+		$ligne1_coef = fgets($f_coef);
+		$part_coef = explode(":", $ligne1_coef);
+		fclose($f_coef);
+		$coef_matiere = $part_coef[0];		
+	}
 
 	tableau("$accueil$classe</a>");
 	$fontclasse = "<font color=\"green\">";
@@ -12,7 +43,7 @@
 	$classe_nb7[0] = 0;
 
 	$matieres = $_GET['mat'];
-	tableau($matieres);
+	tableau("$matieres</td><td><div id=\"coef\" title=\"$fichier_coef\" onclick=\"changer_coef(this);\">$coef_matiere</div>");
 	
 	//Définition de la première colonne du tableau
 	$nbdelignetab = count($leleve)+1;
@@ -53,9 +84,9 @@
 		while (!feof($fp)){
 			$ligne = fgets($fp);
 			$data = explode(":", $ligne);
-			$nom = $data[0];
-			$note1 = $data[1];
-			$coef1 = $data[2]; if($coef1=="") $coef1=1;
+			$nom = my_array_value($data,0);
+			$note1 = my_array_value($data,1);
+			$coef1 = my_array_value($data,2); if($coef1=="") $coef1=1;
 			for($j=0;$j<count($leleve);$j++) {//On ne considère que la dernière ligne
 				if(dansgroupe($nom,$leleve[$j])) {
 					$note[$j]=$note1;
@@ -114,12 +145,12 @@
 		 $moyenne_delaclassetext = "-";
 	}
 	
-	//CONSTRUCTION LE TABLEAU
-	if($nbdepreuves>5) $tableau = "<table class=\"C100\">";
+	//---------------------------------------------------------------------------------------    CONSTRUCTION DU TABLEAU
+	if($nbdepreuves>7) $tableau = "<table class=\"C100\">";
 	else $tableau = "<table>";
 	for($j=0;$j<$nbdelignetab;$j++){
 		$tableau .= "\n<tr>";
-		for($k=0;$k<$nbdepreuves+3;$k++){
+		for($k=0;$k<$nbdepreuves+2;$k++){//###
 			$tableau .= "<td>".$casetab[$j+$k*$nbdelignetab]."</td>";
 		}
 		$tableau .= "</tr>";

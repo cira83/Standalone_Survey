@@ -12,8 +12,10 @@ function truncate($text, $length)
 	
 function petitephotode2($nom)
 {
-	$photos="./photos/";
+	$classe = $_COOKIE['laclasse'];
+	$photos="./files/$classe/_Photos/";
 
+	
 	$nom_txt = truncate($nom,10);//pour couillet en 2018
 	$adr = $photos.$nom .".jpg";
 	$image = "<a href=\"./eleve.php?nom=$nom\"><img src=\"$adr\"\ width=\"50px\"></a><br>$nom_txt";
@@ -63,6 +65,9 @@ function quadrillage($zerox,$zeroy)
 
 function diagramme($nom,$note,$zerox,$zeroy)
 {
+ 	$liste2noms = "";
+ 	foreach($nom as $txt) $liste2noms.=" ".$txt;
+ 	
  	$x = $zerox;
  	$y = $zeroy - 40;
   	if($note) $nbEleves = count($note);
@@ -77,6 +82,7 @@ function diagramme($nom,$note,$zerox,$zeroy)
  	$place = 1.2;
  	for ($i = 0; $i < $nbEleves; $i++) 
  	{
+	 	$decal[$i]=0;
 		for($j=0;$j<$i;$j++)
 		{
 			if(($note[$i]>$note[$j]-$place)and($note[$i]<$note[$j]+$place)) 
@@ -88,7 +94,7 @@ function diagramme($nom,$note,$zerox,$zeroy)
 			}
 		}
 		if($decal[$i]>$taille) $taille = $decal[$i];
-		$x = $zerox + 50*$note[$i];
+		$x = $zerox + 50* floatval($note[$i]) ;
  		$y = $zeroy + 85*$decal[$i];
 		echo("<SPAN style=\"position: absolute; top: $y"."px; left: $x"."px; background-color:#FFFFFF;\" >");
 		if($note[$i]) petitephotode2($nom[$i]);//n'affiche que les élèves notés

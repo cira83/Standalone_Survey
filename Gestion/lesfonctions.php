@@ -486,7 +486,17 @@
 	}
 
 	function coefmat($nom){//Donne le coef de la matière TP 1 et Cours 1
-		$coef = 1;
+		$classe = $_COOKIE['laclasse'];
+		$fichier_coef = "./files/$classe/_Coef $nom.txt";
+		if(file_exists($fichier_coef)) {
+			$f_coef = fopen($fichier_coef, "r");
+			$ligne1_coef = fgets($f_coef);
+			$part_coef = explode(":", $ligne1_coef);
+			fclose($f_coef);
+			$coef = $part_coef[0];		
+		}
+		else $coef = 1;
+
 		$texte = strtolower("_$nom");
 		$pos = strpos($texte,"oral"); if($pos) $coef = 1; //Coef pour l'oral
 		//$pos = strpos($texte,"instrum"); if($pos) $coef = 0; //Coef pour ne pas tenir compte de l'instrum en CIRA2
@@ -833,7 +843,8 @@
 		 sort($listetp);
 	}
 	$i=0;$k=0;
-	while($i < count($listetp)){
+	$listetp_count = isset($listetp)?count($listetp):0;
+	while($i < $listetp_count){
 		if(estfichier($listetp[$i])){
 			$listedesTPs .= "<a href=\"./ranger.php?file=$listetp[$i]\">$listetp[$i]</a> ";
 			$tableaudesTP[$k] = $listetp[$i]; $k++;

@@ -2,7 +2,7 @@
 <hr/>
 <?php
 	$dirlist = scandir("./files/$classe/");
-	$partiel_list = "<select name=\"mat\"/><option selected>$mat</option>";
+	$partiel_list = "<select name=\"mat\"/><option selected>----</option>";
 	foreach($dirlist as $dir){
 		if(($dir[0]!="_")&&($dir[0]!=".")) $partiel_list .= "<option>$dir</option>";
 	}

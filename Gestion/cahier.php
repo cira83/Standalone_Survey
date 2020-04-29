@@ -1,9 +1,9 @@
 <?php 
 	include("./haut.php");
 	
-	$classe = $_COOKIE["laclasse"];
+	$classe = $_COOKIE['laclasse'];
 	$filename_cahier = "./files/$classe/_Cahier.txt";
-	$action = $_GET[action];
+	$action = my_GET("action");//$_GET['action'];
 	
 	if($action==44){
 		if(!empty($_FILES["fichier_choisi"]["name"])){
@@ -83,10 +83,10 @@
 	fclose($fp);
 	
 	
-	if($_GET[action]==1){
-		$data1 = $_POST[jour];
-		$data2 = $_POST[mois];
-		$data3 = $_POST[texte];
+	if($action==1){
+		$data1 = $_POST['jour'];
+		$data2 = $_POST['mois'];
+		$data3 = $_POST['texte'];
 		if($data2<8) $codedate="2$data2$data1";
 		else $codedate="1$data2$data1";
 		$ligne12[$i]="<td><input type=\"hidden\" value=\"$codedate\">$data1</td><td>$data2</td><td>$data3</td>"; 
@@ -101,8 +101,11 @@
 	
 	
 	
-	sort($ligne12);
-	for($j=$i-1;$j>-1;$j--) $tableau .= "<tr>$ligne12[$j]</tr>";
+	if(isset($ligne12)) sort($ligne12);
+	for($j=$i-1;$j>-1;$j--) {
+		$ligne12_j = my_array_value($ligne12,$j);
+		$tableau .= "<tr>$ligne12_j</tr>";
+	}
 	
 	
 	$tableau .= "</table>";

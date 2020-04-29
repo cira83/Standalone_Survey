@@ -52,7 +52,7 @@
 				}
 				else $listerep[0]=0;
 				$number = intval(count($listerep))-2;
-				$number = my_in_array("I",$listerep);
+				$number = my_in_array("txt",$listerep);
 				$liste_rep .= "$number:";
 				
 				$question = "";

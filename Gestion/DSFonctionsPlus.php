@@ -38,7 +38,7 @@ function bandeau($repertoire_elv,$code) {
 			if($part[0]=="Q") {//Question
 				$i++;
 				$coef[$i]= $part[2];
-				$total = $total+$coef[$i];
+				$total = $total+ floatval($coef[$i]);//###
 			}
 		}
 		fclose($fp);

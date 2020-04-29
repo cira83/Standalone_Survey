@@ -3,6 +3,7 @@
 	echo("<table>");
 	$i = 1;
 	$k = 0;
+	$listedesparticipants = "";
 	while($k<count($leleve)){
 		$nom = $leleve[$k];
 		$photo = photobord($nom,"#fff");

@@ -4,6 +4,7 @@
 <?php
 	include("diagramme.php");
 
+	$largeurdelecran = $_COOKIE['largeur'];//###
 	$dezero = ($largeurdelecran - 1060);
 	if($dezero>0) $zerox = $dezero/2; else $zerox = 0;
 	$zeroy = 100;
@@ -14,21 +15,23 @@
 	$epreuve[0]=str_replace("_", "", $epreuve[0]);
 	tableau($epreuve[0]);
 	
-	if (!$fp = fopen($nomdufichier,"r")) 
+	if (!file_exists($nomdufichier)) 
 	{
-		echo "<center><h1>Echec de l'ouverture du fichier : $nomdufichier</h1></center>";
+		echo "<center><h1>Pas de fichier : $nomdufichier</h1></center>";
 	}else
 	{
-		//echo("<center><h1>$nomdufichier</h1></center>");
-		$i = 0;
-		while(!feof($fp)) 
-		{
-			$ligne[$i] = fgets($fp);
-			$i++;
-		}
+		$fp = fopen($nomdufichier,"r");
+		if(!feof($fp)) $ligne_0 = fgets($fp);
+		if(!feof($fp)) $ligne_1 = fgets($fp);
+		fclose($fp);
+		
+		echo("<!-- nomdufichier = $nomdufichier -->\n");
+		echo("<!-- liste2notes = $ligne_0 -->\n");
+		echo("<!-- liste2noms = $ligne_1 -->\n");
+		
 		if($ligne[0]!="\n") {
-			$notes14 = explode(":", $ligne[0]);
-			$participants = explode(":", $ligne[1]);
+			$notes14 = explode(":", $ligne_0);
+			$participants = explode(":", $ligne_1);
 
 			$rk = 0;
 			for($i=0;$i<count($notes14);$i++){

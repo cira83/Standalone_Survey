@@ -42,7 +42,7 @@
 		if(estfichier($lamatiere)) {
 			echo("\n<table width=\"781px\" class=\"notes\">");//pleine 
 			$periode = periode($lamatiere);
-			$coefmat = coefmat($lamatiere);
+			$coefmat = coefmat($lamatiere);////
 			//LISTE DES EPREUVES
 			$repertoire = "./files/$classe/$lamatiere";
 			$epreuves = scandir($repertoire);
@@ -60,9 +60,9 @@
 						$ligne = fgets($fp);
 						$data = explode(":", $ligne);
 						$nom2 = $data[0];//le nom des participants
-						$note = $data[1];
-						$coef = $data[2]; if($coef=="") $coef=1;
-						$nonfait = $data[3];//10-01-2019
+						$note = my_array_value($data,1);
+						$coef = my_array_value($data,2); if($coef=="") $coef=1;
+						$nonfait = my_array_value($data,3);
 						if(dansgroupe($nom2,$nom)) {
 							$lanote = $note;
 							$lecoef = $coef;

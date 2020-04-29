@@ -135,16 +135,18 @@
 				echo("<table id=\"Li$numero\"><tr><td align=\"left\"><p class=\"commentaires\">$contenu</p></td><td width=\"10px\"><img src=\"icon/C_vert.gif\" title=\"Commentaire\"/>$HR$SUP$BR$Mod$BR$C$BR$Q$BR$L</td><tr></table>");
 				break;
 			case "Q":
-				echo("<table id=\"Li$numero\"><tr><td align=\"left\"><p class=\"question\"><font color=\"blue\"><b>Q$quest)</b></font> $contenu</p></td><td width=\"10px\"><img src=\"icon/Q_vert.gif\" title=\"Question\"/><br><b>$coef</b>$HR$SUP$BR$Mod$BR$C$BR$T$BR$U$BR$I</td><tr></table>");
+				if($coef>0) $bgcolor = "bgcolor=\"#c0c0c0\"";
+				else $bgcolor = "bgcolor=\"#e0c0c0\"";
+				echo("<table id=\"Li$numero\"><tr><td align=\"left\" $bgcolor><p class=\"question\"><font color=\"blue\"><b>Q$quest)</b></font> $contenu</p></td><td width=\"10px\"><img src=\"icon/Q_vert.gif\" title=\"Question\"/><br><b>$coef</b>$HR$SUP$BR$Mod$BR$C$BR$T$BR$U$BR$I</td><tr></table>");
 				break;
 			case "T":
 				echo("<table id=\"Li$numero\"><tr><td $bgcolor>Réponse texte sur une ligne</td><td width=\"10px\"><img src=\"icon/T_vert.gif\" title=\"R&eacute;ponse courte\"/>$HR$SUP$BR$C$BR$Q$BR$L</td><tr></table>");
 				break;
 			case "U":
-				echo("<table id=\"Li$numero\"><tr><td $bgcolor>Réponse texte<br>sur plusieurs lignes</td><td width=\"10px\"><img src=\"icon/Ligne.gif\" title=\"R&eacute;ponse longue\"/>$HR$SUP$BR$C$BR$Q$BR$L</td><tr></table>");
+				echo("<table id=\"Li$numero\"><tr><td $bgcolor>Réponse texte<hr/>sur<hr/>plusieurs lignes</td><td width=\"10px\"><img src=\"icon/Ligne.gif\" title=\"R&eacute;ponse longue\"/>$HR$SUP$BR$C$BR$Q$BR$L</td><tr></table>");
 				break;
 			case "I":
-				if($contenu=="\n") $amettre = "Réponse image png, jpg ou gif.";
+				if($contenu=="\n") $amettre = "<img src=\"./icon/interro.png\"/> Réponse image png, jpg ou gif.";
 				else $amettre = "<img src=\"$contenu\">";
 				//$amettre = "Réponse image png, jpg ou gif.";
 				echo("<table id=\"Li$numero\"><tr><td align=\"center\" $bgcolor>$amettre</td><td width=\"10px\"><img src=\"icon/I_vert.gif\" title=\"R&eacute;ponse image\"/>$HR$SUP$BR$Mod$BR$C$BR$Q$BR$L</td><tr></table>");

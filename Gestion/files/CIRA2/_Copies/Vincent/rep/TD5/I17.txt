@@ -1,0 +1,2 @@
+On utilise une régulation cascade quand on a besoin de régler une grande inertie du système par rapport à une perturbation sur la  grandeur réglante ou la grandeur intermédiaire.
+Ici la grande inertie est la température du mélange que l'on mesure avec TT1,et notre perturbation se joue sur la double enveloppe que l'on règle ensuite avec TT2.

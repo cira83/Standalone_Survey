@@ -1,0 +1,1 @@
+Je choissirez plutot la cascade car on voit qu'elle ameliore de ma maniere générale les resultats et quel'objectif avant tous est d'avoir un temps de reponse et une erreur statique minimale

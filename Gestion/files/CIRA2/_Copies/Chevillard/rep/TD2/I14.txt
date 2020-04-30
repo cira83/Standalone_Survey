@@ -1,0 +1,1 @@
+la valeur de l'erreur statique sera nul car T(p=0) = l'infini 

@@ -59,19 +59,19 @@ function bandeau($repertoire_elv,$code) {
 			fclose($fp);
 			if($note_Lu=="A\n") {
 				$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/A.gif\" title=\"Q$i\"></a>";
-				$note_C += $coef[$i];
+				$note_C += floatval($coef[$i]);
 			}
 			if($note_Lu=="B\n") {
 				$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/B.gif\" title=\"Q$i\"></a>";
-				$note_C += 0.75*$coef[$i];
+				$note_C += 0.75*floatval($coef[$i]);
 			}
 			if($note_Lu=="C\n") {
 				$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/C.gif\" title=\"Q$i\"></a>";
-				$note_C += 0.35*$coef[$i];
+				$note_C += 0.35*floatval($coef[$i]);
 			}
 			if($note_Lu=="D\n") {
 				$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/D.gif\" title=\"Q$i\"></a>";
-				$note_C += 0.05*$coef[$i];
+				$note_C += 0.05*floatval($coef[$i]);
 			}
 
 		}

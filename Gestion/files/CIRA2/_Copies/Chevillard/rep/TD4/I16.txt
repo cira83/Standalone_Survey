@@ -1,0 +1,1 @@
+HART est un protocole de communication utilisé en contrôle industriel pour communiquer numériquement avec des capteurs ou actionneurs dits intelligents

@@ -1,0 +1,1 @@
+(DeltaConcentration/DeltaDephasage)=(76-89)/(242-109)=-0,097

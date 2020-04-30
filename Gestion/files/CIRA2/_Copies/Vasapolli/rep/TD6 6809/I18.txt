@@ -1,0 +1,1 @@
+Quand A2 augmente (de la boucle de tendance), on diminue le temps de retour Tret. Mais dépassé un seuil, le temps ré - augmente 

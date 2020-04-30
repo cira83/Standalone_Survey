@@ -1,0 +1,1 @@
+Le système est intégrateur car l'entrée est stable et la sortie ne l'est pas, c'est une courbe croissante.

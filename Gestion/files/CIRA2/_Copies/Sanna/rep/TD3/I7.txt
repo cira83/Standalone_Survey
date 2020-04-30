@@ -1,0 +1,4 @@
+on ferme V1 V2 et V5 et on ouvre V3 et V4
+ensuite en c et en d je met une pression de 0,1 bar puis je vérifie le capteur affiche bien 0 
+puis je augmente la pression en C de 0,0225 en vérifiant la mesure de niveau  jusqu'à 0,19 bar et à 0,19 bar je suis censé avoir 2m  
+

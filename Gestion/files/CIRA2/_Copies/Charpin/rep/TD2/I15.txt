@@ -1,0 +1,1 @@
+On ne peut pas car le systeme est integrateur, il n'y à donc pas de réponse du procédé stable

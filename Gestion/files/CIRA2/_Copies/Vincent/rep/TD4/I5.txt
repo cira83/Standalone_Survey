@@ -1,0 +1,1 @@
+Qme= Qve * ρ(eau) ,       QmLc = QmPC + Qve *ρ(eau)

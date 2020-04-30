@@ -1,0 +1,1 @@
+Pour commencer, il faut fermé les vannes V1, V2 et V5 puis ouvrir les vannes V3 et V4. Par la suite, on applique une pression de 0.1bar au point C et D. Le capteur doit afficher 0 pour qu'on puisse augmenter la pression de +0.0225 au point C. Pour finir, on doit obtenir un niveau de 2m pour une mesure à 0.19bar.

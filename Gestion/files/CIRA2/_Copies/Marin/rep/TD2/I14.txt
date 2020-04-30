@@ -1,0 +1,1 @@
+En boucle fermée la valeur de l'erreur statique seras nulle donc 0.

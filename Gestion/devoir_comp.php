@@ -1,3 +1,23 @@
+<script>
+	function commentaire(numero,rep) {
+		var cellule = document.getElementById('CX'+numero);
+		var commentaire = prompt('Votre commentaire', '');
+		var xhr = null;
+	    var xhr = new XMLHttpRequest();	
+	    
+	    if(commentaire) {
+		    chemin = './commentaire.php?infos='+commentaire+':'+numero+':'+rep+':';	
+			xhr.open("GET", chemin, true);
+			xhr.send(null);
+			
+			phrase = '<font color="red">'+commentaire+'</font>';
+			cellule.innerHTML = phrase;
+		}		
+		
+		
+		
+	}	
+</script>
 <?php
 	include("./security.php");
 	include("./DSFonctions.php");
@@ -23,13 +43,24 @@
 	
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-	function ligne_tab_Q($case1,$case2,$case3,$case4,$num_quest) {
+	function nouveau_comment($numero,$repelv) {
+		$nouveau_commentaire = "<img src=\"./icon/bouche.gif\" height=\"15px\" onclick=\"commentaire($numero,'$repelv');\">";
+		return $nouveau_commentaire;
+	}
+
+	function ligne_tab_Q($case1,$case2,$case3,$case4,$num_quest) {//Pour une question
 		return("<table id=\"T$num_quest\"><tr><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>");
 	}
 
-	function ligne_tab($case1,$case2,$case3,$case4) {
+	function ligne_tab_C($case1,$num_quest) {//Commentaire prof
+		return("<table><tr bgcolor=\"white\"><td align=\"left\" width=\"800px\"id=\"CX$num_quest\">$case1</td><td width=\"50px\"></td><td width=\"50px\"></td><td align=\"left\" width=\"800px\"></td></tr></table>");
+	}
+
+	function ligne_tab($case1,$case2,$case3,$case4) {//Ligne normale
 		return("<table><tr><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>");
 	}
+
+
 
 	function lire_reponse($repertoire,$num,$type){
 		$filename = "$repertoire/I$num.txt";
@@ -108,10 +139,10 @@
 			$note = fgets($fp);
 			fclose($fp);
 		}
-		if($note=="A\n") $res = $coef;
-		if($note=="B\n") $res = 0.75*$coef;
-		if($note=="C\n") $res = 0.35*$coef;
-		if($note=="D\n") $res = 0.05*$coef;
+		if($note=="A\n") $res = floatval($coef);
+		if($note=="B\n") $res = 0.75*floatval($coef);
+		if($note=="C\n") $res = 0.35*floatval($coef);
+		if($note=="D\n") $res = 0.05*floatval($coef);
 		return $res;
 	}
 
@@ -155,8 +186,9 @@
 				$reponse_elv = lire_reponse("$rep_elv",$num_question,$part_elv[0]);
 				$note_elv = lire_note("$rep_elv/N$num_question.txt",$num_question);
 				$reponse_prof = lire_reponse("$rep_prof",$num_question,$part_prof[0]);
-				
-				$content.=ligne_tab($reponse_elv,"<a href=\"#entete\">$note_elv[0]</a>",$notation,$reponse_prof);
+				$nouveau_commentaire = nouveau_comment($num_question,$rep_elv);
+				$content.=ligne_tab($reponse_elv,"<a href=\"#entete\">$note_elv[0]</a><br/><br/>$nouveau_commentaire",$notation,$reponse_prof);
+				$content.=ligne_tab_C("",$num_question);
 				$feuille2notes .= "<td><b>$num_question</b>|</td><td><a href=\"#T$num_question\">$note_elv[1]</a></td>";
 			}
 			if($part_elv[0]=="I"){
@@ -164,8 +196,9 @@
 				$reponse_elv = lire_reponse("$rep_elv",$num_question,$part_elv[0]);
 				$note_elv = lire_note("$rep_elv/N$num_question.txt",$num_question);
 				$reponse_prof = lire_reponse("$rep_prof",$num_question,$part_prof[0]);
-				
-				$content.=ligne_tab($reponse_elv,"<a href=\"#entete\">$note_elv[0]</a>",$notation,$reponse_prof);
+				$nouveau_commentaire = nouveau_comment($num_question,$rep_elv);
+				$content.=ligne_tab($reponse_elv,"<a href=\"#entete\">$note_elv[0]</a><br/><br/>$nouveau_commentaire",$notation,$reponse_prof);
+				$content.=ligne_tab_C("",$num_question);
 				$feuille2notes .= "<td><b>$num_question</b>|</td><td><a href=\"#T$num_question\">$note_elv[1]</a></td>";
 			}
 			if($part_elv[0]=="C") {

@@ -90,26 +90,34 @@
 		request.responseType = 'text';
 		
 		request.onload = function() {
-			data = request.response;
-			if(data!='null###') {//null### = pas de fichier
-				part = data.split('#');
-				tdquestion.innerHTML = part[0];
-				if(part[1]) {
-					tdreponse.innerHTML = part[1];
-					case_Q.setAttribute("bgcolor", '#fff');
-					bouton.setAttribute("onclick", 'question(this);');
-				}
-				
-				else {
+			data = request.response; //alert(data);
+			part = data.split('#');//Question#reponse#remarque
+			tdquestion.innerHTML = part[0];
+			if(!part[0]) {
+				tdreponse.innerHTML = part[1];
+				case_Q.setAttribute("bgcolor", '#fff');
+				bouton.setAttribute("onclick", 'question(this);');
+			}
+			else {
+				if(!part[1]) {
 					tdreponse.innerHTML = "";
 					case_Q.setAttribute("bgcolor", '#f00');
 					bouton.setAttribute("onclick", 'alert(\'Pas encore de reponse\');');
 				}
+				else {
+					tdreponse.innerHTML = part[1];
+					case_Q.setAttribute("bgcolor", '#fff');
+					bouton.setAttribute("onclick", 'question(this);');				
+				}
+			}
+			if(part[2]) {
+				remarque = part[2];
+				alert(remarque);
 			}
 		};	
 		request.send();
 	}
-	setInterval(refresh_Q, 1000);
+	setInterval(refresh_Q, 2000);
 </script>
 
 <?php
@@ -445,6 +453,7 @@
 			<tr>
 				<td width="52px" bgcolor="#fff" id="stateQ"><img src="../pi/Question.gif" width="40px" onclick="question(this);" id="bullebd"></td>
 				<td><font size="+5"><?php echo($titredudocument);?></font></td>
+				<td width="52px"><img src="./icon/Code4.gif" height="30px" title="Code du sujet" onclick="alert('<?php echo($copie_password); ?>');"></td>
 				<td width="52px">
 <?php //###
 				if(!file_exists("../B800")) 

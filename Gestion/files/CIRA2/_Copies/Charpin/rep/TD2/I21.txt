@@ -1,0 +1,1 @@
+premier depassement = 120%, temps de réponse est de : 40s

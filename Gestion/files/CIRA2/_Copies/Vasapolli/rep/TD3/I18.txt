@@ -1,0 +1,1 @@
+A l'inverse, la vanne est NF donc quand Y augment, X augmente -> procédé direct. Donc régulateur inverse

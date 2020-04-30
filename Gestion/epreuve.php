@@ -17,8 +17,8 @@
 		return($result);
 	}
 	
-	$mat = $_GET['mat'];
-	$epr = $_GET['epr'];
+	$mat = my_GET("mat");
+	$epr = my_GET("epr");
 	$modif = isset($_GET['modif']) ? $_GET['modif'] : "";
 	$laliste = isset($_POST['laliste']) ? $_POST['laliste'] : "";
 	$action = isset($_GET['action']) ? $_GET['action'] : "";
@@ -81,13 +81,13 @@
 	
 	//Ajout des nouvelles informations dans le fichier
 	if($modif=="oui"){
-		$newnote = str_replace(",", ".", $_POST[note]);
-		$newnom = $_POST[nom];
-		$newcoef = $_POST[coef];
-		$newdate = $_POST[date]; if($newdate=="") $newdate = $date0212;
-		$newcause = $_POST[cause];
-		$url = $_POST[url];
-		$rq = $_POST[rq];
+		$newnote = str_replace(",", ".", $_POST['note']);
+		$newnom = $_POST['nom'];
+		$newcoef = $_POST['coef'];
+		$newdate = $_POST['date']; if($newdate=="") $newdate = $date0212;
+		$newcause = $_POST['cause'];
+		$url = my_POST("url");
+		$rq = $_POST['rq'];
 		echo("<p>Nouvelle note pour $newnom : $newnote ($newcoef) le $newdate<p>");
 		$handle = fopen($fichier, "a");
 		fprintf($handle, "\n$newnom:$newnote:$newcoef:$newdate:$newcause:$url:$rq:");
@@ -120,7 +120,7 @@
 	}
 
 	if($action==45){//Rangement d'une copie dans le dossier elv 
-		$nom45 = $_POST[elv];
+		$nom45 = my_POST("elv");
 		$epr45 = explode(".", $epr);
 		//Création du répertoire si nécéssaire
 		$repertoire_elv = "$repertoire_copies";
@@ -359,10 +359,11 @@
 	
 	fclose($mdr_file);
 	
-	echo("<center>");
+	/*echo("<center>");
 	//Nouvelle épreuves
 	include("newepreuve.php");
 	echo("</center>");
+	*/
 	
 	//les epreuves 3 janvier 2017
 	$tabEpreuves = tabEpreuves($classe,$mat);

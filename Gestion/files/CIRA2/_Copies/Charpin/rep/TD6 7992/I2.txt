@@ -1,0 +1,1 @@
+K=1.2;   constante de temps=5.5(40-29)=60.5s;  retard T=9.2s

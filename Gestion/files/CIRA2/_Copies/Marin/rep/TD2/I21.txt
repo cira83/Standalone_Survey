@@ -1,0 +1,1 @@
+Il n'y a aucun dépassement. Le temps de réponse est 4*21 donc Trep=168s

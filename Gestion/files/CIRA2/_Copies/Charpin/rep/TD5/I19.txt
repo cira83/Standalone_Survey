@@ -1,0 +1,1 @@
+elle permet d'anticiper les changement de température dans l'enveloppe du réacteur pour ne pas impacter la mesure

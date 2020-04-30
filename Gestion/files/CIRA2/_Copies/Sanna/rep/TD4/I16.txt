@@ -1,0 +1,1 @@
+l'intérêt de ce type de connexion est qu'il permet une interopérabilité entre appareils HART certifiés, quel que soit leur fabricant.

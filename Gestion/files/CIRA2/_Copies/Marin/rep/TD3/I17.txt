@@ -1,0 +1,1 @@
+Lorsqu'on augmente la commande Y (Vanne NF) on a la mesure X qui diminue donc le procédé est inverse. Alors le sens d'action du régulateur est direct.

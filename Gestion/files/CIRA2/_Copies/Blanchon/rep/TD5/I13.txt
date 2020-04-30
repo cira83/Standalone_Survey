@@ -1,0 +1,1 @@
+Temps de reponse = 73s Erreur statique= 1,5%

@@ -1,0 +1,1 @@
+D1= 15% ; erreur statique nulle; ±10% Tr = 110 sec

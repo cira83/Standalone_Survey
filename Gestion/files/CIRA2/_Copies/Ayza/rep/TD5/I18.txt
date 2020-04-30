@@ -1,0 +1,1 @@
+le temps de réponse passe d'un temps de réponse a 10% de 65s a 40s, donc la régulation cascade est bien meilleur. 

@@ -1,0 +1,4 @@
+en Augmentant la commande de la vanne on augmente le débit d'eau en entrée de la cuve ce qui fait arriver plus d'eau qu'il n'en sort de la cuve.
+une augmentation du débit d'arrivée d'eau froide va calmer l'ébullition ce qui explique la baisse de niveau dans la cuve au début.
+
+

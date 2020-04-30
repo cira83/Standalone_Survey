@@ -1,0 +1,1 @@
+les deux régulation arrive à une erreur statique nul, mais la régulation cascade a un temps de réponse 5 fois inférieur à la régulation simple

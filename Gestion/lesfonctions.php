@@ -213,13 +213,15 @@
 		$k = 0;
 		for($i=0;$i<count($nom);$i++){//Pour les différents participants
 			$repertoire = "$repertoire_copies/$nom[$i]";
-			$copies = scandir($repertoire);
-			for($j=0;$j<count($copies);$j++){//toutes les copies du répertoire
-				$nomfichier2 = explode(".", $copies[$j]);
-				//if(strpos("_".$copies[$j], $nomfichier[0])) {//suprimé le  10/10/2016 - A valider avec Movamp
-				if(strpos("_".$nomfichier2[0], $nomfichier[0])) {
-					$lien[$k] = "$repertoire/$copies[$j]";
-					$k++;
+			if(file_exists($repertoire)){
+				$copies = scandir($repertoire);
+				for($j=0;$j<count($copies);$j++){//toutes les copies du répertoire
+					$nomfichier2 = explode(".", $copies[$j]);
+					//if(strpos("_".$copies[$j], $nomfichier[0])) {//suprimé le  10/10/2016 - A valider avec Movamp
+					if(strpos("_".$nomfichier2[0], $nomfichier[0])) {
+						$lien[$k] = "$repertoire/$copies[$j]";
+						$k++;
+					}
 				}
 			}
 		}

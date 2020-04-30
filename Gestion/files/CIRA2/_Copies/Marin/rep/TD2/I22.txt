@@ -1,0 +1,1 @@
+Méthode du régleur : On a A=5% donc Xp=100/A=100/5=20% ; Ti=100s et Td=0s

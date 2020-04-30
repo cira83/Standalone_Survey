@@ -1,0 +1,2 @@
+la vanne est NF donc quand on augmente Y, X diminue donc le procédé est inverse du coup le sens d'action du régulateur est direct 
+

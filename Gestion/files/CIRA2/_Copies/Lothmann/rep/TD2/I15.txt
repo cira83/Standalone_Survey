@@ -1,0 +1,1 @@
+en boucle ouverte on ne peut faire varier que la commande du coup il faut mieux etre en boucle fermé 

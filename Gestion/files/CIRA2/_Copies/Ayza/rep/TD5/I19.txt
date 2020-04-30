@@ -1,0 +1,1 @@
+La régulation en cascade permet d’augmenter considérablement la qualité de la régulation. Cela concerne en particulier le comportement dynamique de la boucle de régulation, donc l’évolution de la grandeur réglée en cas de modification de la grandeur pilote ou d’apparition de grandeurs perturbatrices.

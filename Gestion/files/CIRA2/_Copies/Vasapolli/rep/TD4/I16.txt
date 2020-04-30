@@ -1,0 +1,1 @@
+avec le protocole HART, cela nous permet de l'étalonner à distance. 

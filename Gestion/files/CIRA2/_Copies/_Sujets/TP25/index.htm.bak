@@ -1,0 +1,40 @@
+Pression - Proportion#TP25
+C#<h2>I. Régulation de pression simple boucle</h2>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP25/img/01.png">
+C#<u>Cahier des charges :</u> On se propose de réaliser une régulation de pression sur la maquette Pignat 1 (à votre gauche). L'organe de réglage sera la vanne V1.
+Q#Donner le schéma électrique correspondant au cahier des charges.#1
+I#
+L#
+Q#Programmer votre T2550 afin de réaliser la régulation représentée ci-avant.#1
+I#
+Q#Régler votre maquette pour avoir une mesure de 50% pour une commande de 50%.#1
+I#
+L#
+Q#Relever l'évolution de la mesure X en réponse à un échelon de commande Y. En déduire le sens de fonctionnement du régulateur (inverse ou direct).#0.5
+T#
+Q#Donner la courbe qui a permis de répondre à la question précédente.#0.5
+I#
+L#
+Q#Régler la boucle de régulation, en utilisant la méthode de Ziegler & Nichols. On choisira un correcteur PID.#2
+I#
+Q#Donner la courbe qui a permis de répondre à la question précédente.#2
+I#
+L#
+Q#Enregistrer la réponse de la mesure à un échelon de consigne W.#2
+I#
+L#
+C#<h2>II. Régulation de proportion</h2>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TP25/img/02.png">
+C#<u>Cahier des charges :</u> On se propose de réaliser une régulation de proportion de pression. La pression mesurée par PIT1 sera égale à 0,8 fois la pression mesurée par PIT2.
+Q#Rappeler le fonctionnement d'une boucle de régulation de proportion.#1
+U#
+L#
+Q#Programmer le régulateur pour obtenir le fonctionnement en régulation de proportion conformément au schéma TI ci-dessus.#3
+I#
+Q#Régler la boucle de régulation menée en utilisant la méthode par approches successives. On ne changera pas le réglage de la boucle menante.#2
+I#
+L#
+Q#Enregistrer la réponse des mesures à un échelon de consigne W.#2
+I#
+Q#Expliquez l'intérêt d'une régulation de proportion en vous aidant de vos enregistrements. Citez un autre exemple pratique.#2
+U#

@@ -1,0 +1,1 @@
+La technologie utilisée pour la mesure du débit d’eau est un débitmètre à turbine car il permet de mesurée le débit et le volume d'un fluide faiblement visqueux ou pas du tout visqueux.

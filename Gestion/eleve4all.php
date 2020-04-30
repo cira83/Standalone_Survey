@@ -55,7 +55,7 @@
 					$fichier = $files."$classe/$lamatiere/$lepreuve"; 
 					$fp = fopen($fichier, "r");
 					$Description = "Historique:";
-					$lanote = ""; $lecoef=""; $liens=""; $Description=""; $commentaire="";$nom3=$nom;
+					$lanote = ""; $lecoef=""; $liens=""; $Description=""; $commentaire="";$nom3=$nom; $lenonfait="";
 					while (!feof($fp)){//On ne prend que la dernière ligne avec $nom dedans
 						$ligne = fgets($fp);
 						$data = explode(":", $ligne);
@@ -117,7 +117,7 @@
 				}
 			}
 			if($somme_coef>0) $lamoyenne = number_format($somme_note/$somme_coef,2); else $lamoyenne = "";
-			$somme_sem[$periode-1] += $lamoyenne*$coefmat ;
+			$somme_sem[$periode-1] += floatval($coefmat)*floatval($coefmat);////
 			if($lamoyenne != "") $somme_coef_sem[$periode-1] += $coefmat ;
 			$somme_note = 0;
 			$somme_coef = 0;

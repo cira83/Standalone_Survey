@@ -1,0 +1,2 @@
+Une régulation cascade ce justifie quand il l'organe de réglage de notre boucle de régulation peut aussi agir sur une perturbation.
+dans notre cas on cherche à réguler la température interne de la cuve en agissant sur la vanne de vapeur mais avec la régulation cascade on peut aussi agir sur enveloppe interne de la cuve et donc prévoir si la température interne de la cuve va augmenté et de ce fait agir sur la vannes pour éviter d’atteindre des températures limites 

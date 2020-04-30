@@ -1,0 +1,1 @@
+Le procédé est direct car lorsqu'on augmente la commande W on a la mesure X qui augmente donc le sens d'action du régulateur est inverse.

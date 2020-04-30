@@ -1,0 +1,3 @@
+On ferme les vannes V1, V2, V5. On ouvre les vannes V3 et V4
+Pour les points C et D on met une valeur autre que 0 de pression; exemple 0,1bar, pour vérifier que le capteur affiche bien 0.
+On augmente la pression progressivement jusqu'a la valeur max théorique soit 2bar, où on devrait obtenir une mesure de 2m

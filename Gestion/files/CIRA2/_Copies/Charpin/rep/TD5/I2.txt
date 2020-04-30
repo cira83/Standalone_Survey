@@ -1,0 +1,1 @@
+K=1, constante de temps=41.6 et le retard T=44s

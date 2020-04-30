@@ -1,0 +1,1 @@
+Cette régulation est assez lente, et la mesure met un peu trop de temps a se stabiliser autour de la consige.

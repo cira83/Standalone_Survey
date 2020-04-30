@@ -1,0 +1,1 @@
+La régulation en cascade permet d'augmenter considérablement la qualité de la régulation. Cela permet de corriger en temps réel la mesure dans le cas d'une augmentation soudaine de température ou encore dans l'ajout d'une quelconque perturbation. 

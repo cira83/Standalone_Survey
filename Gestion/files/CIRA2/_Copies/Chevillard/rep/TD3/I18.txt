@@ -1,0 +1,1 @@
+pour augmente le débit on ferme la vanne donc FIC15 et inverse

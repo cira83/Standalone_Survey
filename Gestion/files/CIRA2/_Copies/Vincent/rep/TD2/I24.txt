@@ -1,0 +1,1 @@
+T= 12 * 4 = 48 secondes ; premier dépassement = 3%

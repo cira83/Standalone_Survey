@@ -1,0 +1,1 @@
+mettre m3 en tonne => Qmlc = rhoLC*10^-3 X Qvlc = 18*1,2 = 21,6 t/h

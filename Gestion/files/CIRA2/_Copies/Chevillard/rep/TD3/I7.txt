@@ -1,0 +1,1 @@
+pour établir l'étalonnage du transmetteur de niveau il faut vidé la cuve et mètre le capteur a 4mA et la remplir au seuil max et mètre 20mA. il faut faire varier OP et voir si il ce passe quelque choses si quand OP=100 rien ne ce passe elle est en normalement ouvert et SI OP=0 est qu'il passe rien la vanne est normalement fermé.

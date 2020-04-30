@@ -1,0 +1,1 @@
+Temps de réponse= 65s Pas d'erreur statique et pas de depassement 

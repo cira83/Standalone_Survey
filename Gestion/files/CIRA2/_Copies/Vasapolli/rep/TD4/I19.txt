@@ -1,0 +1,1 @@
+son incertitude 10000*0,1/100 = 10 Kg/h + 6,72 Kg/h = 16,72 Kg/h d'incertitude totale  

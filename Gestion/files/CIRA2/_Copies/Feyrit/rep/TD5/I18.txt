@@ -1,0 +1,1 @@
+La boucle cascade contrairement a la boucle simple permet d'accélérer le temps de réponse et aussi d'améliorerl'erreur statique

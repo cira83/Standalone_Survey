@@ -1,0 +1,3 @@
+Si on parle de façon économique la régulation en boucle simple est plus facile à régler et est moins couteuse(moins de capteurs, régulateurs etc...); Cependant la régulation  cascade permet d'avoir d'avoir un meilleur temps de réponse et un meilleur contrôle sur le procédé.
+-Pour l'argent et la simplicité: boucle simple
+-Pour un procédé optimal: Boucle cascade

@@ -1,0 +1,1 @@
+en augmentant Ti la courbe de Black se stabilise de plus en plus. Du coup la régulation est de plus en plus stable.

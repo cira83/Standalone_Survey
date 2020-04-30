@@ -13,6 +13,7 @@
 
 
 	include("./DSFonctionsPlus.php");
+	include("./DSFonctions.php");
 
 	function lecture_DS_pour_image($numero2question, $sujet2DS) {
 		if(file_exists($sujet2DS)) {//Pour récupérer le titre court 24 fevrier 2017
@@ -273,16 +274,24 @@
 					fclose($filetexte16);
 				}
 
+				$commentaire = get_commentaire("$repertoire_rep/CX$i.txt");
+				if($commentaire) ligne2tableau("<font color=\"red\">$commentaire</font>");
 			}
 			if($part[0]=="T") {//Réponse sous la forme de texte
 				$texte = trouve_texte("I$i",$repertoire_rep);
 				if($texte != "?") ligne2tableauRep($texte);
 				else ligne2tableau($texte);
+				
+				$commentaire = get_commentaire("$repertoire_rep/CX$i.txt");
+				if($commentaire) ligne2tableau("<font color=\"red\">$commentaire</font>");
 			}
 			if($part[0]=="U") {//Réponse sous la forme de texte
 				$texte = trouve_texte_long("I$i",$repertoire_rep);
 				if($texte != "?") ligne2tableauRep($texte);
 				else ligne2tableau($texte);
+
+				$commentaire = get_commentaire("$repertoire_rep/CX$i.txt");
+				if($commentaire) ligne2tableau("<font color=\"red\">$commentaire</font>");
 			}
 			if($part[0]=="L") {//Saut de page
 				$numero2page++;

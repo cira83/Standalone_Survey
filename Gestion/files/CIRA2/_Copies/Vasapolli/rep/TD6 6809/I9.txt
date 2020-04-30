@@ -1,0 +1,1 @@
+T1= 100sec en négligeant la légère variation entre 100 et 150sec

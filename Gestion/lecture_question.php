@@ -17,8 +17,18 @@
 		}
 		fclose($fp);	
 	}
-	else $ligne1 = "null###";//pas de fichier
+	else $ligne1 = "##";//pas de fichier
 	
-	if($nb_ligne) echo("$ligne1");
-	else echo("$ligne2$ligne1");
+	$ligne3 = "";
+	if(file_exists("$repertoire/RQ.txt")){
+		$fp = fopen("$repertoire/RQ.txt", "r");
+		while(!feof($fp)) {
+			$ligne3 = fgets($fp);
+		}
+		fclose($fp);
+		unlink("$repertoire/RQ.txt");
+	}	
+	
+	if($nb_ligne) echo("$ligne1$ligne3");
+	else echo("$ligne2$ligne1$ligne3");
 ?>

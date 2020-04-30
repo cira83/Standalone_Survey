@@ -1,0 +1,2 @@
+la mesure diminue jusqu'à que le débit d'entrée arrive a la même valeur que la commande puis la mesure augmente jusqu’à saturé
+

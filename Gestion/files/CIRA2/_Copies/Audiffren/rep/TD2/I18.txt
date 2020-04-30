@@ -1,0 +1,1 @@
+gain crit = 31 et la periode d'un carreaux est de 8 seconde donc la période total est de 20s

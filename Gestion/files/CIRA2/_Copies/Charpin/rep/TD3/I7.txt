@@ -1,0 +1,1 @@
+je propose de remplir le niveaux a fond, d'étalonner 20mA pour un niveaux max, et inversement 4mA pour un niveaux minimum.. Le niveaux max 120cm et niveaux min est de 0cm 

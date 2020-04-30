@@ -1,0 +1,3 @@
+Le système est intégrateur car quand l'entrée reste constante alors la sortie 
+  niveau est une droite croissante.
+

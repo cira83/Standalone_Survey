@@ -1,0 +1,1 @@
+quand la concnetration augmente il faut diminuer le tourne en rond pour arreter de chaufer la vanne étant NO il faut donc augmenter la sortie du régulateur pour diminuer la concentration et arreté de chauffer. Le sens d'action du régulateur est donc direct.

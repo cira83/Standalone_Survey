@@ -65,11 +65,18 @@
 						}					
 						cellule = document.getElementById(i);
 						celluleQ = document.getElementById('Q'+i);
+						celluleB = document.getElementById('B'+i);
+						bouche = '<img src="bouche.gif" height="15px" onclick="parle(\''+nom[i]+'\');">';
 						if(i<data[3]) {
 							cellule.innerHTML =  pastille_color(timer[i])+nom[i]+' '+nb_rep[i]+'<br>'+TP[i]+photo(classe, nom[i],laquestion);
 							celluleQ.innerHTML = interrogation;
+							celluleB.innerHTML = bouche;
 						}
-						else cellule.innerHTML = '';
+						else {
+							cellule.innerHTML = '';
+							celluleQ.innerHTML = '';
+							celluleB.innerHTML = '';
+						}
 					}	
 				};	
 				
@@ -131,6 +138,21 @@
 				refresh();
 				classe();
 			}	
+			
+			function parle(nom){
+				var question = 'Remarque à '+nom;
+				laremarque = prompt(question,'');
+				
+				var xhr = null;
+			    var xhr = new XMLHttpRequest();	
+			    
+			    if(laremarque) {
+				    chemin = './attention.php?remarque='+laremarque+'&lenom='+nom;	
+					xhr.open("GET", chemin, true);
+					xhr.send(null);
+				}
+
+			}
 		</script>
 	</head>
 	<body onload="debut()">
@@ -156,55 +178,55 @@
 			?>
 			<table><!-- ETUDIANTS -->
 				<tr>
-					<td id="0">----</td>
-					<td id="1">----</td>
-					<td id="2">----</td>
-					<td id="3">----</td>
-					<td id="4">----</td>
-					<td id="5">----</td>
+					<td id="0" colspan="2">----</td>
+					<td id="1" colspan="2">----</td>
+					<td id="2" colspan="2">----</td>
+					<td id="3" colspan="2">----</td>
+					<td id="4" colspan="2">----</td>
+					<td id="5" colspan="2">----</td>
 				</tr>
 				<tr>
-					<td id="Q0"></td>
-					<td id="Q1"></td>
-					<td id="Q2"></td>
-					<td id="Q3"></td>
-					<td id="Q4"></td>
-					<td id="Q5"></td>
-				</tr>
-
-				<tr>
-					<td id="6">----</td>
-					<td id="7">----</td>
-					<td id="8">----</td>
-					<td id="9">----</td>
-					<td id="10">----</td>
-					<td id="11">----</td>
-				</tr>
-				<tr>
-					<td id="Q6"></td>
-					<td id="Q7"></td>
-					<td id="Q8"></td>
-					<td id="Q9"></td>
-					<td id="Q10"></td>
-					<td id="Q11"></td>
+					<td id="Q0"></td><td id="B0"></td>
+					<td id="Q1"></td><td id="B1"></td>
+					<td id="Q2"></td><td id="B2"></td>
+					<td id="Q3"></td><td id="B3"></td>
+					<td id="Q4"></td><td id="B4"></td>
+					<td id="Q5"></td><td id="B5"></td>
 				</tr>
 
-
 				<tr>
-					<td id="12">----</td>
-					<td id="13">----</td>
-					<td id="14">----</td>
-					<td id="15">----</td>
-					<td id="16">----</td>
-					<td id="17">----</td>
+					<td id="6" colspan="2">----</td>
+					<td id="7" colspan="2">----</td>
+					<td id="8" colspan="2">----</td>
+					<td id="9" colspan="2">----</td>
+					<td id="10" colspan="2">----</td>
+					<td id="11" colspan="2">----</td>
 				</tr>
 				<tr>
-					<td id="Q12"></td>
-					<td id="Q13"></td>
-					<td id="Q14"></td>
-					<td id="Q15"></td>
-					<td id="Q16"></td>
-					<td id="Q17"></td>
+					<td id="Q6"></td><td id="B6"></td>
+					<td id="Q7"></td><td id="B7"></td>
+					<td id="Q8"></td><td id="B8"></td>
+					<td id="Q9"></td><td id="B9"></td>
+					<td id="Q10"></td><td id="B10"></td>
+					<td id="Q11"></td><td id="B11"></td>
+				</tr>
+
+
+				<tr>
+					<td id="12" colspan="2">----</td>
+					<td id="13" colspan="2">----</td>
+					<td id="14" colspan="2">----</td>
+					<td id="15" colspan="2">----</td>
+					<td id="16" colspan="2">----</td>
+					<td id="17" colspan="2">----</td>
+				</tr>
+				<tr>
+					<td id="Q12"></td><td id="B12"></td>
+					<td id="Q13"></td><td id="B13"></td>
+					<td id="Q14"></td><td id="B14"></td>
+					<td id="Q15"></td><td id="B15"></td>
+					<td id="Q16"></td><td id="B16"></td>
+					<td id="Q17"></td><td id="B17"></td>
 				</tr>
 
 			</table>

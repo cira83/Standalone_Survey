@@ -17,15 +17,15 @@
 	$menu_cause .= "<option value=\"+2 Tableau\">+2 Tableau*</option>";
 	$menu_cause .= "</select>";
 	
-	$nom = $_GET[nom];
-	$epr = $_GET[epr]; $epreuve = explode(".", $epr);
-	$mat = $_GET[mat];
+	$nom = $_GET['nom'];
+	$epr = $_GET['epr']; $epreuve = explode(".", $epr);
+	$mat = $_GET['mat'];
 	
 	
 	tableau("$accueil$classe</a></td><td><a href=\"./epreuve.php?mat=$mat&epr=$epr\">$epreuve[0]</a></td>");
 
 	//Upload d'une copie dans le repertoire de l'elève
-	if($_GET[action]==54){
+	if(my_GET("action")==54){
 		
 		// Création Repertoire de l'élève
 		$nom = un_nom($nom);
@@ -80,7 +80,10 @@
 	fclose($handle);
 	
 	$histo = "<table class=\"Px300G\">";
-	for($i=0;$i<count($ligne);$i++){
+	$note = "";////
+	$coef = "";
+	$rq = "";
+	for($i=0;$i<my_count($ligne);$i++){
 		$data = explode(":", $ligne[$i]); 
 		if($data[0]==$nom){
 			$note = $data[1];

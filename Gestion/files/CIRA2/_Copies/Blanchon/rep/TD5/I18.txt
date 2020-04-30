@@ -1,0 +1,1 @@
+La boucle cascade est plus rapide que la boucle simple et aussi que l'erreur statique est le depassement soient plus faible voir nulle 

@@ -1,5 +1,5 @@
 <?php
-	$nom = $_GET['nom'];
+	$nom = isset($_GET['nom'])?$_GET['nom']:"";
 	setcookie("nom", $nom,time()+3600*24*8,"/");
 	$nom_doc = $nom;
 	$titre_page = "$nom";

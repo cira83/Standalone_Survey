@@ -1,0 +1,1 @@
+la sortie sera donc de 20mA pour le niveaux max

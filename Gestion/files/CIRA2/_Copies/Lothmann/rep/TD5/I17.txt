@@ -1,0 +1,1 @@
+on utilise une régulation cascade quand la grandeur réglée est influencée par la grandeur perturbatrice

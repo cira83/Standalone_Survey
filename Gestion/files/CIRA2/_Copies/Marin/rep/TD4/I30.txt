@@ -1,0 +1,1 @@
+x=7/10*16+4=15.2mA pour une concentration : 85°Brix.

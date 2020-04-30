@@ -1,0 +1,1 @@
+premier dépassement 3%; erreur statique nulle ;  temps de réponse = 265 secondes

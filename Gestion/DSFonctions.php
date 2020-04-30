@@ -77,4 +77,16 @@
 		return $max;
 	}
 
+	function get_commentaire($filename){
+		$retour = "";
+		if(file_exists($filename)) {
+			$fp = fopen($filename, "r");
+			$retour = fgets($fp);
+			fclose($fp);
+		}
+		return($retour);
+	}
+	
+
+
 ?>

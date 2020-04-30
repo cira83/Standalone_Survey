@@ -1,0 +1,3 @@
+On ouvre les vannes 4 et 3 et on ferme la 1 et la 2
+Ensuit en fait en sorte que le capteur 0 en mettant une pression de 0.1 bar au point c et d, puis on augmente la pression en c de 0.0225 bar de sorte a obtenir 0.1225 bar tout en vérifiant la mesure du niveau jusqu’à 0.19 bar
+0.19bar = 2 m

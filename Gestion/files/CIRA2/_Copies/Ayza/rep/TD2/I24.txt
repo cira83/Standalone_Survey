@@ -1,0 +1,1 @@
+Temps de réponse à 10% = 60s, Valeur du premier dépassement = 3%

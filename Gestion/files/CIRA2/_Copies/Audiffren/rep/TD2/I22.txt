@@ -1,0 +1,1 @@
+pour avoir une réponses plus rapide il faudrait augmenter Td donc je vais prendre Td=3s

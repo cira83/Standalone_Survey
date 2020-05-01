@@ -60,6 +60,9 @@
 	$historique_select .= "<select name=\"histo\" onchange=\"redirect(this.value);\" style=\"max-width:150px;\"></select>";
 	if(!$passwordOK) $historique_select="";
 	$titre_page = isset($titre_page) ? $titre_page : basename($_SERVER['SCRIPT_NAME']);
+	$cookie_nom = isset($_COOKIE['nom'])?$_COOKIE['nom']:"no name";
+
+
 ?>
 <!--                                  DEBUT DU FICHIER                         -->
 <script type="text/javascript" src="./script.js"></script>
@@ -95,7 +98,7 @@
 			<td width="70px"><img src="./icon/ip.gif" height="30px" onclick="ip();"></td>
 			
 			<td><?php echo($listedesclasses);?></td>
-			<td><?php echo($_COOKIE['nom']);?></td>
+			<td><?php echo($cookie_nom);?></td>
 		<td align="right"><?php echo($historique_select);?></td>
 		</tr></table>
 <!-- haut.php -->

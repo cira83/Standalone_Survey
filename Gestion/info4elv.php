@@ -1,7 +1,7 @@
 <?php
-	include("./security.php");
+	//include("./security.php");
 	include("../head1.html");
-	
+	include("./lesfonctions.php");
 	echo("<title>NOTES $elv</title>");
 ?>		
 	<script type="text/javascript">
@@ -24,7 +24,7 @@
 	$files = "./files/";
 	$repertoire_copies =  "./files/$classe/_Copies";
 	
-	include("./lesfonctions.php");
+	
 	
 	if($password_OK){
 		echo("<table><tr><td colspan=2><p class=\"titre\">Les notes de $nom</p></td></tr></table>");

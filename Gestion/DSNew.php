@@ -1,10 +1,10 @@
 <?php
 	$titre = "Edition de DS";
 	include("./haut_DS2.php");
+	$filename_menu_lien = "./files/_Menu_Liens.txt";////
 	
 	$action = isset($_POST['action'])?$_POST['action']:(isset($_GET['action'])?$_GET['action']:"");
-	echo("<!-- action = $action -->");
-	//1. Nouveau Sujet 2.Editer sujet 3.Supprimer Ligne 4.Editer Ligne 5. Ajouter ligne 6. Saut de page
+	echo("<!-- action = $action -->"); //1. Nouveau Sujet 2.Editer sujet 3.Supprimer Ligne 4.Editer Ligne 5. Ajouter ligne 6. Saut de page
 	if($action==1) {
 		$TAG = isset($_POST['TAG'])?$_POST['TAG']:"TAG00";//nouveau sujet
 		$titre = isset($_POST['titre'])?$_POST['titre']:"Sans titre";
@@ -22,6 +22,7 @@
 	$repertoire_Sujets = "./files/$classe/_Copies/_Sujets/";
 	$repertoire_Images = "./files/$classe/_Copies/_Sujets/$TAG/img/";
 	$message = "";
+	$message2tete = "";
 
 
 	function add_event($events) {
@@ -37,6 +38,10 @@
 
 ?>
 <script>
+	function charge_lien(selex) {
+		var input = document.getElementById('lien');
+		input.value = selex.value;
+	}
 
 	function miseajour() {
         ip = document.getElementById("images");
@@ -104,7 +109,10 @@
 
 <?php
 	// FONCTIONS
-	include("./DSFonctions.php");//###
+	include("./DSFonctions.php");
+
+	$menu_liens = menu_lien($filename_menu_lien);////
+
 	$menu_balise = "<select id=\"menu_balise\" onchange=\"add_balise(this);\">";
 	$menu_balise .= "<option value=\"0\">----</option>";
 	$menu_balise .= "<option value=\"h2\">Titre 2</option>";
@@ -302,8 +310,8 @@
 		$message = "<table id=\"Edition\"><form method=\"POST\" action=\"./DSNew.php?action=41&ligne=$num2ligne&TAG=$TAG&page=$pageaafficher#Li$num2ligne\">";
 		$message .= "<tr><td bgcolor=\"white\"><textarea cols=\"90\" rows=\"5\" name=\"Champs\" id=\"Champs\">$part2ligne[1]</textarea></td><td width=\"100px\">";
 		$message .= "$icone<br>$Deroulant_image<br><br>$menu_balise<hr><input type=\"submit\"><input type=\"hidden\" id=\"tipe\" value=\"$part2ligne[0]\"></td><tr></form></table>";
-
-		$message .= "<table><tr><td>Lien vers <input type=\"text\" id=\"lien\" size=\"70px\"></td>";
+////
+		$message .= "<table><tr><td>$menu_liens</td><td>Lien vers <input type=\"text\" id=\"lien\" size=\"70px\"></td>";
 		$message .= "<td width=\"100px\"><input type=\"submit\" onclick=\"addlien();\" value=\"+ Lien\"></td><tr></table>";
 		if($part2ligne[0]=="Q") $message .= "<table><tr bgcolor=\"yellow\"><td>Mettre le nombre de points de la question après le # (séparateur décimal = .)</td><tr></table>";
 		//$message .= "<table><tr><td bgcolor=\"#0085cf\"><b>Edition ligne $num2ligne</b></td><tr></table>";
@@ -339,7 +347,7 @@
 		insert_ligne($chemin_du_sujet, $num2ligne,"L");
 	}
 
-	if($action==100) {//------------------------------------------------------------------- CHARGE IMAGES
+	if($action==100) {////------------------------------------------------------------------- CHARGE IMAGES
 		//on vérifie que le champ est bien rempli:
 		if(!empty($_FILES["fichier_choisi"]["name"])){
 			//nom du fichier choisi:
@@ -355,25 +363,23 @@
 
 			if(!file_exists($repertoire_Images)) {
 				mkdir($repertoire_Images);
-				$message .= "<table><tr><td>Répertoire image créé.</td><tr></table>";
+				$message2tete .= "<table><tr><td>Répertoire image créé.</td><tr></table>";
 			}
 
 			if(est_image($nomFichier)) {
-				if(copy($nomTemporaire, $repertoire_Images.$nomFichier)){
-					chmod("$repertoire_Images$nomFichier",0777);
-					$extension = substr(strrchr($nomFichier, '.'), 1);
-					$LDIMAGE = scandir($repertoire_Images);
-					$nbimageplus1 = count($LDIMAGE) - 2;
-					if($nbimageplus1<10) $nbimageplus1 = "0$nbimageplus1";//pour commencer par 01, 02 .....
-					$nomFichier_propre = "$nbimageplus1.$extension";
-					rename("$repertoire_Images$nomFichier", "$repertoire_Images$nomFichier_propre");
-					$message .= "<table><tr><td>Votre fichier <font color=\"blue\">$nomFichier</font> est sauvegardé.</td><tr></table>" ;
+				$LDIMAGE = scandir($repertoire_Images);
+				$nbimageplus1 = count($LDIMAGE) - 2;
+				$extension = substr(strrchr($nomFichier, '.'), 1);
+				if($nbimageplus1<10) $nbimageplus1 = "0$nbimageplus1";//pour commencer par 01, 02 .....
+				$nomFichier_propre = "$nbimageplus1.$extension";
+				if(copy($nomTemporaire, $repertoire_Images.$nomFichier_propre)){
+					$message2tete .= "<table><tr><td>Votre fichier <font color=\"blue\">$nomFichier</font> est sauvegardé.</td><tr></table>" ;
 				}
-				else $message .= "<table><tr><td>La sauvegarde a échouée !!</td><tr></table>" ;
+				else $message2tete .= "<table><tr><td>La sauvegarde a échouée !!</td><tr></table>" ;
 			}
-			else $message .= "<table><tr><td>Format non supporté</td><tr></table>" ;
+			else $message2tete .= "<table><tr><td>Format non supporté</td><tr></table>" ;
 		}
-		else $message .= "<table><tr><td>Pas de fichier choisi !!!</td><tr></table>" ;
+		else $message2tete .= "<table><tr><td>Pas de fichier choisi !!!</td><tr></table>" ;
 
 	}
 
@@ -398,6 +404,7 @@
 	$i = 1;
 	$pageaafficher_vu = intval($pageaafficher) + 1;
 	$vu_eleve = "</td><td><a href=\"./devoir.php?name=_Sujets/$TAG&file=./files/$classe/_Copies/_Sujets/$TAG&page=$pageaafficher_vu\" target=\"_blank\"><img src=\"./icon/sujet_mod.png\" height=\"40px\" title=\"Vu candidat\"/></a>";
+	echo($message2tete);
 	// Première Ligne avec le Titre
 	ligne($i,"X","<a href=\"./DSZone.php\"><img src=\"./icon/home.png\" height=\"20px\" title=\"Home\"/></a></td><td width=\"30px\"><a href=\"./DSNew.php?TAG=$TAG&action=101&page=$pageaafficher\"><img src=\"./icon/reload.png\" height=\"20px\" title=\"Annuler la derni&egrave;re modification\"/></a></td><td><font size=\"+3\">$TAG - $part[0]</font>$vu_eleve",$part[1],$quest,$page,$TAG,$pageaafficher);
 	if($i==$num2ligne) echo($message);

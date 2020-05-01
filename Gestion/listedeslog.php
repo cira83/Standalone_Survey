@@ -1,12 +1,15 @@
 <?php
 	include("./haut.php");
+	//$logindeseleves = "./files/$classe/_logindeseleves.txt";
+
+	echo("<!-- $logindeseleves -->");
 	if(file_exists($logindeseleves)){
 		$fp = fopen($logindeseleves, "r");
 		$i=0;
-		$content_tab = "";
+		$content_tab = "<tr bgcolor=\"white\"><td>Classe</td><td>Nom</td><td>Etat</td><td>Date</td><td>IP</td></tr>";
 		while (!feof($fp)){
 			$ligne26 = fgets($fp);
-			if($i!=0) $content_tab = "<tr>$ligne26</tr>".$content_tab;
+			$content_tab .= "<tr>$ligne26</tr>";
 			$i++;
 		}
 		fclose($fp);

@@ -2,9 +2,9 @@
 <?php
 	include("./grapheSVG_plus.php");//function graphe_plus($lanote,$filename)
 	
-	if(!$tabgphw) $tabgphw = "width=\"420px\"";
-	if(!$tabeprw) $tabeprw = "width=\"100px\"";
-	if(!$tabnotw) $tabnotw = "width=\"100px\"";
+	$tabgphw = "width=\"420px\"";
+	$tabeprw = "width=\"100px\"";
+	$tabnotw = "width=\"100px\"";
 
 	//LISTE LES MATIERES ET EPREUVES
 	$repertoire = "./files/$classe"; 	
@@ -117,7 +117,7 @@
 				}
 			}
 			if($somme_coef>0) $lamoyenne = number_format($somme_note/$somme_coef,2); else $lamoyenne = "";
-			$somme_sem[$periode-1] += floatval($coefmat)*floatval($coefmat);////
+			$somme_sem[$periode-1] += floatval($lamoyenne)*floatval($coefmat);////
 			if($lamoyenne != "") $somme_coef_sem[$periode-1] += $coefmat ;
 			$somme_note = 0;
 			$somme_coef = 0;

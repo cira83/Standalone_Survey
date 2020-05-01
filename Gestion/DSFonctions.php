@@ -1,4 +1,36 @@
 <?php
+	function menu_lien($filename){//// Retourne le menu des liens - Filename nom du fichier contenant titre,lien,
+		$menu = "<select id=\"menu_lien\" onchange=\"charge_lien(this);\">\n";
+		if(file_exists($filename)){
+			$fp = fopen($filename, "r");
+			$menu .= "<option>----</option>\n";
+			while(!feof($fp)){
+				$ligne = fgets($fp);
+				$part = explode(",", $ligne);
+				$menu .= "<option value=\"$part[1]\">$part[0]</option>\n";
+			}
+			fclose($fp);
+		}
+		else $menu .= "</option>$filename not found</option>\n";
+		$menu .= "</select >\n";
+		return($menu);
+	}
+	
+	function lien_vers($filename,$titre) {//// Retourne le lien pour javascript
+		$lien = "";
+		if(file_exists($filename)){
+			$fp = fopen($filename, "r");
+			while(!feof($fp)){
+				$ligne = fgets($fp);
+				$part = explode(",", $ligne);
+				if($titre==$part[0]) $lien = $part[1];
+			}
+			fclose($fp);
+		}
+		return($lien);				
+	}
+	
+	
 	function icone4lettre($lettre) {
 		$icone = "";
 		$SUP = "<img src=\"icon/Moins.gif\" title=\"Supprimer\"/>";

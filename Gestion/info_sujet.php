@@ -4,6 +4,8 @@
 	$part1 = explode("_link", $sujetlink);
 	$part0 = explode(".", $part1[1]); //echo($part[1]);
 	$part3 = explode("/", $sujetlink);
+	$info_sujet = "";
+	$ligne = array_fill(0, 10, "");
 	
 	if(my_GET("src")==1){
 		//affiche("Modification du fichier info : $sujetlink");
@@ -11,7 +13,7 @@
 		//affiche("Sujet : $sujet");
 		$cor = $_POST['ppt'];
 		//affiche("Correction : $cor");
-		$active = $_POST[active];
+		$active = $_POST['active'];
 		$bar= $_POST['xls'];
 		//affiche("Barème : $bar");
 		//affiche("Disponibles : $active");

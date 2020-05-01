@@ -21,6 +21,8 @@
 	$epr = $_GET['epr']; $epreuve = explode(".", $epr);
 	$mat = $_GET['mat'];
 	
+	$ligne = array_fill(0, 200, "");
+
 	
 	tableau("$accueil$classe</a></td><td><a href=\"./epreuve.php?mat=$mat&epr=$epr\">$epreuve[0]</a></td>");
 
@@ -71,10 +73,10 @@
 	$fichier = "./files/$classe/$mat/$epr"; //echo($fichier);
 	$handle = fopen($fichier, "r");
 	if($handle){
-		$i = 0;
+		$nb_ligne2020 = 0;//nb de ligne du fichier
 		while (!feof($handle)){
-			$ligne[$i] = fgets($handle); //echo("<p>$ligne[$i]</p>");
-			$i++;
+			$ligne[$nb_ligne2020] = fgets($handle); echo("<!-- $ligne[$i] -->");
+			$nb_ligne2020++;
 		}
 	}
 	fclose($handle);
@@ -83,15 +85,16 @@
 	$note = "";////
 	$coef = "";
 	$rq = "";
-	for($i=0;$i<my_count($ligne);$i++){
-		$data = explode(":", $ligne[$i]); 
+	for($i=0;$i<$nb_ligne2020;$i++){
+		$data = explode(":", $ligne[$i]);
+		echo("<!-- $data[0]==$nom -->\n"); 
 		if($data[0]==$nom){
 			$note = $data[1];
 			$coef = $data[2]; if($coef=="") $coef = 1;
 			$ladate = $data[3];
-			$url = $data[5];
-			$rq = $data[6];
-			$cause = $data[4];
+			$url = my_array_value($data,5);//$data[5];
+			$rq = my_array_value($data,6);//$data[6];
+			$cause = my_array_value($data,4);//$data[4];
 			
 			$histo .= "<tr><td>$note</td><td>$cause</td><td>$ladate</td></tr>";
 		}

@@ -3,14 +3,11 @@
 	include("./DS_Securite.php");// function DSMDP($classe, $elv);
 
 	$nom2eleve = isset($_GET['name']) ? $_GET['name'] : NULL;
-	//$nom2eleve = $_GET['name'];
 	$titre_copie = $_COOKIE['nom'];
 	$sujet2DS = isset($_GET['file']) ? $_GET['file'] : NULL;
-	//$sujet2DS = $_GET['file'];
 	$DS_password = DSMDP($classe, $nom2eleve);
 	$repertoire_rep = "./files/$classe/_Copies/$nom2eleve/rep/$DS_password";
 	$nom_court = "";
-
 
 	include("./DSFonctionsPlus.php");
 	include("./DSFonctions.php");

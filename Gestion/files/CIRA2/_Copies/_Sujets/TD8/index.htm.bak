@@ -1,0 +1,102 @@
+Production d'alcool absolu#TD8#
+C#L'industrie sucrière produit 135 kg de sucre à partir d'une tonne de betterave. À la fin du procédé de production de sucre, on obtient un résidu sirupeux : la mélasse. Grâce à sa forte teneur en sucre, la mélasse va être retraitée dans le but d'obtenir de l'éthanol.<br/>Après fermentation de la mélasse, on obtient de l'éthanol. Cet éthanol est alors concentré par distillation. Il est possible d'obtenir à la fin de ce processus un produit affichant une pureté de 95,6% en éthanol, le reste étant constitué d'eau.<br/>L'alcool absolu est ensuite obtenu par passage dans une colonne de déshydratation où le reliquat d'eau est retiré à l'aide d'un entraîneur hydrophile de type cyclohexane. À la fin de cette dernière étape, l'alcool titre à 99,98%. Ce dernier procédé, représenté par la colonne K1 de distillation servira de support pour la présente étude.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD8/img/01.gif">
+C#Le schéma ci-dessus représente le procédé de rectification de l'éthanol.<li>Le mélange eau-éthanol (noté I) alimente la colonne de déshydratation K1.</li><li>Un appoint en cyclohexane (noté S) est injecté dans la colonne K1.</li><li>L'éthanol déshydraté (noté E) est soutiré en pied de colonne K1.</li><li>En tête de colonne K1 la vapeur formée d'eau, d'éthanol résiduel et de cyclohexane est récupérée, puis condensée.</li><li>Les condensats sont dirigés vers le décanteur SE. On est ici en présence de deux phases : une phase légère et une phase lourde.</li><li>La phase légère est réinjectée dans la colonne K1. Elle constitue donc le reflux de la colonne K1. Ce reflux est nécessaire au bon fonctionnement de la colonne K1.</li><li>La phase lourde alimente la colonne K2.</li><li>L'eau pure est récupérée en pied de colonne K2.</li><li>La vapeur en tête de colonne K2 est constituée d'éthanol résiduel et de cyclohexane. Cette vapeur est condensée. Les condensats sont ensuite dirigés vers le décanteur SE.</li>
+C#Le contrôle et la régulation de grandeurs telles que le débit d’alimentation et sa température, le niveau en pied de colonne et la pression différentielle (pied/tête) sont nécessaires au bon fonctionnement de cette colonne.
+L#
+C#<h2>1. Mesure de la température du mélange eau-éthanol alimentant la colonne </h2>
+C#Le capteur est une sonde Pt100 (montage 2 fils) et le transmetteur en tête de sonde, 4 20 mA, est de type 2 fils. Ils sont respectivement repérés TE01 et TT01 sur le schéma TI.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD8/img/02.gif">
+C#L'étendue de mesure est comprise entre 0 °C et 100 °C.<br/>On désire contrôler l'ensemble sur un banc d'étalonnage, en utilisant un bain thermostaté. L’intensité du courant de sortie I<sub>S</sub> du transmetteur sera mesurée avec un milliampèremètre noté mA.
+L#
+Q#En s’aidant de la <a href="./files/CIRA2/_Copies/_Sujets/TD8/img/03.gif" target="_blank" >documentation constructeur</a>, réaliser le schéma de câblage de la chaîne de mesure.
+I#./files/CIRA2/_Copies/_Sujets/TD8/img/04.gif
+C#La sonde est plongée dans le bain thermostaté à la température T = 62 °C.
+Q#Quelle est la valeur I<sub>S</sub> de l'intensité du courant en sortie du transmetteur ?#
+T#
+C#Sur la plage de mesure considérée, on admettra que la loi de variation de la résistance R de la sonde Pt100, en fonction de la température T (en °C), est :<center>R = R0.(1+3,85.10<sup>-3</sup>.T) où R et R0 sont exprimés en ohms.</center>
+Q#Quelle est alors la valeur de la résistance R de la sonde ?
+T#
+Q#Pour quelle température T, la résistance de la sonde vaut R = 115,4 &Omega; ?
+T#
+L#
+C#<h2>Mesure de la pression différentielle entre le pied et la tête de la colonne </h2>
+C#Cette pression différentielle de la vapeur (formée d'eau, d'éthanol et de cyclohexane) qui monte du pied de la colonne K1 vers la tête de la colonne est liée aux pertes de charges, et donc au débit de cette vapeur au sein de la colonne.<br/>Une pression différentielle trop faible ralentit la production. Une pression différentielle trop forte peut provoquer l'engorgement de la colonne.<br/>Le capteur-transmetteur de pression différentielle est repéré PdT03 sur le schéma TI. Sa plage de mesure est comprise entre 0 et 50 mbar.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD8/img/02.gif">
+L#
+Q#On souhaite une ΔP positive. Préciser où doivent être reliées respectivement les prises HP (pression haute) et BP (pression basse) du PdT sur la colonne : quelle est la prise qui est reliée à la tête de la colonne et celle qui est reliée au pied de la colonne ? Justifier votre réponse.
+U#
+C#Le PdT est équipé d'une sortie courant 4-20 mA. On désire contrôler sa précision au voisinage du point de fonctionnement (25 mbar), en réalisant une étude statistique. Pour cela on utilise un calibrateur de pression de référence.<li>Étendue de mesure : 0-50 mbar</li><li>Sortie courant : 4-20 mA</li><li>Pression du calibrateur : 25 mbar ± 0,025 mbar</li>
+Q#On réalise 10 mesures pour une pression différentielle de 25 mbar affichée sur le calibrateur. Compléter le tableau suivant, la sortie en courant est proportionnelle à la différence de pression.#
+I#./files/CIRA2/_Copies/_Sujets/TD8/img/05.gif
+Q#Calculer la valeur moyenne &Delta;Pmoy de ces 10 mesures, en arrondissant chaque mesure au dixième le plus proche.
+T#
+Q#Déduire de cette moyenne une estimation de l'erreur systématique. 
+T#
+Q#Que peut-on en conclure quant à la justesse de la mesure ?
+U#
+L#
+C#<h2>Mesure de niveau en pied de colonne</h2>
+C#Cette mesure du niveau d'éthanol déshydraté, en pied de colonne K1, est réalisée à l'aide d'un capteur radar. <br/>Le capteur-transmetteur est repéré LT04 sur le schéma TI. 
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD8/img/02.gif" width="600px">
+C#Extrait de la <a href="./files/CIRA2/_Copies/_Sujets/TD8/img/06.gif" target="_blank" >documentation technique </a>du transmetteur LT4.
+Q#Expliquer, en quelques lignes, le principe de fonctionnement d'un capteur de niveau de type radar.
+U#
+Q#Donner l'erreur relative commise pour une mesure de niveau de 90 cm.
+T#
+L#
+C#<h2>Convertisseur I/P + vanne</h2>
+C#En pied de colonne K1, le liquide est maintenu à ébullition par un bouilleur à faisceau tubulaire monté en thermosiphon. Le débit de vapeur de chauffe est piloté par la vanne V3.<br/>La vanne, de type NF, reçoit un signal de commande pneumatique provenant du convertisseur I/P. La caractéristique de la vanne est linéaire.<br/>Le convertisseur I/P, à sortie standard pression (en mbar), est commandé par un courant électrique 4-20 mA. Il est alimenté en pression sous 1,4 bar.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD8/img/02.gif">
+L#
+Q#Compléter le tableau suivant.
+I#./files/CIRA2/_Copies/_Sujets/TD8/img/08.gif
+L#
+C#<h2>Régulation de pression différentielle dans la colonne</h2>
+C#On régule la pression différentielle afin d'éviter l'engorgement de la colonne et afin de maintenir un débit de production suffisant.<br/>En pied de colonne, c'est le débit de vapeur de chauffe qui va nous permettre de réguler la pression différentielle via le régulateur PdIC03 et la vanne V3, qui est de type NF.
+Q#Compléter le schéma TI de cette régulation.
+I#./files/CIRA2/_Copies/_Sujets/TD8/img/02.gif
+L#
+C#La fonction de transfert H3(p) reliant la pression différentielle au signal de commande du régulateur PdIC03 a été identifiée en utilisant le modèle de Broïda. Les paramètres du modèle sont : gain statique K = 0,7 ; constante de temps &tau; = 120 s ; retard T = 40 s.
+Q#Fournir l’expression de H3(p), en remplaçant les paramètres du modèle par leur valeur numérique.
+T#
+Q#En déduire le sens d’action du régulateur.
+T#
+C#On a réalisé différents essais de réglage du régulateur avec consigne qui passe de 50% à 60%.<li>Action P seule : Xp = 40%</li><li>Régulateur PI : Xp = 40%, Ti = 4 min</li><li>Régulateur PI : Xp = 40%, Ti = 2 min</li>
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD8/img/09.gif">
+Q#Déterminer à quel essai correspond chaque réponse. Justifier.
+U#
+L#
+C#<h2>Régulation de la température d’introduction du mélange eau-éthanol</h2>
+C#Le mélange eau-éthanol alimentant la colonne K1 est préchauffé par l'intermédiaire d'un échangeur.<br/>Afin d'éviter de « déséquilibrer » la colonne, la température du mélange doit être maintenue constante. Le débit de vapeur de chauffe nous permet de réguler la température via le régulateur TIC01 et la vanne V1, qui est de type NF.
+Q#Déterminer le sens d’action du régulateur. Justifier votre réponse.
+U#
+C#Le débit du mélange eau-éthanol perturbe de façon notable la température du mélange. On envisage alors une boucle de régulation mixte afin de minimiser les effets de cette perturbation.
+Q#Comment évolue la température du mélange quand son débit augmente ?
+U#
+L#
+Q#En déduire le schéma TI de cette stratégie de régulation.#
+I#./files/CIRA2/_Copies/_Sujets/TD8/img/02.gif
+C#Pour le correcteur de tendance, on se contente d'une correction statique.<br/>On réalise un essai autour du point de fonctionnement en l’absence de correcteur de tendance : quand le débit du mélange (mesuré par FT02) augmente de 10%, il faut augmenter le signal de commande de la vanne V1 de 12% afin de ramener la mesure de température au point de consigne.
+Q#Calculer la valeur du gain K<sub>T</sub> du correcteur statique de tendance.
+T#
+L#
+C#<h2>Régulation de niveau en pied de colonne</h2>
+C#L'éthanol « pur » (à 99,98%) est soutiré en pied de colonne. Le niveau M<sub>N</sub> en pied de colonne doit cependant être maintenu constant afin de ne pas perturber la chauffe.<br/>La régulation du niveau est réalisée en agissant sur le débit de soutirage via le régulateur LIC04 et la vanne V4, qui est de type NF.
+Q#Compléter le schéma TI de cette régulation.
+I#./files/CIRA2/_Copies/_Sujets/TD8/img/02.gif
+Q#En déduire le sens d’action du régulateur. Justifier votre réponse.
+U#
+L#
+C#Afin d’optimiser le réglage, on cherche à identifier ce procédé en réalisant un échelon sur la commande Yr de la vanne V4. Le procédé (vanne V4 + pied de colonne + LT04) est assimilé à un système du premier ordre.
+Q#Déterminer les valeurs du gain statique et de la constante de temps τ. Attention, le modèle proposé a un retard T de valeur nulle.#
+T#
+Q#Faire apparaitre les constructions qui vous ont permis de répondre à la question précédente sur la réponse indicielle.
+I#./files/CIRA2/_Copies/_Sujets/TD8/img/10.gif
+L#
+C#Le régulateur LIC04 est réglé avec un correcteur PI, de gain A4 et de temps intégrale Ti4. On désire une fonction de transfert en boucle fermée de la forme :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD8/img/11.gif">
+Q#Déterminer la valeur du gain A4 et du temps intégrale Ti4.
+T#
+Q#Quelle est  alors la valeur de G<sub>bf</sub> ?
+T#

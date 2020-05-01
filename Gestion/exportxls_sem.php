@@ -1,8 +1,11 @@
 <?php
 	header ("Content-type: text/plain");//Pour le faire considérer par le système comme un fichier texte et non html
 	
-	$sem = $_GET[sem];
-	$classe = $_GET[classe];
+	$sem = $_GET['sem'];
+	$classe = $_GET['classe'];
+	$note = array_fill(0, 100, "");
+	$couple = array_fill(0, 100, "");
+	$txt_output = "";
 
 	$directory = "./files/$classe";
 	$repertoires = scandir($directory);

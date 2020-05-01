@@ -2,20 +2,15 @@
 	include("./security.php");
 	include("../Dropbox.php");
 	include("../head1.html");
+	include("lespetitesfonctions.php");
+	
 
 	$nom = $elv;
 	$password = $password;
 	$classe = $classe;
 	$files = "./files/";
 	$repertoire_copies =  "./files/$classe/_Copies";
-
-	$doc_elv_1 = $_GET['doc'];
-	if($doc_elv_1) {
-		$password_OK = $doc_elv_1;
-		$nom = $doc_elv_1;
-	}
-
-
+	$nb_ligne = 0;
 
 ?>
 	<title>Documents <?php echo($nom);?></title>
@@ -44,13 +39,15 @@
 		if(!file_exists($filename_of_elv)) echo("<center><table><tr><td>Pas encore de répertoire !!</td></tr></table></center>");
 		else {
 			$listeD = scandir($filename_of_elv);
-			if(count($listeD)>1){
+			$listeD_count = count($listeD);
+			if($listeD_count>1){
 				$rep_nom = "./files/$classe/_Documents/rep_$nom.txt";
 				$fp = fopen($rep_nom,"w");//Fichier qui liste le contenu du répertoire élève
-				foreach($listeD as $name){
+				for($i=2;$i<$listeD_count;$i++){
+					$name = $listeD[$i];
 					$part = explode(".", $name);
 					if($name=="index.htm") $part=0;
-					if($part[1]) {
+					if(isset($part[1])) {
 						if($nb_ligne>0) fprintf($fp,"\n$name,$filename_of_elv/$name");
 						else {
 							$nb_ligne++;
@@ -59,7 +56,6 @@
 					}
 				}
 				fclose($fp);
-				chmod($rep_nom,0777);
 				Dropbox("",$rep_nom);
 			}
 		}

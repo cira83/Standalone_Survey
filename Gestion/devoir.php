@@ -456,7 +456,7 @@
 				<td width="52px"><img src="./icon/Code4.gif" height="30px" title="Code du sujet" onclick="alert('<?php echo($copie_password); ?>');"></td>
 				<td width="52px">
 <?php //###
-				if(!file_exists("../B800")) 
+				if(!file_exists("../B800_")) 
 					echo("<a href=\"../tui.image-editor/editor/\" target=\"_blank\"><img src=\"icon/image_editor.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");
 				else 
 					echo("<a href=\"./index7.php\"><img src=\"icon/home.png\" width=\"50px\" title=\"Editeur d'image\"\></a>");	

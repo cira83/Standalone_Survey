@@ -66,11 +66,11 @@
 	}
 	fclose($fp);
 	
-	
-	if($_GET[action]==1){
-		$data1 = $_POST[jour];
-		$data2 = $_POST[mois];
-		$data3 = $_POST[texte];
+	$get_action = isset($_GET['action'])?$_GET['action']:"";
+	if($get_action==1){
+		$data1 = $_POST['jour'];
+		$data2 = $_POST['mois'];
+		$data3 = $_POST['texte'];
 		if($data2<8) $codedate="2$data2$data1";
 		else $codedate="1$data2$data1";
 		$ligne12[$i]="<td><input type=\"hidden\" value=\"$codedate\">$data1</td><td>$data2</td><td>$data3</td>"; 

@@ -5,6 +5,7 @@ function sommaire_document($sujet2DS){
 		$fp = fopen($sujet2DS, "r");
 		$ligne = fgets($fp);
 		$i=0;
+		$sommaire_td = "";
 		while(!feof($fp)){
 			$ligne = fgets($fp);
 			$part = explode("#", $ligne);

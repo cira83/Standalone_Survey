@@ -19,6 +19,13 @@
 	
 	if($Mdp==$prof_password) $drap = 2;
 	
+	$file_log = "./files/$classe/_logindeseleves.txt";
+	$date = date('l jS \of F Y h:i:s A');
+	$ip = $_SERVER['REMOTE_ADDR'];
+	$phrase = "\n<td>$classe</td><td>$elv</td><td>$drap</td><td>$date</td><td>$ip</td>";
+	$fp2 = fopen($file_log, "a");
+	fwrite($fp2, $phrase);
+	fclose($fp2);
 	//Mauvais login = 0 ; Bon login = 1 ; Prof login = 2 ;
 	echo("$drap");	
 ?>

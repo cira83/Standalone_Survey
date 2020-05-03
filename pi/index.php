@@ -157,7 +157,7 @@
 	</head>
 	<body onload="debut()">
 			<table><tr><!-- ENTETE -->
-				<td width="50px"><a href="../Gestion/DSZone.php" title="Appel"><img src="../Gestion/icon/home.png" height="40px"></a></td>
+				<td width="50px"><a href="../Gestion/appel.php" title="Appel"><img src="../Gestion/icon/home.png" height="40px"></a></td>
 				<td width="50px"><img src="../Gestion/icon/ip.gif" height="40px" onclick="ip();"></td>
 				<td width="150px"><font size="-1">18 élèves<br>maximum</font></td>
 				<td align="center"><font size="+2">TP CIRA</font></td>

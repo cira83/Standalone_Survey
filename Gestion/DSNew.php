@@ -368,12 +368,12 @@
 
 			if(est_image($nomFichier)) {
 				$LDIMAGE = scandir($repertoire_Images);
-				$nbimageplus1 = count($LDIMAGE) - 2;
+				$nbimageplus1 = count($LDIMAGE) - 1;
 				$extension = substr(strrchr($nomFichier, '.'), 1);
 				if($nbimageplus1<10) $nbimageplus1 = "0$nbimageplus1";//pour commencer par 01, 02 .....
 				$nomFichier_propre = "$nbimageplus1.$extension";
-				if(copy($nomTemporaire, $repertoire_Images.$nomFichier_propre)){
-					$message2tete .= "<table><tr><td>Votre fichier <font color=\"blue\">$nomFichier</font> est sauvegardé.</td><tr></table>" ;
+				if(copy($nomTemporaire, "$repertoire_Images$nomFichier_propre")){
+					$message2tete .= "<table><tr><td>Votre fichier <font color=\"blue\">$nomFichier</font> est sauvegardé vers $nomFichier_propre.</td><tr></table>" ;
 				}
 				else $message2tete .= "<table><tr><td>La sauvegarde a échouée !!</td><tr></table>" ;
 			}

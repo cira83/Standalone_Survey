@@ -114,7 +114,7 @@
 	<center>
 		<table>
 		<tr>
-			<td width="50px"><a href="./index.php" title="Appel"><img src="./icon/home.png" height="25px"></a></td>
+			<td width="50px"><a href="./appel.php" title="Appel"><img src="./icon/home.png" height="25px"></a></td>
 			<td width="50px"><a href="../pi" title="Pi"><img src="../pi/pi.png" height="25px"></a></td>
 			<td><?php echo($listedesclasses);?></td>
 			<td><?php echo($_COOKIE['nom']);?></td>

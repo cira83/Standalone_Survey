@@ -184,7 +184,7 @@
 				$ligne = fgets($fp2020);
 				$part = explode(":", $ligne);
 				$part3 = explode("/", $part[1]);
-				$id .= "<font color=\"green\">$part3[2]/$part3[3] $part3[1]h$part3[0]</font><br><font size=\"-1\">$part3[2]</font><br>$part[0]<br>";
+				$id .= "<font color=\"green\">$part3[2]/$part3[3] $part3[1]h$part3[0]</font><br><font size=\"-1\">$part[2]</font><br>$part[0]<br>";
 				fwrite($fp_liste, "$part[0]:");
 			}
 			fclose($fp2020);

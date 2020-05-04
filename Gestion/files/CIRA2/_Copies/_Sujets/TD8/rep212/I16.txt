@@ -1,0 +1,1 @@
+Quand on augmente la commande de TIC01, la vanne s'ouvre, le débit de vapeur augmente ce qui fait augmenter la température. Le procédé est direct, il faut régler le régulateur avec une action inverse.

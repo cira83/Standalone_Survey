@@ -78,7 +78,7 @@
 		$select2 = creer_select($listeNom,2);
 		$select3 = creer_select($listeDetat,3);
 		$select5 = creer_select($listeIP,5);
-		$ligne1 = "<table><tr><td>Nom : $select2</td><td>Etat : $select3</td><td>IP : $select5</td></tr></table>";
+		$ligne1 = "<table><tr><td>Nom : $select2</td><td>Type : $select3</td><td>IP : $select5</td></tr></table>";
 	}
 
 

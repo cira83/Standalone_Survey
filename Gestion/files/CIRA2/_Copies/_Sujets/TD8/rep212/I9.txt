@@ -1,0 +1,1 @@
+Le capteur radar émet une onde acoustique et il mesure le temps d'aller-retour de cette onde pour mesurer le niveau.

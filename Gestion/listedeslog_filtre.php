@@ -41,7 +41,7 @@
 		}
 		fclose($fp);
 		
-		echo("<tr bgcolor=\"yellow\"><td>Classe</td><td>Nom</td><td>Etat</td><td>Date</td><td>IP</td></tr>");
+		echo("<tr bgcolor=\"yellow\"><td>Classe</td><td>Nom</td><td>Type</td><td>Date</td><td>IP</td></tr>");
 		echo($content_tab);
 		
 		//Fichier à supprimer

@@ -1,0 +1,1 @@
+Comme K est positif, le procédé est direct, donc il faut régler le régulateur avec une action inverse.

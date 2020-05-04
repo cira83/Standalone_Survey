@@ -1,0 +1,3 @@
+Essai 1 : Courbe (c), car il reste une erreur statique.
+Essai 2 : Courbe (a), car dépassement plus grand que (b).
+Essai 3 : Courbe (b), car dépassement plus petit que (c).

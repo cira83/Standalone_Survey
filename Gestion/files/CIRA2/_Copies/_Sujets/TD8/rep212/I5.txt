@@ -1,0 +1,1 @@
+La vapeur monte dans la colonne, donc la prise HP est en bas (pied de colonne) et la prise BP est en haut (tête de colonne). 

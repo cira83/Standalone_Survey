@@ -32,7 +32,7 @@
 	
 	
 			$part_5 = rtrim($part_5);
-			if($filtre) {
+			if(strlen($filtre)) {
 				if(($id==2)&&($part_2!="$filtre</td>")) $ligne1 = "";
 				if(($id==3)&&($part_3!="$filtre</td>")) $ligne1 = "";
 				if(($id==5)&&($part_5!="$filtre</td>")) $ligne1 = "";

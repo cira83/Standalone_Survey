@@ -44,12 +44,13 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 	function nouveau_comment($numero,$repelv) {
-		$nouveau_commentaire = "<img src=\"./icon/bouche.gif\" height=\"15px\" onclick=\"commentaire($numero,'$repelv');\">";
+		$nouveau_commentaire = "<img src=\"./icon/bouche.gif\" height=\"15px\" onclick=\"commentaire($numero,'$repelv');\" title=\"Commentaire\">";
 		return $nouveau_commentaire;
 	}
 
 	function ligne_tab_Q($case1,$case2,$case3,$case4,$num_quest) {//Pour une question
-		return("<table id=\"T$num_quest\"><tr><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>");
+		$ligne = "<table id=\"T$num_quest\"><tr><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>";
+		return($ligne);
 	}
 
 	function ligne_tab_C($case1,$num_quest) {//Commentaire prof
@@ -57,7 +58,10 @@
 	}
 
 	function ligne_tab($case1,$case2,$case3,$case4) {//Ligne normale
-		return("<table><tr><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>");
+		$ligne = "<table><tr><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>";
+		if($case1=="") 
+		$ligne = "<table><tr><td align=\"left\" width=\"800px\" bgcolor=\"#e0C0C0\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>";
+		return($ligne);
 	}
 
 

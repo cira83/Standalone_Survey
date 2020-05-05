@@ -51,7 +51,7 @@
 	
 	//-------------------------------------------------------------------------------------
 	
-	$listeDetat = "";
+	$listeDetat = "0:1:2:";
 	$listeNom = "";
 	$listeIP = "";
 	if(file_exists($logindeseleves)){
@@ -69,7 +69,6 @@
 			if(strpos("_$part_3", "0")) $ligne1 = "<tr bgcolor=\"red\">$ligne26</tr>";
 			$content_tab = $ligne1.$content_tab;
 			$listeNom = add2listpt($part_2,$listeNom);
-			$listeDetat = add2listpt($part_3,$listeDetat);
 			$listeIP = add2listpt($part_5,$listeIP);
 			$i++;
 		}

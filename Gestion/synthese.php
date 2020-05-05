@@ -31,8 +31,9 @@
 		$periode = periode($tableaudesmatieres[$j]);//fournie la periode des epreuves
 		$lelien6 = "<a href=\"./matiere.php?mat=$tableaudesmatieres[$j]\">";
 		$tableaudesmatieres_j = my_array_value($tableaudesmatieres,$j);
-		if($periode==1) $ligne1[0] .= "<td>---></td><td>$lelien6$tableaudesmatieres_j</a></td>";
-		else $ligne2[0] .= "<td>---></td><td>$lelien6$tableaudesmatieres[$j]</a></td>";
+		$coefmat = coefmat($tableaudesmatieres_j); 
+		if($periode==1) $ligne1[0] .= "<td>---></td><td>$lelien6$tableaudesmatieres_j <br>($coefmat)</a></td>";
+		else $ligne2[0] .= "<td>---></td><td>$lelien6$tableaudesmatieres_j <br>($coefmat)</a></td>";
 		$repertoire = "./files/$classe/$tableaudesmatieres[$j]";
 		$eprsynth = scandir($repertoire);
 		sort($eprsynth);
@@ -122,7 +123,7 @@
 	//Construction du tableau
 	$tableau = "<table class=\"C100\">";
 	$ligne[0] .= "$ligne1[0] <td><font color=\"red\">Sem 1</font></td>";
-	$ligne[0] .= "$ligne2[0] <td><font color=\"red\">Sem 2</font></td><td><font color=\"green\">Ann&eacute;e</font></td>";
+	$ligne[0] .= "$ligne2[0] <td><font color=\"red\">Sem 2</font></td><td><font color=\"green\">Année</font></td>";
 	$tableau .= "<tr>$ligne[0]</tr>";//entête	
 	for($i=1;$i<count($leleve)+1;$i++) {
 		$coef_year = 0;$year=0;

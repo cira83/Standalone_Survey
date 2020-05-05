@@ -1,6 +1,4 @@
 <?php
-	$titre = "Edition de DS";
-	include("./haut_DS2.php");
 	$filename_menu_lien = "./files/_Menu_Liens.txt";////
 	
 	$action = isset($_POST['action'])?$_POST['action']:(isset($_GET['action'])?$_GET['action']:"");
@@ -10,6 +8,10 @@
 		$titre = isset($_POST['titre'])?$_POST['titre']:"Sans titre";
 	}
 	else $TAG = isset($_POST['TAG'])?$_POST['TAG']:(isset($_GET['TAG'])?$_GET['TAG']:"TAG00");
+
+
+	$titre = "Edition $TAG";
+	include("./haut_DS2.php");
 	
 	$num2ligne = isset($_GET['ligne'])?$_GET['ligne']:0;
 	$champs = isset($_POST['Champs'])?$_POST['Champs']:""; //$champs = str_replace("%", "p0ur100", $champs);

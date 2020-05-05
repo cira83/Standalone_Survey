@@ -59,7 +59,7 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="styles_sujet.css">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<link rel="icon" type="image/jpg" href="./icon/favicon.jpg" />
-		<title>Edition DS</title>
+		<title><?php echo($titre);?> </title>
 	</head>
 	
 	<body onload="tailledelafenetre();">

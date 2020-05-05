@@ -1,3 +1,5 @@
+/Gestion/DSZone.php
+/Gestion/appel.php
 /Gestion/appel.php
 /Gestion/matiere.php?mat=TP%202
 /Gestion/matiere.php?mat=TP%201
@@ -12,5 +14,3 @@
 /Gestion/appel.php
 /Gestion/new.php
 /Gestion/appel.php
-/Gestion/planning.php?action=3&ladate=21/01
-/Gestion/planning.php?action=3&ladate=07/01

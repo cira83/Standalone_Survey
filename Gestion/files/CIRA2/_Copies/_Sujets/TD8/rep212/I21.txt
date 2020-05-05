@@ -1,0 +1,1 @@
+Quand on augmente la commande du régulateur LIC04, la vanne V4 s'ouvre, le niveau mesuré par LT04 baisse. Le procédé est inverse, il faut régler le régulateur avec une action directe.

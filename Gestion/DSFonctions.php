@@ -1,5 +1,5 @@
 <?php
-	function menu_lien($filename){//// Retourne le menu des liens - Filename nom du fichier contenant titre,lien,
+	function menu_lien($filename,$classe,$TAG){//// Retourne le menu des liens - Filename nom du fichier contenant titre,lien,
 		$menu = "<select id=\"menu_lien\" onchange=\"charge_lien(this);\">\n";
 		if(file_exists($filename)){
 			$fp = fopen($filename, "r");
@@ -12,6 +12,15 @@
 			fclose($fp);
 		}
 		else $menu .= "</option>$filename not found</option>\n";
+		
+		//Ajout des images
+		$repertoire_image = "./files/$classe/_Copies/_Sujets/$TAG/img"; 
+
+		$liste_images = scandir($repertoire_image);
+		for($i=2;$i<count($liste_images);$i++){
+			$menu .= "<option value=\"$repertoire_image/$liste_images[$i]\">$liste_images[$i]</option>\n";
+		}
+		
 		$menu .= "</select >\n";
 		return($menu);
 	}

@@ -52,7 +52,7 @@ function bandeau($repertoire_elv,$code) {
 	$repertoireDreponses = "$repertoire_elv/rep/$code";
 	if(file_exists($repertoireDreponses))	$elements = scandir($repertoireDreponses);
 	else $elements[0] = "";
-	for($i=1;$i<count($coef)+1;$i++) {
+	for($i=1;$i<count($coef);$i++) {
 		$note_L = "<a href=\"#Q$i\" ><img src=\"./icon/X.gif\" title=\"Q$i\"></a>";
 		if(in_array("N$i.txt", $elements)) {
 			$fp = fopen("$repertoireDreponses/N$i.txt", "r");
@@ -79,7 +79,7 @@ function bandeau($repertoire_elv,$code) {
 		if($i==1) $sommaire_td .= "$note_L";
 		else $sommaire_td .= "</td><td>$note_L";
 	}
-	$retour[1] = "<font size=\"+3\" color=\"red\">$note_C/$total</font>";
+	$retour[1] = "<font size=\"+3\" color=\"red\">$note_C</font>/$total";
 	$retour[0] = $sommaire_td;
 	return $retour;
 }

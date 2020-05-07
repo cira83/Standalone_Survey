@@ -1,0 +1,14 @@
+Audiffren:Absent:-1:
+Ayza:Pr&eacute;sent:+1:
+Bichon:Pr&eacute;sent:+1:
+Blanchon:Pr&eacute;sent:+1:
+Charpin:Pr&eacute;sent:+1:
+Chevillard:Pr&eacute;sent:+1:
+Feyrit:Pr&eacute;sent:+1:
+Lothmann:Pr&eacute;sent:+1:
+Marin:Absent:-1:
+Mrabet:Pr&eacute;sent:+1:
+Sanna:Pr&eacute;sent:+1:
+Sibilo:Pr&eacute;sent:+1:
+Vasapolli:Pr&eacute;sent:+1:
+Vincent:Pr&eacute;sent:+1:

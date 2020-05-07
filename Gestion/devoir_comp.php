@@ -49,7 +49,7 @@
 	}
 
 	function ligne_tab_Q($case1,$case2,$case3,$case4,$num_quest) {//Pour une question
-		$ligne = "<table id=\"T$num_quest\"><tr><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>";
+		$ligne = "<table id=\"T$num_quest\"><tr bgcolor=\"#aafffb\"><td align=\"left\" width=\"800px\">$case1</td><td width=\"50px\">$case2</td><td width=\"50px\">$case3</td><td align=\"left\" width=\"800px\">$case4</td></tr></table>";
 		return($ligne);
 	}
 

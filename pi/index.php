@@ -57,7 +57,8 @@
 						if(question[i]) {
 							laquestion = question[i].toString();
 							lenom = nom[i].toString();
-							interrogation = '<img src="PI_orange.gif" height="20px" id="' + laquestion + '" onclick="repondre(this.id,\''+lenom+'\');">';
+							interrogation = '<img src="Question.gif" height="20px" id="' + laquestion + '" onclick="repondre(this.id,\''+lenom+'\');">';
+							sonnerie();
 						}
 						else {
 							interrogation = '';	
@@ -77,7 +78,7 @@
 							celluleQ.innerHTML = '';
 							celluleB.innerHTML = '';
 						}
-					}	
+					}
 				};	
 				
 				request.send();
@@ -91,7 +92,7 @@
 				cellule.innerHTML = retour;
 			}
 
-			setInterval(refresh, 1000);
+			setInterval(refresh, 3000);
 			
 			function repondre(question,nom){
 				lareponse = prompt(question,'');
@@ -137,6 +138,7 @@
 			function debut(){
 				refresh();
 				classe();
+				sonnerie();
 			}	
 			
 			function parle(nom){
@@ -153,9 +155,15 @@
 				}
 
 			}
+			
+			function sonnerie(){
+				var audio = new Audio('SW.mp3');
+				audio.play();
+				
+			}
 		</script>
 	</head>
-	<body onload="debut()">
+	<body onload="debut();">
 			<table><tr><!-- ENTETE -->
 				<td width="50px"><a href="../Gestion/appel.php" title="Appel"><img src="../Gestion/icon/home.png" height="40px"></a></td>
 				<td width="50px"><img src="../Gestion/icon/ip.gif" height="40px" onclick="ip();"></td>
@@ -230,5 +238,6 @@
 				</tr>
 
 			</table>
+			<audio id="SW" src="SW.mp3"></audio>
 	</body>
 </html>

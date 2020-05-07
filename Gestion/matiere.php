@@ -19,6 +19,9 @@
 	$titre_page = "$matieres";
 	include("./haut.php");
 	$casetab = array_fill(0, 500, 0);
+	$somme_note = array_fill(0, 500, 0);
+	$coef = array_fill(0, 500, 0);
+
 	
 	$fichier_coef = "./files/$classe/_Coef $titre_page.txt";
 	if(!file_exists($fichier_coef)) {

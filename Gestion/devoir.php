@@ -451,7 +451,7 @@
 		<center>
 		<table>
 			<tr>
-				<td width="52px" bgcolor="#fff" id="stateQ"><img src="../pi/Question.gif" width="40px" onclick="question(this);" id="bullebd"></td>
+				<td width="52px" bgcolor="#fff" id="stateQ"><img src="./icon/Question.gif" width="40px" onclick="question(this);" id="bullebd"></td>
 				<td><font size="+5"><?php echo($titredudocument);?></font></td>
 				<td width="52px"><img src="./icon/Code4.gif" height="30px" title="Code du sujet" onclick="alert('<?php echo($copie_password); ?>');"></td>
 				<td width="52px">

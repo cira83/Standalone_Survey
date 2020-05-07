@@ -178,7 +178,7 @@
 	}
 
 
-	$sommaire_td = bandeau("./files/$classe/_Copies/$nom2eleve",$DS_password);
+	$sommaire_td = bandeau("./files/$classe/_Copies/$nom2eleve",$DS_password);// Dans DSFonctionPlus
 	if($cestleprof) $sommaire_td[1] = "";
 ?>
 <!-- __________________________________________________________________________________________ DEBUT DU DOCUMENT ___________________ -->

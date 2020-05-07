@@ -1,5 +1,5 @@
 <?php
-	$valeur = $_GET[valeurs];
+	$valeur = $_GET['valeurs'];
 	$classe = $_COOKIE['laclasse'];
 
 	$part = explode(":", $valeur);

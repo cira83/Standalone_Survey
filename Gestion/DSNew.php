@@ -113,7 +113,7 @@
 	// FONCTIONS
 	include("./DSFonctions.php");
 
-	$menu_liens = menu_lien($filename_menu_lien);////
+	$menu_liens = menu_lien($filename_menu_lien,$classe,$TAG);////
 
 	$menu_balise = "<select id=\"menu_balise\" onchange=\"add_balise(this);\">";
 	$menu_balise .= "<option value=\"0\">----</option>";

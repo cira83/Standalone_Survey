@@ -5,7 +5,7 @@
 	echo("<!-- action = $action -->"); //1. Nouveau Sujet 2.Editer sujet 3.Supprimer Ligne 4.Editer Ligne 5. Ajouter ligne 6. Saut de page
 	if($action==1) {
 		$TAG = isset($_POST['TAG'])?$_POST['TAG']:"TAG00";//nouveau sujet
-		$titre = isset($_POST['titre'])?$_POST['titre']:"Sans titre";
+		$titreDOC = isset($_POST['titre'])?$_POST['titre']:"Sans titre";
 	}
 	else $TAG = isset($_POST['TAG'])?$_POST['TAG']:(isset($_GET['TAG'])?$_GET['TAG']:"TAG00");
 
@@ -267,7 +267,7 @@
 	$chemin_du_sujet = $repertoire_du_sujet."/index.htm";
 	if(!file_exists($chemin_du_sujet)) {
 		$fp = fopen($chemin_du_sujet, "a");
-		fwrite($fp, "$titre#$TAG\n");
+		fwrite($fp, "$titreDOC#$TAG#\n");
 		fwrite($fp, "C#");
 		echo("<p>Sujet créer </p>");
 		fclose($fp);

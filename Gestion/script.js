@@ -1,3 +1,30 @@
+var mytempo;
+
+function myInfo(nom) {
+  mytempo = setTimeout(function(){lecture_json(nom)}, 3000);//2 s avant affichage des infos
+}
+
+function myStopInfo() {
+  clearTimeout(mytempo);
+}
+
+function lecture_json(nom){
+	var request = new XMLHttpRequest();
+	var reponse;
+	var source = './infos_json.php?nom='+nom;
+	
+	request.open('GET', source);
+	request.responseType = 'text';
+	
+	request.onload = function() {
+		data = request.response;
+		//message = data.nom+' - '+data.prenom+' - '+data.Motdepasse;
+		alert(data);
+	};	
+	
+	request.send();
+}
+
 function message(msg){
     if (window.webkitNotifications) {
         if (window.webkitNotifications.checkPermission() == 0) {
@@ -53,3 +80,4 @@ function out(){
 function gotolien(lien){
 	window.location.replace(lien);
 }
+

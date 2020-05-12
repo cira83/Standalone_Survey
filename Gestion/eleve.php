@@ -4,9 +4,17 @@
 	$nom_doc = $nom;
 	$titre_page = "$nom";
 	include("./haut.php");
-	$fichierdesnoms = "./files/$classe.txt";
-	
+	$fichierdesnoms = "./files/$classe.txt";	
 	$repertoireClasse= "./files/$classe/_Copies";
+	
+	//Creation du repertoire _JSON
+	$json_file = "./files/$classe/_JSON";
+	if(!file_exists("$json_file")) mkdir($json_file);
+	$json_elv = "$json_file/$nom.json";
+	$json_fp = fopen($json_elv, "w");
+	//fwrite($json_fp, "{\n");
+	//json_add($json_fp,"Nom",$nom);
+	
 	if(!file_exists($repertoireClasse)){
 		mkdir($repertoireClasse);
 		affiche("Répertoire $repertoireClasse créé");
@@ -44,6 +52,10 @@ function precedent_suivant($liste2nom,$nom){
 		}
 	}
 	return $names;
+}
+
+function json_add($json_fp,$object,$value) {
+	fwrite($json_fp, "$object : $value \n");
 }
 
 //____________________________________________________________
@@ -102,12 +114,12 @@ function precedent_suivant($liste2nom,$nom){
 			$ligne = fgets($fp);
 			$nomlu = explode(":", $ligne);
 			if($nomlu[0]==$nom){
-				$prenom = $nomlu[1];
+				$prenom = $nomlu[1]; json_add($json_fp,"Prenom",$prenom);
 				$naissance = $nomlu[2];
-				$passe = $nomlu[3];
+				$passe = $nomlu[3]; //json_add($json_fp,"Motdepasse",$passe);
 				$tel = $nomlu[4];
 				$mail = $nomlu[5];
-				$origine = $nomlu[6];
+				$origine = $nomlu[6]; json_add($json_fp,"Origine",$origine);
 				$remarque = $nomlu[7];
 				$demission = $nomlu[8];
 				$sem1 = $nomlu[9];
@@ -126,7 +138,7 @@ function precedent_suivant($liste2nom,$nom){
 	//Fiche de l'élève
 	echo("<table>");
 	echo("<tr><td>$laphoto<br/></td>");
-	$champs = champs("nom",$nom);
+	$champs = champs("nom",$nom); 
 	echo("<td align=\"left\">[0] Nom : $champs<br/>");
 	$champs = champs("Prenom",$prenom);
 	echo("\n[1] Prenom : $champs<br/>");
@@ -188,6 +200,9 @@ function precedent_suivant($liste2nom,$nom){
 	echo("<tr><td>\n[9] :<input type=\"text\" name=\"Sem1\" value=\"$sem1\" size=\"100\"></td></tr>");
 	echo("<tr><td>\n[10] :<input type=\"text\" name=\"Sem2\" value=\"$sem2\" size=\"100\"></td></tr>");
 	echo("</table>");
+	
+	
+
 ?>
 </form>
 <table><form name="envoie fichier" enctype="multipart/form-data" method="post" action="./eleve.php?modif=2">
@@ -195,8 +210,15 @@ function precedent_suivant($liste2nom,$nom){
 <td><input name="bouton" value="Envoyer le fichier" type="submit"></td></tr>
 </form></table>
 
-<?php 
+
+
+<?php
+	$json_open = 1;	
 	include("./eleve4all.php");
 ?>
 
-<?php include("./bas.php");?>
+<?php 
+	//fwrite($json_fp, "}\n");
+	fclose($json_fp);
+	include("./bas.php");
+?>

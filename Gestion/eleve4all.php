@@ -5,6 +5,8 @@
 	$tabgphw = "width=\"420px\"";
 	$tabeprw = "width=\"100px\"";
 	$tabnotw = "width=\"100px\"";
+	if(!isset($json_open)) 	$json_open = 0;	
+
 
 	//LISTE LES MATIERES ET EPREUVES
 	$repertoire = "./files/$classe"; 	
@@ -128,6 +130,7 @@
 			//Moyenne dans la matière ###
 			$file_image = $files."$classe/_$lamatiere.svg";	
 			$legraphe = graphe_plus($lamoyenne,$file_image);
+			if($json_open) json_add($json_fp,"$lamatiere ($coefmat)",$lamoyenne);
 			
 			echo("\n<!-- matière --><table class=\"notes\">");
 			if($lamoyenne != "") echo("<tr><td>La moyenne de $font_orange$lamatiere</font> est $lamoyenne ($coefmat) <br/>qui compte pour le semestre $periode </td><td $tabgphw>$legraphe</td></tr>");

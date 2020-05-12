@@ -1,4 +1,16 @@
 <?php
+	function lecture_commentaires($num_Q, $chemin) {
+		$filename = "$chemin/CX$num_Q.txt";
+		$retour = "";
+		if(file_exists($filename)){
+			$fp = fopen($filename, "r");
+			$retour = fgets($fp);
+			fclose($fp);
+		}
+		return($retour);
+	}
+	
+	
 	function menu_lien($filename,$classe,$TAG){//// Retourne le menu des liens - Filename nom du fichier contenant titre,lien,
 		$menu = "<select id=\"menu_lien\" onchange=\"charge_lien(this);\">\n";
 		if(file_exists($filename)){
@@ -16,13 +28,15 @@
 		//Ajout des images
 		$repertoire_image = "./files/$classe/_Copies/_Sujets/$TAG/img"; 
 
-		$liste_images = scandir($repertoire_image);
-		for($i=2;$i<count($liste_images);$i++){
-			$menu .= "<option value=\"$repertoire_image/$liste_images[$i]\">$liste_images[$i]</option>\n";
+		if(file_exists($repertoire_image)) {
+			$liste_images = scandir($repertoire_image);
+			for($i=2;$i<count($liste_images);$i++){
+				$menu .= "<option value=\"$repertoire_image/$liste_images[$i]\">$liste_images[$i]</option>\n";
+			}
+			
+			$menu .= "</select >\n";
+			return($menu);
 		}
-		
-		$menu .= "</select >\n";
-		return($menu);
 	}
 	
 	function lien_vers($filename,$titre) {//// Retourne le lien pour javascript

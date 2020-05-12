@@ -183,7 +183,7 @@
 	echo("<a href=\"./geo.php?nomfichier=$filesave\">");
 	include("grapheSVG_fct.php");
 	include("grapheSVG.php");
-	echo("</a>");
+	echo("</a>$savefileicon");
 	
 	
 	include("./bas.php");

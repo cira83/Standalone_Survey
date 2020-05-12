@@ -1,0 +1,87 @@
+Centrale de traitement de l’air (CTA)#TD10#BTS 2011
+C#Le rôle d’une CTA est de renouveler l’air ambiant d’un local en maintenant la température et le taux d’hygrométrie de celui-ci à des valeurs constantes mais ajustables.<br/>La CTA est située à l’extérieur du bâtiment, généralement en toiture.<br/>Elle peut être affectée à la climatisation d’une seule pièce ou de plusieurs (multi-zoning) suivant le volume d’air à traiter.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD10/img/01.gif">
+C#La CTA étudiée fonctionne à débit d’air constant et traite 5 000 m<sup>3</sup>.h<sup>-1</sup>.<br/>Elle est affectée à un atelier comportant des instruments de précision nécessitant un contrôle précis de la température et de l’humidité.<br/>L’air neuf est mélangé, à l’aide de registres, à de l’air repris dans le local afin de préchauffer l’air neuf et travailler en récupération d’énergie.<br/>Ce mélange est ensuite filtré par les deux filtres mécaniques à poussière, puis chauffé ou refroidi par la batterie chaude ou la batterie froide.<br/>La batterie de préchauffage ne sert qu’à maintenir l’installation hors gel.<br/>La batterie froide est alimentée en eau glycolée par un groupe froid.<br/>La batterie chaude est alimentée en eau chaude par une chaudière.<br/>Le groupe froid et la chaudière alimentent plusieurs CTA dans l’entreprise.<br/>Un humidificateur par pulvérisation de vapeur permet de modifier l’hygrométrie du local.
+L#
+C#Les mesures de température et d’humidité sont assurées par une sonde d’ambiance <a href="./files/CIRA2/_Copies/_Sujets/TD10/img/02.gif" target="_blank" >Siemens QFA66</a>.
+C#<h2>Mesure de la température dans l’atelier</h2>
+C#La sonde d’ambiance utilise un capteur dénommé Pt100, montage 2 fils.
+Q#Que signifie Pt100 ? Quel est le principe de ce type de capteur ?
+U#
+C#Le transmetteur est relié à un système numérique de contrôle commande (SNCC) Siemens acceptant des entrées en tension et à un enregistreur numérique également à entrées tension.<br/>La plage de température que l’on désire utiliser est 0 – 50°C.
+Q#En s’aidant de la documentation sur la sonde d’ambiance <a href="./files/CIRA2/_Copies/_Sujets/TD10/img/02.gif" target="_blank" >Siemens QFA66</a>, réaliser le schéma de câblage de la mesure de température en indiquant les polarités des appareils, ainsi que les valeurs des tensions, des courants et des résistances éventuelles mises en œuvre.#
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/03.gif
+Q#Pourquoi, dans ce cas, un capteur montage 3 fils n’est-il pas nécessaire ?
+U#
+L#
+C#<h2>Mesure de l’humidité relative dans l’atelier</h2>
+C#Cette humidité est mesurée par un capteur capacitif de capacité :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD10/img/04.png">
+Q#Dans cette formule, quel est le paramètre modifié par l’humidité de l’air ?
+T#
+Q#À partir de la documentation constructeur de la sonde d’ambiance <a href="./files/CIRA2/_Copies/_Sujets/TD10/img/02.gif" target="_blank" >Siemens QFA66</a>, calculer la sensibilité (s en V.%<sup>-1</sup> ) de cette sonde.#
+T#
+C#<h2>Choix et dimensionnement de la vanne de régulation TV1</h2>
+C#Cette vanne est une vanne Masoneilan série 21000.
+Q#Le corps de vanne est de type « fluide tendant à ouvrir la vanne ». Justifier cette expression.
+U#
+Q# Compléter le document ci-dessous par 2 flèches indiquant le sens de circulation du fluide.#
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/05.gif
+L#
+Q#Quel servomoteur doit-on associer au corps de vanne (type 37 ou type 38) pour obtenir une vanne FMA ? Préciser sur le schéma de la vanne la position de l’arrivée d’air pour commander cette vanne.
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/06.gif
+C#L’association corps de vanne / servomoteur a une caractéristique « installée » dite : « égal pourcentage ».
+Q#Préciser la signification de cette expression.
+U#
+L#
+C#La vanne est à clapet tourné non équilibré et à siège pincé.
+Q#Fournir la codification correspondant à cette vanne.
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/07.gif
+L#
+C#On souhaite obtenir une vanne à caractéristique linéaire entre l’ouverture (en %) et le signal de commande Yr (en %). Pour cela, on équipe la vanne d’un positionneur intelligent.
+Q#Pour le positionneur, placer les points correspondants à la course de la tige du clapet pour les commandes Yr suivantes : 0%, 20%, 50%, 80% et 100%.<br/>Tracer la caractéristique course (%) en fonction de la commande Yr (%).
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/08.gif
+L#
+C#<h2>Calcul du CV de la vanne</h2>
+C#<li>Type de fluide : eau.</li><li>ρ = 1 000 kg.m<sup>-3</sup>pour les conditions de fonctionnement.</li><li>Tension de vapeur de l’eau est égale à 2 bar à la température de fonctionnement.</li><li>Débit d’eau maximal = 20 m<sup>3</sup>.h<sup>-1</sup>.</li><li>La chute de pression dans la vanne est estimée à 3 bar.</li><li>La pression amont de la vanne est de 6 bar.</li><li>Le facteur de débit critique de la vanne (Cf) est de 0,9.</li><li><a href="./files/CIRA2/_Copies/_Sujets/TD10/img/09.gif" target="_blank" >Documentation constructeur.</a></li>
+Q#Déterminer le type d’écoulement (critique ou non). Utiliser la relation ∆P s= P1- Pv.
+T#
+Q#Calculer numériquement la valeur du CV de la vanne.
+T#
+L#
+C#<h2>Étude de la boucle « courte » de température dans l’atelier</h2>
+C#Le schéma TI de la boucle simple de température est fourni ci-dessous. <br/>Pour un régulateur TIC2 en fonctionnement manuel, une réponse indicielle en boucle ouverte est réalisée à partir du point de fonctionnement de 20°C.<br/>Remarque : Les vannes TV01 et TV02 sont fermées par manque d’air (NF).
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD10/img/10.gif">
+Q#Identifier la fonction de transfert H(p) du procédé sous la forme d’un premier ordre retardé, par la méthode de Broïda ( fournir les valeurs des paramètres K, T, !).
+T#
+Q#Faire apparaitre sur le graphique les constructions qui vous permis de répondre à la question précédente.
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/11.gif
+L#
+C#Le schéma fonctionnel de la boucle de température est le suivant :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD10/img/12.gif">
+C#À l’aide d’un logiciel de simulation, il est possible de tracer le diagramme de Black de T(p), pour différents réglages du correcteur C(p).<br/>Avec les valeurs suivantes (A = 1, Ti = 150s), on obtient la courbe n° 1. Les valeurs des marges de stabilités étant trop importantes, on décide de modifier les réglages du régulateur.
+Q#Pour obtenir la courbe n° 2, un paramètre du régulateur a été modifié, lequel, et dans quel sens ?
+T#
+Q#Pour obtenir la courbe n° 3, un autre paramètre du régulateur a été modifié. Lequel et dans quel sens ?
+T#
+Q#Faire apparaitre la marge de gain Gm et la marge de phase &phi;m pour la courbe n° 3.
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/13.gif
+L#
+C#<h2>Régulation à partage d’échelle</h2>
+C#En réalité, la régulation de température est une régulation à partage d’échelle (ou split range) agissant sur la batterie chaude et la batterie froide. Le bloc de partage est réalisé dans le SNCC et aboutit à 2 sorties standards Y<sub>Chaud</sub> et Y<sub>Froid </sub>, les équations de partage étant :
+C#<li>Y<sub>Chaud</sub> = A.Y + B = 2.Y - 100 ;</li><li>Y<sub>Froid</sub> = C.Y + D = -2,5.Y + 100.</li>
+C#Y étant la valeur de sortie du correcteur C(p). Y, Y<sub>Chaud</sub> et Y<sub>Froid</sub> sont exprimés en %.
+Q#Quelle est la particularité de cette stratégie de régulation ? Quels sont les avantages apportés par celle-ci par rapport à une boucle simple ?
+U#
+Q#Tracer le diagramme de partage en signaux de commande : Y<sub>Chaud</sub> = f(Y) et Y<sub>Froid </sub> = f(Y) sur le même schéma. On utilisera le logiciel <a href="../EasyGraph" target="_blank" >EasyGraph</a>.#
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/14.png
+Q#Quelle est la particularité de ce diagramme ? Quel en est l’intérêt ?
+U#
+L#
+Q#Réaliser le schéma TI de cette régulation sur le document réponse n° 4.
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/15.gif
+Q#Compte tenu du diagramme de partage, déterminer par un raisonnement clair le sens d’action du régulateur TIC 02.
+U#
+L#
+Q#Pour obtenir la régulation de température du local mesurée par le transmetteur TT01, déterminer la stratégie nécessaire et compléter le document réponse ci-dessous.#
+I#./files/CIRA2/_Copies/_Sujets/TD10/img/15.gif

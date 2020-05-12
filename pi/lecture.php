@@ -48,7 +48,7 @@
 					$code4 = fgets($fp);
 					fclose($fp);
 					$dossier_rep = "$repertoire_documents/$nom/rep/$code4";	
-					if(file_exists($dossier_rep)) $listerep = scandir($dossier_rep);
+					if(file_exists($dossier_rep)) $listerep = preg_grep("/I(\w+)/", scandir($dossier_rep)) ;
 				}
 				else $listerep[0]=0;
 				$number = intval(count($listerep))-2;

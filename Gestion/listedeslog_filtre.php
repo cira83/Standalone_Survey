@@ -21,12 +21,16 @@
 		while (!feof($fp)){
 			$ligne26 = fgets($fp);
 			$part = explode("<td>", $ligne26);
-			$ligne1 = "<tr>$ligne26</tr>";
+			$part_1 = my_array_value($part,1);
 			$part_2 = my_array_value($part,2);
 			$part_3 = my_array_value($part,3);
+			$part_4 = my_array_value($part,4);
 			$part_5 = my_array_value($part,5);
-			if(strpos("_$part_3", "1")) $ligne1 = "<tr bgcolor=\"white\">$ligne26</tr>";
-			if(strpos("_$part_3", "0")) $ligne1 = "<tr bgcolor=\"red\">$ligne26</tr>";
+			$ip = explode("</td>", $part_5);
+			$ligne27 = "<td>$part_1<td>$part_2<td>$part_3<td>$part_4<td onclick=\"locate_ip('$ip[0]');\">$part_5";
+			$ligne1 = "<tr>$ligne27</tr>";
+			if(strpos("_$part_3", "1")) $ligne1 = "<tr bgcolor=\"white\">$ligne27</tr>";
+			if(strpos("_$part_3", "0")) $ligne1 = "<tr bgcolor=\"red\">$ligne27</tr>";
 	
 	//echo("<!-- id=$id  $part_5!=$filtre</td> ? -->\n");
 	

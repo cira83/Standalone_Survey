@@ -1,5 +1,6 @@
 /Gestion/appel.php
 /Gestion/appel.php
+/Gestion/appel.php
 /Gestion/DSZone.php
 /Gestion/appel.php
 /Gestion/appel.php
@@ -13,4 +14,3 @@
 /Gestion/DSZone.php?action=20202&name=toto1
 /Gestion/DSZone.php?action=20201&name=toto1
 /Gestion/DSZone.php?action=20202&name=toto2
-/Gestion/DSZone.php?action=20201&name=toto2

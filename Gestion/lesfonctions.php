@@ -545,7 +545,8 @@
 		for($i=0;$i<count($lesnom);$i++) {
 			$filephoto = "./files/$classe/_Photos/$lesnom[$i].jpg";
 			if(file_exists($filephoto))
-				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"$filephoto\" height=\"133px\" style=\"border:solid 4px $couleur;\" id=\"$nom\"/></a>";
+				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"$filephoto\" height=\"133px\" style=\"border:solid 4px $couleur;\" id=\"$nom\"/ 
+				onmouseover=\"myInfo('$nom');\" onmouseout=\"myStopInfo();\"></a>";
 			else
 				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/----.jpg\" height=\"133px\" style=\"border:solid 4px $couleur;\"id=\"$nom\"/></a>";
 		}

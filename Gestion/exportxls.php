@@ -1,9 +1,8 @@
 <?php
 	header ("Content-type: text/plain");//Pour le faire considérer par le système comme un fichier texte et non html
 	
-	$filesave = $_GET[filesave];
-	$file = $_GET[file]; $part = explode(".", $file);
-	$moy = $_GET[moy];
+	$filesave = $_GET['filesave'];
+	$file = $_GET['file']; $part = explode(".", $file);
 	
 	if(file_exists($filesave)){
 		$fp = fopen($filesave, "r");

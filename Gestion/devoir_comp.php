@@ -192,7 +192,8 @@
 				$reponse_prof = lire_reponse("$rep_prof",$num_question,$part_prof[0]);
 				$nouveau_commentaire = nouveau_comment($num_question,$rep_elv);
 				$content.=ligne_tab($reponse_elv,"<a href=\"#entete\">$note_elv[0]</a><br/><br/>$nouveau_commentaire",$notation,$reponse_prof);
-				$content.=ligne_tab_C("",$num_question);
+				$le_commentaire_enregistre = lecture_commentaires($num_question, $rep_elv);
+				$content.=ligne_tab_C("<font color=\"red\">$le_commentaire_enregistre</font>",$num_question);
 				$feuille2notes .= "<td><b>$num_question</b>|</td><td><a href=\"#T$num_question\">$note_elv[1]</a></td>";
 			}
 			if($part_elv[0]=="I"){
@@ -202,7 +203,8 @@
 				$reponse_prof = lire_reponse("$rep_prof",$num_question,$part_prof[0]);
 				$nouveau_commentaire = nouveau_comment($num_question,$rep_elv);
 				$content.=ligne_tab($reponse_elv,"<a href=\"#entete\">$note_elv[0]</a><br/><br/>$nouveau_commentaire",$notation,$reponse_prof);
-				$content.=ligne_tab_C("",$num_question);
+				$le_commentaire_enregistre = lecture_commentaires($num_question, $rep_elv);
+				$content.=ligne_tab_C("<font color=\"red\">$le_commentaire_enregistre</font>",$num_question);
 				$feuille2notes .= "<td><b>$num_question</b>|</td><td><a href=\"#T$num_question\">$note_elv[1]</a></td>";
 			}
 			if($part_elv[0]=="C") {

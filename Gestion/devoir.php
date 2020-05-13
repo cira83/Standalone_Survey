@@ -352,8 +352,6 @@
 		$Message = "--> Votre réponse '$reponse' est sauvegard&eacute;e" ;
 	}
 
-	if(!file_exists($repertoire_rep)) mkdir($repertoire_rep, 0777);//-------------------------------------------         Création du répertoire réponse si non existant
-
 	//
 	if(!$prof_login) {
 		//Gestion des sessions
@@ -413,16 +411,18 @@
 		}
 
 		//Liste des réponses
-		$liste_fichier = scandir($repertoire_rep);
-		foreach($liste_fichier as $reponse) {
-			if(strpos("_$reponse", "I")) {
-				$part1 = explode("I", $reponse);
-				$part2 = explode(".", $part1[1]);
-				//$bulle[$part2[0]-1]=$fait;
-				$bulle[$part2[0]-1] = str_replace($non_fait, $fait, $bulle[$part2[0]-1]);
+		if(file_exists($repertoire_rep)){
+			$liste_fichier = scandir($repertoire_rep);
+			foreach($liste_fichier as $reponse) {
+				if(strpos("_$reponse", "I")) {
+					$part1 = explode("I", $reponse);
+					$part2 = explode(".", $part1[1]);
+					//$bulle[$part2[0]-1]=$fait;
+					$bulle[$part2[0]-1] = str_replace($non_fait, $fait, $bulle[$part2[0]-1]);
+				}
 			}
 		}
-
+		
 		//On construit les bulles
 		$le_bon_message = "";
 		$wall2 = 0;
@@ -483,6 +483,7 @@
 
 $_SESSION['sujet2DS'] = $filename;
 if($DS_password == $copie_password) {
+	if(!file_exists($repertoire_rep)) mkdir($repertoire_rep, 0777);//-------------------------------------------         Création du répertoire réponse si non existant
 	if($Message) echo("<p><font color=\"#0000FF\">$Message</font></p>");
 
 	if(sujet_ouvert($filename,$repertoire_rep,$password_OK)) echo(sujet_ouvert($filename,$repertoire_rep,$password_OK));//Affichage du problème si existe

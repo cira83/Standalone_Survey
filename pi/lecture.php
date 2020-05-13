@@ -3,7 +3,14 @@
 	$ligne = fgets($fp);
 	fclose($fp);
 	
-	
+
+	function ping() {
+		$output = shell_exec('ping -c 1 8.8.8.8');
+		$part_ping1 = explode("time=",$output);
+		$part_ping2 = explode(" ",$part_ping1[1]);
+		return($part_ping2[0]);		
+	}
+
 	function my_in_array($mot,$tableau){
 		$k = 0;
 		foreach($tableau as $valeur) 
@@ -73,8 +80,8 @@
 		}
 	}
 	
-
+	$ping = ping();
 	
-	$information = "$liste_actif#$liste_tempo#$liste_rep#$nb_actif#$classe#$TP#$file_info#$liste_question";
+	$information = "$liste_actif#$liste_tempo#$liste_rep#$nb_actif#$classe#$TP#$file_info#$liste_question#$ping#";
 	echo("$information");
 ?>

@@ -47,6 +47,7 @@
 				request.onload = function() {
 					data = request.response.split("#");
 					classe = data[4];
+					ping = data[8];
 					nom = data[0].split(':');
 					timer = data[1].split(':');
 					TP = data[5].split(':');
@@ -79,6 +80,10 @@
 							celluleB.innerHTML = '';
 						}
 					}
+					cellule_ping = document.getElementById('ping');
+					
+					cellule_ping.innerHTML = '<font color="white" size="-2">'+ping+'</font>';
+;
 				};	
 				
 				request.send();
@@ -182,6 +187,7 @@
 				echo("<td bgcolor=\"white\" width=\"30px\" align=\"center\"><font size=\"-2\">1 min</font></td><td bgcolor=\"$jaune_t\"></td>");
 				echo("<td bgcolor=\"white\" width=\"30px\" align=\"center\"><font size=\"-2\">20 s</font></td><td bgcolor=\"$vert_t\"></td>");
 				echo("<td bgcolor=\"white\" width=\"10px\" align=\"center\"><font size=\"-2\">0</font></td>");
+				echo("<td bgcolor=\"black\" width=\"30px\" align=\"center\" id=\"ping\"></td>");
 				echo("</tr></table>");	
 			?>
 			<table><!-- ETUDIANTS -->

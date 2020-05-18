@@ -353,10 +353,10 @@
 	}
 
 	//
+	$sessions_file_name = $repertoire_rep1."sessions.txt";
 	if(!$prof_login) {
 		//Gestion des sessions
 		$date_ext = date("i/G/d/m");
-		$sessions_file_name = $repertoire_rep1."sessions.txt";
 		if(!file_exists($sessions_file_name)) {
 			echo("<script>premier(\"$DS_password\");</script>");
 			$session_fp = fopen($sessions_file_name, "w");

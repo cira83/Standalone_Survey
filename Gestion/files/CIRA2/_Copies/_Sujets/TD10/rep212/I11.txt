@@ -1,0 +1,4 @@
+∆Ps = P1 - Pv = 6 - 2 = 4 ; 
+Cf²∆Ps = 0,9²x4 = 3,24 > ∆P (3 bar)
+L'écoulement est non critique.
+

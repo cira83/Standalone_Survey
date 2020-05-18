@@ -1,0 +1,1 @@
+La PT100 est une sonde résistive (sa résistance varie en fonction de la température) en platine qui à une résistance de 100 Ω pour une température de 100 °C.

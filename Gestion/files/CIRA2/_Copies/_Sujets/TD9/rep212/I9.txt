@@ -1,0 +1,2 @@
+ATEX : Zone explosive.
+La zone 0 a une atmosphère explosive qui est constamment, généralement ou fréquemment présente.

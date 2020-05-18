@@ -1,0 +1,1 @@
+4.2.	La courbe 2 correspond à la courbe 1 décalée vers le haut. La paramètre modifié est le gain A du régulateur. Il a été augmenté.

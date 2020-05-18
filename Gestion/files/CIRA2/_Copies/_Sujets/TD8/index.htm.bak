@@ -85,7 +85,7 @@ Q#En déduire le sens d’action du régulateur. Justifier votre réponse.#0.5
 U#
 L#
 C#Afin d’optimiser le réglage, on cherche à identifier ce procédé en réalisant un échelon sur la commande Yr de la vanne V4. Le procédé (vanne V4 + pied de colonne + LT04) est assimilé à un système du premier ordre H4(p).
-Q#Déterminer les valeurs du gain statique et de la constante de temps τ. Attention, le modèle proposé a un retard T de valeur nulle.#
+Q#Déterminer les valeurs du gain statique et de la constante de temps τ. Attention, le modèle proposé a un retard T de valeur nulle.#0.5
 T#
 Q#Faire apparaitre les constructions qui vous ont permis de répondre à la question précédente sur la réponse indicielle.#0.5
 I#./files/CIRA2/_Copies/_Sujets/TD8/img/10.gif

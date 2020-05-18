@@ -1,0 +1,1 @@
+Des accroissements égaux du signal de commande de vanne provoquent des accroissements égaux de débit relatif.

@@ -6,89 +6,85 @@ C#<li>V : vitesse de l’onde (m.s<sup>-1</sup>) ;</li><li>∆t : durée entre l
 C#La vitesse du son varie en fonction de la température de l’air selon la relation :
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD9/img/01.png">
 C#<li>Vo : vitesse du son à 0 °C (soit 331,5 m.s<sup>-1</sup> ) ;</li><li>Vs : vitesse du son à la température T ;</li><li>T : température de l’air en kelvin (K).</li>
-Q#Le capteur est placé au-dessus de la cuve vide à une distance de 20 m. Calculer la durée du parcours entre l’instant d’émission et l’instant de la réception pour une onde sonore se déplaçant dans de l’air à 0 °C.
+Q#Le capteur est placé au-dessus de la cuve vide à une distance de 20 m. Calculer la durée du parcours entre l’instant d’émission et l’instant de la réception pour une onde sonore se déplaçant dans de l’air à 0 °C.#0.5
 T#
-Q#Calculer la durée du parcours entre l’émission et la réception pour une onde sonore émise se déplaçant dans un milieu à 30 °C lorsque la cuve est vide.
+Q#Calculer la durée du parcours entre l’émission et la réception pour une onde sonore émise se déplaçant dans un milieu à 30 °C lorsque la cuve est vide.#0.5
 T#
 C#Le capteur ne dispose pas de compensation de température et a été calibré à la température de 0 °C.
-Q#Calculer la valeur de la mesure donnée par le capteur lorsque la cuve est vide pour la température ambiante de 30 °C.
-T#
-Q#En déduire l’erreur relative commise sur la mesure.
+Q#En déduire l’erreur relative commise sur la mesure.#0.5
 T#
 L#
-C#Les capteurs à ultrasons sont munis de compensateurs en température, cependant le choix se porte sur une mesure de niveau de type radar. Le transmetteur à radar fonctionne suivant le même principe, l’onde exploitée est électromagnétique. Un capteur de type « <a href="./files/CIRA2/_Copies/_Sujets/TD9/img/02.gif" target="_blank" >vegapuls 62 </a>» est retenu. L’étendue de mesure est de 20 m.<br/><br/><u>On rappelle :</u> la vitesse de la lumière dans l’air c = 300 000 km.s<sup>-1</sup>.
-Q#Quelle durée maximale va mettre l’onde pour effectuer un aller-retour entre le capteur et la surface du liquide ?
+C#Les capteurs à ultrasons sont munis de compensateurs en température, cependant le choix se porte sur une mesure de niveau de type radar. Le transmetteur à radar fonctionne suivant le même principe, l’onde exploitée est électromagnétique. Un capteur de type « <a href="./files/CIRA2/_Copies/_Sujets/TD9/img/02.gif" target="_blank" >vegapuls 62 </a>» est retenu. L’étendue de mesure est de 20 m.
+Q#Pour une distance mesurée de 20 m, déterminer « l’erreur » absolue de ce capteur. <br/>Remarque : le terme approprié pour « l’erreur » est incertitude.#0.5
 T#
-Q#Pour une distance mesurée de 20 m, déterminer « l’erreur » absolue de ce capteur. <br/>Remarque : le terme approprié pour « l’erreur » est incertitude.
+Q#Pour cette même distance, quelle est « l’erreur » en mA sur la mesure pour une information fournie au standard 4-20 mA ?#0.5
 T#
-Q#Pour cette même distance, quelle est « l’erreur » en mA sur la mesure pour une information fournie au standard 4-20 mA ?#
-T#
-Q#Une mesure effectuée a donné I = 14,48 mA. Est-elle acceptable pour un niveau mesuré de 13,2 m ?#
+Q#Une mesure effectuée a donné I = 14,48 mA. Est-elle acceptable pour un niveau mesuré de 13,2 m ?#0.5
 T#
 L#
 C#<h2>Choix du capteur de pression de la cuve FA201</h2>
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD9/img/03.gif">
 C#<u>Cahier des charges </u><li>Cette cuve doit être maintenue à une pression de 0,5 bar absolu.</li><li>La plateforme chimique impose un agrément ATEX.</li><li>Le capteur doit fournir un signal en courant standardisé.</li><li>Le capteur doit pouvoir être configuré à distance.</li><li>Le capteur doit avoir la meilleure précision possible proposée par le constructeur. </li><li>L’appareil doit posséder un indicateur local. (module de programmation).</li>
-Q#Choisir la référence du capteur en vous aidant de la <a href="./files/CIRA2/_Copies/_Sujets/TD9/img/04.gif" target="_blank" >documentation</a> et en partant de la référence partielle du capteur donné ci-dessous.#
+Q#Choisir la référence du capteur en vous aidant de la <a href="./files/CIRA2/_Copies/_Sujets/TD9/img/04.gif" target="_blank" >documentation</a> et en partant de la référence partielle du capteur donné ci-dessous.#1
 I#./files/CIRA2/_Copies/_Sujets/TD9/img/05.gif
 L#
-Q#Quel intérêt procure le capteur de type « HART » ? (Highway Adressable Remote Transducteur).
+Q#Quel intérêt procure le capteur de type « HART » ? (Highway Adressable Remote Transducteur).#1
 U#
-Q#Que signifie « zone ATEX » ? « zone 0 » ?
+Q#Que signifie « zone ATEX » ? « zone 0 » ?#1
 U#
-Q#Citer en l’explicitant un mode de protection du matériel installé dans une zone ATEX.
+Q#Citer en l’explicitant un mode de protection du matériel installé dans une zone ATEX.#0.5
 U#
 L#
 C#<h2>Mode de fonctionnement normal ; régulation de la pression d’aspiration du compresseur</h2>
 C#La pression d’aspiration du compresseur, en mode de marche normale, mesurée sur la cuve FA201 doit être maintenue à 0,5 bar (pression absolue). L’action se fait par admission de vapeur de la chambre HP vers la chambre BP de la turbine. La vanne utilisée est de type normalement fermée (NF).
-Q#Compléter le schéma TI de cette régulation. Prévoir l’enregistrement de cette mesure.
+Q#Compléter le schéma TI de cette régulation. Prévoir l’enregistrement de cette mesure.#1
 I#./files/CIRA2/_Copies/_Sujets/TD9/img/03.gif
 L#
 C#Il s’agit maintenant d’optimiser la conception de la boucle en tenant compte du fait que la vitesse de la turbine est une perturbation intermédiaire qui doit être corrigée.
-Q#Compléter le schéma TI de cette régulation en ajoutant les instruments et appareils nécessaires.#
+Q#Compléter le schéma TI de cette régulation en ajoutant les instruments et appareils nécessaires.#1
 I#./files/CIRA2/_Copies/_Sujets/TD9/img/03.gif
 L#
 C#<h2>Mode de marche particulière : admission de la vapeur sur la chambre HP de la turbine</h2>
 C#Le mode de marche particulière se déclenche lorsque le débit de vapeur du réseau à 110 bar est excédentaire (pression d’admission supérieure de 7 %).<br/>La vanne PV 201 doit se fermer pour protéger la turbine « Section BP ». Le régulateur PIC 201 devra piloter la vanne PV601.
-Q#Quelle valeur de la consigne de pression permet ce mode de fonctionnement ?
+Q#Quelle valeur de la consigne de pression permet ce mode de fonctionnement ?#0.5
 T#
-Q#À l’aide de la <a href="./files/CIRA2/_Copies/_Sujets/TD9/img/07.gif" target="_blank" >documentation</a>, compléter par les chiffres qui conviennent les lettres A , E et S représentant successivement la fonction du bloc utilisé, l’entrée et la sortie.#
+Q#À l’aide de la <a href="./files/CIRA2/_Copies/_Sujets/TD9/img/07.gif" target="_blank" >documentation</a>, compléter par les chiffres qui conviennent les lettres A , E et S représentant successivement la fonction du bloc utilisé, l’entrée et la sortie.#1
 I#./files/CIRA2/_Copies/_Sujets/TD9/img/06.gif
 L#
 C#<h2>Identification du procédé</h2>
 C#Une procédure d’identification en boucle fermée doit permettre d’obtenir les paramètres modèle de Broïda de fonction de transfert H(p). Cette procédure comporte deux essais.<br/>Le premier essai doit permettre de déterminer le gain statique K de la fonction de transfert. <br/>Le deuxième essai doit permettre de déterminer les paramètres dynamiques &tau; (constante de temps en secondes) et T (temps mort ou retard en secondes).
-C#<u>Premier essai :</u> <br/>Pour cet essai le régulateur est en action proportionnelle seule : C(p) = A. La variation d’entrée est un changement de consigne de pression de 40% à 50%. La boucle étudiée est constituée d’un régulateur, du système modélisé par H(p) et d’un retour unitaire.
-Q#Représenter le schéma fonctionnel correspondant. Indiquer la consigne W(p) et la sortie X(p).
+C#<u>Premier essai :</u> <br/>Pour cet essai le régulateur est en action proportionnelle seule : C(p) = 1,4. La variation d’entrée est un changement de consigne de pression de 40% à 50%. La boucle étudiée est constituée d’un régulateur, du système modélisé par H(p) et d’un retour unitaire.
+Q#Représenter le schéma fonctionnel correspondant. Indiquer la consigne W(p) et la sortie X(p).#1
 I#./files/CIRA2/_Copies/_Sujets/TD9/img/08.png
-Q#Donner l’expression de X(p) en fonction de C(p), de H(p) et W(p).
+Q#Donner l’expression de X(p) en fonction de H(p) et W(p).#1
 T#
-Q#En déduire G<sub>BO</sub>=X(0)/W(0) en fonction de A et K.
+Q#En déduire G<sub>BO</sub>=X(0)/W(0) en fonction de A et K.#1
 T#
 L#
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD9/img/09.gif">
-Q#Déterminer à l'aide de la réponse de la régulation en boucle fermée ci-dessus, la valeur du gain K.
+Q#Déterminer à l'aide de la réponse de la régulation en boucle fermée ci-dessus, la valeur du gain K.#1
 T#
 C#Pour la suite, on prendra : K = 2,8.
 C#<u>Deuxième essai :</u><br/>Le régulateur est encore en action proportionnelle seule, le gain de celui-ci est augmenté jusqu’à obtenir des oscillations régulières non amorties de la mesure. Le gain du régulateur est alors A = 2,7. Le système est dit en oscillations suivant une période notée T<sub>osc</sub> .
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD9/img/10.gif">
-Q#Relever sur l'enregistrement la période T<sub>osc</sub>.
+Q#Relever sur l'enregistrement la période T<sub>osc</sub>.#1
 T#
 L#
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD9/img/11.gif">
-Q#Calculer les valeurs de T et de t à l’aide des formules ci-dessus. Les angles sont exprimés en radians, T<sub>osc</sub>, T et &tau; en secondes.
+Q#Calculer les valeurs de T et de τ à l’aide des formules ci-dessus. Les angles sont exprimés en radians, T<sub>osc</sub>, T et τ en secondes.#1
 T#
 L#
 C#<h2>Préréglage graphique</h2>
-C#Le correcteur choisi est de structure PI série et possède une bande proportionnelle de 67% et un temps d’intégrale Ti = 43 s.<br/>le graphique ci-dessous comporte le tracé de la fonction de transfert en boucle ouverte C(j&omega;).H(j&omega;) dans le plan de Black Nichols.
-Q#Relever les valeurs de la marge de gain (MG) et de la marge de phase (M&phi;) sur le graphique.
+C#Le correcteur choisi est de structure PI série et possède une bande proportionnelle de 67% et un temps d’intégrale Ti = 43 s.<br/>Le graphique ci-dessous comporte le tracé de la fonction de transfert en boucle ouverte C(jω).H(jω) dans le plan de Black Nichols.
+Q#Relever les valeurs de la marge de gain (MG) et de la marge de phase (Mφ) sur le graphique.#1
 I#./files/CIRA2/_Copies/_Sujets/TD9/img/12.gif
 L#
-Q#Quel est l’intérêt d’une grande marge de phase et comment peut-on l’augmenter ?
+Q#Quel est l’intérêt d’une grande marge de phase et comment peut-on l’augmenter ?#1
 U#
-Q#Que signifie une marge de gain nulle dans ce cas ?
+Q#Que signifie une marge de gain nulle dans ce cas ?#1
 U#
 L#
 C#<h2>Détermination des paramètres PID du régulateur</h2>
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD9/img/13.gif">
-Q#Déterminer la structure du régulateur de type PID à l’aide de l'essai ci-dessus.
+Q#Déterminer la structure du régulateur de type PID à l’aide de l'essai ci-dessus.#1
 U#

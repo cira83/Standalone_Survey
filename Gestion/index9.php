@@ -17,9 +17,8 @@
 ?>
 <center>
 <p class="liste">Pour tracer des courbes : <a href="../EasyGraph" class="no-under" target="_blank" >EasyGraph</a></p>
-<p class="liste">Editeur d'images : <a href="../tui.image-editor" class="no-under" target="_blank" >Tui.image-editor</a></p>
+<p class="liste">Editeur d'images : <a href="../Image-editor/editor" class="no-under" target="_blank" >Tui.image-editor</a></p>
 <p class="liste">Pour les fonctions de transfert : <a href="../EasyRegPhp" class="no-under" target="_blank" >EasyReg</a></p>
-<p class="liste">Simulation d'un process : <a href="../Process4" class="no-under" target="_blank" >Process 4</a></p>
 </center>
 
 <?php

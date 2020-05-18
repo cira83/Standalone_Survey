@@ -1,0 +1,4 @@
+Δ = 20 ;
+Δp = 20 =  A(1+Td/Ti)Δ ;
+Δi = 10 = AΔ ;
+Le régulateur a une structure série.

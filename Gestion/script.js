@@ -46,8 +46,16 @@ function message(msg){
 }
 
 function newclasse(lavaleur){
-	document.cookie = 'laclasse='+lavaleur;
-	lien = './index.php';
+	var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
+
+	document.cookie = 'laclasse='+lavaleur+"; path=/; expires="+date.toUTCString();
+	location.reload() ;
+}
+
+function cira(){
+	var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
+	classe = document.getElementById('classe').value;
+	document.cookie = 'laclasse='+classe+"; path=/; expires="+date.toUTCString();
 	location.reload() ;
 }
 

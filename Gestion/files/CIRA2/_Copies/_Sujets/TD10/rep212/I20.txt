@@ -1,0 +1,1 @@
+Dans ce schéma, pour une commande entre 40% et 50%, il ne se passe rien. Cela permet de limiter le temps de réchauffage et refroidissement en même temps dût aux inerties des systèmes.

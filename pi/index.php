@@ -1,4 +1,10 @@
 <html>
+<!--
+	Le fichier _Copies/nom_elv/rep/qs.txt contient les questions et leurs réponses 
+	- Une question réponse par ligne 
+	- En cas de remarque, la question devient "remarque :"
+	Le fichier _Copies/nom_elv/rep/RQ.txt contient les remarques furtives (une alerte apparait et efface la remarque)
+-->
 <?php
 	$noire_t = "#000000";//noir 
 	$violet_t = "#8d1682";//violet 27min
@@ -58,7 +64,7 @@
 						if(question[i]) {
 							laquestion = question[i].toString();
 							lenom = nom[i].toString();
-							interrogation = '<img src="Question.gif" height="20px" id="' + laquestion + '" onclick="repondre(this.id,\''+lenom+'\');">';
+							interrogation = '<img src="Question.gif" height="20px" id="' + laquestion + '" onclick="repondre(this.id,\''+lenom+'\',\''+classe+'\');">';
 							sonnerie();
 						}
 						else {
@@ -68,7 +74,7 @@
 						cellule = document.getElementById(i);
 						celluleQ = document.getElementById('Q'+i);
 						celluleB = document.getElementById('B'+i);
-						bouche = '<img src="bouche.gif" height="15px" onclick="parle(\''+nom[i]+'\');">';
+						bouche = '<img src="bouche.gif" height="15px" onclick="parle(\''+nom[i]+'\',\''+classe+'\');">';
 						if(i<data[3]) {
 							cellule.innerHTML =  pastille_color(timer[i])+nom[i]+' '+nb_rep[i]+'<br>'+TP[i]+photo(classe, nom[i],laquestion);
 							celluleQ.innerHTML = interrogation;
@@ -99,14 +105,15 @@
 
 			setInterval(refresh, 3000);
 			
-			function repondre(question,nom){
+			function repondre(question,nom,classe){
 				lareponse = prompt(question,'');
 				
 				var xhr = null;
 			    var xhr = new XMLHttpRequest();	
 			    
 			    if(lareponse) {
-				    chemin = './repondre1question.php?lareponse='+lareponse+'&lenom='+nom;	
+				    infos = classe+'_'+nom+'_'+lareponse+'_1_';
+				    chemin = './repondre1question.php?infos='+infos;	
 					xhr.open("GET", chemin, true);
 					xhr.send(null);
 				}
@@ -146,15 +153,16 @@
 				sonnerie();
 			}	
 			
-			function parle(nom){
-				var question = 'Remarque à '+nom;
+			function parle(nom,classe){
+				var question = 'Remarque à '+nom+' de '+classe;
 				laremarque = prompt(question,'');
 				
 				var xhr = null;
 			    var xhr = new XMLHttpRequest();	
 			    
 			    if(laremarque) {
-				    chemin = './attention.php?remarque='+laremarque+'&lenom='+nom;	
+				    infos = classe+'_'+nom+'_'+laremarque+'_0_';
+				    chemin = './repondre1question.php?infos='+infos;	//réponse sans question = remarque
 					xhr.open("GET", chemin, true);
 					xhr.send(null);
 				}
@@ -175,7 +183,7 @@
 				<td width="150px"><font size="-1">18 élèves<br>maximum</font></td>
 				<td align="center"><font size="+2">TP CIRA</font></td>
 				<td align="center"><font size="+2"><div id="laclasse">----</div></font></td>
-				<td width="50px"><a href="http://localhost:1880/ui/"><img src="./node-red-icon.png" height="40px"></a></td>
+				<!-- <td width="50px"><a href="http://localhost:1880/ui/"><img src="./node-red-icon.png" height="40px"></a></td> -->
 			</tr></table>
 			<!-- LUT -->
 			<?php

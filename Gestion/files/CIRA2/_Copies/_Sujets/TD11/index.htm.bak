@@ -1,0 +1,88 @@
+Station de production d'eau potable#TD11#BTS 2010
+C#Le procédé servant de support pour cette étude est une installation de production d'eau potable.<br/>Cette station peut être décrite en quelques chiffres :<br/>- Le débit journalier produit est de 55 000 m<sup>3</sup>/jour environ, ce qui couvre les besoins d'une ville de 300 000 habitants.<br/>- Elle possède deux sources d'alimentation : l'eau est acheminée par deux conduites forcées de longueurs respectives 32 et 10 km, depuis des barrages de stockage en amont. Le débit maximal obtenu par gravité à l'arrivée est de 1,20 m<sup>
+C#Du fait de la composition géologique des terrains, le pH de l'eau provenant des barrages est faible.<br/>Le cahier des charges impose que cette valeur soit remontée à 6,9 en sortie d'installation.
+C#Le schéma ci-dessous représente les grandes étapes de la production.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/01.gif">
+C#<li>L'eau à l'arrivée de la station est turbinée pour produire de l'électricité, ce qui couvre une partie des besoins de l'entreprise.</li><li>Reminéralisation 1 : l'eau est reminéralisée à l'aide de lait de chaux pour réaliser une pré-neutralisation de l'eau.</li><li>La décantation : après injection de floculant, on laisse reposer l'eau de ce bassin pour la débarrasser des matières en suspension.</li><li>La désinfection : la protection bactériologique de l'eau jusqu'au robinet du consommateur est assurée par une injection de dioxyde de chlore.</li><li>La filtration finale : l'eau passe à travers une épaisse couche de sable qui retient les particules plus légères qui n'ont pas été piégées par les décanteurs.</li><li>La stérilisation à l'ozone. </li><li>Le traitement final : contrôle de la qualité et reminéralisation si nécessaire.</li><li>La distribution : après traitement, l'eau arrive jusqu'au consommateur par un réseau souterrain de canalisations, comportant de nombreux réservoirs et des stations de pompage.</li>
+C#Le ministère de la santé a défini 54 paramètres à contrôler (parmi lesquels la transparence et la saveur, la teneur en calcium et en magnésium, le pH... ) suivant un cahier des charges très strict, à la fois sur le réservoir en sortie de l'usine de traitement d'eau potable et sur le réseau de distribution.
+L#
+C#L'injection de lait de chaux basique va permettre de contrôler le pH de l'eau, en le remontant à la consigne de 6,9.
+C#<h2>Mesure de débit de lait de chaux</h2>
+C#<u>Cahier des charges :</u><br/>L'étendue de mesure adoptée pour ce procédé est : 0 à 2 m<sup>3</sup>.h<sup>-1</sup>.<br/>Pour cela on utilise un débitmètre électromagnétique PROMAG 50W.
+Q#Pourquoi peut-on utiliser cette technologie et quel est son avantage principal ?
+U#
+Q#Calculer le débit maximum du lait de chaux en dm<sup>3</sup>.min<sup>-1</sup>.
+T#
+Q#Pour cette installation, quelle est la vitesse d'écoulement maximale conseillée par le constructeur ? <br/>Voir documentation constructeur du <a href="./files/CIRA2/_Copies/_Sujets/TD11/img/02.gif" target="_blank" >PROMAG 50W</a>.#
+T#
+Q#Donner DN le diamètre nominal du capteur que vous choisiriez (en justifiant).
+U#
+Q#Calculer la vitesse d'écoulement en m.s<sup>-1</sup> pour 2 m<sup>3</sup>.h<sup>-1</sup> de lait de chaux à travers le débitmètre.
+T#
+Q#Déterminer l'erreur absolue maximum commise pour une mesure de 2 m<sup>3</sup>.h<sup>-1</sup>.
+T#
+C#Le débitmètre envoie un signal 4-20 mA pour 0-2 m<sup>3</sup>.h<sup>-1</sup> sur une entrée tension du régulateur, ayant une résistance de shunt de valeur 2,49 &Omega;. Le technicien souhaite vérifier le bon fonctionnement de la mesure.
+Q#Quelle serait la tension mesurée à l'aide d'un voltmètre pour un débit de 1 m<sup>3</sup>.h<sup>-1</sup> ?
+T#
+L#
+C#<h2>Mesure de pH</h2>
+C#On souhaite mesurer le pH en sortie du bac de reminéralisation 1. Selon la saison, la température de<br/>l'eau provenant des barrages fluctue. On rappelle que par définition pH = -log[H<sub>3</sub>0<sup>+</sup>].<br/>L'ajout d'une base de reminéralisante (lait de chaux) permet de remonter le pli acide de la solution initiale. La sonde de pli est une électrode combinée qui fonctionne selon la loi de Nemst.<br/>Le potentiel délivré par cette électrode s'écrit de façon simplifiée :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/03.gif">
+C#Avec K est une constante homogène à une tension, R la constante des gaz parfaits, F le nombre de Faraday et T la température absolue de l'eau dont on mesure le pH.
+C#La sonde utilisée sur le site est un modèle combiné associant l'électrode de référence et l'électrode de mesure dans le même corps (voir figures ci-dessous).
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/04.gif">
+Q#Parmi les deux modèles 5333 et 5337, lequel choisiriez-vous ? Justifier.
+T#
+L#
+Q#Justifier l'affirmation suivante :<br/>- Le signal de sortie Em de la sonde n'est pas linéaire en fonction de la concentration en [H<sub>3</sub>0<sup>+</sup>] de l'eau dans le reminéralisateur 1.
+U#
+C#Le transmetteur utilise une technologie Smart (capteur intelligent) avec la possibilité de calibration de l'échelle et des sorties à l'aide d'une interface de communication. <br/>Deux caractéristiques de sortie sont proposées sur la figure suivante.
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/05.gif">
+C#Du lait de chaux est injecté et mélangé à l'eau. L'injection est réalisée au moyen d'une pompe centrifuge. Un variateur de fréquence assure la variation du débit (commande 4-20 mA pour 0-75 Hz).
+Q#Quelle caractéristique statique (a ou b) choisiriez-vous pour ce transmetteur ? Expliquer les raisons de<br/>ce choix.
+U#
+Q#Pour une valeur du pH de 6,9, quel est la valeur en mA du signal de mesure issu du transmetteur pour la courbe b ?
+T#
+L#
+C#<h2>Régulation de pH</h2>
+C#On s'intéresse à la régulation de pH de la reminéralisation 1. <br/>Du lait de chaux est injecté et mélangé à l'eau. L'injection est réalisée au moyen d'une pompe centrifuge. Un variateur de fréquence assure la variation du débit (commande 4-20 mA pour 0-75 Hz).<br/>Un débitmètre FT1 (échelle 0-2 m<sup>3</sup>/h et sortie 4-20 mA) est installé sur la conduite.<br/>Un régulateur local gère cette régulation.
+Q#Représenter le schéma TI de cette boucle de régulation.
+I#./files/CIRA2/_Copies/_Sujets/TD11/img/06.gif
+Q#Déterminer en le justifiant le sens d'action du régulateur de pH.#
+U#
+Q#Des deux jeux de réglages suivants, lequel vous semble le plus adapté ? Justifier la réponse.<br/><li>PID1 : Xp = 0.001% ; Ti= 1 500 s ; Td=0 s ;</li><li>PID2 : Xp = 50 % ; Ti = 40 s ; Td = 0 s.</li>#
+U#
+L#
+C#<h2>Régulation cascade</h2>
+C#Une sonde de pH Aldos est installée en sortie du bac de reminéralisafion 1 (échelle de pH 4-10 ; sortie 4-20 mA). La consigne pour le pH est de 6,9. Compte tenu de l'installation et de l'instrumentation installée, on préfère une régulation cascade à la place de la boucle simple.
+Q#Justifier ce choix en précisant le type de cascade (sur la grandeur réglante ou une grandeur intermédiaire), ainsi que les grandeurs maître et esclave.#
+U#
+Q#Représenter cette stratégie sur le schéma TI.
+I#./files/CIRA2/_Copies/_Sujets/TD11/img/06.gif
+Q#Déterminer en le justifiant le sens d'action du régulateur de pH.
+U#
+L#
+C#Pour le réglage, on recherche un modèle du procédé vu par le régulateur de pH.<br/>À t=0 on réalise un échelon de 5% de la commande du régulateur de pH (courbe fournie à la question 20).
+Q#Pour réaliser cet essai donner le mode de chaque régulateur : MAN, AUTO ou REMOTE ?
+U#
+Q#Donner le modèle de Broïda du procédé.
+T#
+Q#Faire apparaitre les constructions qui vous ont permis de répondre à la question précédente.#
+I#./files/CIRA2/_Copies/_Sujets/TD11/img/07.gif
+Q#Calculer le coefficient de réglabilité kr et conclure sur le type de régulation à adopter.
+T#
+L#
+C#<h2>Avec compensation de temps mort</h2>
+C#Le schéma fonctionnel de la boucle de régulation de pH est le suivant :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/08.gif">
+Q#Déterminer l'expression littérale de la fonction H'(p) = X(p)/Yr(p) en fonction de G(p) et H(p).
+T#
+Q#En déduire l'expression littérale de la fonction G(p) pour que H'(p) soit un premier ordre sans temps mort T, de gain K et constante de temps &tau; identiques à ceux de H(p).
+U#
+L#
+C#Dans ces conditions, le schéma équivalent devient :
+C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/09.gif">
+C#On désire avoir F(p) = X(p)/W(p) = 1/(1+τp)<br/>C(p) est un correcteur PI de structure mixte.
+Q#Rappeler l'expression littérale de la fonction de transfert de C(p).
+T#
+Q#Déterminer les deux paramètres de réglage de ce régulateur PI.#

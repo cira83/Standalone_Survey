@@ -1,0 +1,1 @@
+13,2 m correspond à 14,56 mA. 14,48 mA n'est pas une valeur acceptable.

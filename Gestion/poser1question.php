@@ -6,12 +6,12 @@
 	
 	if(file_exists($filename)) {
 		$fp = fopen($filename, "a");
-		fwrite($fp, "\n$question#");
+		fwrite($fp, "\n$question");
 		fclose($fp);	
 	}
 	else {
 		$fp = fopen($filename, "w");
-		fwrite($fp, "$question#");
+		fwrite($fp, "$question");
 		fclose($fp);		
 	}
 

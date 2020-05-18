@@ -7,7 +7,8 @@
 	function ping() {
 		$output = shell_exec('ping -c 1 8.8.8.8');
 		$part_ping1 = explode("time=",$output);
-		$part_ping2 = explode(" ",$part_ping1[1]);
+		$part_ping1_1 = isset($part_ping1[1])?$part_ping1[1]:"KO ";
+		$part_ping2 = explode(" ",$part_ping1_1);
 		return($part_ping2[0]);		
 	}
 
@@ -69,11 +70,10 @@
 					$fp = fopen($question_file, "r");
 					while(!feof($fp)) {
 						 $ligne = fgets($fp);
-						 $nb_ligne=1-$nb_ligne;
 					}
 					fclose($fp);
 					$part = explode("#", $ligne);
-					if($nb_ligne) $question = $part[0];
+					if(!isset($part[1])) $question = $part[0];
 				}
 				$liste_question.="$question:";
 			}

@@ -1,0 +1,1 @@
+Le protocole Hart permet de communiquer avec le transmetteur en utilisant la boucle de courant 4-20 mA.

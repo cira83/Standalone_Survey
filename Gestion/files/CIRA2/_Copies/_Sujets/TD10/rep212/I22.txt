@@ -1,0 +1,1 @@
+Quand on augmente la commande Y du régulateur, la commande Ychaud augmente (vu avec les équations), ce qui fait augmenter la température (question 4.3.). Le procédé est direct, il faut régler le régulateur avec une action inverse.

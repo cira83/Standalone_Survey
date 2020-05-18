@@ -1,0 +1,1 @@
+Plus la marge de phase est important, plus le système est stable. On peut l'augmenter en diminuant le gain ou en augmentant l'action dérivée.

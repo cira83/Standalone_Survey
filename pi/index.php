@@ -74,11 +74,13 @@
 						cellule = document.getElementById(i);
 						celluleQ = document.getElementById('Q'+i);
 						celluleB = document.getElementById('B'+i);
+						celluleL = document.getElementById('L'+i);
 						bouche = '<img src="bouche.gif" height="15px" onclick="parle(\''+nom[i]+'\',\''+classe+'\');">';
 						if(i<data[3]) {
 							cellule.innerHTML =  pastille_color(timer[i])+nom[i]+' '+nb_rep[i]+'<br>'+TP[i]+photo(classe, nom[i],laquestion);
 							celluleQ.innerHTML = interrogation;
 							celluleB.innerHTML = bouche;
+							celluleL.innerHTML = '<a href="./discussion.php?nom='+nom[i]+'&classe='+classe+'" target="_blank"><img src="../Gestion/icon/tab.jpg" height="16px" title="Discussion"/></a>';
 						}
 						else {
 							cellule.innerHTML = '';
@@ -200,55 +202,55 @@
 			?>
 			<table><!-- ETUDIANTS -->
 				<tr>
-					<td id="0" colspan="2">----</td>
-					<td id="1" colspan="2">----</td>
-					<td id="2" colspan="2">----</td>
-					<td id="3" colspan="2">----</td>
-					<td id="4" colspan="2">----</td>
-					<td id="5" colspan="2">----</td>
+					<td id="0" colspan="3">----</td>
+					<td id="1" colspan="3">----</td>
+					<td id="2" colspan="3">----</td>
+					<td id="3" colspan="3">----</td>
+					<td id="4" colspan="3">----</td>
+					<td id="5" colspan="3">----</td>
 				</tr>
 				<tr>
-					<td id="Q0"></td><td id="B0"></td>
-					<td id="Q1"></td><td id="B1"></td>
-					<td id="Q2"></td><td id="B2"></td>
-					<td id="Q3"></td><td id="B3"></td>
-					<td id="Q4"></td><td id="B4"></td>
-					<td id="Q5"></td><td id="B5"></td>
-				</tr>
-
-				<tr>
-					<td id="6" colspan="2">----</td>
-					<td id="7" colspan="2">----</td>
-					<td id="8" colspan="2">----</td>
-					<td id="9" colspan="2">----</td>
-					<td id="10" colspan="2">----</td>
-					<td id="11" colspan="2">----</td>
-				</tr>
-				<tr>
-					<td id="Q6"></td><td id="B6"></td>
-					<td id="Q7"></td><td id="B7"></td>
-					<td id="Q8"></td><td id="B8"></td>
-					<td id="Q9"></td><td id="B9"></td>
-					<td id="Q10"></td><td id="B10"></td>
-					<td id="Q11"></td><td id="B11"></td>
+					<td id="Q0"></td><td id="L0"></td><td id="B0"></td>
+					<td id="Q1"></td><td id="L1"></td><td id="B1"></td>
+					<td id="Q2"></td><td id="L2"></td><td id="B2"></td>
+					<td id="Q3"></td><td id="L3"></td><td id="B3"></td>
+					<td id="Q4"></td><td id="L4"></td><td id="B4"></td>
+					<td id="Q5"></td><td id="L5"></td><td id="B5"></td>
 				</tr>
 
-
 				<tr>
-					<td id="12" colspan="2">----</td>
-					<td id="13" colspan="2">----</td>
-					<td id="14" colspan="2">----</td>
-					<td id="15" colspan="2">----</td>
-					<td id="16" colspan="2">----</td>
-					<td id="17" colspan="2">----</td>
+					<td id="6" colspan="3">----</td>
+					<td id="7" colspan="3">----</td>
+					<td id="8" colspan="3">----</td>
+					<td id="9" colspan="3">----</td>
+					<td id="10" colspan="3">----</td>
+					<td id="11" colspan="3">----</td>
 				</tr>
 				<tr>
-					<td id="Q12"></td><td id="B12"></td>
-					<td id="Q13"></td><td id="B13"></td>
-					<td id="Q14"></td><td id="B14"></td>
-					<td id="Q15"></td><td id="B15"></td>
-					<td id="Q16"></td><td id="B16"></td>
-					<td id="Q17"></td><td id="B17"></td>
+					<td id="Q6" width="8%"></td><td id="L6" width="9%"></td><td id="B6" width="8%"></td>
+					<td id="Q7" width="8%"></td><td id="L7" width="9%"></td><td id="B7" width="8%"></td>
+					<td id="Q8" width="8%"></td><td id="L8" width="9%"></td><td id="B8" width="8%"></td>
+					<td id="Q9" width="8%"></td><td id="L9" width="9%"></td><td id="B9" width="8%"></td>
+					<td id="Q10" width="8%"></td><td id="L10" width="9%"></td><td id="B10" width="8%"></td>
+					<td id="Q11" width="8%"></td><td id="L11" width="9%"></td><td id="B11" width="8%"></td>
+				</tr>
+
+
+				<tr>
+					<td id="12" colspan="3">----</td>
+					<td id="13" colspan="3">----</td>
+					<td id="14" colspan="3">----</td>
+					<td id="15" colspan="3">----</td>
+					<td id="16" colspan="3">----</td>
+					<td id="17" colspan="3">----</td>
+				</tr>
+				<tr>
+					<td id="Q12"></td><td id="L12"></td><td id="B12"></td>
+					<td id="Q13"></td><td id="L13"></td><td id="B13"></td>
+					<td id="Q14"></td><td id="L14"></td><td id="B14"></td>
+					<td id="Q15"></td><td id="L15"></td><td id="B15"></td>
+					<td id="Q16"></td><td id="L16"></td><td id="B16"></td>
+					<td id="Q17"></td><td id="L17"></td><td id="B17"></td>
 				</tr>
 
 			</table>

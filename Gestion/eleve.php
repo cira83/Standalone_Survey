@@ -4,7 +4,7 @@
 	$nom_doc = $nom;
 	$titre_page = "$nom";
 	include("./haut.php");
-	$fichierdesnoms = "./files/$classe.txt";	
+	$fichierdesnoms = "./files/$classe/_Profils.txt";	
 	$repertoireClasse= "./files/$classe/_Copies";
 	
 	//Creation du repertoire _JSON
@@ -66,7 +66,7 @@ function json_add($json_fp,$object,$value) {
 	tableau("$accueil$classe</a> - <a href=\"$tabsynth1\">Semestre 1</a> - <a href=\"$tabsynth2\">Semestre 2</a>");	
 	//$_GET['modif']
 	if(my_GET("modif")==1){
-		affiche("Fichier modifié");
+		affiche("Fichier modifié : $fichierdesnoms");
 		$nom = $_POST['nom'];
 		$handle = fopen($fichierdesnoms, "a");
 		fprintf($handle, "\n$_POST[nom]:$_POST[Prenom]:$_POST[nez]:$_POST[Mot]:");
@@ -199,12 +199,11 @@ function json_add($json_fp,$object,$value) {
 	echo("<table>");
 	echo("<tr><td>\n[9] :<input type=\"text\" name=\"Sem1\" value=\"$sem1\" size=\"100\"></td></tr>");
 	echo("<tr><td>\n[10] :<input type=\"text\" name=\"Sem2\" value=\"$sem2\" size=\"100\"></td></tr>");
-	echo("</table>");
+	echo("</form></table>");
 	
 	
 
 ?>
-</form>
 <table><form name="envoie fichier" enctype="multipart/form-data" method="post" action="./eleve.php?modif=2">
 <tr><td><input name="fichier_choisi" type="file"><input type="hidden" name="nom" value="<?php echo($nom);?>"></td>
 <td><input name="bouton" value="Envoyer le fichier" type="submit"></td></tr>

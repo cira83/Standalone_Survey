@@ -1,1 +1,0 @@
-Quand y augmente x diminue le procédé est inverse et le sens d'action du régulateur est directe

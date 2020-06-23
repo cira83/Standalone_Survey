@@ -1,0 +1,6 @@
+FE o2 = Capteur de débit 
+FY o2 = relais de calcul
+FV o2 = vanne de régulation pneumatique
+FT o2 = transmetteur 
+FIC o2 = régulateur et indicateur de débit 
+

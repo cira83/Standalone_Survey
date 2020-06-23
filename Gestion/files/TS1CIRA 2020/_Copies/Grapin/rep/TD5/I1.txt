@@ -1,0 +1,7 @@
+Il y a :
+-FIC 02: un régulateur indicateur de débit
+-FT 02: un transmetteur de débit
+-FV 02: une vanne pneumatique
+-FY 02: un relai de calcul d'un courant au pneumatique
+-FE 02: un capteur de débit
+

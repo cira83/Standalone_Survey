@@ -1,1 +1,0 @@
-en boucle ouverte on ne peut faire varier que la commande du coup il faut utiliser une méthode de réglage en boucle fermé pour prendre en compte la consigne ainsi que la pertubation

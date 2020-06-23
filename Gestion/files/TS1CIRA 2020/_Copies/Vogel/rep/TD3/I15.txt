@@ -1,0 +1,5 @@
+i1= mesure
+12=commande maitre/consigne esclave
+i3= commande
+i4= mesure
+

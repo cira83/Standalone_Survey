@@ -1,0 +1,1 @@
+Quand on augmente la commande du FIC la vanne NO se ferme donc le débit diminue et la mesure diminue. Procédé inverse, régulateur directe.

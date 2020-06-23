@@ -1,1 +1,0 @@
-oui le système est intégrateur car il a une entrée( e) stable et constante, alors qu'en sortie (s) il y'a une droite croissante 

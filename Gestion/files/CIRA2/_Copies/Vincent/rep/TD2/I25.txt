@@ -1,1 +1,0 @@
-en utilisant la méthode du régleur comparé à celle de Ziegler et Nichols on peut s'approcher petit à petit d'une régulation quasi-parfaite en augmentant les réglages du PID dans cet ordre P->D->I .

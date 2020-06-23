@@ -343,7 +343,7 @@
 	echo("<a href=\"./geo.php?nomfichier=$filesave\">");
 	include("grapheSVG_fct.php");
 	include("grapheSVG.php");
-	echo("</a>");	
+	echo("</a>$savefileicon");	
 	
 	echo("</td><td><a href=\"./pub_notes.php?filesave=$filesave&file=$epr&moy=$moyenne\">Publier les statistiques</a></td>");
 

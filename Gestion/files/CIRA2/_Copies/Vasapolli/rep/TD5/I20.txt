@@ -1,1 +1,0 @@
-On a pu comparer deux régulations (cascade ou simple). Je choisirai la régulation cascade car plus efficace (plus rapide), ce que permettra un meilleur suivie de la température du mélange 

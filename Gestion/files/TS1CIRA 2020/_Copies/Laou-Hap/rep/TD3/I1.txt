@@ -1,0 +1,1 @@
+Pt100 traduit un capteur fait d'une résistance en Platine pour mesurer la Température. Le capteur a une valeur initiale de 100ohms équivalent a une température de 0°c. 

@@ -1,0 +1,1 @@
+Quand on augmente la commande du FIC, la vanne OMA se ferme donc le débit diminue donc la mesure du FT diminue donc le procédé est inverse et il faut regler le regulateur avec une action direct 

@@ -1,2 +1,0 @@
-Lors de ce procédé, la régulation cascade va nous permettre d'anticiper les changements de température situé dans l'enveloppe afin de ne pas venir modifier les valeurs de la mesure X.
-

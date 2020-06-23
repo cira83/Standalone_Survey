@@ -37,7 +37,8 @@
 	$TAG = TAGdufichier($fichier_elv);
 	//$TAG = trim($TAG);
 	$fichier_prof= "./files/$classe/_Copies/_Sujets/$TAG/index.htm"; //echo("<!-- $fichier_prof -->\n");
-	$rep_prof = "./files/$classe/_Copies/_Sujets/$TAG/rep212";
+	$code4 = code_correction("./files/$classe/_Copies/_Sujets/$TAG");
+	$rep_prof = "./files/$classe/_Copies/_Sujets/$TAG/rep$code4";
 	$titredudocument = "$TAG $nom_elv";
 	$content = "";
 	

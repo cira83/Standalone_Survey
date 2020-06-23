@@ -1,0 +1,1 @@
+écart statique ε1 est de 2,5%, ε2=10%, ε3=12,5%

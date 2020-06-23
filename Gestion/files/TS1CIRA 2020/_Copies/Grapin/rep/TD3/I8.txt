@@ -1,0 +1,1 @@
+le régulateur est direct car le système est dircte lors que la commande augmente, la vanne se ferme, et la mesure descend.

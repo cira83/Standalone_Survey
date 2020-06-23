@@ -1,0 +1,2 @@
+Le modèle 5337 car il comporte une compensation de température et la température influence la tension qui sert à la mesure du pH.
+

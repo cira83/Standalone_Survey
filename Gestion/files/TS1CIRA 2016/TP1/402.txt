@@ -1,0 +1,13 @@
+Fouasse::1:
+Are:20:1:
+Bacquias:20:1:
+Berre:20:1:
+Gire:20:1:
+Mougeolle:20:1:
+Nadau:20:1:
+Roggero:20:1:
+Romdhani:20:1:
+Segault:20:1:
+Vassal:20:1:
+Lamarque:16:1:
+Minel:14:1:

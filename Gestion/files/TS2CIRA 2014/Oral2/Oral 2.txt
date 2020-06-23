@@ -1,0 +1,10 @@
+Ailloud:9:1:Me 15-01
+Antar:18.5:1:Me 15-01
+Baudry:10.5:1:Me 15-01
+Destombes:2.5:1:Me 15-01
+Guigon:15:1:Me 15-01
+Keller:16.5:1:Me 15-01
+Le_Goff:16.5:1:Me 15-01
+Roux:16:1:Me 15-01
+Saba:9.5:1:Me 15-01
+Touze:11.5:1:Me 15-01

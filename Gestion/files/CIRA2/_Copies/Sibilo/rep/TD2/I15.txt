@@ -1,1 +1,0 @@
-En boucle ouverte, on peut faire varier uniquement la commande, il faut alors utiliser une boucle fermée

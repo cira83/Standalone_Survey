@@ -1,0 +1,2 @@
+la rapidité a été augmenté par rapport au réglage proposé par Ziegler&Nichols. 
+

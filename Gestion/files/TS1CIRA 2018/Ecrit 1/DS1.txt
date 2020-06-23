@@ -1,0 +1,41 @@
+Agostino::1:
+Andre::1:
+Bellemere::1:
+Chapelain::1:
+Couillet::1:
+Fiandino::1:
+Gensollen::1:
+Ginieys::1:
+Lidou::1:
+Lothmann::1:
+Mahouachi::1:
+Mengual::1:
+Raspaud::1:
+Selegue::1:
+Spite::1:
+Torchut::1:
+Turkcan::1:
+Agostino:15:1:03/10 - 18h50:0 Correction:::
+Andre:5:1:03/10 - 18h57:0 Correction:::
+Bellemere:15:1:04/10 - 07h26:0 Correction:::
+Chapelain:18:1:04/10 - 08h08:0 Correction:::
+Couillet:9:1:04/10 - 08h15:0 Correction:::
+Fiandino:14:1:04/10 - 08h31:0 Correction:::
+Ginieys:13:1:04/10 - 08h44:0 Correction:::
+Lothmann:11:1:04/10 - 08h48:0 Correction:::
+Mahouachi:13:1:04/10 - 08h53:0 Correction:::
+Mengual:4:1:04/10 - 08h57:0 Correction:::
+Raspaud:13:1:04/10 - 09h02:0 Correction:::
+Spite:14:1:04/10 - 09h06:0 Correction:::
+Turkcan:18:1:04/10 - 09h10:0 Correction:::
+Gensollen:6:1:04/10 - 09h19:0 Correction:::
+Lidou:4:1:04/10 - 09h23:0 Correction::Note prise en compte si supérieure à la moyenne du semestre 1:
+Gensollen:6:1:04/10 - 09h23:0 Correction::Note prise en compte si supérieure à la moyenne du semestre 1:
+Selegue:9:1:04/10 - 09h27:0 Correction::Note prise en compte si supérieure à la moyenne du semestre 1:
+Torchut:16:1:04/10 - 09h37:0 Correction::Note prise en compte si supérieure à la moyenne du semestre 1:
+Gensollen:6:0:21/11 - 17h27:0 Correction::Note prise en compte si supérieure à la moyenne du semestre 1:
+Gensollen:6:0:21/11 - 17h28:0 Correction::Note prise en compte si inférieure à la moyenne du semestre 1:
+Torchut:16:1:21/11 - 17h29:0 Correction::Note prise en compte si inférieure à la moyenne du semestre 1:
+Torchut:16:0:09/01 - 10h55:0 Correction::Note prise en compte si inférieure à la moyenne du semestre 1:
+Selegue:0:1:20/01 - 16h36:0 Correction::Note prise en compte si supérieure à la moyenne du semestre 1:
+Selegue:9:0:20/01 - 16h36:0 Correction::Note prise en compte si supérieure à la moyenne du semestre 1:

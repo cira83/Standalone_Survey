@@ -1,0 +1,4 @@
+grandeur reglante = sortie du régulateur
+grandeur réglée =Mesure de taux de co2
+grandeur perturbatrice = température et pression du co2
+

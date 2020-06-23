@@ -1,1 +1,0 @@
-InvPID = True donne une régulation directe.

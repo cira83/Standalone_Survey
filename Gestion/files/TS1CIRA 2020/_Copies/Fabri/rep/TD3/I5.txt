@@ -1,0 +1,1 @@
+Quand on augmente la commande du régulateur, la vanne se ferme alors le débit d'eau froide diminue donc ça chauffe plus et la mesure PT100 augmente. Le procédé est donc direct et il le régulateur doit être réglé en action inverse

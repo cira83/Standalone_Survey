@@ -1,0 +1,1 @@
+Quand on augmente la commande du LIC, la vanne LV s'ouvre plus donc le debit d'entrée augmente donc le niveau augmente donc la mesure du LT augmente donc le procédé est direct et il faut régler le regulateur avec une action inverse.

@@ -1,6 +1,6 @@
 <?php
 	include("./lesfonctions.php");
-	include("../head1.html");
+	include("../head1grey.html");
 	
 	
 	if($_COOKIE["nom"]) $elv = $_COOKIE["nom"]; 
@@ -16,7 +16,7 @@
 		
 	</head>
 	<body>
-		<img src="head.png"/>
+		<center>
 		<table><tr><td><p class="titre">
 			<?php echo("$classe - $elv - Sauvegarde"); ?>
 		</p></td></tr></table>

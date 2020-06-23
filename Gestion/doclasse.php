@@ -1,5 +1,5 @@
 ﻿<?php
-	include("../head1.html");
+	include("../head1grey.html");
 	include("DSFonctions.php");
 	include("lespetitesfonctions.php");
 	include("../Dropbox.php");
@@ -13,7 +13,7 @@
 <!-- fin head -->
 	</head>
 	<body>
-		<img src="../../../../head.png"/>
+		<center>
 		<table><tr><td><p class="titre">Documents <?php echo($classe);?></p></td></tr></table>
 
 <?php

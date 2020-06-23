@@ -1,0 +1,1 @@
+Quand on augmente la commande du régulateur, la mesure augmente donc le débit d'entrée augmente, donc le niveau augmente, donc la mesure du LT augmente, donc le procédé est direct, donc le régulateur doit être réglé en inverse.

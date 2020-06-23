@@ -1,2 +1,0 @@
-Quand Ti augmente : la stabilité augmente ; la rapidité diminue (sauf pour l'essai 4 car il y a trop de Ti) ; et la précision reste parfaite
-

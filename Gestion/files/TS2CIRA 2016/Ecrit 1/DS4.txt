@@ -1,0 +1,13 @@
+Cipolla::1:
+Premayon:19.5:1:
+Rein:19.5:1:
+Andreani:16.5:1:
+Semenadisse:16.5:1:
+Rousseau:13.5:1:
+Santoni:13:1:
+Luccioni:10.5:1:
+Frelin:10:1:
+Pastor:9.5:1:
+Tremino:9.5:1:
+Bourgue:7:1:
+Arcas:4:1:

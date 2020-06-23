@@ -1,0 +1,1 @@
+par calcul grâce à la loi des gaz parfait T=(P*V)/(n*R)-273,15

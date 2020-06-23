@@ -1,0 +1,14 @@
+Andreani:0:1:Lu 10-02
+Arcas:15:1:Lu 10-02
+Auda:5:1:Lu 10-02
+Colas::1:Lu 10-02
+Dethorey:0:1:Lu 10-02
+Golleret:20:1:Lu 10-02
+Krout:0:1:Lu 10-02
+Raffellini:20:1:Lu 10-02
+Rein:15:0:Lu 10-02
+Roussel:20:1:Lu 10-02
+Santoni:20:1:Lu 10-02
+Savelli::1:Lu 10-02
+Semenadisse::1:Lu 10-02
+Vaiarello::1:Lu 10-02

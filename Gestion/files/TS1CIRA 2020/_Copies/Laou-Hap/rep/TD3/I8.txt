@@ -1,0 +1,1 @@
+Quand la commande y en % augmente l'échelon de mesure x augmente (passe de 50 à 60).on a alors un procédé direct et donc le régulateur est en action inverse. 

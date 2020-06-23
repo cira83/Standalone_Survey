@@ -4,8 +4,9 @@
 	
 	include("../head1.html");
 	echo("<title>$classe</title>");
+	
 
-	function estfichier2($nom){// Fichier ou non ?
+	function estrep2($nom){// Fichier ou non ?
 		$drap = true;
 		$data = explode(".", $nom);
 		if($data[0]=="") $drap = false;
@@ -22,9 +23,9 @@
 		sort($classes);
 		$i=0;
 		foreach($classes as $classe) {
-			if(estfichier2($classe)){
+			if(estrep2($classe)){
 				$part = explode(".", $classe);
-				if(count($part)>1) {
+				if(count($part)==1) {
 					if($i) $classe_text .= ":$part[0]";
 					else $classe_text = "$part[0]";
 					$i++;
@@ -53,7 +54,7 @@
 
 	//MENU DEROULANT ELEVES        ------------------------------------------------------------------------------------------------------
 	$select_elv = "<select name=\"nom\" id=\"nom\">\n";
-	$fichieralire = "$repertoire$classe.txt";
+	$fichieralire = "$repertoire$classe/_Profils.txt";
 	if(file_exists($fichieralire)){
 		$fp = fopen($fichieralire, "r");
 		while(!feof($fp)){
@@ -64,6 +65,7 @@
 		}
 		fclose($fp);
 	}
+	else echo("$fichieralire n'existe pas !!");
 	$select_elv .= "</select>";
 
 	$password_in = "<input type=\"password\" name=\"password\" id=\"password\" autocomplete=\"on\">";

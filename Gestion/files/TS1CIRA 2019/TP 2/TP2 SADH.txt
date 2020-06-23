@@ -1,0 +1,24 @@
+Audiffren Sanna::1:
+Ayza Blanchon::1:
+Bernardi Feyrit::1:
+Bichon Vasapolli::1:
+Cafagna Marin::1:
+Charpin Chevillard::1:
+Lothmann Vincent::1:
+Mrabet Sibilo::1:
+Ayza Blanchon:6.85:1:27/11 - 11h18:0 Correction:::
+Bichon Vasapolli:10.10:1:03/12 - 11h16:0 Correction:::
+Bernardi Feyrit:8.25:1:10/12 - 10h04:0 Correction:::
+Bernardi Feyrit:10.25:1:12/12 - 13h31:0 Correction::Pb stabilité +2:
+Cafagna Marin:9.85:1:13/12 - 18h15:0 Correction:::
+Audiffren Sanna:11.25:1:04/01 - 10h44:0 Correction:::
+Audiffren Sanna:11.25:1:Non Fait:0 Correction:::
+Ayza Blanchon:6.85:1:Non Fait:0 Correction:::
+Bernardi Feyrit:10.25:1:Non Fait:0 Correction::Pb stabilité +2:
+Bichon Vasapolli:10.10:1:Non Fait:0 Correction:::
+Cafagna Marin:9.85:1:Non Fait:0 Correction:::
+Mrabet Sibilo:11.15:1:15/01 - 09h36:0 Correction:::
+Charpin Chevillard:15.65:1:21/01 - 09h52:0 Correction:::
+Lothmann::1:30/01 - 17h40:0 Correction:::
+Lothmann Vincent::1:Non Fait:0 Correction:::
+Lothmann:11.70:1:04/02 - 14h18:0 Correction:::

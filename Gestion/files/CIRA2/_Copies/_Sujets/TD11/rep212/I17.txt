@@ -1,0 +1,1 @@
+Quand on augmente la commande de AC, le débit de lait de chaud augmente ce qui fait augmenter le pH. Il faut régler le régulateur avec une action inverse.

@@ -1,0 +1,1 @@
+Quand on augmente la commende du régulateur la mesure augmente le procédé est direct on règle donc le sens d'action du régulateur en sens inverse

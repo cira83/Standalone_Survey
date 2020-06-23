@@ -27,7 +27,7 @@
 		var pastille = <?php echo($lut); ?>
 		
 			function photo(classe, nom,laquestion){
-				laphoto = '<br><a href="../Gestion/devoir_comp.php?name='+nom+'&quest='+laquestion+'" target="_blank"><img src="../Gestion/files/'+classe+'/_Photos/'+ nom + '.jpg" height="100px"/></a>';
+				laphoto = '<br><a href="../Gestion/devoir_comp.php?name='+nom+'&quest='+laquestion+'" target="_blank"><img src="photo2.php?file=../Gestion/files/'+classe+'/_Photos/'+ nom + '.jpg" height="100px"/></a>';
 				return(laphoto);
 			}
 		
@@ -86,6 +86,7 @@
 							cellule.innerHTML = '';
 							celluleQ.innerHTML = '';
 							celluleB.innerHTML = '';
+							celluleL.innerHTML = '';
 						}
 					}
 					cellule_ping = document.getElementById('ping');

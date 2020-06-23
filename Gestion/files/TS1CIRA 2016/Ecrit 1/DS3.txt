@@ -1,0 +1,20 @@
+Are::1:
+Fouasse::1:
+Gire::1:
+Yborra::1:
+Bacquias:14.5:1:
+Nadau:12.5:1:
+Romdhani:12.5:1:
+Roggero:11.5:1:
+Vassal:10.5:1:
+Minel:9.5:1:
+Berre:7.75:1:
+Lamarque:7.5:1:
+Segault:3.5:1:
+Mougeolle:1.25:1:
+Fouasse::1:Non Fait:0 Correction:::
+Gire::1:Non Fait:0 Correction:::
+Are::1:Non Fait:0 Correction:::
+Yborra::1:Non Fait:0 Correction:::
+Yborra::1:Non Fait:0 Correction:::
+Yborra::1:Non Fait:0 Correction:::

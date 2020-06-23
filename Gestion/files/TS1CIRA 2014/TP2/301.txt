@@ -1,0 +1,16 @@
+Andreani:18:1:Lu 03-02
+Arcas:19:1:Lu 03-02
+Auda:16:1:Lu 03-02
+Colas:20:1:Lu 03-02
+Crivello::1:Lu 03-02
+Dethorey:18:1:Lu 03-02
+Golleret::1:Lu 03-02
+Krout:19:1:Lu 03-02
+Raffellini:19:1:Lu 03-02
+Rein:19:1:Lu 03-02
+Roussel:19:1:Lu 03-02
+Russo:18:1:Lu 03-02
+Santoni:20:1:Lu 03-02
+Savelli:19:1:Lu 03-02
+Semenadisse:19:1:Lu 03-02
+Vaiarello:16:1:Lu 03-02

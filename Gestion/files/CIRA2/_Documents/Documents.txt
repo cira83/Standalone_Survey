@@ -1,0 +1,39 @@
+﻿[Fiches Techniques
+2604 Doc rapide,./Doc_Tech/2604%20Doc%20rapide.pdf
+Dossier Technique Aerotherm,./Doc_Tech/Dossier%20Technique%20Aerotherm.pdf
+Dossier Technique Multiboucle,./Doc_Tech/Dossier%20Technique%20Multiboucle.pdf
+Dossier Technique SAD Bas,./Doc_Tech/Dossier%20Technique%20SAD%20Bas.pdf
+Dossier Technique SAD Haut,./Doc_Tech/Dossier%20Technique%20SAD%20Haut.pdf
+Notice Fluke 705,./Doc_Tech/Notice%20Fluke%20705.pdf
+Notice FujiHartExplorer,./Doc_Tech/Notice%20FujiHartExplorer.pdf
+Notice Itools,./Doc_Tech/Notice%20Itools.pdf
+Notice JUMO dTRANS HART,./Doc_Tech/Notice%20JUMO%20dTRANS%20HART.pdf
+Notice LibreOffice,./Doc_Tech/Notice%20LibreOffice.pdf
+Protocole HART,./Doc_Tech/Protocole%20HART.pdf
+PT100,./Doc_Tech/PT100.pdf
+Transmetteurs FUJI,./Doc_Tech/Transmetteurs%20FUJI.pdf
+[Cours
+Régulation,https://www.dropbox.com/s/le0kbpasu2yoxs4/Regulation%20Industrielle.pdf?dl=0
+Se souvenir,https://www.dropbox.com/s/apyoq2wcgw0vg29/Se%20Souvenir.pdf?dl=0
+Eurotherm Suite,https://www.dropbox.com/s/x1hm1in5zpzh7j4/Eurothem%20Suite.pdf?dl=0
+Capteurs - Rappels,https://www.dropbox.com/s/o4tescm6eyqs8vs/Capteurs%20et%20transmetteurs.pdf?dl=0
+Capteurs de température,https://www.dropbox.com/s/p2888mcxedk20nv/Capteurs%20de%20temp%C3%A9rature.pdf?dl=0
+[Stage
+Attendus du stage,https://docs.google.com/presentation/d/e/2PACX-1vSx4fWL6td_fQ-ICTS5049biv27Q-ty5zN5YV1VuPeo3fpFlnK2y_LRcGgEzXOcsJdsm2Na3nEDXMrg/pub?start=false&loop=false&delayms=3000
+Fiche à rendre à la rentrée,https://www.dropbox.com/s/3sn5f53wy59phen/CONTENU%20SCIENTIFIQUE%20ET%20TECHNIQUE.pdf?dl=0
+[Présentations
+Accueil CIRA,https://www.dropbox.com/s/68cnpcoutp75n8n/Jour%201.pptx?dl=0
+Epreuve de rapport de stage E41,https://www.dropbox.com/s/bu0y20a4ira44yz/E41.pptx?dl=0
+[Fiches d'exercices
+Fiche 1
+Fiche 2
+Fiche 3
+Fiche 4
+Fiche 5
+Fiche 6
+Fiche 7
+Fiche 8
+Fiche 9
+Fiche 10
+Fiche 11
+Fiche 12

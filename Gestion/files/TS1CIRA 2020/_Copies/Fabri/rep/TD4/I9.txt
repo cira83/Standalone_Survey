@@ -1,0 +1,2 @@
+On se place en manuel et on réalise un échelon de commande et on observe la courbe devrait devenir stable 
+

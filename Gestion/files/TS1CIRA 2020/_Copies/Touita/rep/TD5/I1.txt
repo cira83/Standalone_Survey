@@ -1,0 +1,2 @@
+FV: vanne débit ; FE: capteur débit ; FT: transmetteur de débit ; 
+FIC: régulateur indicateur de débit ; FY: relais calcul débit

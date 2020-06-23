@@ -1,0 +1,5 @@
+Réglante : Sortie du régulateur AIC
+
+Réglée : mesure taux de Co2
+perturbatrice : débit de Co2
+

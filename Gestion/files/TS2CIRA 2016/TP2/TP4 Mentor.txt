@@ -1,0 +1,9 @@
+Andreani::1:
+Semenadisse:20:1:
+Rousseau:19:1:
+Premayon:18:1:
+Bourgue:17.5:1:
+Tremino:17.5:1:
+Pastor:14:1:
+Cipolla:11:1:
+Arcas:7:1:

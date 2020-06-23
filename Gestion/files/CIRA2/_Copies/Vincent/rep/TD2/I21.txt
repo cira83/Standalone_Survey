@@ -1,1 +1,0 @@
-Temps de réponse = 17,5 * 4 = 70 sec ; valeur du premier dépassement = 6%

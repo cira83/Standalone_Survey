@@ -1,0 +1,4 @@
+reglantes : débit de co2 en entrée
+Réglée : débit de co2 en sortie
+Perturbatrice : Température, pression
+

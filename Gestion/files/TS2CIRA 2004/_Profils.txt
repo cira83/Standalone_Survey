@@ -1,0 +1,17 @@
+Bouassa:Hanene:10/10/1987::::::non:::non:NON:
+Brault:Nicolas:::::::non:::non:NON:
+Bui:Julien:23/03/1990::::::non:::non:NON:
+Deleye:Gaetan:12/05/1988::::::non:::non:NON:
+Dufour:Benoit:09/02/1989::::::non:::non:NON:
+Ferrarini:Sebastien:08/03/1990::::::non:::non:NON:
+Hermer:Florian:29/03/1990::::::non:::non:NON:
+Martin:Emilien:::::::non:::non:NON:
+Masero:Jonathan:28/02/1988::::::non:::non:NON:
+Medina:Emmanuel:04/02/1989::::::non:::non:NON:
+Menard:Yohann:05/10/1990::::::non:::non:NON:
+Michaud:Alexandre:03/05/1990::::::non:::non:NON:
+Nangard:Virgil:26/04/1990::::::non:::non:NON:
+Nas_de_Tourris:Maxime:28/03/1989::::::non:::non:NON:
+Regis:Florian:04/10/1987::::::non:::non:NON:
+Souidi:Fouzi:01/04/1990::::::non:::non:NON:
+Villeseche:Herve:13/06/1988::::::non:::non:NON:

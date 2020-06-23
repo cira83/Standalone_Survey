@@ -1,1 +1,0 @@
-La régulation cascade permet un temp de réponse rapide ce qui permet le maintien de la température du mélange réactionnel en régime stabilisé.

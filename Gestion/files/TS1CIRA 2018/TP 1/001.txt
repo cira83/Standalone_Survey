@@ -1,0 +1,32 @@
+Agostino::1:
+Andre::1:
+Bellemere::1:
+Chapelain::1:
+Couillet::1:
+Fiandino::1:
+Ginieys::1:
+Laouer::1:
+Lothmann::1:
+Mahouachi::1:
+Mengual::1:
+Parodi::1:
+Raspaud::1:
+Spite::1:
+Turkcan::1:
+Mengual::0:12/09 - 15h59:0 Correction::Fichier effacée par admin:
+Mahouachi::0:12/09 - 16h00:0 Correction::Absent à la rentrée:
+Mahouachi::1:12/09 - 16h02:0 Correction:::
+Laouer::1:Non Fait:0 Correction:::
+Parodi::1:Non Fait:0 Correction:::
+Agostino:17:1:13/09 - 16h26:0 Correction:::
+Andre:20:1:13/09 - 16h29:0 Correction:::
+Chapelain:20:1:13/09 - 16h30:0 Correction:::
+Couillet:20:1:13/09 - 16h32:0 Correction:::
+Fiandino:20:1:13/09 - 16h34:0 Correction:::
+Ginieys:14:1:13/09 - 16h37:0 Correction:::
+Lothmann:17:1:13/09 - 16h40:0 Correction:::
+Mahouachi:20:1:13/09 - 16h42:0 Correction:::
+Raspaud:13:1:13/09 - 16h45:0 Correction:::
+Spite:20:1:13/09 - 16h46:0 Correction:::
+Turkcan:17:1:13/09 - 16h49:0 Correction:::
+Bellemere:12:1:18/09 - 13h46:0 Correction:::

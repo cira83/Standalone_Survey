@@ -1,0 +1,16 @@
+Bagur:Pr&eacute;sent:+1:
+Bayssac:Absent:-1:
+Bertolotti:Absent:-1:
+Blanc:Pr&eacute;sent:+1:
+Bouchlagham:Absent:-1:
+Fabri:Absent:-1:
+Gonzalez:Absent:-1:
+Grapin:Absent:-1:
+Henry:Absent:-1:
+Laou-Hap:Absent:-1:
+Menini:Pr&eacute;sent:+1:
+Rinuit:Absent:-1:
+Seghi:Absent:-1:
+Touita:Pr&eacute;sent:+1:
+Vernhet:Pr&eacute;sent:+1:
+Vogel:Absent:-1:

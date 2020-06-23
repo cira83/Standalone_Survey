@@ -1,1 +1,0 @@
-La stratégie de régulation du régulateur FIC2 est une régulation proportionnelle. La grandeur menée est le capteur de débit FT2.

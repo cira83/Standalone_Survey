@@ -1,0 +1,1 @@
+Puisque la vanne est normalement ouverte, quand on augmente la commande du TIC la vanne se ferme, le débit d'eau froide diminue donc il chauffe de plus en plus, le procédé est directe, il faut donc régler le régulateur en inverse.

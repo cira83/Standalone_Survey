@@ -1,1 +1,0 @@
-la procédé est direct car lorsque on augmente le débit d'entée le niveaux augmente, ce implique que le régulateur est inverse

@@ -1,0 +1,33 @@
+Ayza::1:
+Bernardi::1:
+Bichon::1:
+Blanchon::1:
+Cafagna::1:
+Charpin::1:
+Chevillard::1:
+Feyrit::1:
+Lothmann::1:
+Marin::1:
+Mrabet::1:
+Sanna::1:
+Sibilo::1:
+Vasapolli::1:
+Vincent::1:
+Chevillard::1:16/11 - 12h27:0 Correction::Absent:
+Ayza:8.55:1:17/11 - 14h37:0 Correction:::
+Vasapolli:13.85:1:17/11 - 14h42:0 Correction:::
+Charpin:11.60:1:17/11 - 14h50:0 Correction:::
+Vincent:7.90:1:17/11 - 14h56:0 Correction:::
+Bichon:10.35:1:17/11 - 15h00:0 Correction:::
+Sanna:15.60:1:17/11 - 15h10:0 Correction:::
+Feyrit:9.30:1:17/11 - 15h15:0 Correction:::
+Bernardi:8.30:1:17/11 - 15h20:0 Correction:::
+Blanchon:6.00:1:17/11 - 15h24:0 Correction:::
+Lothmann:10.25:1:17/11 - 15h33:0 Correction:::
+Sibilo:4.25:1:17/11 - 15h37:0 Correction:::
+Marin:7.05:1:17/11 - 15h42:0 Correction:::
+Cafagna:5.70:1:17/11 - 15h46:0 Correction:::
+Mrabet:6.45:1:17/11 - 15h51:0 Correction:::
+Audiffren:6.9:1:17/11 - 15h54:0 Correction::Absent:
+Audiffren:6.9:1:19/11 - 16h10:0 Correction:::
+Chevillard:7.55:1:22/11 - 14h28:0 Correction::Absent:

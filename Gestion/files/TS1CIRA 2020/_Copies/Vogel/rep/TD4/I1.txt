@@ -1,0 +1,1 @@
+pression differentielle vu qu'on a les valeurs des 2 pressions donc on peut appliquer la formule : P2=P1+ roh *g *h

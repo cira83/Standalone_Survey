@@ -1,1 +1,0 @@
-Les deux boucle arrivent à une régulation avec une erreur statique nul et pas de dépaassement de plus de 10%. Mais la boucle de cascade a un temp de réponse (17,5sec)  presque 4x plus rapide que la boucle simple (65sec)

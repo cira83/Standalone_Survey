@@ -1,14 +1,13 @@
 <?php
 	//Liste des logiciels disponibles sur la clef
 	include("./security.php");
-	include("../head1.html");
+	include("../head1grey.html");
 	if($password_OK) echo("<title>$classe - $elv</title>");
 	else echo("<title>$classe</title>");
 ?>
 </head>
 <body>
-  <img src="head.png"/>
-
+<center>
 <?php
   	$class_cook = $_COOKIE["laclasse"];
 

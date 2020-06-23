@@ -1,0 +1,9 @@
+Andreani:20:1:
+Tremino:17:1:
+Pastor:13:1:
+Cipolla:12:1:
+Bourgue:11:1:
+Luccioni:11:1:
+Rousseau:11:1:
+Arcas:8:1:
+Frelin:8:1:

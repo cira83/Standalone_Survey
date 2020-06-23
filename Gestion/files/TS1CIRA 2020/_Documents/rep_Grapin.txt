@@ -1,0 +1,15 @@
+DS1 Grapin.pdf,./files/CIRA1/_Copies/Grapin/DS1 Grapin.pdf
+DS2 Grapin.pdf,./files/CIRA1/_Copies/Grapin/DS2 Grapin.pdf
+DS3 Grapin.pdf,./files/CIRA1/_Copies/Grapin/DS3 Grapin.pdf
+DS5 Grapin.pdf,./files/CIRA1/_Copies/Grapin/DS5 Grapin.pdf
+DS6 Grapin.pdf,./files/CIRA1/_Copies/Grapin/DS6 Grapin.pdf
+DS7 Grapin.pdf,./files/CIRA1/_Copies/Grapin/DS7 Grapin.pdf
+DS8 Grapin.pdf,./files/CIRA1/_Copies/Grapin/DS8 Grapin.pdf
+TD1 Grapin.pdf,./files/CIRA1/_Copies/Grapin/TD1 Grapin.pdf
+TD2 Grapin.pdf,./files/CIRA1/_Copies/Grapin/TD2 Grapin.pdf
+TD3 Grapin.pdf,./files/CIRA1/_Copies/Grapin/TD3 Grapin.pdf
+TD4 Grapin.pdf,./files/CIRA1/_Copies/Grapin/TD4 Grapin.pdf
+TD5 Grapin.pdf,./files/CIRA1/_Copies/Grapin/TD5 Grapin.pdf
+TP2 SADB Grapin.pdf,./files/CIRA1/_Copies/Grapin/TP2 SADB Grapin.pdf
+TP2 SADH Grapin.odt,./files/CIRA1/_Copies/Grapin/TP2 SADH Grapin.odt
+TP2 SADH Grapin.pdf,./files/CIRA1/_Copies/Grapin/TP2 SADH Grapin.pdf

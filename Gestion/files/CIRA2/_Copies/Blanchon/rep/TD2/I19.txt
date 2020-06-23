@@ -1,1 +1,0 @@
-Gain= 16, Ti(s) 49, Td(s)=0   PID MIXTE

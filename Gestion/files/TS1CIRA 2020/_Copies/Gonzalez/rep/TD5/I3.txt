@@ -1,0 +1,3 @@
+grandeur réglante: le taux de CO2
+grandeur réglée: la régulation de débit de CO2
+grandeur perturbatrice: le débit de CO2 de la boucle 02

@@ -1,0 +1,3 @@
+pour Xa le Xp est trop grand car on a un dépassement avec trop de variation
+pour Xb le Xp est correct car on a pas de dépassement et la mesure est proche de la consigne
+pour Xc le Xp est trop grand donc pas bon car la mesure est trop éloigner de la consigne 

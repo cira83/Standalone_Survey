@@ -1,0 +1,1 @@
+Trouver un Ti correct en prenant en compte Td et Xp. 

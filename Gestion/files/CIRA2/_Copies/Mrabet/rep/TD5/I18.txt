@@ -1,1 +1,0 @@
-elle améliore l’erreur statique et accélère le temps de réponse 

@@ -1,0 +1,4 @@
+grandeur réglée:le niveau h
+grandeur réglante: le débit Qmp
+grandeur perturbatrice: le débit Qs1
+

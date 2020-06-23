@@ -1,1 +1,0 @@
-Je choisie la cascade car on voit de meilleure résultat. Le but etant d'avoir un minimum de temps de reponse et derreur statique cette regulation nous permet d'avoir une bonne régulation

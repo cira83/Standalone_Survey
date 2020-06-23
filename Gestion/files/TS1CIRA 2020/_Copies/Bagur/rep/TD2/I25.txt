@@ -1,0 +1,2 @@
+Ici, par rapport au réglages Ziegler&Nichols la rapidité a augmenté.
+

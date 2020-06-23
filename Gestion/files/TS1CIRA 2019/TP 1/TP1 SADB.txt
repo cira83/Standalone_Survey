@@ -1,0 +1,13 @@
+Ayza Sanna::1:
+Bernardi Feyrit::1:
+Cafagna Marin::1:
+Chevillard Charpin::1:
+Lothmann Vincent::1:
+Sibilo Mrabet::1:
+Vasapolli Bichon::1:
+Bernardi Feyrit:9.6:1:18/09 - 08h31:0 Correction:::
+Cafagna Marin:8.4:1:25/09 - 08h53:0 Correction:::
+Lothmann Vincent:16.5:1:09/10 - 19h26:0 Correction:::
+Chevillard Charpin:16.35:1:05/11 - 10h07:0 Correction:::
+Vasapolli Bichon:17.75:1:13/11 - 09h14:0 Correction:::
+Sibilo Mrabet:16.60:1:19/11 - 08h16:0 Correction:::

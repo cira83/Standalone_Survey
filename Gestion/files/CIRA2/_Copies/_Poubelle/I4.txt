@@ -1,1 +1,0 @@
-il y a 0 dépassement, l'erreur statique = 17 % et le temps de réponse est de 110 secondes environ

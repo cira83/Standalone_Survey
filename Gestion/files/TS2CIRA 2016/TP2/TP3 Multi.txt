@@ -1,0 +1,6 @@
+Tremino Pastor::1:
+Rousseau Premayon:18.5:1:
+Bourgue:11.5:1:
+Frelin Cipolla:10:1:
+Andreani:9.5:1:
+Semenadisse:0:1:

@@ -1,0 +1,15 @@
+Andreani:17:1:Ve 10-10
+Arcas:10:1:Ve 10-10
+Bourgue:17:1:Ve 10-10
+Cipolla:14:1:Ve 10-10
+Frelin:3:1:Ve 10-10
+Kremer:14:1:Ve 10-10
+Lamarque:13:1:Ve 10-10
+Luccioni:10:1:Ve 10-10
+Missilini:5:1:Ve 10-10
+Noaman:12:1:Ve 10-10
+Pastor:18:1:Ve 10-10
+Premayon:14:1:Ve 10-10
+Rousseau:12:1:Ve 10-10
+Souames:12:1:Ve 10-10
+Tremino:12:1:Ve 10-10

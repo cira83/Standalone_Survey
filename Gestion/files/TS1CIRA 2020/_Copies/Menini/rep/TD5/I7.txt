@@ -1,0 +1,2 @@
+En utilisant la constante des gaz parfaits.On divise nrt par le volume de gaz
+

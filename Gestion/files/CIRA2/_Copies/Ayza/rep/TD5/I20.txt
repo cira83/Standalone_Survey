@@ -1,1 +1,0 @@
-La régulation cascade est plus rapide donc je choisi la régulation cascade.

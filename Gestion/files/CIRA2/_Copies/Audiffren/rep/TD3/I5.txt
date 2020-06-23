@@ -1,1 +1,0 @@
-H=h2-h3-h1=2,7-0,4-0,3=2m on utilise bernouilli donc P=19000Pa

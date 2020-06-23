@@ -1,0 +1,1 @@
+On a une cuve fermée avec une pression de référence P0. Il faut donc utiliser un capteur de pression différentiel pour effectuer une mesure. 

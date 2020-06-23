@@ -1,1 +1,0 @@
-trep=55s  Es=1% pas de depassement

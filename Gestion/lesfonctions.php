@@ -44,6 +44,8 @@
 	function coefmat($nom){//Donne le coef de la matière TP 1 et Cours 1
 	function info_sujet($file){//Lien vers le sujet et sa correction
 	function info_sujet_ouvert($file){//Informations disponibles pour les élèves ?
+	function est1dossier($nom){//Si c'est un dossier (pour le menu classe)
+
 
 	$tableaudesepreuves Tableau de toutes les epreuves
 	$lepreuve1[$k] = $epreuves[$j].".".$matieres[$i].".";
@@ -233,8 +235,14 @@
 			$resultat .= "<a href=\"$lien[$i]\"><img src=\"./icon/$ext.gif\"/></a> ";
 		}
 
-		return("$resultat");
-		//return("$epreuve");
+		//Utilisation des TAG pour les DS 
+		$part3 = explode(".",$epreuve);
+		$tag = $part3[0];
+		$lieu = "./files/$classe/_Copies/$nom[0]/rep";
+		$file_rep = TAG_existe($lieu,$tag);
+		if($file_rep) $resultat = "<a href=\"./copie.php?tag=$tag&name=$nom[0]\"><img src=\"./icon/doc.gif\" height=\"20px\"/></a>";
+
+		return($resultat);
 	}
 
 	function note2copie($nom2,$classe,$epreuve,$matiere,$ladate){
@@ -255,7 +263,15 @@
 	}
 
 
-	function lescopies3($nom2,$classe,$epreuve,$repertoire_copies){// ###
+	function TAG_existe($repertoire,$tag){
+		$liste_file = scandir($repertoire);
+		$filename = "";
+		foreach($liste_file as $file) 
+			if(strpos("_$file", "$tag ")==1) $filename = $file;
+		return($filename);//retourne filename si la copie TAG existe dans le répertaire élève
+	}
+
+	function lescopies3($nom2,$classe,$epreuve,$repertoire_copies){//###
 		$resultat = "";
 		$nom = explode(" ", $nom2);//Liste des noms si c'est un groupe
 		$nomfichier = explode(".", $epreuve);
@@ -288,8 +304,15 @@
 			$resultat2 .= "$mdr[$i] ";
 		}
 
+		//Utilisation des TAG pour les DS 
+		$part3 = explode(".",$epreuve);
+		$tag = $part3[0];
+		$lieu = "./files/$classe/_Copies/$nom[0]/rep";
+		$file_rep = TAG_existe($lieu,$tag);
+		if($file_rep) $lienplus = "<a href=\"./copie.php?tag=$tag&name=$nom[0]\"><img src=\"./icon/doc.gif\" height=\"15px\"/></a>";
+		else $lienplus = "";
 
-		return("$resultat:$resultat2");
+		return("$lienplus$resultat:$resultat2");//$resultat = lien vers copies, $resultat2 = liste des MD5
 	}
 
 
@@ -468,6 +491,10 @@
 		return($drap);
 	}
 
+	function est1dossier($nom){//###
+		$data = explode(".", $nom);
+		return(!isset($data[1]));
+	}
 
 	function lien($filename){ //Affiche un lien vers un fichier defini par son chemin
 		echo("<a href=\"$filename\">$filename</a>");
@@ -514,8 +541,7 @@
 
 		return($drap);
 	}
-
-
+	
 	function dejavu($liens,$liens_vus){
 		$drap = 0;
 		$tab = explode(" ", $liens);
@@ -524,13 +550,10 @@
 		return($drap);
 	}
 
-
 	function affiche($texte){ //affiche un texte et un saut à la ligne
 		echo("<p>$texte</p>");
 	}
 
-
-	###
 	function photode($nom) { //fournie la photo et un lien vers la fiche de l'élève
 		$lesphotos = "";
 		$lesnom = explode(" ", $nom);
@@ -548,7 +571,9 @@
 				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"$filephoto\" height=\"133px\" style=\"border:solid 4px $couleur;\" id=\"$nom\"/ 
 				onmouseover=\"myInfo('$nom');\" onmouseout=\"myStopInfo();\"></a>";
 			else
-				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/----.jpg\" height=\"133px\" style=\"border:solid 4px $couleur;\"id=\"$nom\"/></a>";
+				$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/----.jpg\" height=\"133px\" style=\"border:solid 4px $couleur;\" id=\"$nom\"/ 
+				onmouseover=\"myInfo('$nom');\" onmouseout=\"myStopInfo();\"></a>";
+				//$lesphotos .= "<a href=\"./eleve.php?nom=$lesnom[$i]\"><img src=\"./photos/----.jpg\" height=\"133px\" style=\"border:solid 4px $couleur;\"id=\"$nom\"/></a>";
 		}
 		return($lesphotos);
 	}
@@ -560,8 +585,10 @@
 	function eleve_present($nom,$laclasse,$mois,$jour){
 		$drap = true;
 		$repertoire_name = "./files/$laclasse/_Appels/";
-		if($jour<10) $jour = "$jour[1]";
-		if($jour>100) $jour = "$jour[2]";
+		//$jour = isset($jour[1])?$jour:"00";
+		//if($jour<10) $jour = "$jour[1]";
+		//if($jour>100) $jour = "$jour[2]";
+		
 		$filename = "$repertoire_name$jour"."_$mois.txt";
 		if(file_exists($filename)){
 			$fp = fopen($filename, "r");
@@ -573,7 +600,9 @@
 				}
 			}
 			fclose($fp);
-		}else echo("<p>Erreur 1410 : Le fichier $filename n'existe pas !!</p>");
+		}
+		else 
+			echo("<p>Le fichier $filename n'existe pas !! (eleve_present-lesfonctions.php) </p>");
 
 		return $drap;
 	}
@@ -612,39 +641,161 @@
 		return $resultat;
 	}
 
+	function appel_mois_tab($mois,$jours_liste,$black_liste,$link_active){
+		$black = explode(":",$black_liste);//Liste des jours MM_DD à mettre en noir séparés par :
+		$jours = explode(":",$jours_liste);
+		$nb2jours = count($jours);
+		$nb2case = 0;
+		while(2*$nb2case<$nb2jours) $nb2case++;
+		
+		$ligne1 = "<td bgcolor=\"#eee\" colspan=\"$nb2case\">$mois</td>";
+		$ligne2 = "";
+		$ligne3 = "";
+		
+		for($i=0;$i<$nb2case;$i++) {
+			if($link_active)
+				$case1 = isset($jours[$i])?"<td bgcolor=\"#eee\"><a href=\"./appel.php?ladate=$jours[$i]/$mois\"><font size=\"-1\">$jours[$i]</font></a></td>":"<td></td>";
+			else
+				$case1 = isset($jours[$i])?"<td bgcolor=\"#eee\"><font size=\"-1\">$jours[$i]</font></td>":"<td></td>";
+			if(isset($jours[$i]))
+				if(in_array("$jours[$i]_$mois", $black)) 
+					$case1 = "<td bgcolor=\"#000\"><font size=\"-1\" color=\"white\">$jours[$i]</font></td>";
+			$ligne2 .= $case1;
+		}
+		for($i=$nb2case;$i<2*$nb2case;$i++) {
+			if($link_active)
+				$case1 = isset($jours[$i])?"<td bgcolor=\"#eee\"><a href=\"./appel.php?ladate=$jours[$i]/$mois\"><font size=\"-1\">$jours[$i]</font></a></td>":"<td></td>";
+			else
+				$case1 = isset($jours[$i])?"<td bgcolor=\"#eee\"><font size=\"-1\">$jours[$i]</font></td>":"<td></td>";
+			if(isset($jours[$i]))
+				if(in_array("$jours[$i]_$mois", $black)) 
+					$case1 = "<td bgcolor=\"#000\"><font size=\"-1\" color=\"white\">$jours[$i]</font></td>";
+			$ligne3 .= $case1;
+		}
+		return("$ligne1:$ligne2:$ligne3:");
+	}
+	
+	function tabDappels2020($lesdates,$listeBlack,$link_active){
+		// $lesdates : tableau des dates au format JJ/MM
+		// $today : string des jours à surligner au format JJ_MM séparer par :
+		// $link_active : 0 - pas de lien, 1 - liens vers l'appel correspondant
+		if(is_array($lesdates)) $nb2dates = count($lesdates);
+		else $nb2dates = 0;
+				echo("<!-- tabDappels2020($lesdates[0],$listeBlack,$link_active) -->");//--------------------    Affichage des informations
+		if($lesdates[0]) {
+			//Je mets le mois d'abord
+			for($i=0;$i<$nb2dates;$i++){
+				$part = explode("/", $lesdates[$i]);
+				if($part[0]<10) $part[0]="0$part[0]";
+				$part1 = my_array_value($part,1);
+				$lesdates[$i]="$part1:$part[0]";
+			}
+			if($nb2dates) sort($lesdates);
+			$ligne11 = "";//rentrée
+			$ligne12 = "";
+			$ligne13 = "";
+			$ligne21 = "";//nouvelle an
+			$ligne22 = "";
+			$ligne23 = "";
+			$mois = "";
+			$seuil = 5;
+			$nb_case = 0;
+			$listeDdate = "";
+			for($i=0;$i<$nb2dates;$i++){
+				$part1 = explode(":", $lesdates[$i]);
+				if($mois!=$part1[0]){//première case du mois
+					if($nb_case > 0) {
+						$part2 = explode(":",appel_mois_tab($mois,$listeDdate,$listeBlack,$link_active));
+						if($mois>$seuil){
+							$ligne11 .= $part2[0];
+							$ligne12 .= $part2[1];
+							$ligne13 .= $part2[2];
+						}
+						else {
+							$ligne21 .= $part2[0];
+							$ligne22 .= $part2[1];
+							$ligne23 .= $part2[2];							
+						}
+					}
+					$mois=$part1[0];
+					$listeDdate = $part1[1];
+					$nb_case = 1; //pour eliminer la case 0
+				}
+				else {
+					$listeDdate .= ":$part1[1]";
+				}
+			}
+			//Pour le dernier mois de la liste
+			if($nb_case > 0) {
+				$part2 = explode(":",appel_mois_tab($part1[0],$listeDdate,$listeBlack,$link_active));
+				if($mois>$seuil){
+					$ligne11 .= $part2[0];
+					$ligne12 .= $part2[1];
+					$ligne13 .= $part2[2];
+				}
+				else {
+					$ligne21 .= $part2[0];
+					$ligne22 .= $part2[1];
+					$ligne23 .= $part2[2];							
+				}
+			}
+	
+			
+			
+			$resultat = "<table><tr>$ligne11$ligne21</tr><tr>$ligne12$ligne22</tr><tr>$ligne13$ligne23</tr></table>";			
+		}
+		else $resultat = "Pas d'appel disponible";
+		return $resultat;
+	}
+
 
 
 
 	function tabDappels($laclasse,$lesdates){
 		$resultat = "<table>";
-		//mois d'abord
 		if(is_array($lesdates)) $nb2dates = count($lesdates);
 		else $nb2dates = 0;
+		
+		//foreach($lesdates as $verif) echo("<!-- $verif -->");
+		
+		//Je mets le mois d'abord
 		for($i=0;$i<$nb2dates;$i++){
 			$part = explode("/", $lesdates[$i]);
 			if($part[0]<10) $part[0]="0$part[0]";
-			//if((isset($part[1])?$part[1]:0)<6) $part[1]="7$part[1]";
 			$part1 = my_array_value($part,1);
 			$lesdates[$i]="$part1:$part[0]";
 		}
 
 		if($nb2dates) sort($lesdates);
-		$ligne1 = "<tr>";
-		$ligne2 = "<tr>";
+		
+		$ligne11 = "";
+		$ligne21 = "";
+		$ligne12 = "";
+		$ligne22 = "";
+		$mois = "";
+		$seuil = 5;
+		$nb_case = 0;
 		for($i=0;$i<$nb2dates;$i++){
 			$part = explode(":", $lesdates[$i]);
-			if($part[0]>70) $part[0]=str_replace("7", "", $part[0]);
-			$theme = "class=\"present\"";
-			$ligne1 .= "<td $theme>$part[0]</td>";//les mois
-			$jour = $part[1];
-			if($jour<10) $jour=my_array_value($jour,1);
-			$ligne2 .= "<td $theme><a href=\"./index.php?ladate=$jour/$part[0]\">$part[1]</a></td>";//les jours
+			$lien = "<a href=\"./appel.php?ladate=$part[1]/$part[0]\">";
+			if($mois!=$part[0]){//première case du mois
+				if($nb_case > 0) {
+					if($mois>$seuil) $ligne11.= "<td colspan=\"$nb_case\" bgcolor=\"#eee\">$mois</td>";
+					else $ligne21 .= "<td colspan=\"$nb_case\" bgcolor=\"#eee\">$mois</td>";	
+				}
+				$mois=$part[0];
+				$nb_case = 1;
+			}
+			else $nb_case++;
+			if($part[0]>$seuil) $ligne12.= "<td bgcolor=\"#eee\"><font size=\"-2\">$lien$part[1]</a></font></td>";
+			else $ligne22 .= "<td bgcolor=\"#eee\"><font size=\"-2\">$lien$part[1]</a></font></td>";
 		}
+		
+		if($part[0]>7) $ligne11.= "<td colspan=\"$nb_case\" bgcolor=\"#eee\">$mois</td>";
+		else $ligne21 .= "<td colspan=\"$nb_case\">$mois</td>";	
 
-		$ligne1 .= "</tr>";
-		$ligne2 .= "</tr>";
 
-		$resultat .= "$ligne2$ligne1</table>";
+		$resultat .= "<tr>$ligne11$ligne21</tr><tr>$ligne12$ligne22</tr></table>";
 		return $resultat;
 	}
 
@@ -655,7 +806,8 @@
 		for($i=0;$i<count($lesdates);$i++){
 			$part = explode("/", $lesdates[$i]);
 			if($part[0]<10) $part[0]="0$part[0]";
-			if($part[1]<7) $part[1]=$part[1]+70;//pour le début de l'année suivante	j'ajoute un 7 devant
+			$part_1 = isset($part[1])?$part[1]:0;
+			if($part_1<7) $part[1]=floatval($part_1) +70;//pour le début de l'année suivante	j'ajoute un 7 devant
 			$lesdates[$i]="$part[1]:$part[0]";
 		}
 
@@ -722,8 +874,6 @@
 			$j=0;
 			while ( $j < count($epreuves)){
 				if(estfichier($epreuves[$j])) {
-					//###
-					//$lepreuve1[$k] = $epreuves[$j].".".$matieres[$i].".";
 					$lepreuve1[$k] = $epreuves[$j].".".$matieres[$i].".";
 					$k++;
 				}
@@ -774,7 +924,7 @@
 	//LISTE DES ELEVES DE LA CLASSE
 	$deroulant3 = "<SELECT name=\"elv\" id=\"elv\" onchange=\"addelv(this.value);\"><OPTION>----</OPTION>";
 	$listedeseleves = "&Eacute;l&egrave;ves : ";
-	$laclassefile = "./files/$classe.txt";
+	$laclassefile = "./files/$classe/_Profils.txt";//2020
 	$fichierdenom = fopen($laclassefile, "r");
 	$k = 0;
 	while (!feof($fichierdenom)){
@@ -817,18 +967,16 @@
 		}
 	}
 	
-	//LISTE DES CLASSES
+	//LISTE DES CLASSES ###
 	$listedesclasses = "<select name=\"classe\" id=\"classe\" onchange=\"newclasse(this.value);\">";
 	$repertoire = "./files";
 	$classes = scandir($repertoire);
 	sort($classes);
 	$i=0;
-	while($i < count($classes)){
-		if(estfichier($classes[$i])){
-			$labonneclasse = explode(".", $classes[$i]);
-			if(count($labonneclasse)>1)
-				if($labonneclasse[0] != $classe) $listedesclasses .= "<option>$labonneclasse[0]</option>";
-				else $listedesclasses .= "<option selected>$labonneclasse[0]</option>";
+	while($i < count($classes)){ //pasdossier
+		if(est1dossier($classes[$i])){
+			if($classes[$i] == $classe) $listedesclasses .= "<option selected>$classes[$i]</option>";
+			else $listedesclasses .= "<option>$classes[$i]</option>";
 		}
 		$i++;
 	}

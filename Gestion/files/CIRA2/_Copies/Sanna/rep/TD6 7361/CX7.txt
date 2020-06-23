@@ -1,1 +1,0 @@
-Attention aux echelles. De plus le dépassement s'exprime en pourcentage de l'échelon de mesure.

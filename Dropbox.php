@@ -5,6 +5,16 @@
 		echo("<!-- $com -->\n");
 	}
 
+	function premiereligne($filename) {
+		if(file_exists($filename)) {
+			$fp = fopen($filename, "r");
+			$ligne = fgets($fp);
+			fclose($fp);			
+		}
+		else $ligne="";
+		return rtrim($ligne);	
+	}
+
 	if(file_exists("../B800")) $B800=1; else $B800=0;//Determine si B800 ou non
 	commente("B800 = $B800");
 
@@ -13,7 +23,7 @@
 	function Dropbox($titre,$filename){
 		if($titre) echo("<h2>$titre</h2>");
 		echo("\n<!-- /DropBox($titre,$filename) -->\n");
-		if(file_exists($filename)){
+		if(premiereligne($filename)){
 			$fp=fopen($filename, "r");
 			echo("<table>");
 			$k=0;
@@ -22,7 +32,7 @@
 				$part = explode(",",$ligne);
 				if(my_array_value($part,1)) {//C'est une ligne normale
 					if($k==0) echo("<tr align=\"left\">");//première colonne
-					echo("<td><a href=\"$part[1]?name=$part[0]\" class=\"annales\" target=\"_blank\">$part[0]</a></td>");
+					echo("<td><a href=\"$part[1]\" class=\"annales\" target=\"_blank\">$part[0]</a></td>");
 					$k++;
 				}
 				else
@@ -55,7 +65,7 @@
 			fclose($fp);
 		}
 		else {
-			echo("Le fichier n'existe pas !!");
+			echo("Le fichier <font color=\"#0FF\" size=\"-1\">$filename</font> n'existe pas ou est vide !!");
 			commente($filename);
 		}
 	}
@@ -125,8 +135,10 @@
 					$DS = "./files/$classe/_Copies/_Sujets/$part[0]";
 					if($k==0) echo("<tr align=\"left\">");//première colonne
 					$Sujet = TitreduTAG($part[0],$classe);
-					echo("<td><a href=\"DS_deplace.php?tag=$part[0]\" class=\"annales\">$part[0] $Sujet</a></td>");
-					$k++;
+					if($Sujet!="Titre?") {
+						echo("<td><a href=\"DS_deplace.php?tag=$part[0]\" class=\"annales\">$part[0] $Sujet</a></td>");
+						$k++;
+					}
 				}
 
 				if($k==3){

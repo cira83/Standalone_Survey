@@ -1,0 +1,1 @@
+Le régulateur est en inverse et le procédé est direct car quand on augmente la commande la mesure augmente

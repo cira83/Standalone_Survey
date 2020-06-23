@@ -1,0 +1,1 @@
+le système est intégrateur car la courbe est croissante et ne se stabilise pas

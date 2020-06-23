@@ -1,0 +1,12 @@
+Are::1:
+Bacquias::1:
+Berre::1:
+Gire::1:
+Lamarque::1:
+Minel::1:
+Mougeolle::1:
+Nadau::1:
+Romdhani::1:
+Segault::1:
+Vassal::1:
+Roggero:20:1:

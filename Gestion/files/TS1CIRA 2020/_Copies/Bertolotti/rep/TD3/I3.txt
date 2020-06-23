@@ -1,0 +1,3 @@
+Réglée = température de l’eau 
+Réglante = débit de l’eau 
+Perturbatrice = température ambiante et du mou 

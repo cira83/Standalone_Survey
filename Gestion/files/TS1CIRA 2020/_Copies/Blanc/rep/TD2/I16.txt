@@ -1,0 +1,2 @@
+quand on augmente la commande du LI, la vanne LV souvre plus donc le débit d'entrée augmente donc le niveau augmente donc la mesure du LT augmente donc le procédé est direct donc on met le régulateur en inverse  
+

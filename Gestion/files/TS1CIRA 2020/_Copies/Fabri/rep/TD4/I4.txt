@@ -1,0 +1,4 @@
+Grandeur réglée:niveau
+grandeur réglante: LV1
+Grandeur perturbatrice: débit de sortie
+

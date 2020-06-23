@@ -1,0 +1,10 @@
+Ailloud:0:0:Lu 04-11
+Antar:13:1:Lu 04-11
+Baudry::1:Lu 04-11
+Destombes:0:1:Lu 04-11
+Guigon:5:1:Lu 04-11
+Keller:5:1:Lu 04-11
+Le_Goff:9:1:Lu 04-11
+Roux:11:1:Lu 04-11
+Saba:7:1:Lu 04-11
+Touze:12:1:Lu 04-11

@@ -34,7 +34,8 @@
 	if($liste_dossiers) {
 		foreach($liste_dossiers as $nom) {
 			$file_info = "$repertoire_documents/$nom/rep/infos.txt";
-			if(file_exists($file_info)) {
+			$file_on = "$repertoire_documents/$nom/rep/on.txt";
+			if(file_exists($file_info)&&file_exists($file_on)) {
 				$fp = fopen($file_info, "r");
 				$tempo = time()-fgets($fp);
 				fclose($fp);

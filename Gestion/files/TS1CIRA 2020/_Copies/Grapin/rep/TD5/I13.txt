@@ -1,0 +1,4 @@
+Essai 1 : Xa : 30%
+Essai 2 : Xb : 50%
+Essai 3 : Xc : 70%
+

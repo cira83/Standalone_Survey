@@ -1,0 +1,22 @@
+Andreani::1:
+Arcas::1:
+Cipolla::1:
+Luccioni::1:
+Pastor::1:
+Premayon::1:
+Rousseau::1:
+Santoni::1:
+Semenadisse::1:
+Bourgue:20:1:
+Frelin:20:1:
+Rein:20:1:
+Tremino:20:1:
+Andreani::1:Non Fait:0 Correction:::
+Arcas::1:Non Fait:0 Correction:::
+Cipolla::1:Non Fait:0 Correction:::
+Luccioni::1:Non Fait:0 Correction:::
+Pastor::1:Non Fait:0 Correction:::
+Premayon::1:Non Fait:0 Correction:::
+Rousseau::1:Non Fait:0 Correction:::
+Santoni::1:Non Fait:0 Correction:::
+Semenadisse::1:Non Fait:0 Correction:::

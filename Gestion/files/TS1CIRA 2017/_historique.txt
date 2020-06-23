@@ -1,0 +1,9 @@
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/epreuve.php?mat=TP%201&epr=001.txt
+/Gestion/eleve.php?nom=Amri
+/Gestion/appel.php
+/Gestion/DSZone.php
+/Gestion/appel.php
+/Gestion/appel.php

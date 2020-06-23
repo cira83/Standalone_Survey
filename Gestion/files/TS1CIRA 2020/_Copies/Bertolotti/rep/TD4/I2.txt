@@ -1,0 +1,1 @@
+P/n=rho*g*(h+z0)+rho *g*z0

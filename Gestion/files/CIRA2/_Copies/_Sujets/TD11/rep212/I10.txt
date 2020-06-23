@@ -1,0 +1,2 @@
+On choisi la courbe b car c'est la courbe avec la plus grande sensibilité autour de la consigne.
+

@@ -1,0 +1,2 @@
+Puisque la vanne LV1 est normalement fermée, quand la commande augmente le niveau augmente donc le procédé du régulateur est directe et le sens d'action inverse.
+

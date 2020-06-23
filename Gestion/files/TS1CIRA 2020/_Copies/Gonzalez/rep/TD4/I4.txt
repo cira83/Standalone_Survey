@@ -1,0 +1,3 @@
+grandeur réglée:le niveau h
+grandeur réglante:la quantité de matière première Qmp
+grandeur perturbatrice:le débit de Qmp 

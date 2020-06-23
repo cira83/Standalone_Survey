@@ -1,1 +1,0 @@
-le système est intégrateur car quand l'entrée "e" est constant, la sortie "s"(niveau) est une droite croissante. 

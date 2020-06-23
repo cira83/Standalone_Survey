@@ -1,0 +1,1 @@
+Pt=Platine c'est le métal utilisé et le 100 indique une résistance de 100 ohms à 0°C

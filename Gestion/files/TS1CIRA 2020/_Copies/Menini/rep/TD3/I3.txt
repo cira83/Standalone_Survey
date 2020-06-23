@@ -1,0 +1,3 @@
+Réglée :Température d'eau en sortir 
+Réglante:Température du moût en entrée
+

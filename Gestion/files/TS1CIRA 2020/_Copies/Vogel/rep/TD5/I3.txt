@@ -1,0 +1,4 @@
+Réglante : mesure du taux de CO2
+réglée : W2
+perturbatrice : consommation du Co2 par l'amine
+

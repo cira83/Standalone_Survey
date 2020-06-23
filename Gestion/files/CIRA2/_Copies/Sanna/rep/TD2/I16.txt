@@ -1,1 +1,0 @@
-inverse car quand quand on augmente la commande la mesure augmente donc le procédé est direct c'est pour cela que l'on doit régler le régulateur en inverse

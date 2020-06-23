@@ -1,0 +1,36 @@
+Agostino::1:
+Andre::1:
+Bellemere::1:
+Chapelain::1:
+Couillet::1:
+Fiandino::1:
+Gensollen::1:
+Ginieys::1:
+Lothmann::1:
+Mahouachi::1:
+Mengual::1:
+Raspaud::1:
+Selegue::1:
+Spite::1:
+Torchut::1:
+Turkcan::1:
+Agostino:0:1:22/11 - 08h45:0 Correction::Programme d'Andre:
+Andre:11:1:22/11 - 10h02:0 Correction:::
+Andre:17:1:22/11 - 10h07:0 Correction:::
+Agostino:14:1:22/11 - 10h14:0 Correction:::
+Spite:17:1:22/11 - 10h21:0 Correction:::
+Torchut:20:1:22/11 - 10h25:0 Correction:::
+Turkcan:4:1:22/11 - 10h29:0 Correction:::
+Chapelain:18:1:10/01 - 13h31:0 Correction:::
+Turkcan:4:0:11/01 - 09h20:0 Correction:::
+Bellemere:0:1:11/01 - 10h33:0 Correction:::
+Couillet:0:1:11/01 - 10h34:0 Correction:::
+Fiandino:0:1:11/01 - 10h34:0 Correction:::
+Ginieys:0:1:11/01 - 10h35:0 Correction:::
+Lothmann:0:1:11/01 - 10h35:0 Correction:::
+Mahouachi:0:1:11/01 - 10h36:0 Correction:::
+Mengual:0:1:11/01 - 10h36:0 Correction:::
+Raspaud:0:1:11/01 - 10h37:0 Correction:::
+Selegue:0:1:11/01 - 10h37:0 Correction:::
+Bellemere::1:16/01 - 09h01:0 Correction:::
+Mengual::1:17/01 - 11h02:0 Correction:::

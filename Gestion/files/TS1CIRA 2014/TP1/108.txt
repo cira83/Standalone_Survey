@@ -1,0 +1,16 @@
+Andreani:0:1:Ma 03-12
+Arcas:6:0:Ma 03-12
+Auda:20:1:Ma 03-12
+Colas:6:0:Ma 03-12
+Crivello:6:1:Ma 03-12
+Dethorey:18:1:Ma 03-12
+Golleret:6:1:Ma 03-12
+Krout::1:Ma 03-12
+Raffellini::1:Ma 03-12
+Rein:18:1:Ma 03-12
+Roussel:16:1:Ma 03-12
+Russo:18:1:Ma 03-12
+Santoni:6:1:Ma 03-12
+Savelli:6:1:Ma 03-12
+Semenadisse:6:0:Ma 03-12
+Vaiarello::1:Ma 03-12

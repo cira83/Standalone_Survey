@@ -1,0 +1,17 @@
+Andreani:7.5:1:Je 17-10
+Arcas:10:1:Je 17-10
+Auda::1:Je 17-10
+Colas:13:1:Je 17-10
+Crivello::1:Je 17-10
+Dethorey:11:1:Je 17-10
+Golleret:8:1:Je 17-10
+Krout:0:0:Je 17-10
+Paladini::1:Je 17-10
+Raffellini:17:1:Je 17-10
+Rein:5:1:Je 17-10
+Roussel:16.5:0:Je 17-10
+Russo:19:1:Je 17-10
+Santoni:19:1:Je 17-10
+Savelli:5:1:Je 17-10
+Semenadisse:15:1:Je 17-10
+Vaiarello::1:Je 17-10

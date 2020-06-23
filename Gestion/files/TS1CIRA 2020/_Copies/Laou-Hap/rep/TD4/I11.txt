@@ -1,0 +1,1 @@
+Il y a beaucoup trop d'instabilité il faut ajouter une action dérivée afin d'obtenir une meilleure allure de courbe. 

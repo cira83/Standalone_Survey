@@ -1,1 +1,0 @@
-On a un PID MIXTE avec Tc=11s donc A=Ac/1.7=42.5/1.7=25. Ensuite Ti=Tc/2=11/2=5.5s et Td=Tc/8=11/8=1.375s

@@ -1,0 +1,2 @@
+Le régulateur doit etre en manuel. On augmente la commande du LIC et on observe la courbe de la mesure et si on a une variation fini de la mesure le systeme est stable sinon il est instable 
+

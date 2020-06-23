@@ -9,81 +9,81 @@ L#
 C#L'injection de lait de chaux basique va permettre de contrôler le pH de l'eau, en le remontant à la consigne de 6,9.
 C#<h2>Mesure de débit de lait de chaux</h2>
 C#<u>Cahier des charges :</u><br/>L'étendue de mesure adoptée pour ce procédé est : 0 à 2 m<sup>3</sup>.h<sup>-1</sup>.<br/>Pour cela on utilise un débitmètre électromagnétique PROMAG 50W.
-Q#Pourquoi peut-on utiliser cette technologie et quel est son avantage principal ?
+Q#Pourquoi peut-on utiliser cette technologie et quel est son avantage principal ?#0.5
 U#
-Q#Calculer le débit maximum du lait de chaux en dm<sup>3</sup>.min<sup>-1</sup>.
+Q#Calculer le débit maximum du lait de chaux en dm<sup>3</sup>.min<sup>-1</sup>.#0.5
 T#
-Q#Pour cette installation, quelle est la vitesse d'écoulement maximale conseillée par le constructeur ? <br/>Voir documentation constructeur du <a href="./files/CIRA2/_Copies/_Sujets/TD11/img/02.gif" target="_blank" >PROMAG 50W</a>.#
+Q#Pour cette installation, quelle est la vitesse d'écoulement maximale conseillée par le constructeur ? <br/>Voir documentation constructeur du <a href="./files/CIRA2/_Copies/_Sujets/TD11/img/02.gif" target="_blank" >PROMAG 50W</a>.#0.5
 T#
-Q#Donner DN le diamètre nominal du capteur que vous choisiriez (en justifiant).
+Q#Donner DN le diamètre nominal du capteur que vous choisiriez (en justifiant).#0.5
 U#
-Q#Calculer la vitesse d'écoulement en m.s<sup>-1</sup> pour 2 m<sup>3</sup>.h<sup>-1</sup> de lait de chaux à travers le débitmètre.
+Q#Calculer la vitesse d'écoulement en m.s<sup>-1</sup> pour 2 m<sup>3</sup>.h<sup>-1</sup> de lait de chaux à travers le débitmètre.#0.5
 T#
-Q#Déterminer l'erreur absolue maximum commise pour une mesure de 2 m<sup>3</sup>.h<sup>-1</sup>.
+Q#Déterminer l'erreur absolue maximum commise pour une mesure de 2 m<sup>3</sup>.h<sup>-1</sup>.#0.5
 T#
 C#Le débitmètre envoie un signal 4-20 mA pour 0-2 m<sup>3</sup>.h<sup>-1</sup> sur une entrée tension du régulateur, ayant une résistance de shunt de valeur 2,49 &Omega;. Le technicien souhaite vérifier le bon fonctionnement de la mesure.
-Q#Quelle serait la tension mesurée à l'aide d'un voltmètre pour un débit de 1 m<sup>3</sup>.h<sup>-1</sup> ?
+Q#Quelle serait la tension mesurée à l'aide d'un voltmètre pour un débit de 1 m<sup>3</sup>.h<sup>-1</sup> ?#0.5
 T#
 L#
 C#<h2>Mesure de pH</h2>
-C#On souhaite mesurer le pH en sortie du bac de reminéralisation 1. Selon la saison, la température de<br/>l'eau provenant des barrages fluctue. On rappelle que par définition pH = -log[H<sub>3</sub>0<sup>+</sup>].<br/>L'ajout d'une base de reminéralisante (lait de chaux) permet de remonter le pli acide de la solution initiale. La sonde de pli est une électrode combinée qui fonctionne selon la loi de Nemst.<br/>Le potentiel délivré par cette électrode s'écrit de façon simplifiée :
+C#On souhaite mesurer le pH en sortie du bac de reminéralisation 1. Selon la saison, la température de<br/>l'eau provenant des barrages fluctue. On rappelle que par définition pH = -log[H<sub>3</sub>O<sup>+</sup>].<br/>L'ajout d'une base de reminéralisante (lait de chaux) permet de remonter le pli acide de la solution initiale. La sonde de pli est une électrode combinée qui fonctionne selon la loi de Nemst.<br/>Le potentiel délivré par cette électrode s'écrit de façon simplifiée :
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/03.gif">
 C#Avec K est une constante homogène à une tension, R la constante des gaz parfaits, F le nombre de Faraday et T la température absolue de l'eau dont on mesure le pH.
 C#La sonde utilisée sur le site est un modèle combiné associant l'électrode de référence et l'électrode de mesure dans le même corps (voir figures ci-dessous).
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/04.gif">
-Q#Parmi les deux modèles 5333 et 5337, lequel choisiriez-vous ? Justifier.
-T#
+Q#Parmi les deux modèles 5333 et 5337, lequel choisiriez-vous ? Justifier.#0.5
+U#
 L#
-Q#Justifier l'affirmation suivante :<br/>- Le signal de sortie Em de la sonde n'est pas linéaire en fonction de la concentration en [H<sub>3</sub>0<sup>+</sup>] de l'eau dans le reminéralisateur 1.
+Q#Justifier l'affirmation suivante :<br/>- Le signal de sortie Em de la sonde n'est pas linéaire en fonction de la concentration en [H<sub>3</sub>O<sup>+</sup>] de l'eau dans le reminéralisateur 1.#0.5
 U#
 C#Le transmetteur utilise une technologie Smart (capteur intelligent) avec la possibilité de calibration de l'échelle et des sorties à l'aide d'une interface de communication. <br/>Deux caractéristiques de sortie sont proposées sur la figure suivante.
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/05.gif">
 C#Du lait de chaux est injecté et mélangé à l'eau. L'injection est réalisée au moyen d'une pompe centrifuge. Un variateur de fréquence assure la variation du débit (commande 4-20 mA pour 0-75 Hz).
-Q#Quelle caractéristique statique (a ou b) choisiriez-vous pour ce transmetteur ? Expliquer les raisons de<br/>ce choix.
+Q#Quelle caractéristique statique (a ou b) choisiriez-vous pour ce transmetteur ? Expliquer les raisons de<br/>ce choix.#0.5
 U#
-Q#Pour une valeur du pH de 6,9, quel est la valeur en mA du signal de mesure issu du transmetteur pour la courbe b ?
+Q#Pour une valeur du pH de 6,9, quel est la valeur en mA du signal de mesure issu du transmetteur pour la courbe b ?#1
 T#
 L#
 C#<h2>Régulation de pH</h2>
 C#On s'intéresse à la régulation de pH de la reminéralisation 1. <br/>Du lait de chaux est injecté et mélangé à l'eau. L'injection est réalisée au moyen d'une pompe centrifuge. Un variateur de fréquence assure la variation du débit (commande 4-20 mA pour 0-75 Hz).<br/>Un débitmètre FT1 (échelle 0-2 m<sup>3</sup>/h et sortie 4-20 mA) est installé sur la conduite.<br/>Un régulateur local gère cette régulation.
-Q#Représenter le schéma TI de cette boucle de régulation.
+Q#Représenter le schéma TI de cette boucle de régulation.#1
 I#./files/CIRA2/_Copies/_Sujets/TD11/img/06.gif
-Q#Déterminer en le justifiant le sens d'action du régulateur de pH.#
+Q#Déterminer en le justifiant le sens d'action du régulateur de pH.#1
 U#
-Q#Des deux jeux de réglages suivants, lequel vous semble le plus adapté ? Justifier la réponse.<br/><li>PID1 : Xp = 0.001% ; Ti= 1 500 s ; Td=0 s ;</li><li>PID2 : Xp = 50 % ; Ti = 40 s ; Td = 0 s.</li>#
+Q#Des deux jeux de réglages suivants, lequel vous semble le plus adapté ? Justifier la réponse.<br/><li>PID1 : Xp = 0.001% ; Ti= 1 500 s ; Td=0 s ;</li><li>PID2 : Xp = 50 % ; Ti = 40 s ; Td = 0 s.</li>#1
 U#
 L#
 C#<h2>Régulation cascade</h2>
-C#Une sonde de pH Aldos est installée en sortie du bac de reminéralisafion 1 (échelle de pH 4-10 ; sortie 4-20 mA). La consigne pour le pH est de 6,9. Compte tenu de l'installation et de l'instrumentation installée, on préfère une régulation cascade à la place de la boucle simple.
-Q#Justifier ce choix en précisant le type de cascade (sur la grandeur réglante ou une grandeur intermédiaire), ainsi que les grandeurs maître et esclave.#
+C#Une sonde de pH Aldos est installée en sortie du bac de reminéralisafion 1 (échelle de pH 4-9 ; sortie 4-20 mA). La consigne pour le pH est de 6,9. Compte tenu de l'installation et de l'instrumentation installée, on préfère une régulation cascade à la place de la boucle simple.
+Q#Justifier ce choix en précisant le type de cascade (sur la grandeur réglante ou une grandeur intermédiaire), ainsi que les grandeurs maître et esclave.#1
 U#
-Q#Représenter cette stratégie sur le schéma TI.
+Q#Représenter cette stratégie sur le schéma TI.#1
 I#./files/CIRA2/_Copies/_Sujets/TD11/img/06.gif
-Q#Déterminer en le justifiant le sens d'action du régulateur de pH.
+Q#Déterminer en le justifiant le sens d'action du régulateur de pH.#1
 U#
 L#
 C#Pour le réglage, on recherche un modèle du procédé vu par le régulateur de pH.<br/>À t=0 on réalise un échelon de 5% de la commande du régulateur de pH (courbe fournie à la question 20).
-Q#Pour réaliser cet essai donner le mode de chaque régulateur : MAN, AUTO ou REMOTE ?
+Q#Pour réaliser cet essai donner le mode de chaque régulateur : MAN, AUTO ou REMOTE ?#1
 U#
-Q#Donner le modèle de Broïda du procédé.
+Q#Donner le modèle de Broïda du procédé.#1
 T#
-Q#Faire apparaitre les constructions qui vous ont permis de répondre à la question précédente.#
+Q#Faire apparaitre les constructions qui vous ont permis de répondre à la question précédente.#1
 I#./files/CIRA2/_Copies/_Sujets/TD11/img/07.gif
-Q#Calculer le coefficient de réglabilité kr et conclure sur le type de régulation à adopter.
+Q#Calculer le coefficient de réglabilité kr et conclure sur le type de régulation à adopter.#1
 T#
 L#
 C#<h2>Avec compensation de temps mort</h2>
 C#Le schéma fonctionnel de la boucle de régulation de pH est le suivant :
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/08.gif">
-Q#Déterminer l'expression littérale de la fonction H'(p) = X(p)/Yr(p) en fonction de G(p) et H(p).
+Q#Déterminer l'expression littérale de la fonction H'(p) = X(p)/Yr(p) en fonction de G(p) et H(p).#1
 T#
-Q#En déduire l'expression littérale de la fonction G(p) pour que H'(p) soit un premier ordre sans temps mort T, de gain K et constante de temps &tau; identiques à ceux de H(p).
+Q#En déduire l'expression littérale de la fonction G(p) pour que H'(p) soit un premier ordre sans temps mort T, de gain K et constante de temps τ identiques à ceux de H(p).#1
 U#
 L#
 C#Dans ces conditions, le schéma équivalent devient :
 C#<img src="./files/CIRA2/_Copies/_Sujets/TD11/img/09.gif">
 C#On désire avoir F(p) = X(p)/W(p) = 1/(1+τp)<br/>C(p) est un correcteur PI de structure mixte.
-Q#Rappeler l'expression littérale de la fonction de transfert de C(p).
+Q#Rappeler l'expression littérale de la fonction de transfert de C(p).#1
 T#
-Q#Déterminer les deux paramètres de réglage de ce régulateur PI.#
+Q#Déterminer les deux paramètres de réglage de ce régulateur PI.#1
 T#

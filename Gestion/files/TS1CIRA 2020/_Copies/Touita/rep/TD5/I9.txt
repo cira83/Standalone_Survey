@@ -1,0 +1,3 @@
+le procédé est inverse et le régulateur est direct
+car quand on augmente la commende du FIC la vanne NO se ferme ce qui fait que le débit et la mesure diminue
+

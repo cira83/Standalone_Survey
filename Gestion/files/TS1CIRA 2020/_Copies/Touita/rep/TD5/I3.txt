@@ -1,0 +1,4 @@
+réglée: mesure du taux du CO2
+réglante: sortie du régulateur AIC
+perturbatrice: température et pression du CO2
+

@@ -1,0 +1,16 @@
+Andreani:Nnot:1:Lu 03-02
+Arcas::1:Lu 03-02
+Auda::1:Lu 03-02
+Colas::1:Lu 03-02
+Crivello::1:Lu 03-02
+Dethorey::1:Lu 03-02
+Golleret::1:Lu 03-02
+Krout::1:Lu 03-02
+Raffellini::1:Lu 03-02
+Rein:15:0:Lu 03-02
+Roussel:15:0:Lu 03-02
+Russo:17:1:Lu 03-02
+Santoni::1:Lu 03-02
+Savelli::1:Lu 03-02
+Semenadisse::1:Lu 03-02
+Vaiarello:9:1:Lu 03-02

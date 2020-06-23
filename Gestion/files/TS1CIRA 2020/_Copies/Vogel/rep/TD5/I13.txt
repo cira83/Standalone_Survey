@@ -1,0 +1,6 @@
+Xa=30%  trop instable car xp trop petit
+
+xb=50%  
+
+xc= 70% car trop éloigné de W donc trop grand 
+

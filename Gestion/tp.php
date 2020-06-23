@@ -1,5 +1,5 @@
 ﻿<?php
-	include("../head1.html");
+	include("../head1grey.html");
 	include("../Dropbox.php");
 	include("DSFonctions.php");
 
@@ -15,8 +15,8 @@
 <title>TP <?php echo($classe);?></title>
 	</head>
 	<body>
-		<img src="../../../../head.png"/>
-		<table><tr><td><p class="titre">TP <?php echo("$classe - $elv");?></p></td></tr></table>
+		<center>
+		<table><tr><td><p class="titre">Sujets <?php echo("$classe - $elv");?></p></td></tr></table>
 
 <?php
 

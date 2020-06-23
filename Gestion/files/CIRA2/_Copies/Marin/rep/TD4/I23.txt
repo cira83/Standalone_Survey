@@ -1,1 +1,0 @@
-On a Kr=T/t=400/900=0.44 donc PID MIXTE soit Ti5=t+0.4T=900+0.4*400=1060s

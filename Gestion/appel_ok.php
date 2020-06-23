@@ -13,12 +13,54 @@
 	$lefichierexiste = false;
 	$filename = "./files/$classe/_Appels/$ladate.txt"; //affiche($filename);
 
+
+	// ----------   CREATION DES REPERTOIRES
 	// Création Repertoire _Appels  
 	$lerepertoire =  "./files/$classe/_Appels";
 	if(!file_exists($lerepertoire)){
-		 echo("<p>Création du repertoire des Appels</p>");
+		 echo("Création du repertoire des Appels<br>");
 		 mkdir($lerepertoire, 0777);
 	}
+
+	// Création Repertoire _Copies  
+	$lerepertoire =  "./files/$classe/_Copies";
+	if(!file_exists($lerepertoire)){
+		 echo("Création du repertoire des Copies<br>");
+		 mkdir($lerepertoire, 0777);
+		 echo("Création du repertoire des _Sujets<br>");
+		 $lerepertoire =  "./files/$classe/_Copies/_Sujets";
+		 mkdir($lerepertoire, 0777);
+	}
+
+	// Création Repertoire _Photos  
+	$lerepertoire =  "./files/$classe/_Photos";
+	if(!file_exists($lerepertoire)){
+		 echo("Création du repertoire des Photos<br>");
+		 mkdir($lerepertoire, 0777);
+	}
+
+	// Création Repertoire _Candidatures  
+	$lerepertoire =  "./files/$classe/_Candidatures";
+	if(!file_exists($lerepertoire)){
+		 echo("Création du repertoire des Candidatures<br>");
+		 mkdir($lerepertoire, 0777);
+	}
+	
+	// Création Repertoire _Sujets2TP  
+	$lerepertoire =  "./files/$classe/_Sujets2TP";
+	if(!file_exists($lerepertoire)){
+		 echo("Création du repertoire des Sujets2TP<br>");
+		 mkdir($lerepertoire, 0777);
+	}
+
+	// Création Repertoire _Documents  
+	$lerepertoire =  "./files/$classe/_Documents";
+	if(!file_exists($lerepertoire)){
+		 echo("Création du repertoire des Documents<br>");
+		 mkdir($lerepertoire, 0777);
+	}
+
+
 ?>
 <form method="post" action="<?php echo("./index.php?action=1&ladate=$getdate");?>"/>
 <?php
@@ -131,7 +173,7 @@
 	$nbeleveclasse = count($leleve);
 ?>
 <table><tr>
-	<td>Nombre d'&eacute;l&egrave;ves pr&eacute;sents dans la salle : <input type="text" id="nombre" size="3" value="<?php echo($nbeleve);?>">
+	<td>Nombre d'élèves présents dans la salle : <input type="text" id="nombre" size="3" value="<?php echo($nbeleve);?>">
 <?php echo("sur $nbeleveclasse - ");?>
 <input type="submit" value="Enregistrer">
 <input type="hidden" value="<?php echo($listedesparticipants); ?>" name="laliste">
@@ -153,7 +195,7 @@ function newvalue(lavaleur,id){
 
 <?php 
 	//les appels 1 decembre 2016
-	$tabDappels = tabDappels($classe,$tableaudesappels);
+	$tabDappels = tabDappels2020($tableaudesappels,$ladate15,1);// lesfonctions.php
 	echo($tabDappels);
 	include("./bas.php");
 ?>

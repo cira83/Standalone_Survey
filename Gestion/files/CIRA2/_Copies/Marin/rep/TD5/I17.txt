@@ -1,2 +1,0 @@
-Une régulation cascade se justifie lorsque la grandeur perturbatrice influence la grandeur réglée. Donc il faudra utiliser le même organe de réglage donc la même vanne TV1.
-

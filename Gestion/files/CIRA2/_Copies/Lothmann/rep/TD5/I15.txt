@@ -1,1 +1,0 @@
-Es=0 , pas de dépassement et le temps de réponse a 100 s

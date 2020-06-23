@@ -1,0 +1,1 @@
+La consigne du FIC doit être configuré en interne car esclave

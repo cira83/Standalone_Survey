@@ -1,0 +1,4 @@
+grandeur réglée: niveau H
+grandeur réglante: Qmp 
+grandeur perturbatrice: Qs1
+

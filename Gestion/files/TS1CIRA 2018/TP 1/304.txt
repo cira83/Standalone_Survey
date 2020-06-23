@@ -1,0 +1,35 @@
+Agostino::1:
+Andre::1:
+Bellemere::1:
+Chapelain::1:
+Couillet::1:
+Fiandino::1:
+Gensollen::1:
+Ginieys::1:
+Lothmann::1:
+Mahouachi::1:
+Mengual::1:
+Raspaud::1:
+Selegue::1:
+Spite::1:
+Torchut::1:
+Turkcan::1:
+Agostino:20:1:19/12 - 08h09:0 Correction:::
+Andre:20:1:19/12 - 08h09:0 Correction:::
+Bellemere:20:1:19/12 - 08h10:0 Correction:::
+Chapelain:20:1:19/12 - 08h11:0 Correction:::
+Couillet:0:1:19/12 - 08h12:0 Correction::Pas le bon TP:
+Fiandino:20:1:19/12 - 08h13:0 Correction:::
+Gensollen:16:1:19/12 - 08h17:0 Correction:::
+Ginieys:20:1:19/12 - 08h17:0 Correction:::
+Lothmann:20:1:19/12 - 08h18:0 Correction:::
+Mahouachi:20:1:19/12 - 08h19:0 Correction:::
+Mengual:20:1:19/12 - 08h20:0 Correction:::
+Raspaud:0:1:19/12 - 08h21:0 Correction:::
+Selegue:20:1:19/12 - 08h23:0 Correction:::
+Spite:20:1:19/12 - 08h24:0 Correction:::
+Torchut:20:1:19/12 - 08h24:0 Correction:::
+Turkcan:20:1:19/12 - 08h25:0 Correction:::
+Raspaud::1:19/12 - 17h47:0 Correction:::
+Raspaud:20:1:10/01 - 13h36:0 Correction:::
+Couillet:20:1:16/01 - 15h15:0 Correction::Pas le bon TP:

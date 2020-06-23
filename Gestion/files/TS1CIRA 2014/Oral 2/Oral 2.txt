@@ -1,0 +1,15 @@
+Andreani:7:1:Me 15-01
+Arcas:17:1:Me 15-01
+Auda:3:1:Me 15-01
+Colas:13.5:1:Me 15-01
+Dethorey:13:1:Me 15-01
+Golleret:8:1:Me 15-01
+Krout:8:1:Me 15-01
+Raffellini:13:1:Me 15-01
+Rein:16:1:Me 15-01
+Roussel:13:1:Me 15-01
+Russo:9:1:Me 15-01
+Santoni:14.5:1:Me 15-01
+Savelli::1:Me 15-01
+Semenadisse:12:1:Me 15-01
+Vaiarello:12:1:Me 15-01

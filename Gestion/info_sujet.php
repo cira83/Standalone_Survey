@@ -1,5 +1,6 @@
 <?php 
 	include("./haut.php");
+	//include("./DSFonctions.php");
 	$sujetlink = $_GET['file']; 	//echo($sujet);
 	$part1 = explode("_link", $sujetlink);
 	$part0 = explode(".", $part1[1]); //echo($part[1]);
@@ -31,10 +32,6 @@
 		fclose($fp);
 	}
 	
-	
-	
-	
-	
 	if(file_exists($sujetlink)) {
 		$fp = fopen($sujetlink, "r");
 		$i = 0;
@@ -53,6 +50,10 @@
 	$info_sujet .= "<td width=\"25px\">".$part_correction_sujet[1]."</td>";
 	$info_sujet .= "<td width=\"25px\">".$part_correction_sujet[2]."</td>";
 	
+	$tag = str_replace(".txt", "", $part1[1]);
+	$code = code_correction("./files/$classe/_Copies/_Sujets/$tag");
+	$sujet = "./sujet.php?tag=$tag";
+	$correction = "./DScorrection.php?tag=$tag&code4=$code";
 	tableau("$part3[3]</td><td><a href=\"epreuve.php?mat=$part3[3]&epr=$part1[1]\">$part0[0]</a>$info_sujet");
 
 	
@@ -64,23 +65,44 @@
 <table><form name="envoie fichier" enctype="multipart/form-data" method="post" action="<?php echo("$action&src=1");?>">
 	<tr>
 		<td width="120px"><b>Sujet</b> : </td>
-		<td><input name="doc" type="txt" value="<?php echo($ligne[0]);?>" size="80px"></td>
-		<td><a href="<?php echo($ligne[0]);?>">__&uarr;__</a></td>
+		<td><input name="doc" id="doc" type="txt" value="<?php echo($ligne[0]);?>" size="80px"></td>
+		<td><input type="button" value="<?php echo($tag);?>" onclick="addsujet('<?php echo($sujet);?>');"></td>
+		<td><a href="<?php echo($ligne[0]);?>">Lien</a></td>
 	</tr><tr>
 		<td><b>Correction</b> : </td>
-		<td><input name="ppt" type="txt" value="<?php echo($ligne[1]);?>" size="80px"></td></td>
-		<td><a href="<?php echo($ligne[1]);?>">__&uarr;__</a></td>
+		<td><input name="ppt" id="ppt" type="txt" value="<?php echo($ligne[1]);?>" size="80px"></td></td>
+		<td><input type="button" value="<?php echo($tag);?>" onclick="addcorrection('<?php echo($correction);?>');"></td>
+		<td><a href="<?php echo($ligne[1]);?>">Lien</a></td>
 	</tr><tr>
-		<td><b>Bareme</b> : </td>
+		<td><b>Notes</b> : </td>
 		<td><input name="xls" type="txt" value="<?php echo($ligne[3]);?>" size="80px"></td></td>
-		<td><a href="<?php echo($ligne[3]);?>">__&uarr;__</a></td>
+		<td></td>
+		<td><a href="<?php echo($ligne[3]);?>">Lien</a></td>
 	</tr><tr>
 		<td><input type="submit"></td>
-		<td>Informations disponibles</td>
+		<td>Informations disponibles aux élèves</td>
 		<td><input type="checkbox" name="active" <?php echo($checked);?> ></td>
+		<td></td>
 	</tr>
 	
 </form></table>
 <?php
 	include("./bas.php");
 ?>
+
+<script>
+function addsujet(lien) {
+	champs = document.getElementById('doc');
+	champs.value = lien;
+}
+
+function addcorrection(lien) {
+	champs = document.getElementById('ppt');
+	champs.value = lien;
+}	
+</script>
+
+
+
+
+

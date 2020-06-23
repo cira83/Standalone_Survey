@@ -1,0 +1,14 @@
+Fouasse:17:1:
+Nadau:17:1:
+Segault:17:1:
+Vassal:17:1:
+Yborra:17:1:
+Bacquias:15:1:
+Berre:15:1:
+Romdhani:14:1:
+Are:13:1:
+Gire:13:1:
+Roggero:13:1:
+Minel:10:1:
+Mougeolle:10:1:
+Lamarque:0:1:

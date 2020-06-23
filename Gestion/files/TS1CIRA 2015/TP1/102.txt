@@ -1,0 +1,15 @@
+Andreani:8:0:Ve 26-09
+Arcas:6:1:Ve 26-09
+Bourgue:8:1:Ve 26-09
+Cipolla:17:1:Ve 26-09
+Frelin:11:1:Ve 26-09
+Kremer:20:1:Ve 26-09
+Lamarque::1:Ve 26-09
+Luccioni:8:1:Ve 26-09
+Missilini:0:1:Ve 26-09
+Noaman:8:1:Ve 26-09
+Pastor:12:1:Ve 26-09
+Premayon:8:1:Ve 26-09
+Rousseau:18:1:Ve 26-09
+Souames:17:1:Ve 26-09
+Tremino:8:0:Ve 26-09

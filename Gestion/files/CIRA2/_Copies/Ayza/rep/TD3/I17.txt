@@ -1,1 +1,0 @@
-Quand Y monte, X descend donc procéder inverse, donc régulateur direct.

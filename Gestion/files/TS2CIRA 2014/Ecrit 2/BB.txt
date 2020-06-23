@@ -1,0 +1,10 @@
+Ailloud:6:1:Lu 17-03
+Antar:6:1:Lu 17-03
+Baudry:2:1:Lu 17-03
+Destombes:6:1:Lu 17-03
+Guigon:2:1:Lu 17-03
+Keller:5:1:Lu 17-03
+Le_Goff:8:1:Lu 17-03
+Roux:0:1:Lu 17-03
+Saba:6:1:Lu 17-03
+Touze:2:1:Lu 17-03

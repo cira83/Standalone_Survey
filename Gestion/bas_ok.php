@@ -47,26 +47,20 @@ function redirect_epreuve(lacible){
 
 <table>
 	<tr>
-		<td>Mati&egrave;re</td>
-		<td>Epreuve</td>
-		<td><a href="./index.php?ladate=<?php echo($ladate_slash);?>">Appel</a></td>
-		<td>
-			<?php
-				$lg_date2017 = date("d_m");
-				if(file_exists("./files/$classe/_Plannings/$lg_date2017.txt"))
-					echo("<a href=\"./planning.php?action=3&ladate=$lg_date2017\">Planning</a>");
-				else
-					echo("Planning");
-			?>
-		</td>
+		<td><a href="./matieres.php">Matière</a></td>
+		<td><a href="./new.php">Epreuve</a></td>
+		<td><a href="./planning.php?action=0">Planning</a></td>
+		<td><a href="./appel.php">Appel</a></td>
 		<td><a href="./ranger.php">Ranger</a></td>
-		<!-- <td rowspan=2><a href="./bts.php"><img src="icon/laureat.png" height="45px"/> </td> -->
+	</tr>
+	<tr bgcolor="#d5d5d5" height="5px">
+		<td  colspan="5"></td>
 	</tr>
 	<tr>
 		<td><?php echo($menu_mat);?></td>
 		<td><?php echo($menu_epreuve);?></td>
-		<td><?php echo($menu_appel);?></td>
 		<td><?php echo($menu_planning);?></td>
+		<td><?php echo($menu_appel);?></td>
 		<td><?php echo($menu_ranger);?></td>
 		
 	</tr>
@@ -74,13 +68,8 @@ function redirect_epreuve(lacible){
 
 <table>
 	<tr>
-		<td>(NEW)</td>
-		<td><a href="./appel.php?ladate=<?php echo($date);?>">Appel</a></td>
-		<td><a href="./planning.php?action=0">Planning</a></td>
-		<td><a href="./new.php">Epreuve</a></td>
 		<td><a href="./synthese.php">Synth&egrave;se</a></td>
 		<td><a href="./cahier.php">Cahier de texte</a></td>
-		<!--<td><a href="./calendrier.php">Progression</a></td>-->
 		<td><a href="./conseil.php?classe=<?php echo($classe);?>">Conseil</a></td>
 	</tr>
 </table>

@@ -1,0 +1,1 @@
+pour régler le temps de réponse on augmente Ti

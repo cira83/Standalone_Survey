@@ -1,0 +1,15 @@
+Andreani:Nnot:1:Ve 30-01
+Arcas:20:1:Ve 30-01
+Bourgue::1:Ve 30-01
+Cipolla:20:1:Ve 30-01
+Frelin::1:Ve 30-01
+Kremer:20:1:Ve 30-01
+Lamarque:20:1:Ve 30-01
+Luccioni:20:1:Ve 30-01
+Missilini:20:1:Ve 30-01
+Noaman::1:Ve 30-01
+Pastor:20:1:Ve 30-01
+Premayon:20:1:Ve 30-01
+Rousseau:20:1:Ve 30-01
+Souames:20:1:Ve 30-01
+Tremino:20:1:Ve 30-01

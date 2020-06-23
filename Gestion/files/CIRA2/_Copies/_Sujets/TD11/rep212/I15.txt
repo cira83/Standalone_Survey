@@ -1,0 +1,1 @@
+C'est une cascade sur la grandeur réglante. Elle permet une atténuation de l'effet des perturbations sur le débit.

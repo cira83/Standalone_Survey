@@ -1,0 +1,17 @@
+Andreani:6:1:Lu 07-10
+Arcas:2:1:Lu 07-10
+Auda:1:1:Lu 07-10
+Colas:1:1:Lu 07-10
+Crivello:2:1:Lu 07-10
+Dethorey:8:1:Lu 07-10
+Golleret:0:1:Lu 07-10
+Krout:1:1:Lu 07-10
+Paladini:3:1:Lu 07-10
+Raffellini:6:1:Lu 07-10
+Rein:3:1:Lu 07-10
+Roussel:18:1:Lu 07-10
+Russo:9:1:Lu 07-10
+Santoni:0:1:Lu 07-10
+Savelli:0:1:Lu 07-10
+Semenadisse:4:1:Lu 07-10
+Vaiarello:2:1:Lu 07-10

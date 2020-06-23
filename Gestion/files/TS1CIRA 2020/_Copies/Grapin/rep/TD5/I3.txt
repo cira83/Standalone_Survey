@@ -1,0 +1,4 @@
+grandeur réglante: sortie du régulateur AT2
+grandeur réglée : taux de co2
+grandeur perturbatrice:le débit Qc02
+

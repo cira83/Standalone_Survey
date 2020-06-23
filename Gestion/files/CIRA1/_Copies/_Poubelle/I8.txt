@@ -1,1 +1,0 @@
-depassement 30%, pas d'erreur statique et temps de reponse = 200s

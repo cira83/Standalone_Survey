@@ -1,0 +1,1 @@
+C(p)=A*(1+Ti*p+Ti*Td*p^2)/(Ti*p)

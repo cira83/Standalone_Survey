@@ -1,0 +1,16 @@
+Andreani:Nnot:1:Lu 25-11
+Arcas:0:0:Lu 25-11
+Auda::1:Lu 25-11
+Colas::1:Lu 25-11
+Crivello::1:Lu 25-11
+Dethorey:0:1:Lu 25-11
+Golleret:0:1:Lu 25-11
+Krout:0:1:Lu 25-11
+Raffellini::1:Lu 25-11
+Rein:0:0:Lu 25-11
+Roussel:20:1:Lu 25-11
+Russo:0:0:Lu 25-11
+Santoni:7:1:Lu 25-11
+Savelli::1:Lu 25-11
+Semenadisse:0:0:Lu 25-11
+Vaiarello::1:Lu 25-11

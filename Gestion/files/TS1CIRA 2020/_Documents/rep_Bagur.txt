@@ -1,0 +1,32 @@
+DS1 Bagur.pdf,./files/CIRA1/_Copies/Bagur/DS1 Bagur.pdf
+DS2 Bagur.pdf,./files/CIRA1/_Copies/Bagur/DS2 Bagur.pdf
+DS3 Bagur.pdf,./files/CIRA1/_Copies/Bagur/DS3 Bagur.pdf
+DS5 Bagur.pdf,./files/CIRA1/_Copies/Bagur/DS5 Bagur.pdf
+DS6 Bagur.pdf,./files/CIRA1/_Copies/Bagur/DS6 Bagur.pdf
+DS7 Bagur.pdf,./files/CIRA1/_Copies/Bagur/DS7 Bagur.pdf
+DS8 Bagur.pdf,./files/CIRA1/_Copies/Bagur/DS8 Bagur.pdf
+TD1 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TD1 Bagur.pdf
+TD2 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TD2 Bagur.pdf
+TD3 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TD3 Bagur.pdf
+TD4 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TD4 Bagur.pdf
+TD5 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TD5 Bagur.pdf
+TP1 Debit2 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP1 Debit2 Bagur.pdf
+TP1 Multi Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP1 Multi Bagur.pdf
+TP1 Niveau1 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP1 Niveau1 Bagur.pdf
+TP1 NiveauDR Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP1 NiveauDR Bagur.pdf
+TP1 SADH Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP1 SADH Bagur.pdf
+TP2 Debit2 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP2 Debit2 Bagur.pdf
+TP2 Multi Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP2 Multi Bagur.pdf
+TP2 Niveau1 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP2 Niveau1 Bagur.pdf
+TP2 NiveauDR Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP2 NiveauDR Bagur.pdf
+TP2 SADB Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP2 SADB Bagur.pdf
+TP2 SADH Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP2 SADH Bagur.pdf
+TP3 Aero Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP3 Aero Bagur.pdf
+TP3 FT Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP3 FT Bagur.pdf
+TP3 Multi Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP3 Multi Bagur.pdf
+TP3 Niveau DR Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP3 Niveau DR Bagur.pdf
+TP3 Pression Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP3 Pression Bagur.pdf
+TP3 SAD Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP3 SAD Bagur.pdf
+TP3 TT Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP3 TT Bagur.pdf
+TP4 Niveau2 Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP4 Niveau2 Bagur.pdf
+TP5 Eycon Bagur.pdf,./files/CIRA1/_Copies/Bagur/TP5 Eycon Bagur.pdf

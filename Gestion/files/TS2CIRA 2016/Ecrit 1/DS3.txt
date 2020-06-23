@@ -1,0 +1,13 @@
+Andreani::1:
+Premayon::1:
+Semenadisse::1:
+Rein:20:1:
+Tremino:11.5:1:
+Santoni:6:1:
+Arcas:5:1:
+Cipolla:4:1:
+Luccioni:4:1:
+Pastor:4:1:
+Rousseau:3.5:1:
+Bourgue:3:1:
+Frelin:2:1:

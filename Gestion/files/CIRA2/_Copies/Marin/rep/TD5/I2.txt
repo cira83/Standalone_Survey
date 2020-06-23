@@ -1,1 +1,0 @@
-K=50/50=1 ; Le retard T=2.8(37-0)-1.8(43-0)=26.2 ; La constante de temps t = 5.5(43-37)=33

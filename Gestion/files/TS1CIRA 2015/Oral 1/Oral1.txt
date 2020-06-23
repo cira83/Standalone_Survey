@@ -1,0 +1,15 @@
+Andreani:17:1:Ma 02-09
+Arcas:17:1:Ma 02-09
+Bourgue:15:1:Ma 02-09
+Cipolla:11:1:Ma 02-09
+Frelin:9.5:1:Ma 02-09
+Kremer::1:Ma 02-09
+Lamarque:12.5:1:Ma 02-09
+Luccioni:18:1:Ma 02-09
+Missilini:11:1:Ma 02-09
+Noaman:13:1:Ma 02-09
+Pastor:11.5:1:Ma 02-09
+Premayon:15.5:1:Ma 02-09
+Rousseau:14.5:1:Ma 02-09
+Souames:13:1:Ma 02-09
+Tremino:21:1:Ma 02-09

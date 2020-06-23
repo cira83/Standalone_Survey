@@ -1,0 +1,10 @@
+----::1:
+Andreani::1:
+Premayon::1:
+Bourgue:16:1:
+Rousseau:15.5:1:
+Pastor:12.5:1:
+Semenadisse:12.5:1:
+Cipolla:9:1:
+Frelin:8.5:1:
+Luccioni:6.5:1:

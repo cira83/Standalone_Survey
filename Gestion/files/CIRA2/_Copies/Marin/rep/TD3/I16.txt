@@ -1,1 +1,0 @@
-Ce type de boucle se nomme une boucle cascade.

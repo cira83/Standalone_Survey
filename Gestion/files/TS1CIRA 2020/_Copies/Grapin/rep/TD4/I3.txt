@@ -1,0 +1,1 @@
+Il y a les capteurs de niveau placé au dessus de la cuve qui mesure la hauteur h avec des ondes envoyés vers le liquide, et les capteurs de niveau qui flottent sur le liquide et donc donne le niveau de la cuve .

@@ -1,0 +1,15 @@
+Andreani:Nnot:1:Ve 07-11
+Arcas:Nnot:1:Ve 07-11
+Bourgue:Nnot:1:Ve 07-11
+Cipolla:Nnot:1:Ve 07-11
+Frelin:0:1:Ve 07-11
+Kremer::1:Ve 07-11
+Lamarque:Nnot:1:Ve 07-11
+Luccioni:20:1:Ve 07-11
+Missilini:0:1:Ve 07-11
+Noaman:0:1:Ve 07-11
+Pastor:0:0:Ve 07-11
+Premayon::1:Ve 07-11
+Rousseau::1:Ve 07-11
+Souames:Nnot:1:Ve 07-11
+Tremino::1:Ve 07-11

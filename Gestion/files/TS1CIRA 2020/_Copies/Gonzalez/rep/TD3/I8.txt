@@ -1,0 +1,1 @@
+quand on augmente la commande la mesure augmente aussi le régulateur et inverse car le procédé est direct

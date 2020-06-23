@@ -1,0 +1,16 @@
+Andreani:0:1:Me 05-03
+Arcas::1:Me 05-03
+Auda:0:1:Me 05-03
+Colas::1:Me 05-03
+Crivello::1:Me 05-03
+Dethorey:10:1:Me 05-03
+Golleret:0:1:Me 05-03
+Krout:0:1:Me 05-03
+Raffellini:20:1:Me 05-03
+Rein::1:Me 05-03
+Roussel::1:Me 05-03
+Russo:0:1:Me 05-03
+Santoni::1:Me 05-03
+Savelli::1:Me 05-03
+Semenadisse::1:Me 05-03
+Vaiarello::1:Me 05-03

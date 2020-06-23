@@ -1,0 +1,1 @@
+La sonde Pt 100 est un capteur de température qui est utilisé dans le domaine industriel (agroalimentaire). Ce capteur est constitué d'une résistance en Platine. La valeur initiale du Pt100 est de 100 ohms correspondant à une température de 0°C.

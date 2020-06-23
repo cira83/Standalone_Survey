@@ -1,0 +1,1 @@
+Il faut prendre PID2, le PID1 et une régulation TOR (ou presque).

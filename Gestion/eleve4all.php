@@ -17,7 +17,7 @@
 	
 	//les apréciations
 	$apres122016 = "";
-	$file_eleve2016 = fopen("./files/$classe.txt", "r");
+	$file_eleve2016 = fopen("./files/$classe/_Profils.txt", "r");
 	while(!feof($file_eleve2016)){
 		$ligne122016 = fgets($file_eleve2016);
 		$content122016 = explode(":", $ligne122016);
@@ -32,9 +32,21 @@
 	};
 	fclose($file_eleve2016);
 	
-	//les absences 14 novembre
-	$lesabsences = lesabsences2($classe,$nom,$tableaudesappels);
-	echo($lesabsences);
+	//------------------------------------------------ LES ABSENCES ###
+	if($tableaudesappels) {
+		//$lesabsences = lesabsences2($classe,$nom,$tableaudesappels);
+		$lesabsences = "";
+		foreach($tableaudesappels as $unappel) {
+			$part2020 = explode("/", $unappel);
+			if(!eleve_present($nom,$classe,$part2020[1],$part2020[0]))
+				$lesabsences .= "$part2020[0]_$part2020[1]:";
+		}
+		$lesappels2020 = tabDappels2020($tableaudesappels,$lesabsences,0);
+		echo($lesappels2020);
+	}
+	
+	
+	//------------------------------------------------ 
 	$somme_note = 0;
 	$somme_coef = 0;
 	$somme_sem = array_fill(0, 3, 0);
@@ -127,7 +139,7 @@
 			echo("</table>");
 			
 			
-			//Moyenne dans la matière ###
+			//Moyenne dans la matière 
 			$file_image = $files."$classe/_$lamatiere.svg";	
 			$legraphe = graphe_plus($lamoyenne,$file_image);
 			if($json_open) json_add($json_fp,"$lamatiere ($coefmat)",$lamoyenne);
@@ -144,7 +156,7 @@
 		if($somme_coef_sem[$i]>0) {
 			$lamoyennesem = number_format($somme_sem[$i]/$somme_coef_sem[$i],2);
 			$semestre = $i + 1;
-			//Moyenne du semestre ###
+			//Moyenne du semestre 
 			$file_image = $files."$classe/_Semestre $semestre.svg";
 
 			$image_semestre = "</td><td><img src=\"graphe_elv.php?filename=$graphe&note=$lamoyennesem\"/>";

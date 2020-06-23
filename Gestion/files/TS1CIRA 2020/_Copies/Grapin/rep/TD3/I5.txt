@@ -1,0 +1,1 @@
+lorsqu'on augmente la commande, le débit diminue et la tempeérature d'eau augmente, donc la mesure augmente, la procedé est direct donc le sens d'action du régulateur est inverse.

@@ -1,2 +1,0 @@
-Les performances améliorées avec ce réglage est le temps de réponse qui est beaucoup plus cours. Pour la méthode de Ziegler&Nichols on a Trép=168s avec qu'avec la méthode du régleur Trép=16s. De plus l'erreur statique est nulle.
-

@@ -1,0 +1,1 @@
+pH = -log[H3O+], et Em est proportionnel à pH. Donc, Em n'est pas linéaire par rapport à la concentration en [H3O+].

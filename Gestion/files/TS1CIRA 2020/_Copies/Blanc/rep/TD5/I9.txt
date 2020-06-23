@@ -1,0 +1,2 @@
+le régulateur doit être en sens directe et le procédé en inverse car quand on augmente la commande du régulateur la vanne va se fermer donc le débit de co2 diminue 
+

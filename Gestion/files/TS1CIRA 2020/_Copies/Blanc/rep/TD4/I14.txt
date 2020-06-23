@@ -1,0 +1,1 @@
+l'écart statique entre la mesure et la consigne est de 0

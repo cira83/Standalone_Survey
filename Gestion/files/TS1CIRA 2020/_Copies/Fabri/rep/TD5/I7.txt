@@ -1,0 +1,1 @@
+comme la pression dépend de la température il suffit de connaitre la température pour connaitre la pression, le théorème de la loi des gaze

@@ -1,0 +1,9 @@
+Bourgue::1:
+Premayon:19.5:1:
+Rousseau:17.5:1:
+Semenadisse:13.5:1:
+Pastor:12.5:1:
+Tremino:9:1:
+Frelin:8:1:
+Cipolla:7:1:
+Arcas:4:1:

@@ -1,0 +1,1 @@
+gain critique=30 Tc=20s

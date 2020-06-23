@@ -1,2 +1,0 @@
-quand le niveaux augmente il faut augmenter le débit pour baisser le niveaux donc augmenter la sortie du régulateur de niveaux, le régulateur est en direct
-

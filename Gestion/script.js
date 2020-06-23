@@ -25,6 +25,22 @@ function lecture_json(nom){
 	request.send();
 }
 
+function coller(infos){
+	var request = new XMLHttpRequest();
+	var outputElem = document.getElementById('note');
+	var source = './DSNote.php?infos='+infos;
+	
+	request.open('GET', source);
+	request.responseType = 'text';
+	
+	request.onload = function() {
+		data = request.response;
+		outputElem.value = data;
+	};	
+	request.send();
+}
+
+
 function message(msg){
     if (window.webkitNotifications) {
         if (window.webkitNotifications.checkPermission() == 0) {
@@ -49,7 +65,7 @@ function newclasse(lavaleur){
 	var date = new Date(Date.now() + 86400000*30);//86400000 = 1 jour
 
 	document.cookie = 'laclasse='+lavaleur+"; path=/; expires="+date.toUTCString();
-	location.reload() ;
+	window.location.replace('./appel.php');
 }
 
 function cira(){

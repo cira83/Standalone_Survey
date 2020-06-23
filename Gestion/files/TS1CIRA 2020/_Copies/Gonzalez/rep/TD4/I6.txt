@@ -1,0 +1,1 @@
+le procédé est direct, vu que la vanne est FMA quand on augmente la commande la vanne s'ouvre ce qui augmente le niveau h, le sens d'action du régulateur est donc inverse.

@@ -1,0 +1,1 @@
+c'est un relais de calcul qui s'occupe d'optimiser le débit de principe actif avec le débit de Qs1

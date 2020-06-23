@@ -1,0 +1,3 @@
+réglée: la température de l'eau sortie de E1
+réglante: le débit d'eau d'entrée de E1
+perturbatrices: température ambiante et la température du moût d'entrée de E1

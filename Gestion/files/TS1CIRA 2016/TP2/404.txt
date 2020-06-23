@@ -1,0 +1,12 @@
+Are:20:1:
+Lamarque:20:1:
+Bacquias:17:1:
+Berre:17:1:
+Nadau:17:1:
+Segault:17:1:
+Vassal:17:1:
+Romdhani:15:1:
+Minel:12:1:
+Gire:8:1:
+Mougeolle:3:1:
+Roggero:3:1:

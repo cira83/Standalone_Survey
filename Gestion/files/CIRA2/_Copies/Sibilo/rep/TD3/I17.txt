@@ -1,2 +1,0 @@
-Quand X augmente, Y diminue, procédé inverse donc régulateur direct.
-

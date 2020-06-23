@@ -1,0 +1,1 @@
+En boucle ouverte on règle le régulateur en mode manuel puis on donne une valeur de la grandeur réglante. Dès la stabilisation de la courbe on fait un échelon de commande et on observe l'évolution de la courbe. 

@@ -1,1 +1,0 @@
-Procédé est direct car quand on ouvert la vanne la mesure augmente donc le régulateur est inverse 

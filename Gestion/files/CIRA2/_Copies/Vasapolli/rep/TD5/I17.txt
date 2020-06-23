@@ -1,1 +1,0 @@
-Une régulation cascade se justifie lorsque l'on a une mesure supplémentaire (Température de la sous couche) qui rentre en jeu dans le réglage de la température principale (Température de la cuve) 

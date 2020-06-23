@@ -1,0 +1,17 @@
+Arcas:10:1:Lu 16-09
+Crivello:10:1:Lu 16-09
+Colas:12:1:Lu 16-09
+Auda:12:1:Lu 16-09
+Andreani:0:1:Lu 16-09
+Dethorey:0:0:Lu 16-09
+Golleret:12:1:Lu 16-09
+Krout:18:1:Lu 16-09
+Paladini:12:1:Lu 16-09
+Raffellini:14:1:Lu 16-09
+Rein:17:1:Lu 16-09
+Roussel:12:0:Lu 16-09
+Russo:11:1:
+Santoni:12:1:Lu 16-09
+Savelli:9:1:Lu 16-09
+Semenadisse:11:1:Lu 16-09
+Vaiarello:10:1:Lu 16-09

@@ -1,0 +1,2 @@
+Le régulateur doit être en sens d'action inverse car quand on augmente la commande la mesure augmente donc le procédé est en sens d'action direct et par conséquent le régulateur doit être en sens d'action inverse 
+

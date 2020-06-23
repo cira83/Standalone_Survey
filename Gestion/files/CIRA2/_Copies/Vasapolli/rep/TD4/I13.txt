@@ -1,1 +1,0 @@
-on utilise une régulation parallèle pour éviter le débordement du liquide 

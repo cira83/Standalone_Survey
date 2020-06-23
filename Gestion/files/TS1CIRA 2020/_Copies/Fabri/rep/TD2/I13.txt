@@ -1,0 +1,1 @@
+la mesure est croissante quand la commande augmente et ne se stabilise pas 

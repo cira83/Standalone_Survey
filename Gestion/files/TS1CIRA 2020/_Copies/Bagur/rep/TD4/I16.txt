@@ -1,0 +1,1 @@
+Tr = le temps de réponse, il permet d'améliorer la rapidité

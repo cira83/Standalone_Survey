@@ -1,0 +1,3 @@
+Xa->Essai 1 car la variation est permanente et le dépassement est trop grand
+Xb->Essai 2 car léger dépassement puis valeur de la mesure proche de la consigne
+Xc->Essai 3 car pas de dépassement et mesure trop loin de la consigne

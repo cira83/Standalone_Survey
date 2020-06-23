@@ -1,2 +1,0 @@
-En boucle simple, le temps de réponse est doublement supérieur au temps de réponse obtenue en boucle cascade. Donc celui diminue grandement le temps de réponse. De même, les deux possède une erreur statique nulle, ainsi qu'un premier dépassement inexistant.
-

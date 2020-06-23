@@ -1,13 +1,14 @@
 <?php
 	$classe = $_COOKIE["laclasse"];
 	$password = $_COOKIE["password"];
-	$filename = "./files/$classe.txt";
+	$filename = "./files/$classe/_Profils.txt";
 	include("./lesvariables.php");
 	$color = "";
 	
 	function age($date){
 		$nombre = explode("/", $date);
-		$age = date("Y")-$nombre[2];
+		$nombre_2 = isset($nombre[2])?$nombre[2]:0; 
+		$age = date("Y")-$nombre_2;
 		
 		return $age;
 	}
@@ -36,25 +37,25 @@
 		}
 		
 		
-		$file_photo = "./photos/$info[0].jpg";
+		$file_photo = "./files/$classe/_Photos/$info[0].jpg";
 		if(!file_exists($file_photo)) $file_photo = "./photos/----.jpg";
 		
 		if($info[11]=="oui") {
 			$info[11]="Marine";
-			$marine_color = "#2ECCFA";
+			$marine_color = "#2a93d2";
 		}
 		else {
 			$info[11]="-----";
-			$marine_color = "#000";
+			$marine_color = "#aa7942";
 		}
 		$age = age($info[2]);
 		
-		$fiche_info = "./Candidatures/$info[0].pdf";
-		if(file_exists($fiche_info)) $candidature = "<a href=\"$fiche_info\"><img src=\"./icon/quest.jpg\" height=\"20px\"></a>";
-		else $candidature = "";
+		$fiche_info = "./files/$classe/_Candidatures/$info[0].pdf";
+		if(file_exists($fiche_info)) $candidature = "<a href=\"$fiche_info\"><img src=\"./icon/quest.gif\" height=\"20px\"></a>";
+		else $candidature = "??";
 		$M_NOM = strtoupper($info[0]);//pour mettre en majuscule
 		echo("<tr bgcolor=\"$color\">");
-		echo("<td width=\"5px\">$i</td><td><a href=\"./eleve.php?nom=$info[0]\"><img src=\"$file_photo\" height=\"40px\" style=\"border:solid 2px $marine_color;\"></a>");
+		echo("<td width=\"10px\">$i</td><td><a href=\"./eleve.php?nom=$info[0]\"><img src=\"$file_photo\" title=\".files/$classe/_Photos/$info[0].jpg\" height=\"40px\" style=\"border:solid 4px $marine_color;\"></a>");
 		echo("</td><td>$M_NOM $info[1]</td><td>$info[2] (<font color=\"blue\"><b>$age</b></font>)</td>");
 		echo("<td>$candidature</td>");
 		echo("<td><font color=\"$color\">$info[3]</font></td><td>$info[4]</td><td><a href=\"mailto:$info[5]\">$info[5]</a></td><td>$info[6]</td><td>$info[13]</td><td>$info[7]</td>");

@@ -1,0 +1,3 @@
+Xa: On a un Xp trop petit (Xp=30%) car on a des ondulations 
+Xb: On a un Xp correct (Xp=50%) régulation correct
+Xc: On a un Xp trop grand (Xp=70%) car la mesure est trop basse

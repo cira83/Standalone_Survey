@@ -1,0 +1,25 @@
+<td colspan="3"><h2>Cahier de texte des TS1CIRA 2016</h2></td>
+<td width="50px"><b>Jour</b></td><td width="50px"><b>Mois</b></td><td><b>Activit&eacute;s</b></td>
+<td><input type="hidden" value="20401">01</td><td>04</td><td>Fiche 11</td>
+<td><input type="hidden" value="20318">18</td><td>03</td><td>Fiche 8 et Fiche 9 + TP505</td>
+<td><input type="hidden" value="20304">04</td><td>03</td><td>DS4 ET1 + TP504</td>
+<td><input type="hidden" value="20325">25</td><td>03</td><td>Fiche 10 + TP506</td>
+<td><input type="hidden" value="20129">29</td><td>01</td><td>Fiche 6)4 + Fiche 7)12 + TP501</td>
+<td><input type="hidden" value="20122">22</td><td>01</td><td>chap 5) + Fiche 6)123</td>
+<td><input type="hidden" value="20115">15</td><td>01</td><td>DS4 2016 + Correction + TP304</td>
+<td><input type="hidden" value="11211">11</td><td>12</td><td>Chap 4) + Fiche 4)Sauf 7 + TP303</td>
+<td><input type="hidden" value="11204">04</td><td>12</td><td>DS3 2015 + TP303</td>
+<td><input type="hidden" value="11127">27</td><td>11</td><td>Fiche 3)67 + TP302</td>
+<td><input type="hidden" value="11120">20</td><td>11</td><td>Fiche 3)45 + TP301</td>
+<td><input type="hidden" value="11013">13</td><td>10</td><td>Chap 3) + Fiche 3)123</td>
+<td><input type="hidden" value="11106">06</td><td>11</td><td>DS2 + TP201</td>
+<td><input type="hidden" value="11016">16</td><td>10</td><td>Fin Chap 2) + Fiche 2) + TP106</td>
+<td><input type="hidden" value="11009">09</td><td>10</td><td>Correction DS1 + Fiche 2)2 + Chap 2)3</td>
+<td><input type="hidden" value="11002">02</td><td>10</td><td>DS1 2016 + Chap 2)1&2 + Fiche 2)1&6 +TP104</td>
+<td><input type="hidden" value="10825">25</td><td>08</td><td>DS1 2015 + TP103</td>
+<td><input type="hidden" value="10918">18</td><td>09</td><td>Fin Fiche 1) + TP102</td>
+<td><input type="hidden" value="10911">11</td><td>09</td><td>Fin Chap 1) + Fiche 1)2 & 3 + TP101</td>
+<td><input type="hidden" value="10904">04</td><td>09</td><td>Chap 0) + Chap 1)Karnaught + TP001 + Fiche 1)1</td>
+<td><input type="hidden" value="10901">01</td><td>09</td><td>Accueil</td>
+<td><input type="hidden" value="20422">22</td><td>04</td><td>Fiche 12 et 13 + Exposé</td>
+<td><input type="hidden" value="20429">29</td><td>04</td><td>Préparation Exposés</td>

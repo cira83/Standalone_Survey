@@ -1,0 +1,2 @@
+dans la boucle 02 nous avons un relais de calcul FY, transmetteur de débit:FT, la vanne pneumatique:FV, un régulateur indicateur de débit:FIC et un capteur de débit: FE
+

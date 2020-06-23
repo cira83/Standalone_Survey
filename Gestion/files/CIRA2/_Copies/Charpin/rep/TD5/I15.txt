@@ -1,1 +1,0 @@
-temps de reponse= 65s,      erreur =0% , et pas de dépassement

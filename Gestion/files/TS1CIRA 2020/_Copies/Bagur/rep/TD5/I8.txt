@@ -1,0 +1,3 @@
+Fvo2 : OMA
+Il faut que la vanne soit ouverte donc sens d'action directe.
+

@@ -1,0 +1,28 @@
+﻿[Fiches Techniques
+2604 Doc rapide,./Doc_Tech/2604%20Doc%20rapide.pdf
+Dossier Technique Aerotherm,./Doc_Tech/Dossier%20Technique%20Aerotherm.pdf
+Dossier Technique Multiboucle,./Doc_Tech/Dossier%20Technique%20Multiboucle.pdf
+Dossier Technique SAD Bas,./Doc_Tech/Dossier%20Technique%20SAD%20Bas.pdf
+Dossier Technique SAD Haut,./Doc_Tech/Dossier%20Technique%20SAD%20Haut.pdf
+Notice Fluke 705,./Doc_Tech/Notice%20Fluke%20705.pdf
+Notice FujiHartExplorer,./Doc_Tech/Notice%20FujiHartExplorer.pdf
+Notice Itools,./Doc_Tech/Notice%20Itools.pdf
+Notice JUMO dTRANS HART,./Doc_Tech/Notice%20JUMO%20dTRANS%20HART.pdf
+Notice LibreOffice,./Doc_Tech/Notice%20LibreOffice.pdf
+Protocole HART,./Doc_Tech/Protocole%20HART.pdf
+PT100,./Doc_Tech/PT100.pdf
+Transmetteurs FUJI,./Doc_Tech/Transmetteurs%20FUJI.pdf
+[Cours de régulation
+Régulation Industrielle,https://www.dropbox.com/s/le0kbpasu2yoxs4/Regulation%20Industrielle.pdf?dl=0
+[Fiches d'exercices
+Fiche 1 - Généralités et Schémas
+Fiche 2 - Caractéristiques
+Fiche 3 - Régulateurs
+Fiche 4 - TOR
+Fiche 5 - P
+Fiche 6 - PI
+Fiche 7 - PID
+Fiche 8 - Laplace
+Fiche 9 - Réglages
+[Présentations
+Accueil de rentrée

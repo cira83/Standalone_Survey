@@ -1,0 +1,1 @@
+le débit libre est le débit de principe actif car sa vanne est une vanne manuelle et pour le débit asservi est le débit Qs1 qui est réglée par le régulateur FIC3

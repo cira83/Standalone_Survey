@@ -1,1 +1,0 @@
-il permet de partager ses données avec d'autres appareils sous le même protocole (régulateur)

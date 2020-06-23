@@ -1,1 +1,0 @@
-Le dépassement s'exprime en % de la variation de la mesure.

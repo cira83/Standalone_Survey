@@ -1,0 +1,15 @@
+Andreani:20:1:Sa 07-02
+Arcas:20:1:Sa 07-02
+Bourgue:18:1:Sa 07-02
+Cipolla:18:1:Sa 07-02
+Frelin:13:1:Sa 07-02
+Kremer:20:1:Sa 07-02
+Lamarque:18:1:Sa 07-02
+Luccioni:18:1:Sa 07-02
+Missilini:0:1:Sa 07-02
+Noaman:16:1:Sa 07-02
+Pastor:12:1:Sa 07-02
+Premayon:20:1:Sa 07-02
+Rousseau:20:1:Sa 07-02
+Souames:18:1:Sa 07-02
+Tremino:18:1:Sa 07-02

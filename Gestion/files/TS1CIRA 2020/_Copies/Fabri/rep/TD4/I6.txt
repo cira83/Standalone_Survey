@@ -1,0 +1,1 @@
+Quand on augmente la commande, la vanne s'ouvre ce qui remplit la cuve donc le capteur augmente. C'est donc un procédé direct et un régulateur inverse

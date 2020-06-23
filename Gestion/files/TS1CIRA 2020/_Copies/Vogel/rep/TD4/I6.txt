@@ -1,0 +1,2 @@
+Quand on augmente la commande du LIC la vanne NF s'ouvre donc le niveau dans la cuve augmente donc la mesure du LT augmente donc le procédé est direct et il faut régler le régulateur avec une action inerse
+

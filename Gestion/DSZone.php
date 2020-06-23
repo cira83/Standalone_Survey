@@ -134,9 +134,9 @@
 			fwrite($fp, "$code");
 			fclose($fp);
 			chmod($fichier_on,0777);
-			$repertoire_reponses = "$repertoire/$code";
-			mkdir($repertoire_reponses);
-			chmod($repertoire_reponses,0777);
+			//$repertoire_reponses = "$repertoire/$code";
+			//mkdir($repertoire_reponses);
+			//chmod($repertoire_reponses,0777);
 		}
 
 

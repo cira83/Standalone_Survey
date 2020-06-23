@@ -1,0 +1,1 @@
+Lorsque la commande augmente la vanne se ferme alors le taux de CO2 diminue, donc la mesure diminue donc le régulateur doit être en direct puisque le procédé est inverse.

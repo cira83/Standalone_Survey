@@ -1,0 +1,1 @@
+1 : régulateur de niveau, 2 : capteur de niveau bas

@@ -1,0 +1,6 @@
+FIC: régulateur indicateur de débit
+FY: convertisseur I/P électrique en pneumatique
+FV: vanne de débit
+FE: sonde de débit de CO2
+FT: transmetteur du capteur au régulateur
+

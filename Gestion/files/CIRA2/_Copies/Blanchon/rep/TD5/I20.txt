@@ -1,1 +1,0 @@
-La régulation cascade car elle permet d'avoir un meilleur resultat  et que la precision est plus elevee mais aussi que le temps de reponse et l'erreur statique est plus faible donc c'est mieux

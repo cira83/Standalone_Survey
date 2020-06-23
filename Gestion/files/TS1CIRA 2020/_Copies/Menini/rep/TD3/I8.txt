@@ -1,0 +1,1 @@
+Sur le graphique Q11 on voit que quand la commande augmente la mesure augmente le procédé est donc en sens d'action directe et donc le régulateur est en sens d'action inverse 

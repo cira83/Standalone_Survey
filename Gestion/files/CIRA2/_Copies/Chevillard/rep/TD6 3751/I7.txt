@@ -1,1 +1,0 @@
-il y a pas d'erreur statique, le premier dépassement 18%, t1= 60s

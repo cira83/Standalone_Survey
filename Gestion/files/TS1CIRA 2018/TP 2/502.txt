@@ -1,0 +1,47 @@
+Agostino::1:
+Andre::1:
+Bellemere::1:
+Chapelain::1:
+Couillet::1:
+Fiandino::1:
+Gensollen::1:
+Ginieys::1:
+Lothmann::1:
+Mahouachi::1:
+Mengual::1:
+Raspaud::1:
+Selegue::1:
+Spite::1:
+Torchut::1:
+Turkcan::1:
+Gensollen:0:1:28/03 - 07h55:0 Correction:::
+Agostino:20:1:04/04 - 08h22:0 Correction:::
+Andre:20:1:04/04 - 08h24:0 Correction:::
+Bellemere:20:1:04/04 - 08h24:0 Correction:::
+Chapelain:20:1:04/04 - 08h25:0 Correction:::
+Couillet:20:1:04/04 - 08h27:0 Correction:::
+Fiandino:20:1:04/04 - 08h28:0 Correction:::
+Ginieys:20:1:04/04 - 08h28:0 Correction:::
+Lothmann:20:1:04/04 - 08h29:0 Correction:::
+Mahouachi:20:1:04/04 - 08h30:0 Correction:::
+Mengual:20:1:04/04 - 08h30:0 Correction:::
+Raspaud:0:1:04/04 - 08h32:0 Correction:::
+Selegue:20:1:04/04 - 08h33:0 Correction:::
+Spite:20:1:04/04 - 08h33:0 Correction:::
+Torchut:20:1:04/04 - 08h34:0 Correction:::
+Turkcan:20:1:04/04 - 08h35:0 Correction:::
+Torchut:18:1:04/04 - 08h45:0 Correction:::
+Spite:18:1:04/04 - 08h49:0 Correction:::
+Selegue:17:1:04/04 - 08h51:0 Correction:::
+Mengual:17:1:04/04 - 08h52:0 Correction:::
+Mahouachi:17:1:04/04 - 08h53:0 Correction:::
+Lothmann:17:1:04/04 - 08h54:0 Correction:::
+Ginieys:17:1:04/04 - 08h55:0 Correction:::
+Fiandino:17:1:04/04 - 08h55:0 Correction:::
+Couillet:16:1:04/04 - 08h56:0 Correction:::
+Bellemere:16:1:04/04 - 08h57:0 Correction:::
+Andre:19:1:04/04 - 08h59:0 Correction:::
+Agostino:17:1:04/04 - 09h02:0 Correction:::
+Raspaud::1:10/04 - 15h36:0 Correction::à corriger:
+Raspaud:16:1:23/04 - 08h58:0 Correction::Pas de liste:
+Gensollen:0:1:Non Fait:0 Correction:::

@@ -1,0 +1,1 @@
+I1= mesure; I2= consigne esclave; I3= commende; I4= mesure

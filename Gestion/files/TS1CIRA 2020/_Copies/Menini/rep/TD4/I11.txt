@@ -1,0 +1,1 @@
+Le système est instable et par conséquent la régulation ne peut se faire correctement.Le système doit passer en boucle ouverte.

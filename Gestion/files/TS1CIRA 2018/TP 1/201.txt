@@ -1,0 +1,34 @@
+Agostino::1:
+Andre::1:
+Bellemere::1:
+Chapelain::1:
+Couillet::1:
+Fiandino::1:
+Gensollen::1:
+Ginieys::1:
+Lidou::1:
+Lothmann::1:
+Mahouachi::1:
+Mengual::1:
+Raspaud::1:
+Selegue::1:
+Spite::1:
+Torchut::1:
+Turkcan::1:
+Lidou::1:Non Fait:0 Correction:::
+Lothmann:0:1:14/11 - 18h59:0 Correction::Fichier de Andre:
+Agostino:20:1:15/11 - 08h48:0 Correction:::
+Andre:20:1:15/11 - 08h50:0 Correction:::
+Bellemere:20:1:15/11 - 08h50:0 Correction:::
+Chapelain:20:1:15/11 - 08h51:0 Correction:::
+Couillet:20:1:15/11 - 08h52:0 Correction:::
+Fiandino:20:1:15/11 - 08h53:0 Correction:::
+Ginieys:20:1:15/11 - 08h53:0 Correction:::
+Mahouachi:20:1:15/11 - 08h54:0 Correction:::
+Mengual:12:1:15/11 - 08h59:0 Correction:::
+Raspaud:20:1:15/11 - 09h01:0 Correction:::
+Selegue:20:1:15/11 - 09h02:0 Correction:::
+Spite:20:1:15/11 - 09h02:0 Correction:::
+Torchut:20:1:15/11 - 09h03:0 Correction:::
+Turkcan:20:1:15/11 - 09h04:0 Correction:::
+Gensollen:0:1:20/11 - 10h04:0 Correction:::

@@ -1,0 +1,1 @@
+le régulateur est en inverse et le procédé est en direct car quand on augmente la commande alors la vanne se ferme alors le débit diminue donc la température augmente

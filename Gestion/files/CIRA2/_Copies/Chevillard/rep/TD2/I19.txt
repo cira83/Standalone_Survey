@@ -1,1 +1,0 @@
-gain = 15% ti = 30s td =0s

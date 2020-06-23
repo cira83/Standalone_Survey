@@ -1,0 +1,10 @@
+Ailloud:13.5:1:Lu 30-09
+Antar:13.5:1:Lu 30-09
+Baudry:10:1:Lu 30-09
+Destombes:11.5:1:Lu 30-09
+Guigon:10.5:1:Lu 30-09
+Keller:14:1:Lu 30-09
+Le_Goff:9.5:1:Lu 30-09
+Roux:10.5:1:Lu 30-09
+Saba:2:1:Lu 30-09
+Touze:15.5:1:Lu 30-09

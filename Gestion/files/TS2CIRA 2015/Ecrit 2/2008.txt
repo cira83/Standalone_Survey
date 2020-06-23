@@ -1,0 +1,14 @@
+Raffellini::1:Lu 11-05
+Dethorey::1:Lu 11-05
+Rein:18:0.5:Lu 11-05
+Roussel:19:0.5:Lu 11-05
+Santoni:8:0.5:Lu 11-05
+Semenadisse::1:Lu 11-05
+Vaiarello::1:Lu 11-05
+Raffellini::1:Lu 11-05
+Dethorey::1:Lu 11-05
+Rein:18:0.5:Lu 11-05
+Roussel:19:0.5:Lu 11-05
+Santoni:8:0.5:Lu 11-05
+Semenadisse::1:Lu 11-05
+Vaiarello::1:Lu 11-05

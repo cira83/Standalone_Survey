@@ -1,1 +1,0 @@
-le procédé n'est pas stable car la variation de la grandeur réglante ne correspond pas a la variation de la grandeur réglée 

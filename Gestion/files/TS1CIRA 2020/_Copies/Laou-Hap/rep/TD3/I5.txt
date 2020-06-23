@@ -1,0 +1,2 @@
+Lorsque la commande y augmente, la puissance de chauffe augmente et donc la mesure de température x augmente aussi.
+Le procédé est direct et donc le régulateur est en sens inverse. 

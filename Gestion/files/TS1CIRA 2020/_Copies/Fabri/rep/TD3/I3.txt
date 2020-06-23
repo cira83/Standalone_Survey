@@ -1,0 +1,4 @@
+La grandeur réglée: température de l'eau
+La grandeur réglante: débit de l'eau
+La grandeur perturbatrice: température ambiante
+

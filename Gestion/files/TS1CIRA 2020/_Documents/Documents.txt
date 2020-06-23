@@ -1,0 +1,39 @@
+﻿[Fiches Techniques
+2604 Doc rapide,./Doc_Tech/2604%20Doc%20rapide.pdf
+Dossier Technique Aerotherm,./Doc_Tech/Dossier%20Technique%20Aerotherm.pdf
+Dossier Technique Multiboucle,./Doc_Tech/Dossier%20Technique%20Multiboucle.pdf
+Dossier Technique SAD Bas,./Doc_Tech/Dossier%20Technique%20SAD%20Bas.pdf
+Dossier Technique SAD Haut,./Doc_Tech/Dossier%20Technique%20SAD%20Haut.pdf
+Notice Fluke 705,./Doc_Tech/Notice%20Fluke%20705.pdf
+Notice FujiHartExplorer,./Doc_Tech/Notice%20FujiHartExplorer.pdf
+Notice Itools,./Doc_Tech/Notice%20Itools.pdf
+Notice JUMO dTRANS HART,./Doc_Tech/Notice%20JUMO%20dTRANS%20HART.pdf
+Notice LibreOffice,./Doc_Tech/Notice%20LibreOffice.pdf
+Protocole HART,./Doc_Tech/Protocole%20HART.pdf
+PT100,./Doc_Tech/PT100.pdf
+Transmetteurs FUJI,./Doc_Tech/Transmetteurs%20FUJI.pdf
+[Cours de régulation
+Régulation Industrielle,https://www.dropbox.com/s/le0kbpasu2yoxs4/Regulation%20Industrielle.pdf?dl=0
+[Fiches d'exercices
+Fiche 1 - Généralités et Schémas,https://www.dropbox.com/s/spq3gx65w2knbkz/Fiche%201.pdf?dl=0
+Fiche 2 - Caractéristiques,https://www.dropbox.com/s/zbwhn0gn046wf15/Fiche%202.pdf?dl=0
+Fiche 3 - Régulateurs,https://www.dropbox.com/s/lk5vnp9hcyj6drx/Fiche%203.pdf?dl=0
+Fiche 4 - TOR,https://www.dropbox.com/s/evw04kmjeie220t/Fiche%204.pdf?dl=0
+Fiche 5 - P,https://www.dropbox.com/s/l1iu9wdc8kr8x85/Fiche%205.pdf?dl=0
+Fiche 6 - PI,https://www.dropbox.com/s/rwow6mtqim37y0n/Fiche%206.pdf?dl=0
+Fiche 7 - PID,https://www.dropbox.com/s/2tkoma2l2o9hrip/Fiche%207.pdf?dl=0
+Fiche 8 - Laplace,https://www.dropbox.com/s/9nz4790d5z68ah6/Fiche%208.pdf?dl=0
+Fiche 9 - Réglages,https://www.dropbox.com/s/im6lf9kw12mhjrm/Fiche%209.pdf?dl=0
+[Présentations
+Accueil de rentrée,https://www.dropbox.com/s/k90mgeuawfz7onm/Jour%201.pptx?dl=0
+Cours,https://www.dropbox.com/s/wlh43jsx2ljm2hq/Regulation%20Industrielle.pptx?dl=0
+[DS
+DS1 2019,https://www.dropbox.com/s/kuywdcyc17zqiw5/DS1%202019.pdf?dl=0
+DS2 2019,https://www.dropbox.com/s/96m5290j1fsoj8w/DS2%202019.pdf?dl=0
+DS3 2019,https://www.dropbox.com/s/sjo57r2oakrjee3/DS3%202019.pdf?dl=0
+DS4 2019,https://www.dropbox.com/s/cqu5kgvp7qi4zkb/DS4%202019.pdf?dl=0
+DS5 2019,https://www.dropbox.com/s/09irossv9lz048o/DS5%202019.pdf?dl=0
+DS6 2019,https://www.dropbox.com/s/g5pmkvp8lqr6c1k/DS7%202018.pdf?dl=0
+DS7 2019,https://www.dropbox.com/s/hv5ymes98chg1kh/DS7%202019.pdf?dl=0
+DS8 2019,https://www.dropbox.com/s/w5ev5g224pdmxkx/DS8%202019.pdf?dl=0
+DS9 2019,https://www.dropbox.com/s/dvjd76srztkdxdn/DS9%202018.pdf?dl=0

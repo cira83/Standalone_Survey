@@ -1,0 +1,46 @@
+Agostino::1:
+Andre::1:
+Bellemere::1:
+Chapelain::1:
+Couillet::1:
+Fiandino::1:
+Gensollen::1:
+Ginieys::1:
+Lothmann::1:
+Mahouachi::1:
+Mengual::1:
+Raspaud::1:
+Selegue::1:
+Spite::1:
+Turkcan::1:
+Andre:10.5:1:15/01 - 15h55:+0.5 Tableau:::
+Lothmann:10.5:1:15/01 - 15h55:+0.5 Tableau:::
+Spite:11:1:15/01 - 15h55:+1 Tableau:::
+Chapelain:9:1:22/01 - 10h01:-1 Retard:::
+Agostino:11:1:22/01 - 12h22:+1 Tableau:::
+Chapelain:8:1:29/01 - 09h58:-1 Retard:::
+Andre:11:1:29/01 - 09h58:+0.5 Tableau:::
+Spite:11.5:1:29/01 - 09h58:+0.5 Tableau:::
+Raspaud:11:1:29/01 - 09h58:+1 Tableau:::
+Raspaud:11.5:1:29/01 - 09h58:+0.5 Tableau:::
+Spite:12.5:1:12/02 - 14h05:+1 Tableau:::
+Spite:13:1:12/02 - 14h05:+0.5 Tableau:::
+Mahouachi:11:1:12/02 - 14h05:+1 Tableau:::
+Torchut:11:1:12/02 - 14h06:+1 Tableau:::
+Turkcan:11:1:19/03 - 10h17:+1 Tableau:::
+Spite:14:1:19/03 - 10h17:+1 Tableau:::
+Ginieys:11:1:19/03 - 10h17:+1 Tableau:::
+Turkcan:13:1:26/03 - 13h57:+2 Tableau*:::
+Ginieys:12:1:26/03 - 13h57:+1 Tableau:::
+Andre:12:1:26/03 - 13h58:+1 Tableau:::
+Spite:15:1:09/04 - 13h51:+1 Tableau:::
+Spite:15.5:1:09/04 - 13h51:+0.5 Tableau:::
+Andre:13:1:09/04 - 13h51:+1 Tableau:::
+Agostino:12:1:09/04 - 13h52:+1 Tableau:::
+Raspaud:12.5:1:09/04 - 13h52:+1 Tableau:::
+Ginieys:13:1:09/04 - 13h52:+1 Tableau:::
+Gensollen::1:Non Fait:0 Correction:::
+Fiandino:11:1:09/04 - 13h52:+1 Tableau:::
+Mahouachi:12:1:09/04 - 13h52:+1 Tableau:::
+Mahouachi:12.5:1:09/04 - 13h53:+0.5 Tableau:::
+Bellemere:10:1:23/04 - 09h00:0 Correction:::

@@ -1,0 +1,10 @@
+Ailloud:Nnot:1:Lu 06-01
+Antar::1:Lu 06-01
+Baudry::1:Lu 06-01
+Destombes::1:Lu 06-01
+Guigon:5:0:Lu 06-01
+Keller::1:Lu 06-01
+Le_Goff::1:Lu 06-01
+Roux::1:Lu 06-01
+Saba::1:Lu 06-01
+Touze::1:Lu 06-01

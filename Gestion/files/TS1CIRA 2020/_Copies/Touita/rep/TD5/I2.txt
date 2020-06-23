@@ -1,0 +1,4 @@
+grandeur réglée: débit du CO2 en sortie
+grandeur réglante: section ouverte vanne
+grandeur perturbatrice: température et pression du CO2
+

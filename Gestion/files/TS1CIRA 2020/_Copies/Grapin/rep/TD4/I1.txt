@@ -1,0 +1,1 @@
+un capteur-transmetteur de pression différentielle

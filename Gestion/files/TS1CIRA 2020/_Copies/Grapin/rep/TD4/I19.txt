@@ -1,0 +1,1 @@
+c'est une régulation de débit maitre esclave

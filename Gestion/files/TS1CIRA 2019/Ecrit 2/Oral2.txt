@@ -1,0 +1,104 @@
+Audiffren::1:
+Ayza::1:
+Bernardi::1:
+Bichon::1:
+Blanchon::1:
+Cafagna::1:
+Charpin::1:
+Chevillard::1:
+Feyrit::1:
+Lothmann::1:
+Marin::1:
+Mrabet::1:
+Sanna::1:
+Sibilo::1:
+Vasapolli::1:
+Vincent::1:
+Audiffren:9:1:16/01 - 14h03:-1 Retard:::
+Sanna:11:1:18/01 - 13h49:+1 Tableau:::
+Charpin:9:1:18/01 - 13h49:-1 Cahier:::
+Lothmann:11:1:18/01 - 13h49:+1 Tableau:::
+Feyrit:11:1:18/01 - 13h49:+1 Tableau:::
+Bichon:11:1:18/01 - 13h50:+1 Tableau:::
+Chevillard:11:1:18/01 - 13h50:+1 Tableau:::
+Audiffren:10:1:18/01 - 13h50:+1 Tableau:::
+Vasapolli:11:1:18/01 - 13h50:+1 Tableau:::
+Vincent:11:1:18/01 - 13h50:+1 Tableau:::
+Lothmann:11.5:1:18/01 - 13h51:+0.5 Tableau:::
+Lothmann:12:1:25/01 - 14h28:+0.5 Tableau:::
+Sanna:12:1:25/01 - 14h28:+1 Tableau:::
+Sanna:12.5:1:25/01 - 14h28:+0.5 Tableau:::
+Charpin:9.5:1:25/01 - 14h28:+0.5 Tableau:::
+Vasapolli:12:1:25/01 - 14h28:+1 Tableau:::
+Chevillard:11.5:1:25/01 - 14h29:+0.5 Tableau:::
+Ayza:10.5:1:25/01 - 14h29:+0.5 Tableau:::
+Sanna:11.5:1:30/01 - 16h07:-1 Retard:::
+Audiffren:9:1:30/01 - 16h07:-1 Retard:::
+Audiffren:9.5:1:08/02 - 12h03:+0.5 Tableau:::
+Audiffren:10:1:08/02 - 12h03:+0.5 Tableau:::
+Audiffren:10.5:1:08/02 - 12h03:+0.5 Tableau:::
+Vasapolli:12.5:1:08/02 - 12h03:+0.5 Tableau:::
+Vincent:11.5:1:08/02 - 12h03:+0.5 Tableau:::
+Mrabet:9:1:27/02 - 13h26:-1 Retard:::
+Cafagna:9:1:27/02 - 13h26:-1 Retard:::
+Lothmann:13:1:01/03 - 12h05:+1 Tableau:::
+Audiffren:11.5:1:01/03 - 12h05:+1 Tableau:::
+Lothmann:13.5:1:01/03 - 12h07:+0.5 Tableau:::
+Vasapolli:13.5:1:01/03 - 12h18:+1 Tableau:::
+Sanna:11.75:1:01/03 - 12h53:+0.25 Tableau:::
+Feyrit:11.5:1:01/03 - 12h53:+0.5 Tableau:::
+Ayza:9.5:1:06/03 - 13h57:-1 Retard:::
+Audiffren:10.5:1:06/03 - 13h57:-1 Retard:::
+Vincent:10.5:1:06/03 - 13h57:-1 Retard:::
+Sanna:12.75:1:08/03 - 11h43:+1 Tableau:::
+Chevillard:12.5:1:08/03 - 11h53:+1 Tableau:::
+Audiffren:11.5:1:08/03 - 11h57:+1 Tableau:::
+Vasapolli:12.5:1:08/03 - 11h59:-1 Cahier:::
+Vasapolli:13.5:1:08/03 - 11h59:+1 Tableau:::
+Vasapolli:14:1:08/03 - 11h59:+0.5 Tableau:::
+Sanna:13.25:1:08/03 - 12h13:+0.5 Tableau:::
+Charpin:10.5:1:08/03 - 12h16:+1 Tableau:::
+Lothmann:14:1:08/03 - 12h18:+0.5 Tableau:::
+Audiffren:12:1:08/03 - 12h24:+0.5 Tableau:::
+Vasapolli:14.5:1:08/03 - 12h31:+0.5 Tableau:::
+Bichon:10:1:08/03 - 12h31:-1 Cahier:::
+Audiffren:11:1:08/03 - 12h32:-1 Retard:::
+Audiffren:11.5:1:08/03 - 12h36:+0.5 Tableau:::
+Vasapolli:15:1:08/03 - 12h39:+0.5 Tableau:::
+Sanna:13.5:1:08/03 - 12h44:+0.25 Tableau:::
+Audiffren:11.75:1:08/03 - 12h44:+0.25 Tableau:::
+Mrabet:10:1:08/03 - 12h50:+1 Tableau:::
+Feyrit:12:1:15/03 - 11h20:+0.5 Tableau:::
+Feyrit:14:1:15/03 - 11h44:+2 Tableau*:::
+Mrabet:11:1:15/03 - 11h55:+1 Tableau:::
+Chevillard:13.5:1:15/03 - 12h43:+1 Tableau:::
+Audiffren:12.75:1:15/03 - 12h47:+1 Tableau:::
+Audiffren:13.75:1:15/03 - 12h50:+1 Tableau:::
+Charpin:11.5:1:15/03 - 12h51:+1 Tableau:::
+Charpin:12.5:1:15/03 - 12h53:+1 Tableau:::
+Feyrit:15:1:22/03 - 11h23:+1 Tableau:::
+Audiffren:14.25:1:22/03 - 11h24:+0.5 Tableau:::
+Audiffren:14.75:1:22/03 - 12h14:+0.5 Tableau:::
+Vincent:11.5:1:22/03 - 12h27:+1 Tableau:::
+Vincent:12.5:1:22/03 - 12h39:+1 Tableau:::
+Bernardi:11:1:22/03 - 12h43:+1 Tableau:::
+Bichon:12:1:22/03 - 12h47:+2 Tableau*:::
+Vasapolli:16:1:22/03 - 12h53:+1 Tableau:::
+Vasapolli:17:1:29/03 - 12h08:+1 Tableau:::
+Blanchon:11:1:29/03 - 12h08:+1 Tableau:::
+Chevillard:14.5:1:29/03 - 12h08:+1 Tableau:::
+Audiffren:15.75:1:29/03 - 12h08:+1 Tableau:::
+Audiffren:14.75:1:03/04 - 13h20:-1 Retard:::
+Lothmann:15:1:05/04 - 11h23:+1 Tableau:::
+Vincent:13.5:1:05/04 - 11h36:+1 Tableau:::
+Audiffren:15.75:1:05/04 - 11h47:+1 Tableau:::
+Chevillard:15:1:05/04 - 11h53:+0.5 Tableau:::
+Feyrit:15.5:1:05/04 - 11h53:+0.5 Tableau:::
+Charpin:13.5:1:05/04 - 11h58:+1 Tableau:::
+Charpin:14:1:05/04 - 12h02:+0.5 Tableau:::
+Mrabet:11.5:1:05/04 - 12h37:+0.5 Tableau:::
+Charpin:15:1:05/04 - 12h37:+1 Tableau:::
+Vincent:14:1:05/04 - 12h38:+0.5 Tableau:::
+Vasapolli:17.25:1:05/04 - 12h42:+0.25 Tableau:::
+Sanna:14:1:05/04 - 12h47:+0.5 Tableau:::
+Sanna:14.5:1:05/04 - 12h52:+0.5 Tableau:::

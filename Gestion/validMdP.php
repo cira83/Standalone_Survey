@@ -6,7 +6,7 @@
 	$Mdp = isset($_COOKIE['password'])?$_COOKIE['password']:"";
 	
 	
-	$fichieralire = "./files/$classe.txt";
+	$fichieralire = "./files/$classe/_Profils.txt";
 	if(file_exists($fichieralire)){
 		$fp = fopen($fichieralire, "r");
 		while(!feof($fp)){

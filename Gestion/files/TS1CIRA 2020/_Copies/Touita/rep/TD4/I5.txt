@@ -1,0 +1,1 @@
+LSL= commutateur du niveau très bas ; LIC= régulateur de niveau

@@ -1,0 +1,14 @@
+Bacquias:20:1:
+Minel:20:2:
+Roggero:20:1:
+Berre:16:1:
+Gire:16:1:
+Romdhani:16:1:
+Segault:16:2:
+Vassal:16:1:
+Yborra:16:1:
+Fouasse:14:2:
+Mougeolle:14:1:
+Nadau:14:1:
+Lamarque:10:1:
+Are:6:1:

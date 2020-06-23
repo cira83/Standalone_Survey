@@ -1,0 +1,4 @@
+I1 est une mesure
+I2 est la commande maitre
+I3 est la commande
+I4 est une mesure

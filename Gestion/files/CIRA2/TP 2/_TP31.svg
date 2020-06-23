@@ -1,7 +1,0 @@
-<svg id="./files/CIRA2/TP 2/_TP31.txt" width="400" height="50">
-<!-- max=1 -->
-<rect width="400" height="50" style="fill:rgb(0,0,0);stroke-width:2;stroke:rgb(0,0,0)" />
-<rect width="400" height="35" style="fill:#fdfdfd;stroke-width:2;stroke:rgb(0,0,0)" />
-<line id="note" x1="###" y1="1" x2="###" y2="36" style="stroke:#0f9d58;stroke-width:3"/>
-<line id="moyenne" x1="1" y1="1" x2="1" y2="36" style="stroke:rgb(255,0,0);stroke-width:3"/>
-</svg>

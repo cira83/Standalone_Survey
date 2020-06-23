@@ -1,2 +1,0 @@
-Ce type de régulation se justifie quand on a une grande inertie du système vis à vis d'une perturbation sur la grandeur réglante, ou sur une grandeur intermédiaire. Il faut d'abord régler la boucle interne, puis la boucle externe avec le régulateur esclave fermée. Elle se caractérise quand la grandeur perturbatrice influe la grandeur réglée
-

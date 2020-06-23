@@ -1,0 +1,13 @@
+Frelin::1:
+Rein:18:1:
+Andreani:17:1:
+Cipolla:10.5:1:
+Rousseau:8.5:1:
+Bourgue:8:1:
+Semenadisse:7:1:
+Premayon:6:1:
+Tremino:6:1:
+Luccioni:4.5:1:
+Pastor:3:1:
+Santoni:3:1:
+Arcas:0:1:

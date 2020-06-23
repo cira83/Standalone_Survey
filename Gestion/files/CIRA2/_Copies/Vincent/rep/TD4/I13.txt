@@ -1,1 +1,0 @@
-on adoptera une régulation cascade pour ce schéma entre le niveau de LT3 et le débit de Fv4

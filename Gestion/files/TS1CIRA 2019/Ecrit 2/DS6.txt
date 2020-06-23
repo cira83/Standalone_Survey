@@ -1,0 +1,32 @@
+Audiffren::1:
+Ayza::1:
+Bernardi::1:
+Bichon::1:
+Blanchon::1:
+Cafagna::1:
+Charpin::1:
+Chevillard::1:
+Feyrit::1:
+Lothmann::1:
+Marin::1:
+Mrabet::1:
+Sanna::1:
+Sibilo::1:
+Vasapolli::1:
+Vincent::1:
+Audiffren:7.25:1:21/02 - 10h16:0 Correction:::
+Ayza:6.6:1:21/02 - 10h16:0 Correction:::
+Blanchon:6.5:1:21/02 - 10h17:0 Correction:::
+Cafagna:4.45:1:21/02 - 10h17:0 Correction:::
+Charpin:6.95:1:21/02 - 10h17:0 Correction:::
+Chevillard:2.8:1:21/02 - 10h17:0 Correction:::
+Lothmann:5:1:21/02 - 10h17:0 Correction:::
+Marin:7.4:1:21/02 - 10h17:0 Correction:::
+Mrabet:4.75:1:21/02 - 10h17:0 Correction:::
+Sanna:11.7:1:21/02 - 10h18:0 Correction:::
+Sibilo:4.25:1:21/02 - 10h18:0 Correction:::
+Vasapolli:10.8:1:21/02 - 10h18:0 Correction:::
+Vincent:7.65:1:21/02 - 10h18:0 Correction:::
+Feyrit:5.8:1:28/02 - 10h49:0 Correction:::
+Bichon:8.85:1:28/02 - 10h55:0 Correction:::
+Bernardi:6.8:1:28/02 - 10h55:0 Correction:::

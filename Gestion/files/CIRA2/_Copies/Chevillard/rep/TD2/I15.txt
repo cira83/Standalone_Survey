@@ -1,1 +1,0 @@
-on peux pas utiliser une méthode de reglage en boucle ouverte car le système est intégrateur 

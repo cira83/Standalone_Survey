@@ -1,1 +1,0 @@
-Le procédé est pas stable car la grandeur réglante de correspond pas è la grandeur réglée. Donc la sortie n'est pas égale à l'entrée.

@@ -1,0 +1,1 @@
+Pour mesurer la température on ajoute un capteur de température

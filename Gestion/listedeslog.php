@@ -59,7 +59,7 @@
 	
 	function creer_select($liste,$id){
 		$select = "<select id=\"$id\" onchange=\"filtre(this);\">";
-		$select .= "<option value=\"0\">Tous</option>";
+		$select .= "<option value=\"\">Tous</option>";
 		$part = explode(":", $liste);
 		for($i=0; $i<count($part)-1;$i++) $select .= "<option value=\"$part[$i]\">$part[$i]</option>";
 		$select .= "</select>";
@@ -93,13 +93,15 @@
 
 		$select2 = creer_select($listeNom,2);
 		$select3 = creer_select($listeDetat,3);
+
+				
 		$select5 = creer_select($listeIP,5);
 		$ligne1 = "<table><tr><td>Nom : $select2</td><td>Type : $select3</td><td>IP : $select5</td></tr></table>";
 	}
 
-
+	$date_heure = date('l jS \of F Y h:i:s A');
 	echo($ligne1);
-
+	echo("<table><tr><td bgcolor=\"black\"><font color=\"white\">$date_heure</font></td></tr></table>");
 	echo("<table id=\"Logs\">");
 	include("./listedeslog_filtre.php");
 	echo("</table>");

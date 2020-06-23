@@ -1,1 +1,0 @@
-on  ne peut pas utiliser de methode de reglage en boucle ouverte  car on ne peut pas modifier la commande en mode auto, 

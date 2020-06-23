@@ -1,4 +1,14 @@
 <?php
+	function code_correction($rep_sujet){//fournie le code pour avoir les réponses de la correction
+		$code = "";
+		$liste = scandir($rep_sujet);
+		foreach($liste as $rep)
+			if(strpos("_$rep", "rep")==1)
+				$code = str_replace("rep", "", $rep);
+		return $code;		
+	}
+
+
 	function lecture_commentaires($num_Q, $chemin) {
 		$filename = "$chemin/CX$num_Q.txt";
 		$retour = "";
@@ -141,7 +151,15 @@
 		}
 		return($retour);
 	}
-	
+
+	function filenameof($repertoire,$tag){
+		$liste_file = scandir($repertoire);
+		$filename = "";
+		foreach($liste_file as $file) 
+			if(strpos("_$file", "$tag ")==1) $filename = $file;
+			
+		return("$repertoire/$filename");
+	}
 
 
 ?>

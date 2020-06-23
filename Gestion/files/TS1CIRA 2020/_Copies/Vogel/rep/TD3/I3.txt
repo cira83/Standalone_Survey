@@ -1,0 +1,4 @@
+réglée : température de l'eau
+réglante : débit de l'eau 
+perturbatrices : températures du mout et température ambiante 
+

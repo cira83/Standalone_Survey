@@ -1,1 +1,0 @@
-Il permet d'étallonner des transmetteur à distance avec ce protocole, d'utiliser une pocket pour faire de la maintenance sur ces transmetteur, etc..

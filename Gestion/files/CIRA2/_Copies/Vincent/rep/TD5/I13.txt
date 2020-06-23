@@ -1,1 +1,0 @@
-Tr10%= 55sec ; pas de 1er dépassement; erreur statique nulle 

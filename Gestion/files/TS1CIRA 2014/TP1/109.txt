@@ -1,0 +1,16 @@
+Andreani:Nnot:1:Lu 16-12
+Arcas::1:Lu 16-12
+Auda::1:Lu 16-12
+Colas::1:Lu 16-12
+Crivello::1:Lu 16-12
+Dethorey::1:Lu 16-12
+Golleret::1:Lu 16-12
+Krout::1:Lu 16-12
+Raffellini::1:Lu 16-12
+Rein:10:1:Lu 16-12
+Roussel::1:Lu 16-12
+Russo::1:Lu 16-12
+Santoni::1:Lu 16-12
+Savelli::1:Lu 16-12
+Semenadisse::1:Lu 16-12
+Vaiarello::1:Lu 16-12

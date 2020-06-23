@@ -1,0 +1,1 @@
+on doit vérifier que le régulateur est en boucle ouverte soit en manuel et que la variation de la commande soit la même que celle de la mesure 

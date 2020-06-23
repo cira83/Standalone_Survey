@@ -1,1 +1,0 @@
-Oui, temps de réponse à 100s au lieu de 130s.

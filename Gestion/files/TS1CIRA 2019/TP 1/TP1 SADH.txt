@@ -1,0 +1,16 @@
+Ayza Sanna::1:
+Bernardi Feyrit::1:
+Cafagna Marin::1:
+Chevillard Charpin::1:
+Lothmann Vincent::1:
+Sibilo Mrabet::1:
+Vasapolli Bichon::1:
+Cafagna Marin:5.4:1:18/09 - 08h36:0 Correction:::
+Lothmann Vincent:7.5:1:25/09 - 09h10:0 Correction:::
+Lothmann Vincent:10.05:1:29/09 - 14h04:0 Correction:::
+Lothmann Vincent:10.1:1:29/09 - 14h07:0 Correction:::
+Ayza Sanna:15.45:1:09/10 - 19h33:0 Correction:::
+Chevillard Charpin:12.27:1:16/10 - 08h12:0 Correction::Panne Elec.:
+Vasapolli Bichon:13.95:1:05/11 - 10h21:0 Correction:::
+Sibilo Mrabet:13.85:1:13/11 - 09h21:0 Correction:::
+Bernardi Feyrit:7.45:1:19/11 - 08h53:0 Correction:::

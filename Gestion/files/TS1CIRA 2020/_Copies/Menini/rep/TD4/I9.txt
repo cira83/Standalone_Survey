@@ -1,0 +1,1 @@
+On doit faire varier la mesurer et si elle varie de façon finie c'est a dire qu'elle ne varie plus alors le procédé est stable.Le régulateur doit être en manuel 

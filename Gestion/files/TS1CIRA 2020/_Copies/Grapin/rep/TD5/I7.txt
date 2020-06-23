@@ -1,0 +1,1 @@
+Comme la pression dépend de la température, avec la valeur de la température on peut connaitre la pression avec la lois des gaz.

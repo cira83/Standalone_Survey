@@ -1,0 +1,1 @@
+Quand on augmente la commande du TIC la vanne TV qui est NO se ferme donc le débit d'eau froide diminue donc il chauffe plus donc la mesure du PT100 augmente donc le procédé est direct et il faut regler le regulateur avec une action inverse

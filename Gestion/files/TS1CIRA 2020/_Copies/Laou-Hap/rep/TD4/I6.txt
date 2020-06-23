@@ -1,0 +1,1 @@
+Lorsque la commande augmente, la vanne s'ouvre et le niveau dans la cuve augmente. La mesure de pression augmente alors aussi, le procédé est donc direct et le régulateur est en action inverse. 

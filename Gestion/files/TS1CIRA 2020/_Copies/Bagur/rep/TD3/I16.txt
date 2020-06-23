@@ -1,0 +1,1 @@
+1 = consigne = débit de bière  2 = mesure = débit d'eau  3 = commande

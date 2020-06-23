@@ -16,17 +16,12 @@
 	$nb2pages = 0;
 
 	$pagenumber = isset($_GET['page']) ? $_GET['page'] : NULL;
-	//$pagenumber = $_GET['page'];//numéro de la page
 	$sujet_tag = isset($_GET['name']) ? $_GET['name'] : NULL;
-	//$sujet_tag = $_GET['name'];//_Sujets/$TAG
-	//$touttag = explode("/", $sujet_tag);
 
 	$ip_adresse = $_SERVER['REMOTE_ADDR'];
 
 	$action = isset($_GET['action']) ? $_GET['action'] : NULL;
-	//$action = $_GET[action];
 	$rep = isset($_POST['rep']) ? $_POST['rep'] : NULL;
-	//$rep = $_POST['rep'];
 	$repertoire = "./files/$classe/_Copies/$nom";
 
 	$sujet = isset($_GET['file']) ? $_GET['file'] : NULL;
@@ -35,9 +30,9 @@
 
 
 	include("./DS_Securite.php");
-	$DS_password = DSMDP($classe, $nom);
-	$copie_password = isset($_COOKIE['code4']) ? $_COOKIE['code4'] : "";
-	$repertoire_rep = "./files/$classe/_Copies/$nom/rep/$copie_password";
+	$DS_password = DSMDP($classe, $nom);//Mot de passe du sujet
+	$copie_password = isset($_COOKIE['code4']) ? $_COOKIE['code4'] : "";//Mot de passe fourni
+	$repertoire_rep = "./files/$classe/_Copies/$nom/rep/$DS_password";
 	$repertoire_rep1 = "./files/$classe/_Copies/$nom/rep/";
 	$filename = "$repertoire/rep/index.htm";
 
@@ -123,9 +118,10 @@
 <?php
   	$prof_login = strpos($sujet,"Sujet"); //------------------------------------------------------   C'est le prof qui corrige le sujet
 	if($prof_login) {
-		$repertoire = "$sujet";
-		if(strpos($repertoire, "index")) $repertoire_rep = str_replace("index.htm", "rep212", $repertoire);
-		else $repertoire_rep = "$repertoire/rep212";		
+		$repertoire = str_replace("/index.htm", "", $sujet);
+		$code4_prof = code_correction($repertoire);
+		if(strpos($repertoire, "index")) $repertoire_rep = str_replace("index.htm", "rep$code4_prof", $repertoire);
+		else $repertoire_rep = "$repertoire/rep$code4_prof";		
 		$repertoire_rep1 = $repertoire_rep;
 		if(strpos($sujet, "index.htm")) $nomdufichier = $sujet;
 		else $nomdufichier = "$sujet/index.htm";

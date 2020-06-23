@@ -1,1 +1,0 @@
-si on chage la consigne ( auto) de 5% l'erreur statique est nul car pour avoir une bonne régulation il faut que X=W

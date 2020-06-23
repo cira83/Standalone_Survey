@@ -1,1 +1,0 @@
-lorsqu'on augmente la commande la mesure de niveau diminue le procédé est inverse donc le régulateur est en sens direct.

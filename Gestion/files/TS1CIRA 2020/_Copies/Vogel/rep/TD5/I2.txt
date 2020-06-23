@@ -1,0 +1,4 @@
+Réglante : débit Qco2 de sortie 
+réglée : débit Qco2 d'entrée 
+perturbatrice : Pco2
+

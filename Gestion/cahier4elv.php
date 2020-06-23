@@ -1,5 +1,5 @@
 <?php
-	include("../head1.html");
+	include("../head1grey.html");
 ?>		
 		
 		<title>BTS CIRA Rouvi&egrave;re</title>
@@ -18,7 +18,7 @@
 		
 	</head>
 	<body>
-		<img src="head.png"/>
+		<center>
 <center>
 
 <?php

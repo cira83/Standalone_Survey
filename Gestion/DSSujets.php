@@ -1,7 +1,9 @@
 <?php
+	include("./DSFonctions.php");
 	$classe = $_COOKIE['laclasse'];
 	$filtre = $_GET['filtre'];
 	
+
 	function estfichier($nom){// Fichier ou non ?
 		$drap = true;
 		$data = explode(".", $nom);
@@ -47,6 +49,7 @@
 		if(estfichier($nom01)&&strpos("_#$nom01", $filtre)) {
 			$filename = "$repertoire_Sujets/$nom01/index.htm";
 			$repsujet = "$repertoire_Sujets/$nom01";
+			$code4 = code_correction($repsujet);
 			if(file_exists($filename)){
 				$parties = explode("#", infosurlefichier($filename));
 
@@ -55,8 +58,11 @@
 				if($parties[1]!=$nom01) $TAG_Affiche = "<font size=\"+1\" color=\"red\"><b>$nom01 ? $parties[1]</b></font>";
 				echo("<td align=\"left\">$TAG_Affiche</td><td align=\"left\">$parties[0]</td><td> <font color=\"blue\">$parties[2]</font></td><td>Q$parties[3]</td><td>P$parties[4]</td>");
 				echo("<td width=\"10px\"><a href=\"./devoir.php?name=_Sujets/$nom01&file=$repsujet\" target=\"_blank\" Title=\"Repondre\"><img src=\"./icon/Q_vert.gif\"></a></td>");
-				echo("<td width=\"10px\"><a href=\"./copie2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"La Correction\"><img src=\"./icon/C.gif\"></a></td>");
-				echo("<td width=\"10px\"><a href=\"./sujet2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Le sujet\"><img src=\"./icon/Page.gif\"></a></td>");
+				echo("<td width=\"10px\"><a href=\"./DScorrection.php?tag=$nom01&code4=$code4\" target=\"_blank\" Title=\"La Correction\"><img src=\"./icon/C.gif\"></a></td>");
+				//echo("<td width=\"10px\"><a href=\"./copie2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"La Correction\"><img src=\"./icon/C.gif\"></a></td>");
+				//echo("<td width=\"10px\"><a href=\"./sujet2DS.php?name=_Sujets/$nom01&file2=$repsujet\" target=\"_blank\" Title=\"Le sujet\"><img src=\"./icon/Page.gif\"></a></td>");
+				echo("<td width=\"10px\"><a href=\"./sujet.php?tag=$nom01\" target=\"_blank\" Title=\"Le sujet\"><img src=\"./icon/Page.gif\"></a></td>");
+
 				echo("<td width=\"10px\"><a href=\"./DSNew.php?action=2&TAG=$nom01\" target=\"_blank\" Title=\"Editer\"><img src=\"./icon/Editer.gif\"></a></td>");
 
 				echo("</tr><tr><td>\n");

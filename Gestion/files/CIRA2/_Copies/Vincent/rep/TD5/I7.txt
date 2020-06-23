@@ -1,1 +1,0 @@
-le signal met plus de temps a se stabiliser que en boucle ouverte . Cependant le signal n'est pas très lisse on obtient une bosse à 90 secondes en deébut de procédé.

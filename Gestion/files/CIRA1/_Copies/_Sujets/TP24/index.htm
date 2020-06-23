@@ -1,0 +1,56 @@
+Niveau DR#TP24#
+C#<img src="./files/CIRA1/_Copies/_Sujets/TP24/img/01.jpg">
+C#On se propose de réaliser une régulation de niveau du réservoir du haut. L'organe de réglage sera la pompe P1. La vanne V2 sera contrôlée manuellement, on devra régler le transmetteur de niveau.
+L#
+C#<h2>I. Réglage du transmetteur de niveau</h2>
+Q#Rappeler le principe de fonctionnement du transmetteur de niveau. <br/>On s'aidera du document sur les <a href="./Doc_Tech/Transmetteurs FUJI.pdf" target="_blank" >transmetteurs de pression FUJI</a>.#1
+U#
+Q#Proposer un câblage électrique permettant le fonctionnement de la boucle de régulation et la communication avec un modem Hart. On rappelle qu'une résistance de 250 Ω est branchée en parallèle sur l'entrée mesure du régulateur. On s'aidera de la fiche sur le <a href="./Doc_Tech/Protocole HART.pdf" target="_blank" >protocole HART.</a>#1
+I#
+L#
+Q#Valider le fonctionnement de la communication avec le transmetteur. On fournira une copie d'écran des réglages du transmetteur. On s'aidera de la fiche sur <a href="./Doc_Tech/Notice_FujiHartExplorer.pdf" target="_blank" >FUJI HART EXPLORER</a>.#1
+I#
+Q#Déterminer la position de la vanne qui permette la mesure du niveau du réservoir du haut. On donnera la procédure.#1
+U#
+L#
+Q#Déterminer la valeur de la pression mesurée en kPa pour un niveau L = 0%.#1
+I#
+Q#Même question pour un niveau de 80%.#1
+I#
+L#
+Q#Compléter alors le graphique suivant :#1
+I#./files/CIRA1/_Copies/_Sujets/TP24/img/02.jpg
+Q#Procéder au réglage du transmetteur pour qu'il affiche la mesure du niveau dans le réservoir supérieur.#1
+I#
+Q#Tracer la caractéristique de votre transmetteur de niveau (mesure en % en fonction du niveau réel en %). On utilisera le logiciel <a href="../EasyGraph" target="_blank" >EasyGraph</a>.#2
+I#
+L#
+C#<h2>II. Régulation de niveau</h2>
+Q#Procéder au réglage de votre maquette pour que le niveau se stabilise à 50% pour une commande de 10 mA.#1
+I#
+Q#Régler le régulateur pour un fonctionnement en régulation proportionnelle avec un gain A=5 et un décalage de bande Y0=0%. On s'aidera du document sur <a href="./Gestion/Doc_Tech/Parametres%20des%20regulateurs%20Eurotherm.pdf" target="_blank" >les paramètres des régulateurs</a>.#1
+I#
+L#
+Q#Relever la réponse indicielle pour une consigne passant de 40% à 50%.#1
+I#
+Q#Donner alors la valeur du temps de réponse à ±10%, la valeur de l'erreur statique ainsi que celle du premier dépassement.#.5
+T#
+Q#Donner la courbe avec les constructions qui ont permis de répondre à la question précédente.#.5
+I#
+L#
+Q#Proposer une valeur de Y<sub>0</sub>=0% qui permette d'annuler l'erreur statique. On expliquera comment on a procédé.#1
+U#
+Q#Régler le régulateur pour un fonctionnement en régulation proportionnelle avec un gain A=5 et le décalage de bande Y<sub>0</sub> déterminé à la question précédente.#1
+I#
+L#
+Q#Relever la réponse indicielle pour une consigne passant de 40% à 50%.#1
+I#
+Q#Donner alors la valeur du temps de réponse à ±10%, la valeur de l'erreur statique ainsi que celle du premier dépassement. #.5
+T#
+Q#Donner la courbe avec les constructions qui ont permis de répondre à la question précédente.#.5
+I#
+L#
+Q#Comparer ces dernières performances à celles obtenues à la question 13. Si l'erreur statique est non nulle, expliquer pourquoi.#1
+U#
+Q#Conclure sur l'apport du décalage de bande dans une régulation proportionnelle.#1
+U#

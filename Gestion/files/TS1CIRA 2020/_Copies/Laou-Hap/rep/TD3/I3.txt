@@ -1,0 +1,4 @@
+Réglé : température eau chaude en sortie 
+Réglante : moût tiède 
+Perturbatrice : température eau froide 
+

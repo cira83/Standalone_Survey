@@ -1,0 +1,16 @@
+Vaiarello:13:1:Me 15-01
+Semenadisse::1:Me 15-01
+Savelli:11:1:Me 15-01
+Santoni:10:0:Me 15-01
+Russo:15:1:Me 15-01
+Roussel:18:1:Me 15-01
+Rein:18:0:Me 15-01
+Raffellini:20:1:Me 15-01
+Golleret::1:Me 15-01
+Dethorey:11:1:Me 15-01
+Colas:10:0:Me 15-01
+Auda::1:Me 15-01
+Andreani:Nnot:1:Me 15-01
+Arcas::1:Me 15-01
+Krout::1:Me 15-01
+Crivello::1:Me 15-01

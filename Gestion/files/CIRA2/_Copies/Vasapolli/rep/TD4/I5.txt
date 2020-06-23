@@ -1,1 +1,0 @@
-en t/h => Qmlc = Qmpc + Qme

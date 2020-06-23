@@ -1,0 +1,1 @@
+Quand on augmente la commande du régulateur, la mesure augmente, le procédé est direct, on doit régler le régulateur. Alors sens d’action inverse.

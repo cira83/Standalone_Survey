@@ -1,0 +1,4 @@
+grandeur réglée: le taux de CO2
+grandeur réglante: AT01 et ATCo1
+grandeur perturbatrice: Température 
+

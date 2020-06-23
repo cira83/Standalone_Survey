@@ -301,51 +301,55 @@
 		}
 		fclose($fp);
 	}
-	for($i=0;$i<count($ligne_planning0112);$i++) {
-		 $newligne_planning = str_replace(":", " ", $ligne_planning0112[$i]); //mets des espaces pour séparer tous les éléments 
-		 
-		 //Ajout du 10 nov 2017 -  pour prendre en concidération les prénoms
-		 $listedesmots107 = explode(" ", $newligne_planning); // Donne la liste des mots pour ajouter les prénoms
-		 for($ik107=0;$ik107<count($listedesmots107);$ik107++){//Ajoute les prénoms si ils existe à la ligne 
-			 $leprenom = prenom2($listedesmots107[$ik107],$classe);
-			 if($leprenom) $ligne_planning0112[$i] = "$leprenom:$ligne_planning0112[$i]";
-		 }
-		 $ligne_planning0112[$i] = str_replace("*", "", $ligne_planning0112[$i]);//Pour enlever la marque des délégués *
-		 //Fin Ajout
-		 
-		 
-		 $newligne_planning = str_replace(":", " ", $ligne_planning0112[$i]);
-		 $listedesmots[$i] = explode(" ", $newligne_planning);
-	}
-	if(is_array($tableaudesTP)) $tableaudesTP_count = count($tableaudesTP);
-	else $tableaudesTP_count = 0;
-	if($tableaudesTP_count>0){
-		echo("<table>");
-		for($i=0;$i<count($tableaudesTP);$i++){
-			$matchnb = 0;
-			for($k=0;$k<count($listedesmots);$k++){
-				$nb2match = nombre2match($tableaudesTP[$i],$listedesmots[$k]); //echo("<p>T $i:$k -- $nb2match </p>");
-				if($nb2match>$matchnb){
-					$matchnb = $nb2match;
-					$epreuves_prop = $planning_epreuves_tab[$k];
-					$acteurs_prop = $planning_acteurs_one[$k];
-				}
-			}
-			$planning_epreuves_menu = menu_deroulant($planning_epreuves_tab,"tp","$epreuves_prop");
-			$planning_acteurs_menu = menu_deroulant($planning_acteurs_tab,"elv","$acteurs_prop");
-			echo("<form method=\"post\" action=\"ranger.php?action=1&file=$tableaudesTP[$i]\">");
-			echo("<tr><td><a href=\"$origine_filename/$tableaudesTP[$i]\">$tableaudesTP[$i]</a></td>");
-			echo("<td>$planning_epreuves_menu</td><td>$planning_acteurs_menu</td>");
-			echo("<td><input type=\"submit\" value=\"Ranger\"\"></td></tr>");
-			echo("</form>");
+	if(isset($ligne_planning0112)) {
+		for($i=0;$i<count($ligne_planning0112);$i++) {
+			 $newligne_planning = str_replace(":", " ", $ligne_planning0112[$i]); //mets des espaces pour séparer tous les éléments 
+			 
+			 //Ajout du 10 nov 2017 -  pour prendre en concidération les prénoms
+			 $listedesmots107 = explode(" ", $newligne_planning); // Donne la liste des mots pour ajouter les prénoms
+			 for($ik107=0;$ik107<count($listedesmots107);$ik107++){//Ajoute les prénoms si ils existe à la ligne 
+				 $leprenom = prenom2($listedesmots107[$ik107],$classe);
+				 if($leprenom) $ligne_planning0112[$i] = "$leprenom:$ligne_planning0112[$i]";
+			 }
+			 $ligne_planning0112[$i] = str_replace("*", "", $ligne_planning0112[$i]);//Pour enlever la marque des délégués *
+			 //Fin Ajout
+			 
+			 
+			 $newligne_planning = str_replace(":", " ", $ligne_planning0112[$i]);
+			 $listedesmots[$i] = explode(" ", $newligne_planning);
 		}
-		echo("</table>");	
-	}	
+		if(is_array($tableaudesTP)) $tableaudesTP_count = count($tableaudesTP);
+		else $tableaudesTP_count = 0;
+		if($tableaudesTP_count>0){
+			echo("<table>");
+			for($i=0;$i<count($tableaudesTP);$i++){
+				$matchnb = 0;
+				for($k=0;$k<count($listedesmots);$k++){
+					$nb2match = nombre2match($tableaudesTP[$i],$listedesmots[$k]); //echo("<p>T $i:$k -- $nb2match </p>");
+					if($nb2match>$matchnb){
+						$matchnb = $nb2match;
+						$epreuves_prop = $planning_epreuves_tab[$k];
+						$acteurs_prop = $planning_acteurs_one[$k];
+					}
+				}
+				$planning_epreuves_menu = menu_deroulant($planning_epreuves_tab,"tp","$epreuves_prop");
+				$planning_acteurs_menu = menu_deroulant($planning_acteurs_tab,"elv","$acteurs_prop");
+				echo("<form method=\"post\" action=\"ranger.php?action=1&file=$tableaudesTP[$i]\">");
+				echo("<tr><td><a href=\"$origine_filename/$tableaudesTP[$i]\">$tableaudesTP[$i]</a></td>");
+				echo("<td>$planning_epreuves_menu</td><td>$planning_acteurs_menu</td>");
+				echo("<td><input type=\"submit\" value=\"Ranger\"\"></td></tr>");
+				echo("</form>");
+			}
+			echo("</table>");	
+		}	
+	}
 ?>
 
 <?php 
 	//les plannings 1 decembre 2016
-	$tabDplannings = tabDplannings($classe,$tableauplanning,$ladate);
-	echo($tabDplannings);
+	if(isset($ligne_planning0112)) {
+		$tabDplannings = tabDplannings($classe,$tableauplanning,$ladate);
+		echo($tabDplannings);
+	}
 	include("./bas.php");
 ?>

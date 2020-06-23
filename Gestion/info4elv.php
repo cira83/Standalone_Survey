@@ -1,6 +1,6 @@
 <?php
 	//include("./security.php");
-	include("../head1.html");
+	include("../head1grey.html");
 	include("./lesfonctions.php");
 	echo("<title>NOTES $elv</title>");
 ?>		
@@ -14,7 +14,6 @@
 		
 	</head>
 	<body>
-		<img src="head.png"/>
 <center>
 	
 <?php
@@ -31,11 +30,8 @@
 		include("./eleve4all.php");
 	}
 	else{
-		echo("<td colspan=2>Vous n'&ecirc;tes pas connect&eacute;(e) !!</td>$logout</tr></table>");
+		echo("<td colspan=2>Vous n'êtes pas connecté(e) !!</td>$logout</tr></table>");
 	}
 
-?>
-</center>
-<?php
 	include("../foot2.html");
 ?>	

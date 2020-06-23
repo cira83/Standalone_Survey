@@ -2,7 +2,12 @@
 	include("./_Clef_Prof.php");
 	$elv = isset($_COOKIE['nom']) ? $_COOKIE['nom'] : "";
 	$password = isset($_COOKIE['password']) ? $_COOKIE['password'] : "";
-	$classe = isset($_COOKIE['laclasse'])?$_COOKIE['laclasse']:"";	
+	$classe = isset($_COOKIE['laclasse'])?$_COOKIE['laclasse']:"";
+	
+	function est2dossier($nom){//###
+		$data = explode(".", $nom);
+		return(!isset($data[1]));
+	}	
 	
 	function estfichier2($nom){// Fichier ou non ?
 		$drap = true;
@@ -21,13 +26,10 @@
 		sort($classes);
 		$i=0;
 		foreach($classes as $classe) {
-			if(estfichier2($classe)){
-				$part = explode(".", $classe);
-				if(count($part)>1) {
-					if($i) $classe_text .= ":$part[0]";
-					else $classe_text = "$part[0]";
-					$i++;
-				}
+			if(est2dossier($classe)){
+				if($i) $classe_text .= ":$classe";
+				else $classe_text = "$classe";
+				$i++;
 			}
 		}
 		return $classe_text;
@@ -51,7 +53,7 @@
 
 	//MENU DEROULANT ELEVES        ------------------------------------------------------------------------------------------------------
 	$select_elv = "<select name=\"nom\" id=\"nom\">\n";
-	$fichieralire = "$repertoire$classe.txt";
+	$fichieralire = "$repertoire$classe/_Profils.txt";
 	$bon_password = "";
 	if(file_exists($fichieralire)){
 		$fp = fopen($fichieralire, "r");
@@ -90,7 +92,7 @@
 	// invite logout
 	$submit = "<input type=\"submit\" value=\"Logout\" onclick=\"logout();\" >\n";
 	$select_classe = "<font color=\"yellow\" size=\"+2\">$elv</font>";
-	$invite = "<table><tr><td align=\"left\">$select_classe</td><td align=\"right\">$submit</td></tr></table>";
+	$invite = "<table><tr><td align=\"center\">$select_classe</td><td align=\"right\">$submit</td></tr></table>";
 
 	//FICHIER LOG        -----------------------------------------------------------------------------------------------------------
 	$session_nb = session_id();

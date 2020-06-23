@@ -1,0 +1,1 @@
+1 : consigne, 2 : mesure et   3 :=commande 

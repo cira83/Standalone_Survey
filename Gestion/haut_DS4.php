@@ -106,6 +106,7 @@
 		<title><?php echo("$titre_page");?></title>
 <?php
 	if(($action)||($creation_repertoire)) echo("<meta http-equiv=\"refresh\" content=\"5;URL=./DSZone.php\">\n");
+	$lenom_cook = isset($_COOKIE['nom'])?$_COOKIE['nom']:"noname";
 
 ?>
 	</head>
@@ -117,7 +118,7 @@
 			<td width="50px"><a href="./appel.php" title="Appel"><img src="./icon/home.png" height="25px"></a></td>
 			<td width="50px"><a href="../pi" title="Pi"><img src="../pi/pi.png" height="25px"></a></td>
 			<td><?php echo($listedesclasses);?></td>
-			<td><?php echo($_COOKIE['nom']);?></td>
+			<td><?php echo($lenom_cook);?></td>
 		<?php
 			echo("<!-- passwordOK=$passwordOK-->\n");
 			if(!$passwordOK){

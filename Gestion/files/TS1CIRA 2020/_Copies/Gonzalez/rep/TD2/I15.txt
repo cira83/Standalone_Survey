@@ -1,0 +1,1 @@
+car lors de fonctionnement de l'instalation on sera jamais en boucle ouverte

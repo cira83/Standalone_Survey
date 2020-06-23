@@ -1,0 +1,1 @@
+Quand on augmente la commande du régulateur LIC , la vanne LV s'ouvre donc la  mesure LT augmente donc le procédé est direct, il faut mettre le régulateur en inverse.

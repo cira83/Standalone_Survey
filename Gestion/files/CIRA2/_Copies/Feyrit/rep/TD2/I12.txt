@@ -1,1 +1,0 @@
-Le systeme est integrateur car lorsque l'entrée constante , la sortie s(niveau )est une droite constante

@@ -1,0 +1,10 @@
+Ailloud:15.5:1:Je 05-09
+Antar:22:1:Je 05-09
+Baudry:14.5:1:Je 05-09
+Destombes:10:1:Je 05-09
+Guigon:14.5:1:Je 05-09
+Keller:21.5:1:Je 05-09
+Le_Goff:16.5:1:Je 05-09
+Roux:20.5:1:Je 05-09
+Saba:14.5:1:Je 05-09
+Touze:18.5:1:Je 05-09

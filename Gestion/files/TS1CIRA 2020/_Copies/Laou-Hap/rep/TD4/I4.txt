@@ -1,0 +1,4 @@
+Grandeur réglée : niveau dans la cuve 
+Grandeur réglante : la pression dans la cuve 
+Grandeur perturbatrice : débit Qmp
+

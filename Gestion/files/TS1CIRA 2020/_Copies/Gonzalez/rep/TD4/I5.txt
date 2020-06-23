@@ -1,0 +1,1 @@
+l'appareil 1 est un commutateur de niveau bas, c'est une alarme de niveau bas, cet appareil gère la sécurité de l’installation. si le niveau est trop bas se met en sécurité en arrêtant la régulation.   l'appareil 2 est le régulateur indicateur de niveau et il est en charge de faire la régulation de la boucle de la zone de matière première

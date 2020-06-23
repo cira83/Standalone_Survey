@@ -1,0 +1,17 @@
+Andreani:0:1:7 oct
+Arcas:16:1:7 oct
+Auda:0:1:7 oct
+Colas:16:1:7 oct
+Crivello:0:1:7 oct
+Dethorey:19:1:7 oct
+Golleret::1:7 oct
+Krout:12:1:7 oct
+Paladini:20:1:7 oct
+Raffellini:20:1:7 oct
+Rein:20:1:7 oct
+Roussel:20:1:7 oct
+Russo:20:1:7 oct
+Santoni::1:7 oct
+Savelli:19:1:7 oct
+Semenadisse:19:1:7 oct
+Vaiarello:13:1:7 oct

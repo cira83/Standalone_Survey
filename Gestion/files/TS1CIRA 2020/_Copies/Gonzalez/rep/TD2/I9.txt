@@ -1,0 +1,1 @@
+e=W-L  e=50-50 e=0 l'erreur statique vaut 0

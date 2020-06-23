@@ -1,0 +1,1 @@
+Relais de calcul qui permet d’optimiser le débit de principe actif avec le débit de Qs1

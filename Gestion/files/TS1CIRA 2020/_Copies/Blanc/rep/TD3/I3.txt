@@ -1,0 +1,4 @@
+grandeur réglée=température du mout 
+grandeur réglante=le débit d'eau froide
+grandeur perturbatrice=le débit d'eau chaude
+

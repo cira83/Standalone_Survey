@@ -1,0 +1,1 @@
+C'est l'action intégrale qui annule l'erreur statique, il faudrait augmenter la valeur de Ti la valeur de TI

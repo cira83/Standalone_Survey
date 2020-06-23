@@ -1,1 +1,0 @@
-On remplit la cuve jusqu'au niveau H  avec les vannes V1 et V2 fermées. On fait un étallonage en 2 point du coup le premier au niveau C puis on remplit la cuve jusqu'à Hmax et on rentre la valeur d'étalonnage max pour ce point là.

@@ -1,0 +1,116 @@
+Aruanno::1:
+Asfour::1:
+Attwood::1:
+Berthelot::1:
+Bonsart::1:
+Devillers::1:
+Dubois::1:
+Gouarin::1:
+Lemoine::1:
+Marchica::1:
+Mouniapin::1:
+Remy::1:
+Saadeh::1:
+Sarnet::1:
+Soucadauch::1:
+Berthelot:10,5:1:2/09:0 Correction:::
+Remy:10,5:1:2/09:0 Correction:::
+Dubois:10,5:1:2/09:0 Correction:::
+Aruanno:10,5:1:2/09:0 Correction:::
+Aruanno:10.5:1:2/09:0 Correction:::
+Berthelot:10.5:1:2/09:0 Correction:::
+Dubois:10.5:1:2/09:0 Correction:::
+Remy:10.5:1:2/09:0 Correction:::
+Amri::1:8/09:0 Correction:::
+Remy:11:1:2/09:+0.5 Tableau:::
+Lemoine:NaN:1:9/09:+0.5 Tableau:::
+Lemoine:11:1:9/09:0 Correction:::
+Soucadauch:10.5:1:9/09:+0.5 Tableau:::
+Remy:11.5:1:2/09:+0.5 Tableau:::
+Devillers:NaN:1:16/09:+0.5 Tableau:::
+Devillers:10,5:1:16/09:+0.5 Tableau:::
+Lemoine:11.5:1:9/09:+0.5 Tableau:::
+Amri:9:1:8/09:-1 Cahier:::
+Saadeh:9:1:16/09:-1 Cahier:::
+Berthelot:11:1:2/09:+0.5 Tableau:::
+Marchica:10.5:1:16/09:+0.5 Tableau:::
+Amri:10:1:8/09:+1 Tableau:::
+Aruanno:11:1:2/09:+0.5 Tableau:::
+Marchica:11:1:16/09:+0.5 Tableau:::
+Mouniapin:NaN:1:16/09:+0.5 Tableau:::
+Mouniapin:10.5:1:16/09:+0.5 Tableau:::
+Aubreville::1:16/09:0 Correction:::
+Aubreville:10.5:1:16/09:+0.5 Tableau:::
+Soucadauch:11:1:9/09:+0.5 Tableau:::
+Amri:9:1:8/09:-1 Retard:::
+Gouarin::1:Non Fait:0 Correction:::
+Asfour::1:Non Fait:0 Correction:::
+Attwood:NaN:1:23/09:-1 Cahier:::
+9:NaN:1:23/09:0 Correction:::
+9:NaN:1:Non Fait:0 Correction:::
+Attwood:9:1:23/09:0 Correction:::
+Aubreville:11.5:1:16/09:+1 Tableau:::
+Remy:12:1:2/09:+0.5 Tableau:::
+Amri:10:1:8/09:+1 Tableau:::
+Marchica:12:1:16/09:+1 Tableau:::
+Bonsart:10.5:1:23/09:+0.5 Tableau:::
+Mouniapin:11.5:1:16/09:+1 Tableau:::
+Lemoine:12:1:9/09:+0.5 Tableau:::
+Lemoine:12.5:1:9/09:+0.5 Tableau:::
+Remy:12.5:1:2/09:+0.5 Tableau:::
+Marchica:12.5:1:16/09:+0.5 Tableau:::
+Remy:13:1:2/09:+0.5 Tableau:::
+Lemoine:13:1:9/09:+0.5 Tableau:::
+Saadeh:9.5:1:16/09:+0.5 Tableau:::
+Berthelot:11.5:1:2/09:+0.5 Tableau:::
+Bonsart:11:1:23/09:+0.5 Tableau:::
+Amri:10.5:1:8/09:+0.5 Tableau:::
+Aruanno:11.5:1:2/09:+0.5 Tableau:::
+Mouniapin:12:1:16/09:+0.5 Tableau:::
+Aubreville:12:1:16/09:+0.5 Tableau:::
+Berthelot:12:1:2/09:+0.5 Tableau:::
+Lemoine:13.5:1:9/09:+0.5 Tableau:::
+Remy:13.5:1:2/09:+0.5 Tableau:::
+Dubois:11:1:2/09:+0.5 Tableau:::
+Aubreville:13:1:16/09:+1 Tableau:::
+Marchica:13:1:16/09:+0.5 Tableau:::
+Bonsart:11.5:1:23/09:+0.5 Tableau:::
+Mouniapin:12.5:1:16/09:+0.5 Tableau:::
+Remy:14.5:1:2/09:+1 Tableau:::
+Lemoine:14.5:1:9/09:+1 Tableau:::
+Aruanno:12:1:2/09:+0.5 Tableau:::
+Amri:9.5:1:18/11 - 14h36:-1 Cahier:::
+Lemoine:13.5:1:18/11 - 14h36:-1 Cahier:::
+Dubois:10:1:02/12 - 14h37:-1 Retard:::
+Berthelot:11:1:02/12 - 14h44:-1 Retard:::
+Devillers:9:1:02/12 - 14h44:-1 Retard:::
+Mouniapin:11.5:1:02/12 - 14h44:-1 Retard:::
+Saadeh:8.5:1:02/12 - 14h46:-1 Retard:::
+Soucadauch:12:1:02/12 - 14h46:+1 Tableau:::
+Mouniapin:12:1:02/12 - 15h01:+0.5 Tableau:::
+Berthelot:11.5:1:02/12 - 15h07:+0.5 Tableau:::
+Devillers:10:1:02/12 - 15h09:+1 Tableau:::
+Mouniapin:13:1:02/12 - 15h13:+1 Tableau:::
+Mouniapin:13.5:1:02/12 - 15h16:+0.5 Tableau:::
+Lemoine:14.5:1:02/12 - 15h28:+1 Tableau:::
+Remy:15.5:1:02/12 - 15h28:+1 Tableau:::
+Remy:16:1:09/12 - 13h46:+0.5 Tableau:::
+Marchica:12:1:09/12 - 13h46:-1 Retard:::
+Amri:8.5:1:09/12 - 13h46:-1 Retard:::
+Amri:9.5:1:09/12 - 13h53:+1 Tableau:::
+Mouniapin:14:1:09/12 - 13h53:+0.5 Tableau:::
+Marchica:13:1:09/12 - 13h58:+1 Tableau:::
+Marchica:14:1:09/12 - 14h09:+1 Tableau:::
+Berthelot:12.5:1:09/12 - 14h09:+1 Tableau:::
+Soucadauch:13:1:09/12 - 14h14:+1 Tableau:::
+Berthelot:13.5:1:09/12 - 14h24:+1 Tableau:::
+Amri:10.5:1:09/12 - 14h29:+1 Tableau:::
+Soucadauch:12:1:16/12 - 13h42:-1 Retard:::
+Dubois:9:1:16/12 - 13h42:-1 Retard:::
+Lemoine:15.5:1:16/12 - 13h59:+1 Tableau:::
+Amri:11.5:1:16/12 - 13h59:+1 Tableau:::
+Amri:12:1:16/12 - 14h13:+0.5 Tableau:::
+Marchica:14.5:1:16/12 - 14h35:+0.5 Tableau:::
+Mouniapin:15:1:16/12 - 14h44:+1 Tableau:::
+Amri:13:1:16/12 - 14h47:+1 Tableau:::
+Amri:13.5:1:16/12 - 15h14:+0.5 Tableau:::

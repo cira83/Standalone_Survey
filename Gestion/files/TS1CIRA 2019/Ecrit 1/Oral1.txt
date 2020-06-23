@@ -1,0 +1,110 @@
+Ayza::1:
+Bernardi::1:
+Bichon::1:
+Cafagna::1:
+Charpin::1:
+Chevillard::1:
+Feyrit::1:
+Hoff::1:
+Lothmann::1:
+Marin::1:
+Mottet::1:
+Mrabet::1:
+Rodrigo::1:
+Sanna::1:
+Sibilo::1:
+Vasapolli::1:
+Vincent::1:
+Feyrit:11:1:05/09 - 15h50:+1 Tableau:::
+Lothmann:11:1:05/09 - 16h49:+1 Tableau:::
+Sanna:11:1:05/09 - 16h50:+1 Tableau:::
+Bernardi:12:1:05/09 - 17h28:+2 Tableau*:::
+Chevillard:11:1:07/09 - 11h41:+1 Tableau:::
+Bernardi:13:1:07/09 - 12h05:+1 Tableau:::
+Charpin:11:1:07/09 - 12h24:+1 Tableau:::
+Sanna:12:1:07/09 - 12h45:+1 Tableau:::
+Sanna:13:1:14/09 - 12h06:+1 Tableau:::
+Vincent:NaN:1:14/09 - 12h07:+1 Tableau:::
+Rodrigo::1:Non Fait:0 Correction:::
+Feyrit:10:1:14/09 - 12h36:-1 Cahier:::
+Cafagna:9:1:14/09 - 12h36:-1 Cahier:::
+Ayza:11:1:14/09 - 12h45:+1 Tableau:::
+Vincent:11:1:20/09 - 19h27:0 Correction:::
+Chevillard:10:1:20/09 - 19h30:-1 Rangement TP:::
+Charpin:10:1:20/09 - 19h30:-1 Rangement TP:::
+Hoff::1:Non Fait:0 Correction:::
+Mottet::1:Non Fait:0 Correction:::
+Chevillard:11:1:21/09 - 12h45:+1 Tableau:::
+Chevillard:11.5:1:21/09 - 12h45:+0.5 Tableau:::
+Charpin:11:1:21/09 - 12h53:+1 Tableau:::
+Chevillard:13.5:1:28/09 - 11h23:+2 Tableau*:::
+Charpin:12:1:28/09 - 11h46:+1 Tableau:::
+Vasapolli:10.5:1:28/09 - 12h46:+0.5 Tableau:::
+Feyrit:10.5:1:28/09 - 12h46:+0.5 Tableau:::
+Sanna:14:1:28/09 - 12h54:+1 Tableau:::
+Cafagna:10:1:10/10 - 16h25:+1 Tableau:::
+Lothmann:12:1:10/10 - 16h37:+1 Tableau:::
+Sanna:15:1:10/10 - 16h43:+1 Tableau:::
+Vincent:12:1:10/10 - 16h47:+1 Tableau:::
+Vasapolli:11.5:1:10/10 - 16h47:+1 Tableau:::
+Chevillard:14.5:1:10/10 - 16h56:+1 Tableau:::
+Bernardi:14:1:10/10 - 17h03:+1 Tableau:::
+Vincent:13:1:12/10 - 11h25:+1 Tableau:::
+Chevillard:15:1:12/10 - 11h32:+0.5 Tableau:::
+Charpin:13:1:12/10 - 11h38:+1 Tableau:::
+Chevillard:15.5:1:12/10 - 12h45:+0.5 Tableau:::
+Vasapolli:12.5:1:12/10 - 12h57:+1 Tableau:::
+Feyrit:11.5:1:17/10 - 13h29:+1 Tableau:::
+Bernardi:15:1:17/10 - 13h29:+1 Tableau:::
+Feyrit:10.5:1:09/11 - 12h26:-1 Cahier:::
+Chevillard:16:1:09/11 - 12h27:+0.5 Tableau:::
+Feyrit:11.5:1:09/11 - 12h30:+1 Tableau:::
+Sanna:16:1:09/11 - 12h32:+1 Tableau:::
+Vincent:14:1:09/11 - 12h34:+1 Tableau:::
+Vincent:14.5:1:09/11 - 12h44:+0.5 Tableau:::
+Vasapolli:13.5:1:09/11 - 12h50:+1 Tableau:::
+Vasapolli:14.5:1:14/11 - 13h30:+1 Tableau:::
+Vasapolli:15:1:16/11 - 11h40:+0.5 Tableau:::
+Audiffren::1:16/11 - 11h46:0 Correction:::
+Charpin:12:1:16/11 - 11h48:-1 Cahier:::
+Feyrit:12.5:1:16/11 - 11h55:+1 Tableau:::
+Audiffren:11:1:23/11 - 11h39:+1 Tableau:::
+Bichon:11:1:23/11 - 11h43:+1 Tableau:::
+Feyrit:13.5:1:23/11 - 11h43:+1 Tableau:::
+Charpin:13:1:23/11 - 12h02:+1 Tableau:::
+Feyrit:14.5:1:23/11 - 12h29:+1 Tableau:::
+Chevillard:17:1:23/11 - 12h29:+1 Tableau:::
+Audiffren:11.5:1:23/11 - 12h37:+0.5 Tableau:::
+Blanchon:11:1:30/11 - 11h19:0 Correction:::
+Vasapolli:16:1:30/11 - 11h29:+1 Tableau:::
+Ayza:12:1:30/11 - 11h40:+1 Tableau:::
+Chevillard:17.5:1:30/11 - 12h09:+0.5 Tableau:::
+Feyrit:15.5:1:30/11 - 12h12:+1 Tableau:::
+Sanna:16.5:1:30/11 - 12h37:+0.5 Tableau:::
+Bernardi:15.5:1:30/11 - 12h37:+0.5 Tableau:::
+Audiffren:12:1:30/11 - 12h49:+0.5 Tableau:::
+Vincent:13.5:1:12/12 - 13h30:-1 Retard:::
+Bichon:11.5:1:14/12 - 11h23:+0.5 Tableau:::
+Vasapolli:17:1:14/12 - 11h29:+1 Tableau:::
+Vasapolli:17.5:1:14/12 - 11h44:+0.5 Tableau:::
+Lothmann:12.5:1:14/12 - 11h51:+0.5 Tableau:::
+Vincent:14.5:1:14/12 - 12h07:+1 Tableau:::
+Lothmann:13.5:1:14/12 - 12h07:+1 Tableau:::
+Charpin:14:1:14/12 - 12h07:+1 Tableau:::
+Sanna:17.5:1:14/12 - 12h13:+1 Tableau:::
+Sanna:18:1:14/12 - 12h33:+0.5 Tableau:::
+Vincent:15:1:14/12 - 12h55:+0.5 Tableau:::
+Ayza:11:1:14/12 - 14h34:-1 Retard:::
+Blanchon:10:1:14/12 - 14h34:-1 Retard:::
+Feyrit:14.5:1:14/12 - 14h34:-1 Retard:::
+Sanna:17:1:14/12 - 14h34:-1 Retard:::
+Vincent:14:1:14/12 - 14h34:-1 Retard:::
+Vincent:15:1:21/12 - 11h21:+1 Tableau:::
+Feyrit:15.5:1:21/12 - 11h24:+1 Tableau:::
+Audiffren:12.5:1:21/12 - 11h25:+0.5 Tableau:::
+Feyrit:16:1:21/12 - 11h47:+0.5 Tableau:::
+Audiffren:13.5:1:21/12 - 11h56:+1 Tableau:::
+Feyrit:16.5:1:21/12 - 12h14:+0.5 Tableau:::
+Audiffren:14.5:1:21/12 - 12h17:+1 Tableau:::
+Audiffren:15:1:22/12 - 11h08:+0.5 Tableau:::
+Audiffren:14:1:18/01 - 11h10:-1 Retard:::

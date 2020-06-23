@@ -1,1 +1,0 @@
-La stratégie de régulation adoptée sera une régulation cascade car le régulateur de débit assureras une égalité entre le débit mesuré et sa consigne externe en agissant constamment sur la vanne FV4.

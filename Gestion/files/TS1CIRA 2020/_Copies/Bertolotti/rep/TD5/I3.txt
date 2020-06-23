@@ -1,0 +1,3 @@
+Grandeur réglée : mesure du taux de CO2
+Grandeur réglante : sortie du régulateur AIC 
+Grandeur perturbatrice : température et pression du CO2 

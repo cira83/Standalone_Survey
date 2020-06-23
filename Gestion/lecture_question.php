@@ -1,5 +1,5 @@
 <?php
-	$nom = $_COOKIE['nom'];
+	$nom = isset($_COOKIE['nom'])?$_COOKIE['nom']:"no-name";
 	$classe = $_COOKIE['laclasse'];
 	$repertoire = "./files/$classe/_Copies/$nom/rep";
 	$ligne1 = "";

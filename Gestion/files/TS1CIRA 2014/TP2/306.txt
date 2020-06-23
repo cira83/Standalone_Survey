@@ -1,0 +1,15 @@
+Andreani:0:1:Lu 10-03
+Russo:0:1:Lu 10-03
+Auda:0:1:Lu 10-03
+Colas::1:Lu 10-03
+Crivello::1:Lu 10-03
+Dethorey::1:Lu 10-03
+Golleret:0:1:Lu 10-03
+Krout:9:1:Lu 10-03
+Raffellini::1:Lu 10-03
+Rein::1:Lu 10-03
+Roussel::1:Lu 10-03
+Santoni::1:Lu 10-03
+Savelli::1:Lu 10-03
+Semenadisse::1:Lu 10-03
+Vaiarello::1:Lu 10-03

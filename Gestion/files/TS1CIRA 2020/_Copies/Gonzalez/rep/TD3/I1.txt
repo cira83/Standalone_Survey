@@ -1,0 +1,2 @@
+la sonde Pt100 est une sonde de température, la nature du métal est l'inox le 100 signifie sa résistance de 100 ohms à une température de 0 °C 
+

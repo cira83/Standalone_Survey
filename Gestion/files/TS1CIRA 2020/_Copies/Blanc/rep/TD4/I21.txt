@@ -1,0 +1,1 @@
+FY3 est le relais calcul qui régule le débit du principe actif avec le débit QS1

@@ -1,0 +1,36 @@
+Amri::1:
+Aruanno::1:
+Attwood::1:
+Aubreville::1:
+Berthelot::1:
+Bonsart::1:
+Devillers::1:
+Dubois::1:
+Lemoine::1:
+Marchica::1:
+Mouniapin::1:
+Remy::1:
+Saadeh::1:
+Sarnet::1:
+Soucadauch::1:
+Amri:5.5:1:4/10:0 Correction:::
+Aruanno:11:1:4/10:0 Correction:::
+Attwood:11:1:4/10:0 Correction:::
+Aubreville:11:1:4/10:0 Correction:::
+Berthelot:11:1:4/10:0 Correction:::
+Bonsart:9:1:4/10:0 Correction:::
+Dubois:11:1:4/10:0 Correction:::
+Lemoine:o:1:4/10:0 Correction:::
+Lemoine:0:1:4/10:0 Correction:::
+Marchica:4:1:4/10:0 Correction:::
+Mouniapin:13:1:4/10:0 Correction:::
+Remy:6.5:1:4/10:0 Correction:::
+Saadeh:15:1:4/10:0 Correction:::
+Sarnet:4:1:4/10:0 Correction:::
+Soucadauch:0:1:4/10:0 Correction:::
+Devillers:0:1:4/10:0 Correction:::
+Marchica:5:1:4/10:0 Correction:::
+Devillers::1:4/10:0 Correction:::
+Soucadauch::1:4/10:0 Correction:::
+Devillers:11:1:16/12 - 10h37:0 Correction:::
+Soucadauch:11:1:16/12 - 10h41:0 Correction:::

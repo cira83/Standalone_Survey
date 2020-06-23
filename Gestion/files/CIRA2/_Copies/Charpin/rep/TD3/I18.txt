@@ -1,1 +1,0 @@
-quand le débit augmente il faut fermer la vanne pour le diminuer donc diminuer la sortie du regulteur, il est en inverse

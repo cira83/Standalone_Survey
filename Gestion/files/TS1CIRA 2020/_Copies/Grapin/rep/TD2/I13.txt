@@ -1,0 +1,1 @@
+la mesure augmente de façon croissante lors que l'échelon de commande arrive mais ne se stabilise pas

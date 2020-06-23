@@ -1,0 +1,2 @@
+ pour vérifier si le procédé est naturellement stable, il faut que le régulateur soit en boucle ouverte soit en manuel et il faut que la variation fini de la mesure corresponde à la variation fini de la commande. 
+

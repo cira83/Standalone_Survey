@@ -1,1 +1,0 @@
-Quand Y augmente, X diminue donc le système est inverse donc le régulateur est direct 

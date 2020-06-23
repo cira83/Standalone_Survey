@@ -1,0 +1,18 @@
+Ayza Sanna::1:
+Bernardi Feyrit::1:
+Cafagna Marin::1:
+Chevillard Charpin::1:
+Lothmann Vincent::1:
+Sibilo Mrabet::1:
+Vasapolli Bichon::1:
+Ayza Sanna:10.6:1:18/09 - 08h11:0 Correction:::
+Chevillard Charpin::1:19/09 - 17h59:0 Correction::Vanne ouverte:
+Chevillard Charpin:12.6:1:25/09 - 08h13:0 Correction::Vanne ouverte:
+Vasapolli Bichon:17.45:1:09/10 - 18h56:0 Correction:::
+Bernardi Feyrit:15.7:1:05/11 - 09h31:0 Correction:::
+Cafagna Marin:12.35:1:13/11 - 08h40:0 Correction:::
+Lothmann Vincent Audiffren::1:14/11 - 13h32:0 Correction:::
+Lothmann Audiffren::1:14/11 - 13h33:0 Correction:::
+Lothmann Vincent Audiffren::1:Non Fait:0 Correction:::
+Lothmann Vincent::1:Non Fait:0 Correction:::
+Lothmann Audiffren:9.40:1:19/11 - 07h44:0 Correction:::

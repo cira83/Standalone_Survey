@@ -7,7 +7,7 @@
 	$nbphotoslignes = 5;
 	if(!file_exists("./files/$classe.txt")) $classe = $_COOKIE["laclasse"];  //$classe = $_COOKIE["laclasse"]; if($classe=="") $classe="TS2CIRA";
 	$password = $_COOKIE["password"];
-	$accueil = "<a href=\"./index.php\">";
+	$accueil = "<a href=\"./appel.php\">";
 	$date = date("j/m");
 	$cheminfichiertp = "../Commun/tp/";
 	$nonfait = "Non Fait";

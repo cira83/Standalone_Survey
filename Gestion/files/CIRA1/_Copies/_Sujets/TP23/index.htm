@@ -1,0 +1,69 @@
+Niveau 1#TP23#
+C#<h2>I. Schématisation de la régulation</h2>
+Q#Compléter le schéma TI fourni ci-dessous en plaçant les fils permettant un fonctionnement de la régulation de niveau.#1
+I#./files/CIRA1/_Copies/_Sujets/TP23/img/01.gif
+Q#Donner le nom des différents éléments : <li>Grandeur réglée ;</li><li>Grandeur réglante ;</li><li>Grandeur perturbatrice ;</li><li>Organe de réglage.</li>#1
+U#
+L#
+Q#Dans le schéma fonctionnel ci-dessus, placer les éléments suivants :<li>La consigne W ;</li><li>La mesure X ;</li><li>LV1, Qout ;</li><li>LV2, Qin ;</li><li>LIC ; LT.</li>#1
+I#./files/CIRA1/_Copies/_Sujets/TP23/img/02.gif
+Q#Comment agit le débit Qin sur le niveau X ?#.5
+T#
+Q#Compléter le schéma fonctionnel en ajoutant l’opérateur + ou - correspondant.#.5
+I#./files/CIRA1/_Copies/_Sujets/TP23/img/02.gif
+Q#Comment agit le débit Qout sur le niveau X ?#.5
+T#
+L#
+Q#Compléter le schéma en ajoutant l’opérateur + ou - correspondant.#.5
+I#./files/CIRA1/_Copies/_Sujets/TP23/img/02.gif
+Q#Quel est le sens d’action du procédé ? En déduire le sens d’action du régulateur.#.5
+U#
+Q#Compléter le schéma en ajoutant les opérateurs + ou - correspondants.#.5
+I#./files/CIRA1/_Copies/_Sujets/TP23/img/02.gif
+L#
+Q#Si l'entrée du bloc H (le réservoir) est soumise à un débit constant non nul, donner l'allure de la mesure en fonction du temps. On utilisera le logiciel <a href="../EasyGraph" target="_blank" >EasyGraph</a>.#1
+I#
+Q#En déduire si le bloc H est un bloc :<li>Stable ?</li><li>Instable ?</li><li>Intégrateur ?</li><br/>#1
+U#
+L#
+C#<h2>II. L’erreur statique quand Qin = 0</h2>
+C#Dans un premier temps, le débit Qin = 0. La régulation est une régulation proportionnelle de bande proportionnelle Xp, avec une consigne de 50%.
+Q#En régime permanent (mesure X constante), quelle sera la valeur du Qout ?#1
+U#
+Q#En déduire la commande Y de la vanne si cette dernière est NF.#1
+U#
+Q#Quelle sera alors la valeur de l’erreur statique pour les bandes suivantes (10%, 20 %) ?#1
+U#
+L#
+C#<h3>En pratique</h3>
+C#Vanne LV1 fermée, remplir le réservoir jusqu’à 100 %.
+Q#Pour une bande proportionnelle de 10%, relever la valeur de l’erreur statique.<br/>#.5
+I#
+Q#Pour une bande proportionnelle de 20%, relever la valeur de l’erreur statique.#.5
+I#
+Q#Expliquez pourquoi elles sont différentes des valeurs théoriques.#1
+U#
+L#
+C#<h2>III. L’erreur statique quand Qin ≠ 0</h2>
+C#Ouvrir modérément la vanne LV2.
+Q#Relever la valeur de la commande Y pour avoir un niveau stable à 50%.#1
+I#
+C#La régulation proportionnelle de bande proportionnelle Xp, avec une consigne de 50%.
+Q#En régime permanent, quelle sera la valeur de la commande Y ?#1
+T#
+Q#En déduire, la valeur de l’erreur statique pour les bandes suivantes (10%, 20 %).#1
+T#
+L#
+C#<h3>En pratique</h3>
+C#<font color="red">Ne pas toucher la vanne LV2 !!</font>
+Q#Pour une bande proportionnelle de 10%, relever la valeur de l’erreur statique.#.5
+I#
+Q#Pour une bande proportionnelle de 20%, relever la valeur de l’erreur statique.#.5
+I#
+Q#Expliquez pourquoi elles sont différentes des valeurs théoriques.#1
+U#
+L#
+Q#Proposer un réglage permettant d’annuler cette erreur statique, sans utiliser de correcteur intégral.#1
+I#
+Q#Vérifier le fonctionnement de votre méthode pour Xp égal à 20%.#1
+I#

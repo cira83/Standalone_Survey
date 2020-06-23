@@ -1,0 +1,3 @@
+grandeur réglée: température de l'eau chaude
+grandeur réglante: le débit d'eau froide 
+grandeur perturbatrices: la température du moût chaud et de l'eau froide

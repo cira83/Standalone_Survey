@@ -1,1 +1,0 @@
-En boucle cascade le signal du procédé est plus stable et le temps de réponse est réduit comparé à la boucle simple.

@@ -1,0 +1,14 @@
+Are:15:1:
+Bacquias:11:1:
+Berre:11:1:
+Fouasse:11:1:
+Gire:11:1:
+Minel:11:1:
+Mougeolle:11:1:
+Nadau:11:1:
+Roggero:11:1:
+Romdhani:11:1:
+Vassal:11:1:
+Yborra:11:1:
+Lamarque:9:0:
+Segault:9:1:

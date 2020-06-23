@@ -1,0 +1,16 @@
+Andreani:0:1:Lu 09-12
+Arcas:2:1:Lu 09-12
+Auda:9:1:Lu 09-12
+Colas:1:1:Lu 09-12
+Crivello:18:1:Lu 09-12
+Dethorey:18:1:Lu 09-12
+Golleret:1:1:Lu 09-12
+Krout:Nnot:1:Lu 09-12
+Raffellini:12:1:Lu 09-12
+Rein:20:1:Lu 09-12
+Roussel:20:1:Lu 09-12
+Russo:8:1:Lu 09-12
+Santoni:14:1:Lu 09-12
+Savelli:0:1:Lu 09-12
+Semenadisse:2:1:Lu 09-12
+Vaiarello:9:1:Lu 09-12

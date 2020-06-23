@@ -1,1 +1,0 @@
-t0 = 0s t1= 32s premier dépassement =130%

@@ -1,0 +1,39 @@
+Amri::1:
+Aruanno::1:
+Attwood::1:
+Aubreville::1:
+Berthelot::1:
+Bonsart::1:
+Devillers::1:
+Dubois::1:
+Lemoine::1:
+Marchica::1:
+Mouniapin::1:
+Remy::1:
+Saadeh::1:
+Sarnet::1:
+Soucadauch::1:
+Aubreville:11:1:19/01 - 15h48:+1 Tableau:::
+Amri:NaN:1:02/02 - 14h01:-1 Cahier:::
+Amri:9:1:02/02 - 14h02:0 Correction:::
+Saadeh:9:1:02/02 - 14h02:-1 Cahier:::
+Attwood:9:1:02/02 - 14h02:-1 Cahier:::
+Lemoine:11:1:02/02 - 14h46:+1 Tableau:::
+Aubreville:12:1:02/02 - 15h17:+1 Tableau:::
+Aruanno:11:1:02/02 - 15h35:+1 Tableau:::
+Attwood:10:1:02/02 - 15h40:+1 Tableau:::
+Amri:10:1:09/02 - 14h15:+1 Tableau:::
+Berthelot:11:1:09/02 - 14h19:+1 Tableau:::
+Dubois:11:1:09/02 - 14h20:+1 Tableau:::
+Lemoine:12:1:09/02 - 14h36:+1 Tableau:::
+Devillers:11:1:09/02 - 14h52:+1 Tableau:::
+Remy:10:1:09/02 - 15h07:0 Correction:::
+Remy:10.5:1:09/02 - 15h08:+0.5 Tableau:::
+Soucadauch:11:1:02/03 - 15h30:+1 Tableau:::
+Mouniapin:11:1:02/03 - 15h33:+1 Tableau:::
+Attwood:11:1:02/03 - 15h40:+1 Tableau:::
+Aubreville:13:1:02/03 - 16h32:+1 Tableau:::
+Berthelot:11.5:1:09/03 - 14h21:+0.5 Tableau:::
+Attwood:12:1:09/03 - 15h16:+1 Tableau:::
+Marchica:11:1:09/03 - 15h33:+1 Tableau:::
+Lemoine:13:1:09/03 - 15h45:+1 Tableau:::

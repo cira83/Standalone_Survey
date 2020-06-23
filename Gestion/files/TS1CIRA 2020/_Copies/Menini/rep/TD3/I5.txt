@@ -1,0 +1,2 @@
+Le régulateur est en sens d'action inverse car si on augmente la commande l'eau sortira donc plus chaude donc la mesure augmente ce qui veut dire que le procédé est en sens d'action directe et donc le régulateur est en sens d'action inverse 
+*

@@ -1,0 +1,1 @@
+Lorsque la commande augmente, la vanne s'ouvre, le débit augmente et le niveau h aussi, la mesure augmente donc le procédé est direct, le régulateur doit-être réglé en inverse.

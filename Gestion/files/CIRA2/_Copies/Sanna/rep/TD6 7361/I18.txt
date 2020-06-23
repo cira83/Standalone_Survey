@@ -1,1 +1,0 @@
-cela évite que la température chute trop et elle diminue le temps pour que la température revienne à l'état initiale 

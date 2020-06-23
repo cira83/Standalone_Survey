@@ -1,1 +1,0 @@
-T(p)=x(p)/e(p)=C(p)*H(p) donc T(p)=(A(1+ti*p/Ti*p)*(1+Td*p)) * K/1+t*p) = (A(1+ti*p/Ti*p)*(1+Td*p)) * (2/1+3p)

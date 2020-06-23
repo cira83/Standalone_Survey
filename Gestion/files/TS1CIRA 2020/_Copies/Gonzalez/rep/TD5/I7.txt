@@ -1,0 +1,1 @@
+par calcul grâce à la loi des gaz parfait ((n*R*T)/V)*10 puissance 5.

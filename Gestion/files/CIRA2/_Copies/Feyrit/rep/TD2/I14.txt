@@ -1,1 +1,0 @@
-L'erreur statique sera nulle car T(p=0)

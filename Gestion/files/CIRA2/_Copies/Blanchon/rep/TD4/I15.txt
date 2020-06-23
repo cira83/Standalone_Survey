@@ -1,1 +1,0 @@
-Le débitmètre met en œuvre un système qui mettra en rotation une portion de masse m du liquide qui s’écoule dans la canalisation. La connaissance de la vitesse de rotation ω et la mesure nous permettent alors d’accéder directement à mvt puis à la valeur du débit massique. 

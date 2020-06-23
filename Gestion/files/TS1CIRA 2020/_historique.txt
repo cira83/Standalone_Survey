@@ -1,0 +1,16 @@
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/planning.php?action=0
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/appel.php
+/Gestion/appel.php?ladate=12/11
+/Gestion/appel.php?ladate=05/11
+/Gestion/appel.php?ladate=11/09
+/Gestion/appel.php?ladate=04/03
+/Gestion/appel.php
+/Gestion/appel.php

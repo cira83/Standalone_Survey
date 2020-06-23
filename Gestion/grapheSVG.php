@@ -4,13 +4,14 @@
 	$listedesnoms = "";
 	if(!($notes===null)) {
 		for($i=0;$i<count($notes);$i++){
+			$lenom = isset($noms[$i])?rtrim("$noms[$i]"):"noname";
 			if($i<count($notes)-1) {
 				$listedesnotes .= rtrim("$notes[$i]").":";//pour nettoyer
-				$listedesnoms .= rtrim("$noms[$i]").":";
+				$listedesnoms .= "$lenom:";
 			}
 			else {
 				$listedesnotes .= rtrim("$notes[$i]");
-				$listedesnoms .= rtrim("$noms[$i]");
+				$listedesnoms .= $lenom;
 			}
 		}
 	}

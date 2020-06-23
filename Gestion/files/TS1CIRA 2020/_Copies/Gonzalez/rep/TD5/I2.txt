@@ -1,0 +1,4 @@
+grandeur réglante: débit de CO2
+grandeur réglée: débit de CO2
+grandeur perturbatrice: le débit de CO2 à l'entré de la régulation
+

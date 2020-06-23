@@ -1,0 +1,12 @@
+Are:Absent:-1:
+Bacquias:Absent:-1:
+Berre:Pr&eacute;sent:+1:
+Gire:Absent:-1:
+Lamarque:Absent:-1:
+Minel:Absent:-1:
+Mougeolle:Pr&eacute;sent:+1:
+Nadau:Pr&eacute;sent:+1:
+Roggero:Absent:-1:
+Romdhani:Absent:-1:
+Segault:Absent:-1:
+Vassal:Pr&eacute;sent:+1:

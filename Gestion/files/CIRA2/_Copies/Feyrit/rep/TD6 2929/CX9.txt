@@ -1,1 +1,0 @@
-Normalement il faut attendre le retour à la valeur initiale.

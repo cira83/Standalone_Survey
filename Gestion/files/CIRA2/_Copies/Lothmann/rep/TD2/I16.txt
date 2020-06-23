@@ -1,2 +1,0 @@
-il faudrait avoir un régulateur de sens d'action inverse pour avoir un procédé direct pour que lorsque l'on augmente la commande la mesure augmente aussi
-

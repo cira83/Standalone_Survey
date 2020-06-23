@@ -1,0 +1,15 @@
+Andreani:14:0:Ve 09-01
+Arcas:15:1:Ve 09-01
+Bourgue:0:1:Ve 09-01
+Cipolla::1:Ve 09-01
+Frelin:0:1:Ve 09-01
+Kremer::1:Ve 09-01
+Lamarque:0:1:Ve 09-01
+Luccioni::1:Ve 09-01
+Missilini:0:1:Ve 09-01
+Noaman:0:1:Ve 09-01
+Pastor:0:1:Ve 09-01
+Premayon:11:0:Ve 09-01
+Rousseau::1:Ve 09-01
+Souames::1:Ve 09-01
+Tremino::1:Ve 09-01

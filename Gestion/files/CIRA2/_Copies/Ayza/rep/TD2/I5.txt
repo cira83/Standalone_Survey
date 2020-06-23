@@ -1,1 +1,0 @@
-Ici la perturbation principale sera le débit de vapeur envoyé à la turbine : si ce débit varie le niveau de liquide varie.

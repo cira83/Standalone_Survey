@@ -1,1 +1,0 @@
-les performances amélioré sont le temp de réponse et le dépassement qui dont moins important 
